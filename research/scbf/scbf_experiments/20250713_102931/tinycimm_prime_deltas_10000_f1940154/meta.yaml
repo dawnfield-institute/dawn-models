@@ -1,0 +1,37 @@
+schema_version: '2.0'
+directory_name: tinycimm_prime_deltas_10000_f1940154
+description: 'This directory contains the checkpoint and results of a Symbolic Collapse
+  Bifractal Framework (SCBF) experiment with 10,000 steps. The directory includes
+  all relevant files and information necessary to reproduce the experiment, as well
+  as a comprehensive summary report outlining the key findings and insights gained
+  from the study.
+
+  The files present in this directory include:
+
+  * checkpoint.json: Contains metadata regarding the experiment, including its name,
+  ID, start time, end time, total steps, and SCBF metrics. This file serves as a record
+  of the experiment''s progress and can be used to resume or reanalyze the study at
+  a later time.
+
+  * experiment_summary.txt: Provides a comprehensive overview of the key findings
+  and insights gained from the experiment. The report covers various topics such as
+  the experiment''s purpose, methods employed, results obtained, and implications
+  for future research.
+
+  * meta.yaml: Contains information about the directory itself, including its name,
+  description, and schema version. This file serves as a brief summary of the directory''s
+  contents and can be used to navigate and understand its structure.
+
+  Overall, this directory is a valuable resource for anyone interested in learning
+  more about the SCBF experiment and the insights gained from it. The files present
+  in this directory provide a detailed record of the study''s progress and results,
+  making it an essential tool for researchers, students, and anyone curious about
+  the field of symbolic collapse and bifractal patterns in neural network weight evolution.'
+semantic_scope:
+- scbf
+files:
+- checkpoint.json
+- experiment_results.json
+- experiment_summary.txt
+child_directories:
+- plots

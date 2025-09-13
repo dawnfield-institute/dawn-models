@@ -1,0 +1,13 @@
+schema_version: '2.0'
+directory_name: tests
+description: This directory tests mathematical experiments using TinyCIMM-Euler, a
+  variant of the minimal agentic model for symbolic cognition and recursive collapse.
+  The experiments demonstrate how lightweight, entropy-informed architectures can
+  achieve adaptive learning, symbolic memory, and field-based intelligence using Dawn
+  Field Theory principles. The directory contains code for testing these experiments,
+  including "test_all_experiments.py" and "test_improved_primes.py".
+semantic_scope: []
+files:
+- test_all_experiments.py
+- test_improved_primes.py
+child_directories: []

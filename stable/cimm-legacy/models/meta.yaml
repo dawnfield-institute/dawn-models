@@ -1,0 +1,26 @@
+schema_version: '2.0'
+directory_name: models
+description: 'The directory "models" in the CIMM repository is where all the model
+  definitions for the Cosmic Information Mining Model (CIMM) are stored. The models
+  contained within this directory are designed to perform tasks related to post-symbolic
+  artificial intelligence, such as live entropy feedback, wave collapse equilibrium,
+  and recursive field dynamics. These models are built using principles of entropy
+  flow, collapse dynamics, and field-theoretic stabilization, which are core components
+  of the CIMM framework.
+
+
+  In addition to the model definitions, this directory also contains supporting files
+  for each model, such as configuration files, documentation, and code for training
+  and testing the models. The meta.yaml file in this directory defines the schema
+  version, directory name, description, semantic scope, and files that make up the
+  CIMM repository.
+
+
+  Overall, the models stored within this directory are essential to the functioning
+  of the CIMM framework and play a critical role in enabling the AI system to learn,
+  reason, and adapt to its environment.'
+semantic_scope:
+- tinycimm
+files:
+- example_model.py
+child_directories: []

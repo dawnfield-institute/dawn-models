@@ -1,0 +1,31 @@
+schema_version: '2.0'
+directory_name: '20250713_101403'
+description: 'This directory contains all the necessary configurations and data for
+  the Symbolic Collapse Bifractal Framework (SCBF) experiments conducted on July 13th,
+  2025. The directory includes metadata files, a configuration file, documentation,
+  and experiment results.
+
+
+  The purpose of this directory is to serve as a central repository for all the configurations,
+  data, and experimental results related to the SCBF research. By organizing and storing
+  these artifacts in a single directory, researchers can easily access, share, and
+  collaborate on their work, making it easier to reproduce and build upon existing
+  experiments.
+
+
+  In addition to its organizational role, this directory also serves as a record of
+  all the experimental results, providing valuable insights into the mathematical
+  structures that emerge during learning through entropy analysis. The SCBF framework
+  has been shown to be effective in understanding deep learning processes and can
+  be applied to various AI tasks such as symbolic cognition, recursive collapse, and
+  meta-cognition.
+
+
+  Overall, this directory contains all the necessary elements for conducting and analyzing
+  experiments related to the SCBF framework, making it a valuable resource for researchers
+  in the field of artificial intelligence.'
+semantic_scope:
+- meta-cognition
+files: []
+child_directories:
+- tinycimm_fibonacci_ratios_10000_9692c3a7

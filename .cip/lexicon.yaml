@@ -1,0 +1,287 @@
+terms:
+  # Core Models
+  - name: CIMM
+    full_name: Cosmic Information Mining Model
+    description: Foundational research framework for post-symbolic artificial intelligence, built on principles of entropy flow, collapse dynamics, and field-theoretic stabilization. Uses live entropy feedback, wave collapse equilibrium, and recursive field dynamics instead of traditional gradient descent.
+    tags: [models, ai, post-symbolic, entropy, collapse, core]
+    status: stable
+    see_also: [TinyCIMM, Quantum Balance Equation, Field Intelligence]
+    related_documents:
+      - stable/cimm-legacy/README.md
+      - foundational/legacy_docs_archive/The CIMM Framework_ A Unified Computational Physics Engine for Emergent Intelligence.md
+    example: CIMM learns through recursive collapse resolution in a field of entropy and potential rather than symbolic optimization.
+
+  - name: TinyCIMM
+    full_name: Tiny Categorical Information Memory Matrix
+    description: Ultra-minimal agentic model for symbolic cognition and recursive collapse. Demonstrates how lightweight, entropy-informed architectures can achieve adaptive learning, symbolic memory, and field-based intelligence using Dawn Field Theory principles.
+    tags: [models, minimal, symbolic, cognition, field-theory, research]
+    status: experimental
+    see_also: [CIMM, SCBF, Symbolic Collapse]
+    related_documents:
+      - research/tinycimm/README.md
+      - research/tinycimm/TinyCIMM_naming.md
+    example: TinyCIMM-Euler variant focuses on number theory and mathematical sequence prediction using minimal neural architectures.
+
+  - name: SCBF
+    full_name: Symbolic Collapse Bifractal Framework
+    description: Interpretability framework that measures symbolic collapse and bifractal patterns in neural network weight evolution. Provides insight into deep mathematical structures that emerge during learning through entropy analysis.
+    tags: [interpretability, symbolic, collapse, bifractal, analysis, experimental]
+    status: experimental
+    see_also: [TinyCIMM, Symbolic Entropy Collapse, Bifractal Collapse]
+    related_documents:
+      - research/scbf/README.md
+      - research/scbf/tinycimm_scbf_experiment.py
+    example: SCBF metrics reveal how TinyCIMM models develop mathematical intuition through symbolic pattern collapse.
+
+  - name: GAIA
+    full_name: Global Adaptive Intelligence Architecture
+    description: Flagship model architecture representing the evolution of Dawn Field Theory principles into large-scale adaptive intelligence systems. Designed for complex reasoning and emergence.
+    tags: [models, adaptive, intelligence, flagship, future]
+    status: planned
+    see_also: [CIMM, Field Intelligence, Recursive Balance Field]
+    related_documents:
+      - roadmaps/gaia_roadmap.md
+    example: GAIA represents the scaling of Dawn Field Theory from minimal models to global intelligence architectures.
+
+  # Core Theoretical Concepts
+  - name: Symbolic Entropy Collapse
+    full_name: Symbolic Entropy Collapse
+    description: Core collapse mechanism where entropy gradients drive the formation of symbolic structures. Measured as reduction in symbolic entropy indicating pattern emergence and structure formation.
+    tags: [collapse, entropy, symbolic, structure, core]
+    status: core
+    see_also: [SCBF, Entropy Collapse, Field Collapse]
+    related_documents:
+      - research/scbf/metrics/entropy_collapse.py
+    example: SEC values increase when TinyCIMM models develop structured mathematical representations from chaotic weight distributions.
+
+  - name: Bifractal Collapse
+    full_name: Bifractal Temporal Collapse
+    description: Time modeling approach using recursive interaction between backward symbolic ancestry and forward emergence constraints. Creates fractal patterns in both temporal directions.
+    tags: [temporal, symmetry, recursion, fractal, experimental]
+    status: experimental
+    see_also: [Symbolic Recursion, SCBF]
+    related_documents:
+      - foundational/docs/[m][F][v1.0][C4][I5]_bifractal_time_emergence.md
+    example: Bifractal collapse enables TinyCIMM to model time-symmetric mathematical relationships.
+
+  - name: Recursive Balance Field
+    full_name: Recursive Balance Field
+    description: Dynamic potential formed by energy-information imbalance and recursive memory. Replaces static potentials in quantum equations with adaptive, memory-aware field dynamics.
+    tags: [balance, field, dynamics, quantum, potentials, core]
+    status: core
+    see_also: [Quantum Potential Layer, Field Pressure, Field Intelligence]
+    related_documents:
+      - foundational/docs/[m][F][v1.0][C4][I5]_recursive_balance_field.md
+    example: The recursive balance field adapts as CIMM agents accumulate memory and experience.
+
+  - name: Field Intelligence
+    full_name: Field Intelligence
+    description: Emergent coordination and memory arising from symbolic recursion and entropy balancing. The intelligence that emerges from field dynamics rather than programmed logic.
+    tags: [emergence, intelligence, recursion, memory, core]
+    status: core
+    see_also: [Recursive Balance Field, Epistemic Feedback, Symbolic Recursion]
+    related_documents:
+      - foundational/docs/[m][F][v1.0][C4][I5]_field_intelligence.md
+    example: Field intelligence in CIMM emerges from the recursive balance between entropy and information structure.
+
+  # Technical Components
+  - name: Quantum Balance Equation
+    full_name: Quantum Balance Equation (QBE)
+    description: Core equation governing equilibrium between structured information, energy, and collapse regulation in CIMM systems. Balances thermodynamic and informational dynamics.
+    tags: [quantum, balance, equation, equilibrium, core]
+    status: core
+    see_also: [CIMM, Recursive Balance Field, Landauer Cost]
+    related_documents:
+      - foundational/legacy_docs_archive/Quantum Balance Equation revised 2.0.md
+    example: QBE determines when CIMM systems transition between exploration and exploitation phases.
+
+  - name: Quantum Potential Layer
+    full_name: Quantum Potential Layer (QPL)
+    description: Computational layer implementing quantum-inspired potential dynamics in CIMM architectures. Enables field-theoretic computation in neural networks.
+    tags: [quantum, potential, layer, implementation, core]
+    status: core
+    see_also: [Recursive Balance Field, CIMM]
+    related_documents:
+      - stable/cimm-legacy/cimm_core/entropy/quantum_potential_layer.py
+    example: QPL layers in CIMM enable quantum-field-like computations in classical neural architectures.
+
+  - name: Epistemic Feedback
+    full_name: Epistemic Feedback
+    description: Self-referential learning mechanism where systems learn about their own learning processes. Enables recursive improvement and meta-cognition in AI systems.
+    tags: [feedback, learning, meta-cognition, recursion, core]
+    status: core
+    see_also: [Field Intelligence, Symbolic Recursion]
+    related_documents:
+      - cognition_index_protocol/README.md
+    example: Epistemic feedback allows CIMM agents to improve their learning strategies through self-observation.
+
+  # Model Variants and Specializations
+  - name: TinyCIMM-Euler
+    full_name: TinyCIMM-Euler
+    description: TinyCIMM variant specialized for number theory, sequence prediction, and mathematical reasoning tasks. Named after Leonhard Euler for his contributions to mathematics.
+    tags: [tinycimm, variant, mathematics, sequences, euler]
+    status: experimental
+    see_also: [TinyCIMM, TinyCIMM-Planck, TinyCIMM-Navier]
+    related_documents:
+      - research/tinycimm/TinyCIMM-Euler/tinycimm_euler.py
+      - research/tinycimm/TinyCIMM_naming.md
+    example: TinyCIMM-Euler excels at discovering patterns in prime numbers and mathematical sequences.
+
+  - name: TinyCIMM-Planck
+    full_name: TinyCIMM-Planck
+    description: Minimal, foundational TinyCIMM variant operating at the smallest computational scale. Named after Max Planck for quantum-scale precision and minimal units.
+    tags: [tinycimm, variant, minimal, foundational, planck]
+    status: experimental
+    see_also: [TinyCIMM, TinyCIMM-Euler]
+    related_documents:
+      - research/tinycimm/TinyCIMM-Planck/tinycimm_planck.py
+    example: TinyCIMM-Planck demonstrates symbolic collapse at the most minimal computational scale.
+
+  - name: TinyCIMM-Navier
+    full_name: TinyCIMM-Navier
+    description: TinyCIMM variant for fluid dynamics and turbulence analysis. Named after Claude-Louis Navier for his work on fluid mechanics equations.
+    tags: [tinycimm, variant, fluid, dynamics, turbulence, navier]
+    status: experimental
+    see_also: [TinyCIMM, Field Dynamics]
+    related_documents:
+      - research/tinycimm/TinyCIMM-Navier/tinycimm_navier.py
+      - research/tinycimm/TinyCIMM-Navier/SCBF_NEURAL_DYNAMICS_ANALYSIS.md
+    example: TinyCIMM-Navier analyzes turbulent flow patterns using field-theoretic neural dynamics.
+
+  # Technical Metrics and Analysis
+  - name: Activation Ancestry
+    full_name: Activation Ancestry Stability
+    description: SCBF metric measuring consistency of activation patterns over time. Tracks how stable hidden activation patterns remain during learning.
+    tags: [scbf, metrics, activation, stability, analysis]
+    status: experimental
+    see_also: [SCBF, Bifractal Lineage]
+    related_documents:
+      - research/scbf/metrics/activation_ancestry.py
+    example: High activation ancestry indicates stable mathematical intuition development in TinyCIMM models.
+
+  - name: Bifractal Lineage
+    full_name: Bifractal Lineage
+    description: SCBF metric tracking fractal patterns in model evolution across multiple timescales. Measures self-similar patterns in learning dynamics.
+    tags: [scbf, metrics, bifractal, lineage, patterns]
+    status: experimental
+    see_also: [SCBF, Bifractal Collapse, Activation Ancestry]
+    related_documents:
+      - research/scbf/metrics/bifractal_lineage.py
+    example: Bifractal lineage reveals how TinyCIMM learning patterns repeat across different temporal scales.
+
+  - name: Phase Alignment
+    full_name: Collapse Phase Alignment
+    description: SCBF metric measuring phase coherence in neural weight updates. Tracks complex-valued weight phase relationships for coherence analysis.
+    tags: [scbf, metrics, phase, coherence, alignment]
+    status: experimental
+    see_also: [SCBF, Symbolic Entropy Collapse]
+    related_documents:
+      - research/scbf/metrics/phase_alignment.py
+    example: Strong phase alignment indicates coherent symbolic structure formation during collapse events.
+
+  - name: Semantic Attractors
+    full_name: Semantic Attractors
+    description: Stable geometries in informational fields that emerge under entropy or recursive feedback. Points of convergence in semantic space.
+    tags: [semantic, attractors, stability, geometry, patterns]
+    status: experimental
+    see_also: [Symbolic Attractors, SCBF]
+    related_documents:
+      - research/scbf/metrics/semantic_attractors.py
+    example: Semantic attractors represent stable mathematical concepts that emerge in TinyCIMM learning.
+
+  # Framework Components
+  - name: Cognition Index Protocol
+    full_name: Cognition Index Protocol (CIP)
+    description: Machine-native protocol for embedding, testing, and validating AI comprehension within codebases. Supports recursive feedback and epistemic benchmarking for automated repository understanding.
+    tags: [protocol, ai, comprehension, benchmarking, validation]
+    status: core
+    see_also: [Epistemic Feedback, Meta-validation]
+    related_documents:
+      - .cip/core.yaml
+      - cognition_index_protocol/README.md
+    example: CIP enables automated validation and enhancement of AI understanding across the dawn-models ecosystem.
+
+  - name: Landauer Cost
+    full_name: Landauer Cost
+    description: Thermodynamic penalty associated with symbolic encoding or branching in recursive models. Energy cost of information processing and memory formation.
+    tags: [thermodynamics, computation, encoding, cost, information]
+    status: core
+    see_also: [Symbolic Payload, Quantum Balance Equation]
+    related_documents:
+      - foundational/docs/[m][F][v1.0][C4][I5]_landauer_cost.md
+    example: Landauer cost increases with symbolic branching complexity in TinyCIMM models.
+
+  - name: Symbolic Payload
+    full_name: Symbolic Payload
+    description: Information content carried by symbolic structures in field-theoretic models. The semantic and computational load of symbolic representations.
+    tags: [symbolic, payload, information, content, structure]
+    status: core
+    see_also: [Landauer Cost, Symbolic Entropy Collapse]
+    related_documents:
+      - foundational/lexicon.yaml
+    example: Higher symbolic payload correlates with more complex mathematical concepts in TinyCIMM reasoning.
+
+  # Methodological Concepts
+  - name: Balance-Aware Evolution
+    full_name: Balance-Aware Evolution
+    description: Physical systems governed by adaptive recursion and entropy-aware modulation rather than static rules. Evolution guided by dynamic balance principles.
+    tags: [evolution, adaptive, systems, entropy, balance]
+    status: core
+    see_also: [Field Intelligence, Recursive Balance Field]
+    related_documents:
+      - foundational/docs/[m][F][v1.0][C4][I5]_balance_aware_evolution.md
+    example: CIMM agents evolve through balance-aware dynamics rather than fixed evolutionary algorithms.
+
+  - name: Superfluid Informational Crystallization
+    full_name: Superfluid Informational Crystallization
+    description: Process where information transitions from fluid, dynamic states to crystallized, structured forms. Analogous to phase transitions in physical systems.
+    tags: [superfluid, crystallization, information, phase_transition, structure]
+    status: experimental
+    see_also: [Symbolic Entropy Collapse, Field Intelligence]
+    related_documents:
+      - foundational/lexicon.yaml
+    example: Mathematical insights in TinyCIMM emerge through superfluid crystallization of information patterns.
+
+  # Dual Licensing Concepts
+  - name: Dual Licensing Strategy
+    full_name: Dual Licensing Strategy
+    description: Dawn Models licensing approach where research variants remain AGPL-3.0 permanently while stable releases use Apache-2.0. Balances open science with practical adoption.
+    tags: [licensing, strategy, research, commercial, sustainability]
+    status: core
+    see_also: [Research Variants, Stable Releases]
+    related_documents:
+      - LICENSING.md
+      - LICENSE
+    example: Research variants like TinyCIMM-Euler remain AGPL to preserve research transparency while stable CIMM enables commercial use.
+
+  - name: Research Variants
+    full_name: Research Variants
+    description: Experimental model implementations licensed under AGPL-3.0 in perpetuity. Preserved as permanent research archive and for specialized applications.
+    tags: [research, experimental, agpl, archive, specialized]
+    status: core
+    see_also: [Dual Licensing Strategy, Stable Releases]
+    related_documents:
+      - research/LICENSE
+      - CONTRIBUTING.md
+    example: TinyCIMM variants remain research variants to enable academic use and specialized commercial applications.
+
+  - name: Stable Releases
+    full_name: Stable Releases
+    description: Production-ready, general-purpose model implementations licensed under Apache-2.0. Cleaned, documented implementations suitable for commercial deployment.
+    tags: [stable, production, apache, commercial, deployment]
+    status: core
+    see_also: [Dual Licensing Strategy, Research Variants]
+    related_documents:
+      - stable/LICENSE
+      - stable/cimm-legacy/README.md
+    example: CIMM-Legacy represents the first stable release suitable for commercial applications.
+
+abbreviations:
+  CIP: Cognition Index Protocol
+  CIMM: Cosmic Information Mining Model
+  SCBF: Symbolic Collapse Bifractal Framework
+  SEC: Symbolic Entropy Collapse
+  QPL: Quantum Potential Layer
+  QBE: Quantum Balance Equation
+  DFT: Dawn Field Theory
+  RBF: Recursive Balance Field

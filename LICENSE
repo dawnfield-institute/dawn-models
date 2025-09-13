@@ -1,0 +1,38 @@
+Dawn Models Dual License
+
+This repository uses a dual-licensing strategy:
+
+RESEARCH DIRECTORY (/research) - AGPL-3.0
+==========================================
+The contents of the /research directory are licensed under the GNU Affero General 
+Public License version 3.0 (AGPL-3.0). See /research/LICENSE for full terms.
+
+STABLE DIRECTORY (/stable) - Apache-2.0
+=========================================
+The contents of the /stable directory are licensed under the Apache License 2.0.
+See /stable/LICENSE for full terms.
+
+REPOSITORY STRUCTURE AND DOCUMENTATION
+=======================================
+Documentation, repository structure, and meta-files (README.md, CONTRIBUTING.md, 
+etc.) are licensed under Apache-2.0 unless otherwise specified.
+
+COMMERCIAL LICENSING
+====================
+For commercial use of AGPL-licensed research variants without source code 
+disclosure requirements, commercial licenses are available.
+
+Contact: info@dawnfield.ca
+Website: https://dawnfield.ca
+
+---
+
+Copyright 2025 Dawn Field Institute
+
+This dual-licensing approach enables:
+1. Open scientific research (AGPL research variants)
+2. Commercial adoption (Apache stable releases)  
+3. Sustainable development funding
+4. Community collaboration
+
+For licensing questions, see LICENSING.md or contact info@dawnfield.ca

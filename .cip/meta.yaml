@@ -1,0 +1,14 @@
+schema_version: '2.0'
+repository_role: models
+title: Dawn Models
+description: "Dual-licensed model repository implementing Dawn Field Theory through AGPL research variants and Apache production releases"
+version: 1.0.0
+authors:
+- Dawn Field Institute
+license: Dual (AGPL-3.0/Apache-2.0)
+tags:
+- models
+- dawn-field-theory
+ecosystem_links:
+  theory: repo://dawn-field-theory/foundational/
+  protocol: repo://cip-core/

@@ -1,0 +1,20 @@
+schema_version: '2.0'
+directory_name: data
+description: "This directory contains data files and supporting datasets for the Cosmic\
+  \ Information Mining Model (CIMM) experiments and analysis. The directory_name field\
+  \ in the meta.yaml file specifies that the directory is named \"data\" and provides\
+  \ a brief description of its contents. \nThe semantic_scope field identifies the\
+  \ CIMM model as the primary context for these data files. The files section lists\
+  \ two files, with the amd_full_... file listed first. The overall purpose of this\
+  \ directory appears to be supporting the CIMM framework by providing data and datasets\
+  \ necessary for experimentation and analysis.\nIt is likely that the data in this\
+  \ directory pertains to the model's behavior and performance under different conditions\
+  \ or scenarios, which could be used to test its effectiveness, identify areas of\
+  \ improvement, and study how it develops over time. The documentation section also\
+  \ includes five files, providing an overview or further context for the data contained\
+  \ in the directory."
+semantic_scope:
+- ciimm
+files:
+- amd_full_history.csv
+child_directories: []

@@ -1,0 +1,700 @@
+schema_version: '2.0'
+orientation_type: directory_index
+description: Directory-level orientation index for CIP navigation
+generated_date: '2025-09-10'
+primary_directories:
+  .cip:
+    semantic_scope: []
+    file_count: 0
+    schema_version: '2.0'
+  research:
+    semantic_scope: []
+    file_count: 1
+    schema_version: '2.0'
+  research\scbf:
+    semantic_scope:
+    - cimm
+    - tinycimm
+    - scbf
+    - gaia
+    file_count: 5
+    schema_version: '2.0'
+  research\scbf\docs:
+    semantic_scope:
+    - cimm
+    - scbf
+    file_count: 0
+    schema_version: '2.0'
+  research\scbf\docs\med:
+    semantic_scope:
+    - med
+    - cimm
+    file_count: 3
+    schema_version: '2.0'
+  research\scbf\loggers:
+    semantic_scope: []
+    file_count: 2
+    schema_version: '2.0'
+  research\scbf\metrics:
+    semantic_scope:
+    - ciimm
+    - tinycimm
+    file_count: 7
+    schema_version: '2.0'
+  research\scbf\scbf_experiments:
+    semantic_scope:
+    - scbf
+    - interpretability
+    file_count: 2
+    schema_version: '2.0'
+  research\scbf\scbf_experiments\20250713_101403:
+    semantic_scope:
+    - meta-cognition
+    file_count: 0
+    schema_version: '2.0'
+  research\scbf\scbf_experiments\20250713_101403\tinycimm_fibonacci_ratios_10000_9692c3a7:
+    semantic_scope:
+    - cimm
+    - symbolic
+    - collapse
+    - bifractal
+    - fibonacci
+    file_count: 3
+    schema_version: '2.0'
+  research\scbf\scbf_experiments\20250713_101403\tinycimm_fibonacci_ratios_10000_9692c3a7\plots:
+    semantic_scope:
+    - plot
+    - tinycimm
+    - fibonacci
+    file_count: 8
+    schema_version: '2.0'
+  research\scbf\scbf_experiments\20250713_101847:
+    semantic_scope:
+    - tinycimm
+    file_count: 0
+    schema_version: '2.0'
+  research\scbf\scbf_experiments\20250713_101847\tinycimm_polynomial_sequence_10000_47bfb087:
+    semantic_scope:
+    - scbf
+    file_count: 3
+    schema_version: '2.0'
+  research\scbf\scbf_experiments\20250713_101847\tinycimm_polynomial_sequence_10000_47bfb087\plots:
+    semantic_scope:
+    - plots
+    - visualization
+    - ai
+    - ml
+    file_count: 8
+    schema_version: '2.0'
+  research\scbf\scbf_experiments\20250713_102144:
+    semantic_scope:
+    - tinycimm
+    - interpretability
+    file_count: 0
+    schema_version: '2.0'
+  research\scbf\scbf_experiments\20250713_102144\tinycimm_recursive_sequence_10000_7fe3c68f:
+    semantic_scope:
+    - cimm
+    - tinycimm
+    file_count: 3
+    schema_version: '2.0'
+  research\scbf\scbf_experiments\20250713_102144\tinycimm_recursive_sequence_10000_7fe3c68f\plots:
+    semantic_scope:
+    - plots
+    - visualization
+    - graph
+    - data
+    - model
+    file_count: 8
+    schema_version: '2.0'
+  research\scbf\scbf_experiments\20250713_102425:
+    semantic_scope:
+    - scbf
+    - tinycimm
+    file_count: 0
+    schema_version: '2.0'
+  research\scbf\scbf_experiments\20250713_102425\tinycimm_mathematical_harmonic_10000_78fa6c71:
+    semantic_scope:
+    - symbolic_cognition
+    - recursive_collapse
+    - field_based_intelligence
+    - scbf_experiment_summary_report
+    file_count: 3
+    schema_version: '2.0'
+  research\scbf\scbf_experiments\20250713_102425\tinycimm_mathematical_harmonic_10000_78fa6c71\plots:
+    semantic_scope:
+    - ciimm
+    - tinycimm
+    file_count: 8
+    schema_version: '2.0'
+  research\scbf\scbf_experiments\20250713_102931:
+    semantic_scope: []
+    file_count: 0
+    schema_version: '2.0'
+  research\scbf\scbf_experiments\20250713_102931\tinycimm_prime_deltas_10000_f1940154:
+    semantic_scope:
+    - scbf
+    file_count: 3
+    schema_version: '2.0'
+  research\scbf\scbf_experiments\20250713_102931\tinycimm_prime_deltas_10000_f1940154\plots:
+    semantic_scope:
+    - code
+    - documentation
+    - visualization
+    - graphs
+    - plots
+    file_count: 10
+    schema_version: '2.0'
+  research\scbf\scbf_experiments\20250713_104841:
+    semantic_scope: []
+    file_count: 0
+    schema_version: '2.0'
+  research\scbf\scbf_experiments\20250713_104841\tinycimm_prime_deltas_100000_20886596:
+    semantic_scope:
+    - tinycimm
+    file_count: 3
+    schema_version: '2.0'
+  research\scbf\scbf_experiments\20250713_104841\tinycimm_prime_deltas_100000_20886596\plots:
+    semantic_scope:
+    - plots
+    - data-visualization
+    - plotting-functions
+    - code-based
+    - data-analysis
+    file_count: 10
+    schema_version: '2.0'
+  research\scbf\scbf_experiments\20250714_104111:
+    semantic_scope: []
+    file_count: 0
+    schema_version: '2.0'
+  research\scbf\scbf_experiments\20250714_104436:
+    semantic_scope: []
+    file_count: 0
+    schema_version: '2.0'
+  research\scbf\scbf_experiments\20250714_104436\tinycimm_prime_deltas_1000000_199db8b0:
+    semantic_scope:
+    - symbolic_collapse_bifractal_framework
+    - symbolic_cognition
+    - recursive_collapse
+    - neural_networks
+    - machine_learning
+    file_count: 1
+    schema_version: '2.0'
+  research\scbf\utils:
+    semantic_scope:
+    - symbolic
+    - collapse
+    - bifractal
+    - epistemic
+    - feedback
+    file_count: 2
+    schema_version: '2.0'
+  research\scbf\visualization:
+    semantic_scope:
+    - visualization
+    - scbf
+    file_count: 2
+    schema_version: '2.0'
+  research\tinycimm:
+    semantic_scope:
+    - ultraminimal
+    - agentic
+    - architecture
+    file_count: 2
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Euler:
+    semantic_scope:
+    - tinycimm
+    - cimm
+    file_count: 1
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Euler\experiments:
+    semantic_scope:
+    - tinycimm
+    - cimm
+    - field-theoretic
+    - neural-architecture
+    - entropy-feedback
+    file_count: 4
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Euler\experiments\experiment_results:
+    semantic_scope:
+    - ciimm
+    - tinyciimm
+    - symboliccollapsebifractalframework
+    - bifractaltemporalcollapse
+    - epistemicfeedback
+    file_count: 0
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\algebraic_sequence_algebraic_reasoning:
+    semantic_scope:
+    - cimm
+    file_count: 0
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\algebraic_sequence_algebraic_reasoning\run_20250710_110908:
+    semantic_scope:
+    - configuration
+    - experiment
+    - model
+    - numerical
+    - simulation
+    file_count: 0
+    schema_version: '2.0'
+  ? research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\algebraic_sequence_algebraic_reasoning\run_20250710_110908\images
+  : semantic_scope: []
+    file_count: 8
+    schema_version: '2.0'
+  ? research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\algebraic_sequence_algebraic_reasoning\run_20250710_110908\logs
+  : semantic_scope:
+    - logs
+    - experiment
+    - tinycimm
+    file_count: 1
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\algebraic_sequence_algebraic_reasoning\run_20250710_125643:
+    semantic_scope:
+    - tinycimm-euler
+    file_count: 0
+    schema_version: '2.0'
+  ? research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\algebraic_sequence_algebraic_reasoning\run_20250710_125643\images
+  : semantic_scope:
+    - images
+    - graphics
+    - photos
+    - visuals
+    file_count: 8
+    schema_version: '2.0'
+  ? research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\algebraic_sequence_algebraic_reasoning\run_20250710_125643\logs
+  : semantic_scope:
+    - tinycimm
+    - cimm
+    file_count: 1
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\fibonacci_ratios_convergence_test:
+    semantic_scope: []
+    file_count: 0
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\fibonacci_ratios_convergence_test\run_20250710_110730:
+    semantic_scope: []
+    file_count: 0
+    schema_version: '2.0'
+  ? research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\fibonacci_ratios_convergence_test\run_20250710_110730\images
+  : semantic_scope:
+    - project
+    - content
+    - image
+    - narrative
+    - story
+    file_count: 8
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\fibonacci_ratios_convergence_test\run_20250710_110730\logs:
+    semantic_scope:
+    - logs
+    - testing
+    - tincimm-euler
+    file_count: 1
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\fibonacci_ratios_convergence_test\run_20250710_125505:
+    semantic_scope:
+    - fibonacci
+    - convergence
+    - mathematics
+    file_count: 0
+    schema_version: '2.0'
+  ? research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\fibonacci_ratios_convergence_test\run_20250710_125505\images
+  : semantic_scope:
+    - images
+    - graphics
+    - visuals
+    - media
+    file_count: 8
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\fibonacci_ratios_convergence_test\run_20250710_125505\logs:
+    semantic_scope: []
+    file_count: 1
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\polynomial_sequence_polynomial_analysis:
+    semantic_scope:
+    - code-analysis
+    - neural-networks
+    - post-symbolic-ai
+    - polynomial-sequences
+    - polynomials
+    file_count: 0
+    schema_version: '2.0'
+  ? research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\polynomial_sequence_polynomial_analysis\run_20250710_110803
+  : semantic_scope:
+    - cimm
+    file_count: 0
+    schema_version: '2.0'
+  ? research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\polynomial_sequence_polynomial_analysis\run_20250710_110803\images
+  : semantic_scope: []
+    file_count: 8
+    schema_version: '2.0'
+  ? research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\polynomial_sequence_polynomial_analysis\run_20250710_110803\logs
+  : semantic_scope: []
+    file_count: 1
+    schema_version: '2.0'
+  ? research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\polynomial_sequence_polynomial_analysis\run_20250710_125538
+  : semantic_scope: []
+    file_count: 0
+    schema_version: '2.0'
+  ? research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\polynomial_sequence_polynomial_analysis\run_20250710_125538\images
+  : semantic_scope:
+    - project
+    - documentation
+    - images
+    file_count: 8
+    schema_version: '2.0'
+  ? research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\polynomial_sequence_polynomial_analysis\run_20250710_125538\logs
+  : semantic_scope:
+    - cimm
+    - tinycimm
+    - scbf
+    - euler
+    file_count: 1
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\prime_deltas_enhanced_prime_recognition:
+    semantic_scope:
+    - cimm
+    - tinycimm
+    - scbf
+    file_count: 0
+    schema_version: '2.0'
+  ? research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\prime_deltas_enhanced_prime_recognition\run_20250710_110620
+  : semantic_scope: []
+    file_count: 0
+    schema_version: '2.0'
+  ? research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\prime_deltas_enhanced_prime_recognition\run_20250710_110620\images
+  : semantic_scope: []
+    file_count: 8
+    schema_version: '2.0'
+  ? research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\prime_deltas_enhanced_prime_recognition\run_20250710_110620\logs
+  : semantic_scope:
+    - aiai
+    - euler
+    - logs
+    - tinycimm
+    file_count: 1
+    schema_version: '2.0'
+  ? research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\prime_deltas_enhanced_prime_recognition\run_20250710_125353
+  : semantic_scope:
+    - ciimm
+    - tinycimm
+    file_count: 0
+    schema_version: '2.0'
+  ? research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\prime_deltas_enhanced_prime_recognition\run_20250710_125353\images
+  : semantic_scope:
+    - visual-identity
+    - graphic-design
+    - user-interface
+    - marketing
+    file_count: 8
+    schema_version: '2.0'
+  ? research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\prime_deltas_enhanced_prime_recognition\run_20250710_125353\logs
+  : semantic_scope:
+    - experiment
+    - optimization
+    - performance
+    - model
+    - hyperparameters
+    file_count: 1
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\recursive_sequence_recursive_patterns:
+    semantic_scope:
+    - recursive_sequence
+    - recursive_pattern
+    - symbolic_cognition
+    - tinycimm-euler
+    - quantum_potential_layer
+    file_count: 0
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\recursive_sequence_recursive_patterns\run_20250710_110836:
+    semantic_scope: []
+    file_count: 0
+    schema_version: '2.0'
+  ? research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\recursive_sequence_recursive_patterns\run_20250710_110836\images
+  : semantic_scope:
+    - images
+    - documentation
+    - project-documentation
+    - visual-explanation
+    file_count: 8
+    schema_version: '2.0'
+  ? research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\recursive_sequence_recursive_patterns\run_20250710_110836\logs
+  : semantic_scope:
+    - data
+    - analysis
+    file_count: 1
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\recursive_sequence_recursive_patterns\run_20250710_125610:
+    semantic_scope:
+    - semantic-attractors
+    - cimm
+    - cognition-index-protocol
+    file_count: 0
+    schema_version: '2.0'
+  ? research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\recursive_sequence_recursive_patterns\run_20250710_125610\images
+  : semantic_scope:
+    - image
+    - data
+    - concepts
+    - graphics
+    file_count: 8
+    schema_version: '2.0'
+  ? research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\recursive_sequence_recursive_patterns\run_20250710_125610\logs
+  : semantic_scope:
+    - cimm
+    - tinycimm
+    - euler
+    - planck
+    - sequence
+    file_count: 1
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Euler\experiments\tests:
+    semantic_scope: []
+    file_count: 2
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Navier:
+    semantic_scope: []
+    file_count: 3
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Navier\experiments:
+    semantic_scope: []
+    file_count: 5
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Navier\experiments\results:
+    semantic_scope: []
+    file_count: 0
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Navier\experiments\results\live_cimm_experiment_20250816_171852:
+    semantic_scope:
+    - cosmic
+    - information
+    - mining
+    - model
+    - cimm
+    file_count: 2
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Navier\experiments\results\live_cimm_experiment_20250816_171852\images:
+    semantic_scope: []
+    file_count: 5
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Navier\experiments\results\live_cimm_experiment_20250818_091023:
+    semantic_scope:
+    - tinycimm-navier
+    file_count: 2
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Navier\experiments\results\live_cimm_experiment_20250818_091023\images:
+    semantic_scope: []
+    file_count: 97
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Planck:
+    semantic_scope:
+    - tinycimm-planck
+    - symbolic-collapse
+    - field-theoretic-stabilization
+    - adaptive-learning
+    - symbolic-memory
+    file_count: 4
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Planck\docs:
+    semantic_scope:
+    - docs
+    - ai
+    - entropy
+    - bifractal
+    - planck
+    file_count: 3
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Planck\experiments:
+    semantic_scope:
+    - experiments
+    - tinycimm-planck
+    file_count: 2
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Planck\experiment_images:
+    semantic_scope: []
+    file_count: 0
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Planck\experiment_images\amp_mod_sine:
+    semantic_scope:
+    - amp-modulation
+    - signal-processing
+    - sine-wave
+    - modulating-function
+    - amplitude-amplification
+    file_count: 41
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Planck\experiment_images\chaotic_sine:
+    semantic_scope: []
+    file_count: 41
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Planck\experiment_images\clean_sine:
+    semantic_scope:
+    - clean_sine
+    - data_preprocessing
+    - machine_learning
+    - sine_wave
+    file_count: 57
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Planck\experiment_images\freq_mod_sine:
+    semantic_scope:
+    - fmc
+    - algorithm
+    file_count: 41
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Planck\experiment_images\noisy_sine:
+    semantic_scope:
+    - noise
+    - sine
+    - signal
+    - processing
+    - evaluation
+    file_count: 41
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Planck\experiment_logs:
+    semantic_scope:
+    - research
+    - signal-processing
+    - machine-learning
+    - audio
+    - image
+    file_count: 18
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Planck\experiment_logs\amp_mod_sine:
+    semantic_scope:
+    - ciimm
+    - tinycimm
+    file_count: 2
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Planck\experiment_logs\chaotic_sine:
+    semantic_scope:
+    - chaotic_sine
+    - tinycimm-planck
+    - cosmic_information_mining
+    - symbolic_collapse
+    - bifractal_temporal_collapse
+    file_count: 2
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Planck\experiment_logs\clean_sine:
+    semantic_scope: []
+    file_count: 2
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Planck\experiment_logs\freq_mod_sine:
+    semantic_scope: []
+    file_count: 2
+    schema_version: '2.0'
+  research\tinycimm\TinyCIMM-Planck\experiment_logs\noisy_sine:
+    semantic_scope: []
+    file_count: 2
+    schema_version: '2.0'
+  stable:
+    semantic_scope:
+    - cimm
+    - tinycimm
+    - gaia
+    file_count: 1
+    schema_version: '2.0'
+  stable\cimm-legacy:
+    semantic_scope:
+    - cimm
+    file_count: 5
+    schema_version: '2.0'
+  stable\cimm-legacy\agents:
+    semantic_scope:
+    - supervisor
+    file_count: 5
+    schema_version: '2.0'
+  stable\cimm-legacy\cimm_core:
+    semantic_scope:
+    - ciimm
+    - cimm
+    - tinycimm
+    file_count: 5
+    schema_version: '2.0'
+  stable\cimm-legacy\cimm_core\entropy:
+    semantic_scope:
+    - entropy
+    - balance
+    - regulation
+    - flow
+    - information
+    file_count: 3
+    schema_version: '2.0'
+  stable\cimm-legacy\cimm_core\learning:
+    semantic_scope:
+    - cimm
+    file_count: 3
+    schema_version: '2.0'
+  stable\cimm-legacy\cimm_core\models:
+    semantic_scope:
+    - cimm
+    file_count: 5
+    schema_version: '2.0'
+  stable\cimm-legacy\cimm_core\optimization:
+    semantic_scope:
+    - optimization
+    file_count: 4
+    schema_version: '2.0'
+  stable\cimm-legacy\data:
+    semantic_scope:
+    - ciimm
+    file_count: 1
+    schema_version: '2.0'
+  stable\cimm-legacy\models:
+    semantic_scope:
+    - tinycimm
+    file_count: 1
+    schema_version: '2.0'
+  stable\cimm-legacy\results:
+    semantic_scope:
+    - cimm
+    file_count: 0
+    schema_version: '2.0'
+  stable\cimm-legacy\results\prime_number_structure:
+    semantic_scope:
+    - ciim
+    - cimm
+    - entropy
+    - field-theoretic
+    - form
+    file_count: 2
+    schema_version: '2.0'
+  stable\cimm-legacy\usecase:
+    semantic_scope:
+    - tinycimm
+    - gai
+    file_count: 5
+    schema_version: '2.0'
+  stable\cimm-legacy\utils:
+    semantic_scope:
+    - data_processing
+    - preprocessing
+    - signal_filtering
+    - butterworth_filter
+    file_count: 3
+    schema_version: '2.0'
+  stable\cimm-legacy\visualization:
+    semantic_scope: []
+    file_count: 2
+    schema_version: '2.0'
+document_categories:
+  theory:
+  - research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\fibonacci_ratios_convergence_test\run_20250710_125505
+  experiments:
+  - research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\fibonacci_ratios_convergence_test\run_20250710_110730\logs
+  - research\tinycimm\TinyCIMM-Planck\experiments
+  blueprints:
+  - research\tinycimm
+  tools: []
+  documentation:
+  - research\scbf\scbf_experiments\20250713_102931\tinycimm_prime_deltas_10000_f1940154\plots
+  - research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\polynomial_sequence_polynomial_analysis\run_20250710_125538\images
+  - research\tinycimm\TinyCIMM-Euler\experiments\experiment_results\recursive_sequence_recursive_patterns\run_20250710_110836\images
+navigation_hints:
+  foundational_theory: foundational/
+  experiments: experiments/ and blueprints/
+  tools_utilities: tools/ and devkit/
+  protocol_specs: cognition_index_protocol/
+  development: sdk/ and models/

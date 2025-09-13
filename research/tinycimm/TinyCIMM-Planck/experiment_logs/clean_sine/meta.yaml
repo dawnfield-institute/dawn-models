@@ -1,0 +1,35 @@
+schema_version: '2.0'
+directory_name: clean_sine
+description: 'This directory contains the experimental data and metadata for a project
+  related to Cosmic Information Mining Model (CIMM) and TinyCategorical Information
+  Memory Matrix (TinyCIMM). The directory is titled "clean_sine," which suggests that
+  it contains data collected during a sine wave-related experiment.
+
+
+  The total number of files in the directory is 3, with 2 code files and 1 documentation
+  file. However, only 5 samples from each type are shown here for brevity. The code
+  files appear to be CSV logs containing metrics related to the CIMM model''s performance
+  during training and testing. The documentation file contains metadata about the
+  experiment, including the schema version and description of the semantic scope (TinyCIMM-Planck,
+  experiment_logs, clean_sine).
+
+
+  The contents of the directory appear to be a result of an experiment focused on
+  understanding the relationship between symbolic entropy collapse and bifractal patterns
+  in neural network weight evolution. The data collected may have been used to analyze
+  deep mathematical structures that emerge during learning through entropy analysis
+  or to demonstrate how lightweight, entropy-informed architectures can achieve adaptive
+  learning, symbolic memory, and field-based intelligence using Dawn Field Theory
+  principles.
+
+
+  Overall, this directory serves as a record of an experimental investigation into
+  the use of CIMM models for symbolic cognition and recursive collapse, with a focus
+  on understanding the relationship between symbolic entropy collapse and bifractal
+  patterns in neural network weight evolution. The data collected within may have
+  contributed to the development of new insights or approaches related to these topics.'
+semantic_scope: []
+files:
+- TinyplanckPlanck_planck_clean_sine_log.csv
+- TinyplanckPlanck_planck_clean_sine_metrics.csv
+child_directories: []

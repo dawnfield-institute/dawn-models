@@ -1,0 +1,22 @@
+schema_version: '2.0'
+directory_name: tinycimm_prime_deltas_1000000_199db8b0
+description: 'This directory structure `tinycimm_prime_deltas_1000000_199db8b0` contains
+  the results of an experiment using the SCBF (Symbolic Collapse Bifractal Framework)
+  for symbolic cognition and recursive collapse. The directory contains two files:
+  `meta.yaml`, which stores metadata about the configuration of the SCBF, and `results_location.txt`,
+  which provides a link to download the results.
+
+
+  The purpose of this directory is to store and share the results of an experiment
+  using the SCBF for symbolic cognition and recursive collapse. The contents of this
+  directory are intended to be useful for researchers and developers working on related
+  projects who want to replicate or build upon the work done here.'
+semantic_scope:
+- symbolic_collapse_bifractal_framework
+- symbolic_cognition
+- recursive_collapse
+- neural_networks
+- machine_learning
+files:
+- results_location.txt
+child_directories: []

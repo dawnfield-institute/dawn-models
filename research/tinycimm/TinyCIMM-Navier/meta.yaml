@@ -1,0 +1,31 @@
+schema_version: '2.0'
+directory_name: TinyCIMM-Navier
+description: 'The TinyCIMM-Navier directory contains an experimental setup for the
+  TinyCIMM (Tiny Categorical Information Memory Matrix) model, which is an ultra-minimal
+  agentic model for symbolic cognition and recursive collapse. The directory includes
+  a set of 121 files, including code files, documentation, and results.
+
+
+  The primary purpose of this directory is to provide a computational platform for
+  exploring the phenomenon of macro-to-micro emergence in fluid dynamics through the
+  use of live pattern recognition and recursive collapse. The TinyCIMM model is designed
+  to achieve adaptive learning, symbolic memory, and field-based intelligence using
+  Dawn Field Theory principles.
+
+
+  The directory includes a README file that provides an overview of the project and
+  its significance in the context of post-symbolic artificial intelligence. It also
+  includes a SCBF Neural Dynamics Analysis Report that analyzes the neural dynamics
+  captured during the live CIMM breakthrough experiment.
+
+
+  Overall, this directory serves as a platform for researchers to investigate the
+  potential of macro-to-micro emergence in fluid dynamics and explore its implications
+  for symbolic cognition and artificial intelligence.'
+semantic_scope: []
+files:
+- README.md
+- SCBF_NEURAL_DYNAMICS_ANALYSIS.md
+- tinycimm_navier.py
+child_directories:
+- experiments

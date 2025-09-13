@@ -1,0 +1,35 @@
+schema_version: '2.0'
+directory_name: TinyCIMM-Euler
+description: 'This directory structure represents a code module for the TinyCIMM-Euler,
+  which is an implementation of the Quantum Bifractal Equilibrium (QBE) Controller,
+  a novel approach to solving complex problems in AI. The TinyCIMM-Euler is a variant
+  of the Cosmic Information Mining Model (CIM) that uses entropy feedback and wave
+  collapse equilibrium to achieve adaptive learning, symbolic memory, and field-based
+  intelligence. It also incorporates Dawn Field Theory principles for lightweight,
+  entropy-informed architectures.
+
+
+  The directory contains 136 files, with code files accounting for 25%, while documentation
+  files make up the remaining 75%. The first 10 code files are essential to the module''s
+  functionality, including ''tinycimm_euler.py'', ''experiments\run_experiment.py'',
+  and ''experiments\run_long_term_experiment.py''. These files provide implementations
+  of the QBE Controller''s key components, such as the TinyCIMM model and its various
+  experimental settings.
+
+
+  On the other hand, the first five documentation files in the directory provide a
+  detailed overview of the module''s concepts and functionalities. They explain how
+  the module achieves adaptive learning, symbolic memory, and field-based intelligence
+  using Dawn Field Theory principles, as well as the mathematical reasoning behind
+  the Quantum Bifractal Equilibrium (QBE) Controller.
+
+
+  Overall, this directory structure represents a powerful tool for solving complex
+  problems in AI through the use of novel approaches like the TinyCIMM-Euler.'
+semantic_scope:
+- tinycimm
+- cimm
+files:
+- tinycimm_euler.py
+child_directories:
+- experiments

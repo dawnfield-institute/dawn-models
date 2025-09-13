@@ -1,0 +1,123 @@
+schema_version: '2.0'
+directory_name: images
+description: 'The images directory in the project contains 98 files, with 10 code
+  files and 5 documentation files. The meta.yaml file specifies the schema version
+  as ''2.0'' and describes the directory name, description, and semantic scope.
+
+
+  The directory''s purpose is to store all visualizations and related files for the
+  project''s experiments. It contains various plots and images generated through code
+  analysis of the CIMM model, including live entropy feedback, wave collapse equilibrium,
+  and recursive field dynamics.
+
+
+  The project''s goal is to develop a new artificial intelligence framework based
+  on principles of entropy flow, collapse dynamics, and field-theoretic stabilization,
+  which replaces traditional gradient descent with SCBF metrics and recursive balance
+  fields. This research framework has the potential to improve interpretability and
+  scalability in deep learning.
+
+
+  The images directory serves as a container for all visualizations generated from
+  these experiments, including plots and images related to the CIMM model, neural
+  network weight evolution, activation patterns, and turbulence analysis.'
+semantic_scope: []
+files:
+- field_aware_flow_analysis.png
+- main_flow_predictions_live_cimm.png
+- neural_weights_extreme_turbulence_s0_c1_00_evolution.png
+- neural_weights_extreme_turbulence_s0_c1_50_evolution.png
+- neural_weights_extreme_turbulence_s0_c2_00_evolution.png
+- neural_weights_extreme_turbulence_s0_c2_50_evolution.png
+- neural_weights_extreme_turbulence_s0_c3_00_evolution.png
+- neural_weights_extreme_turbulence_s0_c3_50_evolution.png
+- neural_weights_extreme_turbulence_s0_c4_00_evolution.png
+- neural_weights_extreme_turbulence_s0_c4_50_evolution.png
+- neural_weights_extreme_turbulence_s0_c4_75_evolution.png
+- neural_weights_extreme_turbulence_s0_c5_00_evolution.png
+- neural_weights_extreme_turbulence_s0_c5_25_evolution.png
+- neural_weights_extreme_turbulence_s0_c5_50_evolution.png
+- neural_weights_extreme_turbulence_s0_c6_00_evolution.png
+- neural_weights_extreme_turbulence_s10_c4_50_evolution.png
+- neural_weights_extreme_turbulence_s10_c4_75_evolution.png
+- neural_weights_extreme_turbulence_s10_c5_00_evolution.png
+- neural_weights_extreme_turbulence_s10_c5_25_evolution.png
+- neural_weights_extreme_turbulence_s10_c5_50_evolution.png
+- neural_weights_extreme_turbulence_s10_c6_00_evolution.png
+- neural_weights_extreme_turbulence_s11_c4_50_evolution.png
+- neural_weights_extreme_turbulence_s11_c4_75_evolution.png
+- neural_weights_extreme_turbulence_s11_c5_00_evolution.png
+- neural_weights_extreme_turbulence_s11_c5_25_evolution.png
+- neural_weights_extreme_turbulence_s11_c5_50_evolution.png
+- neural_weights_extreme_turbulence_s11_c6_00_evolution.png
+- neural_weights_extreme_turbulence_s1_c1_00_evolution.png
+- neural_weights_extreme_turbulence_s1_c1_50_evolution.png
+- neural_weights_extreme_turbulence_s1_c2_00_evolution.png
+- neural_weights_extreme_turbulence_s1_c2_50_evolution.png
+- neural_weights_extreme_turbulence_s1_c3_00_evolution.png
+- neural_weights_extreme_turbulence_s1_c3_50_evolution.png
+- neural_weights_extreme_turbulence_s1_c4_00_evolution.png
+- neural_weights_extreme_turbulence_s1_c4_50_evolution.png
+- neural_weights_extreme_turbulence_s1_c4_75_evolution.png
+- neural_weights_extreme_turbulence_s1_c5_00_evolution.png
+- neural_weights_extreme_turbulence_s1_c5_25_evolution.png
+- neural_weights_extreme_turbulence_s1_c5_50_evolution.png
+- neural_weights_extreme_turbulence_s1_c6_00_evolution.png
+- neural_weights_extreme_turbulence_s2_c1_00_evolution.png
+- neural_weights_extreme_turbulence_s2_c1_50_evolution.png
+- neural_weights_extreme_turbulence_s2_c2_00_evolution.png
+- neural_weights_extreme_turbulence_s2_c2_50_evolution.png
+- neural_weights_extreme_turbulence_s2_c3_00_evolution.png
+- neural_weights_extreme_turbulence_s2_c3_50_evolution.png
+- neural_weights_extreme_turbulence_s2_c4_00_evolution.png
+- neural_weights_extreme_turbulence_s2_c4_50_evolution.png
+- neural_weights_extreme_turbulence_s2_c4_75_evolution.png
+- neural_weights_extreme_turbulence_s2_c5_00_evolution.png
+- neural_weights_extreme_turbulence_s2_c5_25_evolution.png
+- neural_weights_extreme_turbulence_s2_c5_50_evolution.png
+- neural_weights_extreme_turbulence_s2_c6_00_evolution.png
+- neural_weights_extreme_turbulence_s3_c4_50_evolution.png
+- neural_weights_extreme_turbulence_s3_c4_75_evolution.png
+- neural_weights_extreme_turbulence_s3_c5_00_evolution.png
+- neural_weights_extreme_turbulence_s3_c5_25_evolution.png
+- neural_weights_extreme_turbulence_s3_c5_50_evolution.png
+- neural_weights_extreme_turbulence_s3_c6_00_evolution.png
+- neural_weights_extreme_turbulence_s4_c4_50_evolution.png
+- neural_weights_extreme_turbulence_s4_c4_75_evolution.png
+- neural_weights_extreme_turbulence_s4_c5_00_evolution.png
+- neural_weights_extreme_turbulence_s4_c5_25_evolution.png
+- neural_weights_extreme_turbulence_s4_c5_50_evolution.png
+- neural_weights_extreme_turbulence_s4_c6_00_evolution.png
+- neural_weights_extreme_turbulence_s5_c4_50_evolution.png
+- neural_weights_extreme_turbulence_s5_c4_75_evolution.png
+- neural_weights_extreme_turbulence_s5_c5_00_evolution.png
+- neural_weights_extreme_turbulence_s5_c5_25_evolution.png
+- neural_weights_extreme_turbulence_s5_c5_50_evolution.png
+- neural_weights_extreme_turbulence_s5_c6_00_evolution.png
+- neural_weights_extreme_turbulence_s6_c4_50_evolution.png
+- neural_weights_extreme_turbulence_s6_c4_75_evolution.png
+- neural_weights_extreme_turbulence_s6_c5_00_evolution.png
+- neural_weights_extreme_turbulence_s6_c5_25_evolution.png
+- neural_weights_extreme_turbulence_s6_c5_50_evolution.png
+- neural_weights_extreme_turbulence_s6_c6_00_evolution.png
+- neural_weights_extreme_turbulence_s7_c4_50_evolution.png
+- neural_weights_extreme_turbulence_s7_c4_75_evolution.png
+- neural_weights_extreme_turbulence_s7_c5_00_evolution.png
+- neural_weights_extreme_turbulence_s7_c5_25_evolution.png
+- neural_weights_extreme_turbulence_s7_c5_50_evolution.png
+- neural_weights_extreme_turbulence_s7_c6_00_evolution.png
+- neural_weights_extreme_turbulence_s8_c4_50_evolution.png
+- neural_weights_extreme_turbulence_s8_c4_75_evolution.png
+- neural_weights_extreme_turbulence_s8_c5_00_evolution.png
+- neural_weights_extreme_turbulence_s8_c5_25_evolution.png
+- neural_weights_extreme_turbulence_s8_c5_50_evolution.png
+- neural_weights_extreme_turbulence_s8_c6_00_evolution.png
+- neural_weights_extreme_turbulence_s9_c4_50_evolution.png
+- neural_weights_extreme_turbulence_s9_c4_75_evolution.png
+- neural_weights_extreme_turbulence_s9_c5_00_evolution.png
+- neural_weights_extreme_turbulence_s9_c5_25_evolution.png
+- neural_weights_extreme_turbulence_s9_c5_50_evolution.png
+- neural_weights_extreme_turbulence_s9_c6_00_evolution.png
+- reynolds_performance_analysis.png
+- turbulent_breakthrough_interpretability.png
+child_directories: []

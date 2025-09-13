@@ -1,0 +1,28 @@
+schema_version: '2.0'
+directory_name: live_cimm_experiment_20250818_091023
+description: "This directory contains the results of a live experiment using TinyCIMM-Navier\
+  \ model for fluid dynamics, specifically \"live_cimm_experiment_20250818_091023\"\
+  . The meta.json file provides information about the experiment configuration and\
+  \ the specific commit of the code used in the experiment. The directory also contains\
+  \ 101 files, including 10 code files and 5 documentation files.\n        \n    \
+  \    The purpose of this directory is to store the results of a live experiment\
+  \ using TinyCIMM-Navier model for fluid dynamics. The data collected during the\
+  \ experiment may include information on the simulation parameters, the results of\
+  \ the simulation, and other relevant data for analysis.\n        \n        The main\
+  \ functionalities of this directory are:\n        \n        * Store the results\
+  \ of a live experiment using TinyCIMM-Navier model for fluid dynamics.\n       \
+  \ * Provide a way to access and analyze the data collected during the experiment.\n\
+  \        * Facilitate collaboration and reproducibility by providing clear documentation\
+  \ and version control of the code used in the experiment.\n        \n        The\
+  \ role of this directory within a larger project is to provide a central location\
+  \ for storing and managing experimental data, allowing researchers to easily access\
+  \ and analyze the data collected during experiments. It also serves as a repository\
+  \ for code and documentation related to the project, making it easier to collaborate\
+  \ and reproduce results."
+semantic_scope:
+- tinycimm-navier
+files:
+- comprehensive_live_cimm_results.json
+- meta.json
+child_directories:
+- images
