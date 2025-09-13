@@ -1,0 +1,18 @@
+schema_version: '2.0'
+directory_name: '20250713_102931'
+description: 'This directory structure contains the configuration for SCBF experiments
+  conducted on July 13, 2025 at 10:29:31 PM. The directory includes 16 files, with
+  code files being the first 10 and documentation files consisting of the first five.
+  The meta.yaml file provides information about the schema version used, the directory
+  name, and a brief description of its purpose, which is to provide a configuration
+  for SCBF experiments.
+
+  The semantic scope of this directory includes the "ai/..." category, which refers
+  to AI-related content.
+
+  Overall, this directory contains the necessary information and settings required
+  to conduct SCBF experiments on July 13, 2025 at 10:29:31 PM.'
+semantic_scope: []
+files: []
+child_directories:
+- tinycimm_prime_deltas_10000_f1940154

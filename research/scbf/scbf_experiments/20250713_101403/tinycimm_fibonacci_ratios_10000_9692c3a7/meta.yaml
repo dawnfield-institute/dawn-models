@@ -1,0 +1,31 @@
+schema_version: '2.0'
+directory_name: tinycimm_fibonacci_ratios_10000_9692c3a7
+description: 'This directory contains a SCBF (Symbolic Collapse Bifractal Framework)
+  experiment with the specified name "tinycimm_fibonacci_ratios_10000" and ID "9692c3a7".
+  The experiment consists of 10000 steps, and it has been running for approximately
+  78 seconds.
+
+
+  The directory contains a checkpoint file called "checkpoint.json", which stores
+  the current state of the experiment. It also includes a text file called "experiment_summary.txt"
+  that provides a summary report of the experiment. Additionally, it contains a meta.yaml
+  file that specifies the schema version and directory name for this experiment.
+
+
+  The purpose of this directory is to store all the data and metadata related to the
+  SCBF experiment, including the experimental setup, the results, and any additional
+  information about the experiment. The files in this directory are designed to be
+  easily accessible and organized, making it possible for others to review and analyze
+  the results of the experiment.'
+semantic_scope:
+- cimm
+- symbolic
+- collapse
+- bifractal
+- fibonacci
+files:
+- checkpoint.json
+- experiment_results.json
+- experiment_summary.txt
+child_directories:
+- plots

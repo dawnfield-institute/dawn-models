@@ -1,0 +1,18 @@
+schema_version: '2.0'
+directory_name: logs
+description: The `logs` directory in this project is used to store the output of a
+  run of the TinyCIMM-Euler experiment for recursive sequence and patterns. The contents
+  of this directory are likely the results of the experiment, such as the data generated
+  by the TinyCIMM-Euler model during its execution. The `meta.yaml` file in this directory
+  provides metadata about the experiment, including the schema version used and the
+  directory name. The semantic scope of this directory is limited to the configuration
+  files for the experiment, such as the `config` files mentioned in the `meta.yaml`.
+semantic_scope:
+- cimm
+- tinycimm
+- euler
+- planck
+- sequence
+files:
+- tinycimm_euler_recursive_sequence_recursive_patterns_log.csv
+child_directories: []

@@ -1,0 +1,27 @@
+schema_version: '2.0'
+directory_name: plots
+description: "This directory \"plots\" appears to be part of a larger research project\
+  \ involving the application of computational intelligence methods to the study of\
+  \ symbolic cognition. The plots stored in this folder are likely used to analyze\
+  \ the performance of a mathematical model that uses the TinyCIMM approach for symbolic\
+  \ memory and field-based intelligence, as well as the impact of live entropy feedback\
+  \ on neural network weight evolution. \nThe plots provide insight into deep mathematical\
+  \ structures that emerge during learning through entropy analysis, demonstrating\
+  \ how lightweight, entropy-informed architectures can achieve adaptive learning,\
+  \ symbolic memory, and field-based intelligence using Dawn Field Theory principles.\
+  \ The use of this approach is crucial for understanding the nature of post-symbolic\
+  \ artificial intelligence and its potential to revolutionize human cognition and\
+  \ communication."
+semantic_scope:
+- ciimm
+- tinycimm
+files:
+- bifractal_evolution.png
+- complete_dashboard.png
+- entropy_collapse.png
+- neural_growth.png
+- predictions_vs_actual.png
+- quantum_metrics_analysis.png
+- training_dynamics.png
+- weight_analysis.png
+child_directories: []

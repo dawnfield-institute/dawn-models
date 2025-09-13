@@ -1,0 +1,34 @@
+schema_version: '2.0'
+directory_name: amp_mod_sine
+description: 'This directory contains experimental data from the "amp_mod_sine" experiment
+  in the TinyCIMM-Planck framework. The directory includes three files: `meta.yaml`,
+  `TinyplanckPlanck_planck_amp_mod_sine_log.csv`, and `TinyplanckPlanck_planck_amp_mod_sine_metrics.csv`.
+
+
+  The `meta.yaml` file contains metadata about the experiment, including the schema
+  version and the directory name. The `TinyplanckPlanck_planck_amp_mod_sine_log.csv`
+  file contains a CSV table with columns for "step," "loss," "entropy," and "neurons."
+  This file contains the log data from the TinyCIMM-Planck model during the amp_mod_sine
+  experiment, which demonstrates how changing the amplitude of the sine wave affects
+  the model''s performance.
+
+
+  The `TinyplanckPlanck_planck_amp_mod_sine_metrics.csv` file contains CSV table with
+  columns for "activation_ancestry," "entropy_alignment," "phase_alignment," and "bifractal_consistency."
+  These metrics provide insight into the model''s performance during the experiment,
+  including its ability to capture symbolic structures and patterns in the data.
+
+
+  Overall, this directory is part of a larger project involving the TinyCIMM-Planck
+  framework and its applications in symbolic cognition and recursive collapse. The
+  contents of this directory serve as a record of the results of the "amp_mod_sine"
+  experiment, which demonstrates how changing the amplitude of the sine wave affects
+  the model''s performance and provides insight into the structure of the data being
+  modeled.'
+semantic_scope:
+- ciimm
+- tinycimm
+files:
+- TinyplanckPlanck_planck_amp_mod_sine_log.csv
+- TinyplanckPlanck_planck_amp_mod_sine_metrics.csv
+child_directories: []

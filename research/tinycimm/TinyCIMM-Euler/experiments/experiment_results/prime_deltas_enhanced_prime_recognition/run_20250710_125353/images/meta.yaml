@@ -1,0 +1,33 @@
+schema_version: '2.0'
+directory_name: images
+description: 'The "images" directory contains various images related to the project.
+  These images can be used for documentation, presentations, or marketing purposes.
+  They are meant to provide visual representations of the features and capabilities
+  of the software. The directory may include images that showcase the user interface,
+  explain various functionalities, or display the intended outcome of the program.
+
+
+  This directory serves as a crucial element in the project''s overall visual identity
+  and helps to establish its distinctiveness. It provides a visual representation
+  of the product and plays an essential role in communicating its key features and
+  benefits to the target audience.
+
+
+  Overall, the "images" directory is essential for showcasing the product''s features,
+  providing valuable information to potential customers or stakeholders, and enhancing
+  the project''s overall brand identity.'
+semantic_scope:
+- visual-identity
+- graphic-design
+- user-interface
+- marketing
+files:
+- enhanced_scbf_interpretability_prime_deltas.png
+- field_aware_loss_analysis_prime_deltas.png
+- main_predictions_prime_deltas.png
+- math_weights_step_3200.png
+- math_weights_step_6400.png
+- math_weights_step_9600.png
+- mathematical_analysis_prime_deltas.png
+- mathematical_performance_prime_deltas.png
+child_directories: []

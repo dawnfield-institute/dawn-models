@@ -1,0 +1,17 @@
+schema_version: '2.0'
+directory_name: logs
+description: This directory structure contains logs related to the TinyCIMM-Euler
+  algorithm, a foundational research framework for symbolic cognition and recursive
+  collapse. The directory contains the configuration files and metadata for the TinyCIMM-Euler
+  algorithm, which is a lightweight, scalable, and efficient version of the CIMM (Cosmic
+  Information Mining Model) that uses live entropy feedback, wave collapse equilibrium,
+  and recursive field dynamics to achieve adaptive learning, symbolic memory, and
+  field-based intelligence. The directory also includes documentation related to the
+  TinyCIMM-Euler algorithm, including a description of its purpose, functionality,
+  and role within a larger project.
+semantic_scope:
+- tinycimm
+- cimm
+files:
+- tinycimm_euler_algebraic_sequence_algebraic_reasoning_log.csv
+child_directories: []

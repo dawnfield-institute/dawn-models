@@ -1,0 +1,39 @@
+schema_version: '2.0'
+directory_name: tinycimm
+description: 'This directory structure contains the TinyCIMM (Tiny Categorical Information
+  Memory Matrix) model, which is an ultra-minimal agentic model for symbolic cognition
+  and recursive collapse. The directory also includes experiments, tests, and documentation
+  related to this model.
+
+
+  The purpose of this directory is to provide a repository for the TinyCIMM model
+  and its associated experiments, tests, and documentation. The model demonstrates
+  how lightweight, entropy-informed architectures can achieve adaptive learning, symbolic
+  memory, and field-based intelligence using Dawn Field Theory principles. The directory
+  structure is organized such that it is easy to find and access the relevant files
+  for each component of the TinyCIMM model.
+
+
+  The directory contains 533 files in total, with 10 code files related to the TinyCIMM
+  model, 5 documentation files, and 10 testing files. The code files include the implementation
+  of the TinyCIMM model, experiments for evaluating its performance, and tests for
+  ensuring the correctness of the model''s functionality. The documentation files
+  provide an overview of the TinyCIMM model, its architecture, and its capabilities,
+  while the testing files verify that the model functions as expected and is free
+  from errors.
+
+
+  Overall, this directory structure serves as a central location for managing and
+  sharing information related to the TinyCIMM model, making it easier for researchers
+  and developers to collaborate and contribute to its development and improvement.'
+semantic_scope:
+- ultraminimal
+- agentic
+- architecture
+files:
+- README.md
+- TinyCIMM_naming.md
+child_directories:
+- TinyCIMM-Euler
+- TinyCIMM-Navier
+- TinyCIMM-Planck

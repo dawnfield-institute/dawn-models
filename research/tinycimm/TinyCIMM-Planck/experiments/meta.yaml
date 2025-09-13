@@ -1,0 +1,21 @@
+schema_version: '2.0'
+directory_name: experiments
+description: "This directory structure \"experiments\" appears to contain experimental\
+  \ scripts for running and benchmarking TinyCIMM-Planck and classical machine learning\
+  \ models on various signals. The directory also includes documentation, including\
+  \ an experiment report that summarizes the experiments conducted with TinyCIMM-Planck.\
+  \ This report highlights the benefits of using minimal adaptive neural architectures\
+  \ inspired by the Cognition Index Memory Model (CIM) over more conventional machine\
+  \ learning models. \nIn summary, this directory appears to be a collection of code\
+  \ and data used for conducting experiments with TinyCIMM-Planck. It includes scripts\
+  \ for running and analyzing the model on various signals, as well as documentation\
+  \ and an experiment report that summarize the findings of these experiments. The\
+  \ purpose of this directory is likely to document and present the results of the\
+  \ experiments, making them available for others to learn from or build upon."
+semantic_scope:
+- experiments
+- tinycimm-planck
+files:
+- run_experiment.py
+- status.md
+child_directories: []

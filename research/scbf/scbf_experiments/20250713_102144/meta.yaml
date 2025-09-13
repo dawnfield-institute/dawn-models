@@ -1,0 +1,32 @@
+schema_version: '2.0'
+directory_name: '20250713_102144'
+description: 'This directory structure contains configuration files for various experiments
+  using the Symbolic Collapse Bifractal Framework (SCBF) and its variants, including
+  TinyCIMM. The directory includes 14 total files, with 10 code files and 5 documentation
+  files.
+
+
+  The code files are likely to be Python scripts that define the parameters and settings
+  for the experiments, while the documentation files provide a detailed summary of
+  each experiment''s results and findings. The meta.yaml file defines the directory
+  structure and its purpose, providing information about the schema version, directory
+  name, and description.
+
+
+  The SCBF is an interpretability framework that measures symbolic collapse and bifractal
+  patterns in neural network weight evolution, providing insight into deep mathematical
+  structures that emerge during learning through entropy analysis. TinyCIMM is a variant
+  of SCBF that specializes in number theory, sequence prediction, and mathematical
+  reasoning tasks, named after Leonhard Euler for his contributions to mathematics.
+
+
+  Overall, this directory structure contains the configuration settings and results
+  for various experiments using SCBF and its variants, demonstrating how lightweight,
+  entropy-informed architectures can achieve adaptive learning, symbolic memory, and
+  field-based intelligence using Dawn Field Theory principles.'
+semantic_scope:
+- tinycimm
+- interpretability
+files: []
+child_directories:
+- tinycimm_recursive_sequence_10000_7fe3c68f

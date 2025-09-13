@@ -1,0 +1,25 @@
+schema_version: '2.0'
+directory_name: learning
+description: 'The learning directory contains files related to the CIMM''s core learning
+  algorithms and supporting files. The quantum_memory.py file contains code for computing
+  Quantum Fisher Information, which is used in the CIMM model for live entropy feedback.
+  The reinforcement_learning.py file contains a class called QBEReinforcementLearner
+  that implements a reinforcement learning algorithm using XGBRegressor from xgboost
+  and PyTorch. Additionally, there are several other supporting files such as the
+  meta.yaml file that defines the directory''s schema version and description.
+
+
+  The purpose of this directory is to house the CIMM''s core learning algorithms and
+  support files necessary for its functioning. The quantum_memory.py file serves as
+  a central repository for functions related to Quantum Fisher Information, which
+  is used in the model to optimize live entropy feedback. The reinforcement_learning.py
+  file contains an implementation of a reinforcement learning algorithm that uses
+  XGBRegressor from xgboost and PyTorch, providing support for the CIMM''s ability
+  to learn from data.'
+semantic_scope:
+- cimm
+files:
+- quantum_memory.py
+- reinforcement_learning.py
+- superfluid_dynamics.py
+child_directories: []

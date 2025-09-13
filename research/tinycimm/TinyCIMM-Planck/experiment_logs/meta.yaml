@@ -1,0 +1,42 @@
+schema_version: '2.0'
+directory_name: experiment_logs
+description: The experiment_logs directory contains files and documentation related
+  to a research project on the application of machine learning algorithms for signal
+  processing. The directory contains 34 total files, including code files (the first
+  10) and documentation (the first five). The clean_sine_log.csv file is an example
+  of one such file. This directory provides a detailed log of experimental data pertaining
+  to the analysis of signals and their processing using machine learning techniques.
+  The research project's purpose, functionality, and role within a larger project
+  are centered around signal processing, which is critical in many applications, including
+  but not limited to audio and image processing.
+semantic_scope:
+- research
+- signal-processing
+- machine-learning
+- audio
+- image
+files:
+- clean_sine_log.csv
+- tinycimm_planck_amp_mod_sine_log.csv
+- tinycimm_planck_chaotic_sine_log.csv
+- tinycimm_planck_clean_sine_log.csv
+- tinycimm_planck_freq_mod_sine_log.csv
+- tinycimm_planck_noisy_sine_log.csv
+- TinyplanckPlanck_planck_amp_mod_sine_log.csv
+- TinyplanckPlanck_planck_amp_mod_sine_metrics.csv
+- TinyplanckPlanck_planck_chaotic_sine_log.csv
+- TinyplanckPlanck_planck_clean_sine_log.csv
+- TinyplanckPlanck_planck_clean_sine_metrics.csv
+- TinyplanckPlanck_planck_freq_mod_sine_log.csv
+- TinyplanckPlanck_planck_mlp_amp_mod_sine_log.csv
+- TinyplanckPlanck_planck_mlp_chaotic_sine_log.csv
+- TinyplanckPlanck_planck_mlp_clean_sine_log.csv
+- TinyplanckPlanck_planck_mlp_freq_mod_sine_log.csv
+- TinyplanckPlanck_planck_mlp_noisy_sine_log.csv
+- TinyplanckPlanck_planck_noisy_sine_log.csv
+child_directories:
+- amp_mod_sine
+- chaotic_sine
+- clean_sine
+- freq_mod_sine
+- noisy_sine

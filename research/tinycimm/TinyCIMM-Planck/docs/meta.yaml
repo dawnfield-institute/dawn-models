@@ -1,0 +1,20 @@
+schema_version: '2.0'
+directory_name: docs
+description: 'This directory contains documentation for the TinyCIMM-Planck project,
+  which explores new classes of adaptive neural architectures inspired by the planck
+  framework and regularization techniques. The directory includes three files: 1)
+  explainability_plan.md, which discusses the predictive power of structural patterns
+  in neural network weight evolution; 2) goals.md, which outlines the project''s research
+  objectives; and 3) meta.yaml, which provides metadata for the documentation including
+  its schema version and semantic scope.'
+semantic_scope:
+- docs
+- ai
+- entropy
+- bifractal
+- planck
+files:
+- explainability_plan.md
+- goals.md
+- TinyplanckPlanck_planck_fractal_explainability.md
+child_directories: []

@@ -1,0 +1,21 @@
+schema_version: '2.0'
+directory_name: fibonacci_ratios_convergence_test
+description: 'The `fibonacci_ratios_convergence_test` directory is an archive containing
+  data and documentation related to an experiment on the convergence of Fibonacci
+  sequence ratios. The directory contains 25 files in total, with 10 code files and
+  5 documentation files. The `meta.yaml` file at the root directory provides metadata
+  for the entire project, including its schema version and directory name.
+
+
+  The purpose of this directory is to contain all the experimental data and documentation
+  related to the convergence study of Fibonacci sequence ratios. The code files contain
+  the experiment''s code and algorithms, while the documentation files provide information
+  on the methodology, results, and interpretation of the study. By organizing the
+  files in a specific structure and naming them accordingly, this directory serves
+  as a comprehensive repository for all the relevant data and information related
+  to the experiment.'
+semantic_scope: []
+files: []
+child_directories:
+- run_20250710_110730
+- run_20250710_125505

@@ -1,0 +1,23 @@
+schema_version: '2.0'
+directory_name: '20250714_104111'
+description: 'This directory contains configuration files for SCBF experiments. The
+  directory name, ''20250714_104111'', suggests that the files within are related
+  to a specific experiment conducted on July 14th, 2025, at approximately 10:41 AM.
+
+
+  The `meta.yaml` file contains metadata about the directory and its contents, including
+  the schema version and description. The semantic scope field specifies that the
+  files in this directory are related to the SCBF framework.
+
+
+  The `files` field is empty, indicating that no specific files were listed within
+  the configuration. However, the `child_directories` field contains a list of sub-directories,
+  which may contain additional configuration files or data files for the SCBF experiment.
+
+
+  In summary, this directory structure likely contains configuration files and metadata
+  related to an SCBF experiment conducted on July 14th, 2025, at approximately 10:41
+  AM.'
+semantic_scope: []
+files: []
+child_directories: []

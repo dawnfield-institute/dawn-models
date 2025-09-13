@@ -1,0 +1,22 @@
+schema_version: '2.0'
+guide_type: document_curation
+description: Document-level curation guide for CIP navigation and citation
+generated_date: '2025-09-10'
+theories: []
+experiments:
+- name: CIP Protocol Experiments
+  description: Protocol-driven experiments and validation studies
+  documents:
+  - research\scbf\scbf_experiments\[cip][experiment][v1.0][2025-07-13]_scbf_interpretability_report.md
+  - research\tinycimm\TinyCIMM-Euler\experiments\[id][F][v2.0][C6][I6][E]_mathematical_reasoning_breakthrough.md
+  - research\tinycimm\TinyCIMM-Planck\[id][F][v1.0][C4][I5][E]_symbolic_collapse_interpretability.md
+  instruction: Reference for reproducible experimental methodology and validation
+    procedures.
+blueprints: []
+tools: []
+usage_instructions:
+  theory_citation: Use theory documents to ground explanations and provide mathematical
+    basis
+  experiment_reference: Reference experiments for validation and reproducibility examples
+  blueprint_integration: Use blueprints for architectural guidance and design patterns
+  tool_utilization: Reference tools for automation and implementation guidance

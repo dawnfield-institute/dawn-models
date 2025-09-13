@@ -1,0 +1,20 @@
+schema_version: '2.0'
+directory_name: logs
+description: This directory structure represents the implementation of various AI
+  models, including the TinyCIMM model, which is an ultra-minimal agentic model for
+  symbolic cognition and recursive collapse. The directory also includes a Global
+  Adaptive Intelligence Architecture (GAIA) that enables complex reasoning and emergence
+  in AI systems. Additionally, the directory contains logs, which provide configuration
+  space for enhanced prime recognition. These logs serve as a container for parameters
+  and dependencies that can be used to customize and optimize the models. The purpose
+  of this directory is to provide a framework for the development and deployment of
+  advanced AI models using principles of entropy flow, collapse dynamics, and field-theoretic
+  stabilization, as well as self-referential learning mechanisms like epistemic feedback.
+semantic_scope:
+- aiai
+- euler
+- logs
+- tinycimm
+files:
+- tinycimm_euler_prime_deltas_enhanced_prime_recognition_log.csv
+child_directories: []

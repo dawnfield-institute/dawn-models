@@ -1,0 +1,37 @@
+schema_version: '2.0'
+directory_name: loggers
+description: 'This directory contains structured logging utilities for SCBF experiments,
+  which provide automatic metric tracking, experiment registration, and results visualization.
+  The loggers directory is an essential component of the SCBF framework as it enables
+  efficient and systematic analysis of the framework''s performance during training.
+
+
+  The directory contains two main components: `experiment_logger.py` and `__init__.py`.
+  The former provides a logging class that can be used to track various metrics during
+  experimentation, such as the evolution of entropy, symbolic collapse, or activation
+  ancestry. The latter is an initialization file that imports the logging module and
+  defines additional functions for tracking experiments and registering them in a
+  centralized registry.
+
+
+  The loggers directory serves several purposes within the SCBF framework:
+
+
+  1. Automatic metric tracking: By using the logging class provided in `experiment_logger.py`,
+  researchers can automatically track various metrics during experimentation, which
+  helps to ensure that the framework''s performance is consistent across different
+  runs and experiments.
+
+  2. Experiment registration: The `__init__.py` file provides a centralized registry
+  for registering experiments, which enables researchers to easily retrieve and compare
+  experimental results.
+
+  3. Results visualization: By analyzing experiment logs, researchers can generate
+  visualizations of the framework''s performance during training, such as entropy
+  evolution or activation ancestry plots. This allows them to gain insights into how
+  the framework is evolving and identify potential issues or areas for improvement.'
+semantic_scope: []
+files:
+- __init__.py
+- experiment_logger.py
+child_directories: []

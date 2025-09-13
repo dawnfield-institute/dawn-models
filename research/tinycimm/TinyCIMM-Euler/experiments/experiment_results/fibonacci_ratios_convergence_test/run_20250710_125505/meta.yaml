@@ -1,0 +1,25 @@
+schema_version: '2.0'
+directory_name: run_20250710_125505
+description: "This directory is named \"run_20250710_125505\" and contains the results\
+  \ of a test that was conducted on the Fibonacci ratios convergence property. The\
+  \ directory includes 12 files, with 10 code files and 5 documentation files. The\
+  \ meta.yaml file contains information about the schema version and directory name,\
+  \ and provides additional details about the purpose and contents of the directory.\n\
+  \        \n        The directory is likely used to store the results of a test that\
+  \ was conducted on the Fibonacci ratios convergence property, which is a fundamental\
+  \ concept in mathematics that describes how certain sequences converge to a limiting\
+  \ value as the number of terms increases. The directory may contain code files and\
+  \ documentation files related to this test, such as data files, reports, or analysis\
+  \ results.\n        \n        The purpose of this directory is to store and organize\
+  \ the results of this test in a structured manner, making it easier for others to\
+  \ access and analyze the results. By using a standardized naming convention and\
+  \ schema version number, the directory can be easily integrated with other tools\
+  \ and frameworks that support reproducible research and data analysis."
+semantic_scope:
+- fibonacci
+- convergence
+- mathematics
+files: []
+child_directories:
+- images
+- logs

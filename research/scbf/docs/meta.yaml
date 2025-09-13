@@ -1,0 +1,22 @@
+schema_version: '2.0'
+directory_name: docs
+description: "This directory, named \"docs,\" contains documentation files that serve\
+  \ as essential resources for managing and configuring the Ollama AI integration\
+  \ for enhanced metadata generation and semantic analysis. These documents provide\
+  \ detailed explanations of various technical aspects of the integration's functionality\
+  \ and operation. The directory includes a comprehensive roadmap for implementation,\
+  \ a design document outlining the architecture of the emergence architecture, and\
+  \ documentation on the SCBF integration as well as the activation ancestry stability\
+  \ metric. \n\nThe integration is an essential component of the Ollama AI system\
+  \ that enables enhanced metadata generation and semantic analysis. It uses various\
+  \ techniques, including CIMM, SCBF, epistemic feedback, and activation ancestry\
+  \ stability to provide insights into deep mathematical structures that emerge during\
+  \ learning. The documentation provides a detailed overview of the integration's\
+  \ architecture, implementation roadmap, and design, making it an essential resource\
+  \ for anyone working with or contributing to the Ollama AI system."
+semantic_scope:
+- cimm
+- scbf
+files: []
+child_directories:
+- med

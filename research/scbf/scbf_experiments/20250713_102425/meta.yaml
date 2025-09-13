@@ -1,0 +1,19 @@
+schema_version: '2.0'
+directory_name: '20250713_102425'
+description: This directory contains the configuration files for SCBF (Symbolic Collapse
+  Bifractal Framework) experiments. The directory provides a set of files that define
+  the experimental setup, including the meta-data schema version, the directory name,
+  and the description of the purpose of the directory. The semantic scope includes
+  computational fluid dynamics and various other fields related to computational systems.
+  The directory also contains documentation for the TinyCIMM (Tiny Categorical Information
+  Memory Matrix) variant, which is a lightweight agentic model for symbolic cognition
+  and recursive collapse. This model demonstrates how entropy-informed architectures
+  can achieve adaptive learning, symbolic memory, and field-based intelligence using
+  Dawn Field Theory principles. The directory also contains samples of SCBF experiments,
+  including the experiment summary.
+semantic_scope:
+- scbf
+- tinycimm
+files: []
+child_directories:
+- tinycimm_mathematical_harmonic_10000_78fa6c71
