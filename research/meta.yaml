@@ -2,25 +2,29 @@ schema_version: '2.0'
 directory_name: research
 description: >
   Experimental research implementations of Dawn Field Theory models including
-  SCBF (Symbolic Collapse Bifractal Framework) for interpretability analysis
-  and TinyCIMM variants demonstrating minimal post-symbolic AI architectures.
-  All research models licensed under AGPL-3.0 to promote open scientific
-  collaboration while protecting commercial applications.
+  GAIA (next-generation field intelligence), SCBF (Symbolic Collapse Bifractal 
+  Framework) for interpretability analysis, and TinyCIMM variants demonstrating 
+  minimal post-symbolic AI architectures. All research models licensed under 
+  AGPL-3.0 to promote open scientific collaboration while protecting commercial 
+  applications.
 semantic_scope:
 - research
 - experimental
+- gaia
 - scbf
 - tinycimm
 - post-symbolic-ai
 - interpretability
+- field-intelligence
 files:
 - LICENSE
 child_directories:
+- GAIA
 - scbf
 - tinycimm
 generation_context:
   generator: ai_enhanced
   file_count: 2
-  directory_count: 2
+  directory_count: 3
   primary_file_types:
     .yaml: 1
