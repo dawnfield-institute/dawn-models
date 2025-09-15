@@ -36,6 +36,7 @@ cd stable/
 ```
 dawn-models/
 ├── research/                 # AGPL-3.0 - Experimental variants
+│   ├── gaia/                # Generative AI Intelligence Architecture
 │   ├── scbf/                # Symbolic Collapse Bifractal Framework
 │   ├── tinycimm/            # TinyCIMM architecture experiments
 │   │   ├── TinyCIMM-Euler/  # Number theory and mathematical reasoning
@@ -83,6 +84,12 @@ dawn-models/
 - Neural network weight evolution analysis
 - Entropy-based pattern detection and bifractal analysis
 - Integration with TinyCIMM for experimental validation
+
+#### **GAIA (Generative AI Intelligence Architecture)**
+- Early generative intelligence framework for autonomous agent systems
+- Foundation for multi-agent architectures and intelligent automation
+- Distributed cognition and emergent intelligence patterns
+- Experimental codebase from early Dawn Field Institute research
 
 #### **TinyCIMM Variants**
 - **TinyCIMM-Euler** - Number theory and mathematical sequence prediction
