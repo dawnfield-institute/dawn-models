@@ -1,17 +1,19 @@
 schema_version: '2.0'
 directory_name: run_20250710_125643
-description: This directory contains the configuration files for the TinyCIMM-Euler
-  experiment, which is a variant of the Tiny Categorical Information Memory Matrix
-  (TinyCIMM) that specializes in number theory, sequence prediction, and mathematical
-  reasoning tasks. The directory includes 12 files, with 10 code files and 5 documentation
-  files. The meta.yaml file contains metadata about the experiment, including the
-  schema version and the directory name. The description field provides an overview
-  of the purpose and scope of the configuration files, while the semantic_scope field
-  highlights the key aspects of the experiment that are relevant to its understanding
-  and interpretation.
+description: The run_20250710_125643 directory organizes 125643 components into logical
+  subdirectories. It serves as a container for related functionality, with each subdirectory
+  focusing on specific aspects of 125643.
 semantic_scope:
-- tinycimm-euler
+- '125643'
+- run
+- '20250710'
 files: []
 child_directories:
 - images
 - logs
+generation_context:
+  generator: ai_enhanced
+  file_count: 1
+  directory_count: 2
+  primary_file_types:
+    .yaml: 1

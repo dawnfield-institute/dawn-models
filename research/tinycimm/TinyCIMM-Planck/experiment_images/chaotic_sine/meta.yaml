@@ -1,23 +1,10 @@
 schema_version: '2.0'
 directory_name: chaotic_sine
-description: 'The "chaotic_sine" directory contains code samples for a chaotic sine
-  wave generation program, with a total of 42 files. Including the first 10 code files
-  and the first five documentation files, it also includes a detailed description
-  of the program''s functionality and its purpose within a larger project.
-
-
-  The code files are written in Python and contain implementations for generating
-  chaotic sine waves using various mathematical algorithms, such as the Lorenz attractor
-  and the FitzHugh-Nagumo model. The documentation files provide an in-depth analysis
-  of each algorithm''s characteristics, numerical stability, and performance.
-
-
-  The program''s purpose is to demonstrate how different mathematical models can be
-  used to generate chaotic sine waves with varying levels of complexity and unpredictability.
-  By using a combination of these algorithms and implementing them in Python, developers
-  may gain insights into the inner workings of complex systems and develop new ideas
-  for modeling and analyzing their behavior.'
-semantic_scope: []
+description: The chaotic_sine directory is reserved for chaotic functionality. It
+  provides a dedicated space for organizing related files and components.
+semantic_scope:
+- chaotic
+- sine
 files:
 - entropy_evolution_chaotic_sine.png
 - feedback_accuracy_chaotic_sine.png
@@ -61,3 +48,10 @@ files:
 - weight_hist_80.png
 - weight_hist_90.png
 child_directories: []
+generation_context:
+  generator: ai_enhanced
+  file_count: 42
+  directory_count: 0
+  primary_file_types:
+    .png: 41
+    .yaml: 1

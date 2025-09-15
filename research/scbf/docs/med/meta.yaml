@@ -1,23 +1,19 @@
 schema_version: '2.0'
 directory_name: med
-description: 'This directory contains the source code for the Macro Emergence Dynamics
-  (MED) framework, which is an extension of the Cosmic Information Mining Model (CIMM).
-  The MED framework incorporates the concepts of entropy flow, collapse dynamics,
-  and field-theoretic stabilization to provide a more efficient and effective method
-  for post-symbolic artificial intelligence.
-
-  The directory also includes the documentation for the implementation, which includes
-  design plans, roadmaps, and architectural details.
-
-  In summary, this directory serves as a foundation for developing MED-based systems
-  that can achieve symbolic cognition, recursive collapse, and field-based intelligence
-  using Dawn Field Theory principles. Its content provides valuable insights into
-  the research behind the framework and its practical applications in AI.'
+description: The med directory contains documentation and reference materials for
+  med. It includes explanatory documents that help users understand and work with
+  this component.
 semantic_scope:
 - med
-- cimm
 files:
 - implementation_roadmap.md
 - med_scbf_integration_design.md
 - qsocket_emergence_architecture.md
 child_directories: []
+generation_context:
+  generator: ai_enhanced
+  file_count: 4
+  directory_count: 0
+  primary_file_types:
+    .md: 3
+    .yaml: 1

@@ -1,34 +1,11 @@
 schema_version: '2.0'
 directory_name: experiments
-description: 'This directory contains a set of experimental files and documentation
-  for a breakthrough in mathematical reasoning through field-theoretic neural architecture
-  using the TinyCIMM model. The experiment utilizes live entropy feedback, wave collapse
-  equilibrium, and recursive field dynamics to achieve adaptive learning, symbolic
-  memory, and field-based intelligence. The directory includes a total of 134 files,
-  with 10 code files and 5 documentation files.
-
-
-  The code files provide the necessary scripts for running the experiment, including
-  `run_experiment.py`, `run_long_term_experiment.py`, and `run_online_experiment.py`.
-  The tests folder contains two test files: `test_all_experiments.py` and `test_improved_primes.py`.
-
-
-  The documentation includes a detailed description of the experiment, its purpose,
-  and the mathematical background behind it. The file `[id][F][v2.0][C6][I6][E]_mathematical_reasoning_breakthrough.md`
-  provides an overview of the experiment''s contribution to mathematical reasoning
-  through field-theoretic neural architecture.
-
-
-  Overall, this directory represents a significant breakthrough in the field of artificial
-  intelligence and mathematics, demonstrating how field-theoretic neural architectures
-  can achieve adaptive learning, symbolic memory, and field-based intelligence using
-  entropy feedback and recursive balance fields.'
+description: The experiments directory contains experimental code and research materials
+  for experiments. It houses exploratory work, prototypes, and research findings that
+  may inform future development.
 semantic_scope:
-- tinycimm
-- cimm
-- field-theoretic
-- neural-architecture
-- entropy-feedback
+- experiments
+- research
 files:
 - '[id][F][v2.0][C6][I6][E]_mathematical_reasoning_breakthrough.md'
 - run_experiment.py
@@ -37,3 +14,11 @@ files:
 child_directories:
 - experiment_results
 - tests
+generation_context:
+  generator: ai_enhanced
+  file_count: 5
+  directory_count: 2
+  primary_file_types:
+    .md: 1
+    .yaml: 1
+    .py: 3

@@ -1,20 +1,12 @@
 schema_version: '2.0'
 directory_name: experiment_logs
-description: The experiment_logs directory contains files and documentation related
-  to a research project on the application of machine learning algorithms for signal
-  processing. The directory contains 34 total files, including code files (the first
-  10) and documentation (the first five). The clean_sine_log.csv file is an example
-  of one such file. This directory provides a detailed log of experimental data pertaining
-  to the analysis of signals and their processing using machine learning techniques.
-  The research project's purpose, functionality, and role within a larger project
-  are centered around signal processing, which is critical in many applications, including
-  but not limited to audio and image processing.
+description: The experiment_logs directory organizes monitoring components into logical
+  subdirectories. It serves as a container for related functionality, with each subdirectory
+  focusing on specific aspects of monitoring.
 semantic_scope:
-- research
-- signal-processing
-- machine-learning
-- audio
-- image
+- monitoring
+- logging
+- experiment
 files:
 - clean_sine_log.csv
 - tinycimm_planck_amp_mod_sine_log.csv
@@ -40,3 +32,10 @@ child_directories:
 - clean_sine
 - freq_mod_sine
 - noisy_sine
+generation_context:
+  generator: ai_enhanced
+  file_count: 19
+  directory_count: 5
+  primary_file_types:
+    .csv: 18
+    .yaml: 1

@@ -1,29 +1,19 @@
 schema_version: '2.0'
 directory_name: freq_mod_sine
-description: 'This directory structure appears to contain data and metadata related
-  to an experiment involving the TinyCIMM model, specifically the frequency-modulated
-  sine (freq_mod_sine) variant. The directory name suggests that the experiment involves
-  the use of a Cosmic Information Mining Model (CIMM), which is a foundational research
-  framework for post-symbolic artificial intelligence based on principles of entropy
-  flow, collapse dynamics, and field-theoretic stabilization.
-
-
-  The contents of this directory appear to include CSV files containing logs and metrics
-  generated during the experiment. The file "meta.yaml" contains metadata about the
-  experiment, including its schema version and the directory name. The "TinyplanckPlanck_planck_freq_mod_sine_log.csv"
-  file appears to contain data on the step, loss, entropy, and neurons used during
-  training, while the "TinyplanckPlanck_planck_freq_mod_sine_metrics.csv" file contains
-  various metrics related to the experiment, including activation ancestry, entropy
-  alignment, phase alignment, bifractal consistency, and attractor density.
-
-
-  The purpose of this directory structure is likely to store and organize data generated
-  during an experiment involving the TinyCIMM model, specifically the freq_mod_sine
-  variant. The data stored in these files may be used for analysis, visualization,
-  or further processing to gain insights into the behavior of the TinyCIMM model and
-  its capabilities.'
-semantic_scope: []
+description: The freq_mod_sine directory is reserved for freq functionality. It provides
+  a dedicated space for organizing related files and components.
+semantic_scope:
+- freq
+- mod
+- sine
 files:
 - TinyplanckPlanck_planck_freq_mod_sine_log.csv
 - TinyplanckPlanck_planck_freq_mod_sine_metrics.csv
 child_directories: []
+generation_context:
+  generator: ai_enhanced
+  file_count: 3
+  directory_count: 0
+  primary_file_types:
+    .yaml: 1
+    .csv: 2

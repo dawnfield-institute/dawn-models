@@ -1,42 +1,11 @@
 schema_version: '2.0'
 directory_name: cimm-legacy
-description: 'This directory contains the core implementation and modules for the
-  CIMM (Collapse-Informed Meta-Model) framework in Dawn Field Theory. The files within
-  this directory are designed to provide a comprehensive understanding of the structure,
-  functionality, and role of the CIMM within larger projects.
-
-
-  The primary focus is on the purpose of the CIMM as a foundational research framework
-  for post-symbolic artificial intelligence, built on principles of entropy flow,
-  collapse dynamics, and field-theoretic stabilization. The use of live entropy feedback,
-  wave collapse equilibrium, and recursive field dynamics differentiates it from traditional
-  gradient descent.
-
-
-  The directory also contains modules and agents that demonstrate how lightweight,
-  entropy-informed architectures can achieve adaptive learning, symbolic memory, and
-  field-based intelligence using Dawn Field Theory principles. These include the TinyCIMM
-  (Tiny Categorical Information Memory Matrix), which is an ultra-minimal agentic
-  model for symbolic cognition and recursive collapse; the SCBF (Symbolic Collapse
-  Bifractal Framework), which measures symbolic collapse and bifractal patterns in
-  neural network weight evolution; and the GAIA (Global Adaptive Intelligence Architecture),
-  a flagship model architecture representing the evolution of Dawn Field Theory principles
-  into large-scale adaptive intelligence systems, designed for complex reasoning and
-  emergence.
-
-
-  Additionally, there are various documentation files, including a README file that
-  provides an overview of the CIMM framework, a requirements file that outlines the
-  necessary dependencies, and several results files containing data and analysis from
-  experiments conducted using the CIMM framework.
-
-
-  Overall, this directory is essential for understanding the core implementation and
-  modules of the CIMM framework in Dawn Field Theory, as well as its role within larger
-  projects that utilize these principles to create more advanced and sophisticated
-  artificial intelligence systems.'
+description: The cimm-legacy directory is a Python package containing cimm modules
+  and functionality. It provides a structured collection of related code organized
+  for easy import and use.
 semantic_scope:
 - cimm
+- legacy
 files:
 - __init__.py
 - prime_number_results.md
@@ -52,3 +21,12 @@ child_directories:
 - usecase
 - utils
 - visualization
+generation_context:
+  generator: ai_enhanced
+  file_count: 6
+  directory_count: 8
+  primary_file_types:
+    .py: 2
+    .yaml: 1
+    .md: 2
+    .txt: 1

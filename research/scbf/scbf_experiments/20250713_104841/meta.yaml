@@ -1,27 +1,17 @@
 schema_version: '2.0'
 directory_name: '20250713_104841'
-description: 'This directory structure is related to the TinyCIMM (Tiny Categorical
-  Information Memory Matrix) algorithm, which is an ultra-minimal agentic model for
-  symbolic cognition and recursive collapse. It demonstrates how lightweight, entropy-informed
-  architectures can achieve adaptive learning, symbolic memory, and field-based intelligence
-  using Dawn Field Theory principles. The directory contains configuration files for
-  the SCBF experiments, which is an interpretability framework that measures symbolic
-  collapse and bifractal patterns in neural network weight evolution. This framework
-  provides insight into deep mathematical structures that emerge during learning through
-  entropy analysis.
-
-
-  The directory also includes sample content related to the TinyCIMM-Euler and TinyCIMM-Planck
-  variants, which are specialized for number theory, sequence prediction, and mathematical
-  reasoning tasks. These variants operate at different computational scales and are
-  named after famous mathematicians Leonhard Euler and Max Planck, respectively.
-
-
-  Overall, this directory structure is focused on providing configuration files for
-  the SCBF experiments, as well as sample content related to the TinyCIMM-Euler and
-  TinyCIMM-Planck variants, which demonstrate the versatility and applicability of
-  the TinyCIMM algorithm across different domains.'
-semantic_scope: []
+description: The 20250713_104841 directory organizes 20250713 components into logical
+  subdirectories. It serves as a container for related functionality, with each subdirectory
+  focusing on specific aspects of 20250713.
+semantic_scope:
+- '20250713'
+- '104841'
 files: []
 child_directories:
 - tinycimm_prime_deltas_100000_20886596
+generation_context:
+  generator: ai_enhanced
+  file_count: 1
+  directory_count: 1
+  primary_file_types:
+    .yaml: 1

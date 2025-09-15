@@ -1,37 +1,20 @@
 schema_version: '2.0'
 directory_name: prime_deltas_enhanced_prime_recognition
-description: 'This directory contains code and documentation related to enhancing
-  the recognition of primes in mathematics, particularly using the concepts and techniques
-  of post-symbolic artificial intelligence. The directory is structured into subdirectories
-  for various aspects of prime number recognition, including symbolic cognition, field-based
-  intelligence, and entropy flow analysis.
-
-
-  The code files in this directory are likely to be written in a programming language
-  such as Python or C++ and are designed to perform specific tasks related to prime
-  number recognition, such as analyzing prime numbers or generating new prime numbers.
-  Some of the code files may also include functions for implementing the CIMM (Cosmic
-  Information Mining Model), TinyCIMM (Tiny Categorical Information Memory Matrix),
-  SCBF (Symbolic Collapse Bifractal Framework), and Epistemic Feedback (self-referential
-  learning mechanism) described in the documentation.
-
-
-  The documentation included in this directory is likely to provide an overview of
-  the concepts and techniques used in prime number recognition, as well as a detailed
-  explanation of the code files and their functions. This documentation may also include
-  examples or case studies demonstrating the use of these techniques in practical
-  applications.
-
-
-  Overall, this directory is designed to serve as a resource for researchers and developers
-  working on post-symbolic artificial intelligence and related fields, providing a
-  collection of tools and techniques that can be used to enhance the recognition of
-  primes and other mathematical structures.'
+description: The prime_deltas_enhanced_prime_recognition directory implements the
+  Cognition Index Protocol (CIP) validation framework. It contains validation questions,
+  answers, and assessment tools that test AI comprehension of the repository contents.
 semantic_scope:
-- cimm
-- tinycimm
-- scbf
+- deltas
+- recognition
+- prime
+- enhanced
 files: []
 child_directories:
 - run_20250710_110620
 - run_20250710_125353
+generation_context:
+  generator: ai_enhanced
+  file_count: 1
+  directory_count: 2
+  primary_file_types:
+    .yaml: 1

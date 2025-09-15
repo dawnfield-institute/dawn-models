@@ -1,14 +1,9 @@
 schema_version: '2.0'
 directory_name: images
-description: The images directory contains nine image files. It is not a code file,
-  but rather documentation. These image files explain the project, provide context,
-  and give insight into the project's goals. They are part of the documentation category
-  and help to provide a visual understanding of the project's objectives and methodology.
+description: The images directory is reserved for images functionality. It provides
+  a dedicated space for organizing related files and components.
 semantic_scope:
 - images
-- documentation
-- project-documentation
-- visual-explanation
 files:
 - enhanced_scbf_interpretability_recursive_sequence.png
 - field_aware_loss_analysis_recursive_sequence.png
@@ -19,3 +14,10 @@ files:
 - mathematical_analysis_recursive_sequence.png
 - mathematical_performance_recursive_sequence.png
 child_directories: []
+generation_context:
+  generator: ai_enhanced
+  file_count: 9
+  directory_count: 0
+  primary_file_types:
+    .png: 8
+    .yaml: 1

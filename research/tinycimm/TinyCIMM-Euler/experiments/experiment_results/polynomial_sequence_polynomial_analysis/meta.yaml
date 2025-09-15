@@ -1,32 +1,19 @@
 schema_version: '2.0'
 directory_name: polynomial_sequence_polynomial_analysis
-description: "This directory contains code and documentation for analyzing and generating\
-  \ polynomial sequences and polynomials, with a focus on the symbolic collapse bifractal\
-  \ framework and the tiny cimmin model. The folder is designed to facilitate research\
-  \ into various mathematical structures that emerge during learning through entropy\
-  \ analysis, such as those found in neural networks. It includes tools for measuring\
-  \ symbolic collapse and bifractal patterns in weight evolution, providing insight\
-  \ into deep mathematical structures that can be used to improve machine learning\
-  \ algorithms. \n\nAdditionally, the directory contains a TinyCIMM variant specialized\
-  \ for number theory, sequence prediction, and mathematical reasoning tasks, named\
-  \ after Leonhard Euler, who made significant contributions to mathematics. The tiny\
-  \ cimmn model is an ultra-minimal agentic model that utilizes live entropy feedback,\
-  \ wave collapse equilibrium, and recursive field dynamics to achieve adaptive learning,\
-  \ symbolic memory, and field-based intelligence using Dawn Field Theory principles.\
-  \ The SCBF framework provides a way to measure symbolic collapse and bifractal patterns\
-  \ in neural network weight evolution, which can provide insight into deep mathematical\
-  \ structures that emerge during learning through entropy analysis. \n\nOverall,\
-  \ this directory is an important tool for researchers working in the field of post-symbolic\
-  \ artificial intelligence, as it provides a comprehensive framework for analyzing\
-  \ and generating polynomial sequences and polynomials, with a focus on understanding\
-  \ the symbolic collapse bifractal framework and the tiny cimmin model."
+description: The polynomial_sequence_polynomial_analysis directory organizes analysis
+  components into logical subdirectories. It serves as a container for related functionality,
+  with each subdirectory focusing on specific aspects of analysis.
 semantic_scope:
-- code-analysis
-- neural-networks
-- post-symbolic-ai
-- polynomial-sequences
-- polynomials
+- analysis
+- polynomial
+- sequence
 files: []
 child_directories:
 - run_20250710_110803
 - run_20250710_125538
+generation_context:
+  generator: ai_enhanced
+  file_count: 1
+  directory_count: 2
+  primary_file_types:
+    .yaml: 1

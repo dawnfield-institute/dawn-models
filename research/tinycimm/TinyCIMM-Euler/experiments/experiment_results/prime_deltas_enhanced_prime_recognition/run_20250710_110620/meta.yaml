@@ -1,16 +1,19 @@
 schema_version: '2.0'
 directory_name: run_20250710_110620
-description: This directory appears to be a collection of configuration files used
-  in running experiments with the TinyCIMM-Euler model, which is an ultra-minimal
-  agentic model for symbolic cognition and recursive collapse. The contents include
-  12 files, including one meta.yaml file that defines the schema version and directory
-  name, as well as documentation files that provide a detailed explanation of the
-  experiment settings and configurations used in the TinyCIMM-Euler model. Overall,
-  this directory is likely to be used for developing and testing machine learning
-  models based on the TinyCIMM-Euler framework, with a focus on number theory, sequence
-  prediction, and mathematical reasoning tasks.
-semantic_scope: []
+description: The run_20250710_110620 directory organizes 110620 components into logical
+  subdirectories. It serves as a container for related functionality, with each subdirectory
+  focusing on specific aspects of 110620.
+semantic_scope:
+- '110620'
+- run
+- '20250710'
 files: []
 child_directories:
 - images
 - logs
+generation_context:
+  generator: ai_enhanced
+  file_count: 1
+  directory_count: 2
+  primary_file_types:
+    .yaml: 1

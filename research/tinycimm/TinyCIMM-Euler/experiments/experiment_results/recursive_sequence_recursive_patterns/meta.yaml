@@ -1,38 +1,19 @@
 schema_version: '2.0'
 directory_name: recursive_sequence_recursive_patterns
-description: 'The `recursive_sequence_recursive_patterns` directory is part of the
-  larger project on TinyCIMM-Euler, which involves developing ultra-minimal agentic
-  models for symbolic cognition and recursive collapse. This specific directory contains
-  code for implementing recursive sequence and pattern detection in these models.
-
-
-  The files contained within this directory are likely to be part of a larger system
-  that includes the main implementation code for TinyCIMM-Euler, which is responsible
-  for symbolic cognition and recursive collapse. The `meta.yaml` file at the root
-  of the directory specifies that the schema version used is 2.0, which indicates
-  that this project follows certain standards and best practices for managing software
-  development projects.
-
-
-  The purpose of this directory appears to be focused on implementing and testing
-  algorithms for detecting recursive sequences and patterns in TinyCIMM-Euler models.
-  This could involve developing and training neural networks or other machine learning
-  models to recognize patterns in the data, as well as evaluating their performance
-  using various metrics and techniques.
-
-
-  Overall, this directory and its contents serve an important role within the larger
-  project of developing and testing ultra-minimal agentic models for symbolic cognition
-  and recursive collapse, leveraging principles from Cosmic Information Mining Model
-  (CIMM), Tiny Categorical Information Memory Matrix (TinyCIMM), Symbolic Collapse
-  Bifractal Framework (SCBF), Quantum Potential Layer (QPL), and Epistemic Feedback.'
+description: The recursive_sequence_recursive_patterns directory organizes recursive
+  components into logical subdirectories. It serves as a container for related functionality,
+  with each subdirectory focusing on specific aspects of recursive.
 semantic_scope:
-- recursive_sequence
-- recursive_pattern
-- symbolic_cognition
-- tinycimm-euler
-- quantum_potential_layer
+- recursive
+- patterns
+- sequence
 files: []
 child_directories:
 - run_20250710_110836
 - run_20250710_125610
+generation_context:
+  generator: ai_enhanced
+  file_count: 1
+  directory_count: 2
+  primary_file_types:
+    .yaml: 1

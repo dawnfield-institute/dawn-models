@@ -1,6 +1,6 @@
 # 🌌 CIMM Core — Entropy-Based Intelligence Engine
 
-*CIMM is currently being migrated, use cases currently will fail until migration is complete.*
+**Status: Stable** - Production-ready implementation available under Apache-2.0 license.
 
 CIMM (Cosmic Information Mining Model) is a foundational research framework for **post-symbolic artificial intelligence**, built on principles of **entropy flow**, **collapse dynamics**, and **field-theoretic stabilization**.
 

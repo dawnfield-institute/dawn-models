@@ -1,17 +1,9 @@
 schema_version: '2.0'
 directory_name: images
-description: "The \"images\" directory houses configuration files for the TinyCIMM-Navier\
-  \ experiment, which is used to investigate the relationship between symbolic cognition,\
-  \ recursive collapse, and bifractal patterns in neural network weight evolution.\
-  \ The directory includes six files in total, with three code files and three documentation\
-  \ files.\n\nThe \"meta.yaml\" file specifies the schema version of 2.0 and defines\
-  \ the directory's semantic scope as simulation, experimentation, and machine learning.\n\
-  \nThe \"directory_name\" describes the name of the directory and its purpose as\
-  \ configuration files for the TinyCIMM-Navier experiment. The \"description\" field\
-  \ provides more information about the content of the directory and its function.\
-  \ \n\nOverall, the \"images\" directory serves as a central location for storing\
-  \ and organizing all the files needed to run the TinyCIMM-Navier experiment."
-semantic_scope: []
+description: The images directory is reserved for images functionality. It provides
+  a dedicated space for organizing related files and components.
+semantic_scope:
+- images
 files:
 - field_aware_flow_analysis.png
 - main_flow_predictions_live_cimm.png
@@ -19,3 +11,10 @@ files:
 - reynolds_performance_analysis.png
 - turbulent_breakthrough_interpretability.png
 child_directories: []
+generation_context:
+  generator: ai_enhanced
+  file_count: 6
+  directory_count: 0
+  primary_file_types:
+    .png: 5
+    .yaml: 1

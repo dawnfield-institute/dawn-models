@@ -1,27 +1,9 @@
 schema_version: '2.0'
 directory_name: plots
-description: 'This directory contains all the plots and visualizations produced by
-  the AI model used in the research project. The directory name "plots" is self-explanatory,
-  as it conveys the purpose of the directory, which is to contain and organize all
-  the plots created by the AI model.
-
-
-  The meta.yaml file contains information about the schema version used for this project.
-  It also specifies the semantic scope of the directory, which includes "ai/ml," "configuration,"
-  and "machine learning" related themes. The description field provides a brief summary
-  of the directory''s content and purpose, which is relevant to the research project.
-
-
-  In conclusion, the "plots" directory serves as a storage location for all the plots
-  and visualizations produced by the AI model in this research project. Its primary
-  function is to provide an organized and convenient way to store and manage these
-  visually appealing graphics that are essential to the understanding and presentation
-  of the results obtained through the AI model.'
+description: The plots directory is reserved for plots functionality. It provides
+  a dedicated space for organizing related files and components.
 semantic_scope:
 - plots
-- visualization
-- ai
-- ml
 files:
 - bifractal_evolution.png
 - complete_dashboard.png
@@ -32,3 +14,10 @@ files:
 - training_dynamics.png
 - weight_analysis.png
 child_directories: []
+generation_context:
+  generator: ai_enhanced
+  file_count: 9
+  directory_count: 0
+  primary_file_types:
+    .png: 8
+    .yaml: 1

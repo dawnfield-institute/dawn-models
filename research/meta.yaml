@@ -1,24 +1,26 @@
 schema_version: '2.0'
 directory_name: research
-description: 'The directory "research" appears to contain files and subdirectories
-  related to research in artificial intelligence (AI) and machine learning. The README
-  file provides an overview of the project''s goals and objectives, while the "docs"
-  subdirectory contains documentation on the implementation roadmap, integration design
-  for MED, and QSocket emergence architecture. The "scbf" subdirectory is where most
-  of the research files are located.
-
-  The "scbf_runner.py" file appears to be an entry point for running SCBF experiments,
-  while the "test_scbf.py" script tests the SCBF framework''s capabilities. The "tinycimm_scbf_experiment.py"
-  script creates a TinyCIMM model and runs it through SCBF. Finally, the "loggers"
-  subdirectory contains scripts for logging experiment data, while the "metrics" subdirectory
-  contains files for calculating metrics related to the SCBF framework, such as activation
-  ancestry, bifractal lineage, entropy collapse, and phase alignment.
-
-  Overall, this directory appears to be a repository for research on the SCBF framework
-  and its applications in AI and machine learning.'
-semantic_scope: []
+description: >
+  Experimental research implementations of Dawn Field Theory models including
+  SCBF (Symbolic Collapse Bifractal Framework) for interpretability analysis
+  and TinyCIMM variants demonstrating minimal post-symbolic AI architectures.
+  All research models licensed under AGPL-3.0 to promote open scientific
+  collaboration while protecting commercial applications.
+semantic_scope:
+- research
+- experimental
+- scbf
+- tinycimm
+- post-symbolic-ai
+- interpretability
 files:
 - LICENSE
 child_directories:
 - scbf
 - tinycimm
+generation_context:
+  generator: ai_enhanced
+  file_count: 2
+  directory_count: 2
+  primary_file_types:
+    .yaml: 1

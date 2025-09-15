@@ -1,25 +1,11 @@
 schema_version: '2.0'
 directory_name: amp_mod_sine
-description: "The \"amp_mod_sine\" directory contains code and documentation files\
-  \ related to the implementation of an amplitude modulation (AMP) signal with a sine\
-  \ wave as the modulating function. This directory serves as a comprehensive repository\
-  \ for all aspects of AMP modulation, including mathematical equations, code implementations,\
-  \ and detailed explanations of the underlying principles.\n        The directory\
-  \ contains 42 files in total, comprising 10 code files that implement the AMP algorithm\
-  \ and its associated functions, 5 documentation files that provide a detailed description\
-  \ of the AMP concept, mathematical derivations, and usage guidelines, and other\
-  \ supporting files such as images and graphs.\n        The purpose of this directory\
-  \ is to serve as a reference guide for researchers and developers interested in\
-  \ exploring the various aspects of AMP modulation and its applications. By providing\
-  \ a well-organized collection of resources, it helps these individuals to develop\
-  \ their knowledge and expertise in the field and contribute to the advancement of\
-  \ AMP technology."
+description: The amp_mod_sine directory is reserved for mod functionality. It provides
+  a dedicated space for organizing related files and components.
 semantic_scope:
-- amp-modulation
-- signal-processing
-- sine-wave
-- modulating-function
-- amplitude-amplification
+- mod
+- amp
+- sine
 files:
 - entropy_evolution_amp_mod_sine.png
 - feedback_accuracy_amp_mod_sine.png
@@ -63,3 +49,10 @@ files:
 - weight_hist_80.png
 - weight_hist_90.png
 child_directories: []
+generation_context:
+  generator: ai_enhanced
+  file_count: 42
+  directory_count: 0
+  primary_file_types:
+    .png: 41
+    .yaml: 1

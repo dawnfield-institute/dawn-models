@@ -17,11 +17,11 @@ experiment:
 # SCBF Interpretability Evaluation Report
 
 ## Executive Summary
-This report presents a professional, balanced analysis of our initial experiments integrating the SCBF (Structural Cognitive Bifractal Framework) with the TinyCIMM-Euler live adaptation model. These preliminary findings evaluate the system's interpretability capabilities across various mathematical signals, establishing a foundation for future development. While the results are promising, they represent only the first step in a broader research agenda for explainable AI in mathematical reasoning domains.
+This report presents a professional, balanced analysis of our initial experiments integrating the SCBF (Symbolic Collapse Bifractal Framework) with the TinyCIMM-Euler live adaptation model. These preliminary findings evaluate the system's interpretability capabilities across various mathematical signals, establishing a foundation for future development. While the results are promising, they represent only the first step in a broader research agenda for explainable AI in mathematical reasoning domains.
 
 ## 1. Initial Experimental Setup
 - **Model**: TinyCIMM-Euler (live adaptation, dynamic network growth)
-- **Framework**: SCBF (preliminary cognitive and structural analysis)
+- **Framework**: SCBF (Symbolic Collapse Bifractal Framework - interpretability analysis)
 - **Signals Tested**: fibonacci_ratios, polynomial_sequence, mathematical_harmonic, recursive_sequence, prime_deltas
 - **Steps**: 1000–100000 per experiment (extended analysis at 100K for prime deltas)
 - **SCBF Analysis**: Every 50 steps (2% coverage) to capture learning dynamics while maintaining computational efficiency

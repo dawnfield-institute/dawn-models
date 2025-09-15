@@ -1,20 +1,19 @@
 schema_version: '2.0'
 directory_name: run_20250710_125353
-description: 'This directory, "run_20250710_125353," is a configuration directory
-  within the TinyCIMM-Euler experiment repository. It contains all the files and settings
-  necessary to execute the experiment on a specific date and time. The directory name
-  reflects the date of the experiment, followed by the time in seconds since midnight.
-
-  The meta.yaml file contains schema version information and the experiment''s description.
-  The directory_name field specifies the directory that will contain the run-specific
-  settings and files for the experiment.
-
-  This directory also contains documentation files for the TinyCIMM-Euler experiment,
-  including descriptions of the experiment''s goals, methodologies, and results.'
+description: The run_20250710_125353 directory organizes 125353 components into logical
+  subdirectories. It serves as a container for related functionality, with each subdirectory
+  focusing on specific aspects of 125353.
 semantic_scope:
-- ciimm
-- tinycimm
+- '125353'
+- run
+- '20250710'
 files: []
 child_directories:
 - images
 - logs
+generation_context:
+  generator: ai_enhanced
+  file_count: 1
+  directory_count: 2
+  primary_file_types:
+    .yaml: 1

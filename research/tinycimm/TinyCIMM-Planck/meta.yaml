@@ -1,38 +1,21 @@
 schema_version: '2.0'
 directory_name: TinyCIMM-Planck
-description: 'This directory structure represents the TinyCIMM-Planck project, which
-  focuses on developing an ultra-minimal agentic model for symbolic cognition and
-  recursive collapse. The project is centered around the concept of Symbolic Entropy
-  Collapse, where entropy gradients drive the formation of symbolic structures.
-
-
-  The directory contains a total of 273 files, with 10 code files related to the TinyCIMM-Planck
-  model and its experiments. The documentation includes several markdown files, including
-  a report on the project''s goals, an explanation of fractal interpretability, and
-  a plan for the documentation.
-
-
-  The meta.yaml file contains metadata for the directory, including the schema version,
-  which indicates the level of organization and structure used in the project. The
-  description field provides additional information about the purpose and scope of
-  the project, with a semantic scope that includes TinyCIMM-Planck, model, and other
-  relevant terms.
-
-
-  Overall, this directory structure represents an ongoing research project focused
-  on developing and refining the TinyCIMM-Planck model for symbolic cognition and
-  recursive collapse, using principles of entropy flow, wave collapse equilibrium,
-  and field-theoretic stabilization. The project aims to provide insight into deep
-  mathematical structures that emerge during learning through entropy analysis, demonstrating
-  how lightweight, entropy-informed architectures can achieve adaptive learning, symbolic
-  memory, and field-based intelligence using Dawn Field Theory principles.'
+description: >
+  TinyCIMM-Planck focuses on quantum-inspired pattern analysis and activation-centered
+  metrics for understanding neural dynamics at the finest granular level. Named after
+  Max Planck for its emphasis on fundamental quantum-like discretization of neural
+  activations and energy states, with bifractal collapse analysis and semantic 
+  recursion capabilities.
 semantic_scope:
-- tinycimm-planck
-- symbolic-collapse
-- field-theoretic-stabilization
-- adaptive-learning
-- symbolic-memory
+- planck
+- tinycimm
+- quantum-inspired
+- activation-dynamics
+- bifractal-analysis
+- semantic-recursion
+- interpretability
 files:
+- README.md
 - '[id][F][v1.0][C4][I5][E]_symbolic_collapse_interpretability.md'
 - output.txt
 - report.md
@@ -42,3 +25,12 @@ child_directories:
 - experiment_images
 - experiment_logs
 - experiments
+generation_context:
+  generator: ai_enhanced
+  file_count: 6
+  directory_count: 4
+  primary_file_types:
+    .md: 3
+    .yaml: 1
+    .txt: 1
+    .py: 1

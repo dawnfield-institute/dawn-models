@@ -1,44 +1,9 @@
 schema_version: '2.0'
 directory_name: plots
-description: 'This directory, "plots," is dedicated to storing graphs and other visually
-  pleasing depictions used to exhibit the performance of AI models. It is a crucial
-  component of any software project, providing a visual representation of the data
-  that can aid in problem-solving and decision-making. The files within this directory
-  include 9 items: 10 code files, and 5 documentation files. The meta.yaml file has
-  a schema version of "2.0," indicating that it is a contemporary format for organizing
-  project information.
-
-
-  The directory_name attribute specifies the name of this directory as "plots." This
-  description explains its purpose, which is to store graphs and other visual depictions
-  used to show the performance of AI models. The semantic_scope attribute has the
-  scope of plo...
-
-
-  This directory structure contains 9 files, with 10 code files and 5 documentation
-  files. The meta.yaml file has a schema version of "2.0," indicating that it is a
-  contemporary format for organizing project information.
-
-  The directory_name attribute specifies the name of this directory as "plots." This
-  description explains its purpose, which is to store graphs and other visual depictions
-  used to exhibit the performance of AI models. The semantic_scope attribute has the
-  scope of plo...
-
-
-  This directory structure contains 9 files, with 10 code files and 5 documentation
-  files. The meta.yaml file has a schema version of "2.0," indicating that it is a
-  contemporary format for organizing project information.
-
-  The directory_name attribute specifies the name of this directory as "plots." This
-  description explains its purpose, which is to store graphs and other visual depictions
-  used to exhibit the performance of AI models. The semantic_scope attribute has the
-  scope of plo...'
+description: The plots directory is reserved for plots functionality. It provides
+  a dedicated space for organizing related files and components.
 semantic_scope:
 - plots
-- visualization
-- graph
-- data
-- model
 files:
 - bifractal_evolution.png
 - complete_dashboard.png
@@ -49,3 +14,10 @@ files:
 - training_dynamics.png
 - weight_analysis.png
 child_directories: []
+generation_context:
+  generator: ai_enhanced
+  file_count: 9
+  directory_count: 0
+  primary_file_types:
+    .png: 8
+    .yaml: 1

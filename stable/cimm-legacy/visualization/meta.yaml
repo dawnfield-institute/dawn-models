@@ -1,20 +1,18 @@
 schema_version: '2.0'
 directory_name: visualization
-description: "This directory contains visualization tools and supporting files for\
-  \ the CIMM (Cosmic Information Mining Model) model, which is a foundational research\
-  \ framework for post-symbolic artificial intelligence. The directory includes a\
-  \ Python script called \"plots.py\" that imports various libraries such as Matplotlib,\
-  \ NumPy, Torch, and Sympy, and defines a function called \"remove_extreme_outliers\"\
-  \ to remove extreme outliers from data. The file also contains an empty initialization\
-  \ file called \"\\_\\_init\\_\\_.py\".\n\n        The purpose of this directory\
-  \ is to provide visualization tools for the CIMM model, which can be used to analyze\
-  \ and understand the behavior of the model. By removing extreme outliers from the\
-  \ data, the visualization tools can help users gain insights into the stability\
-  \ and convergence of the model's output in semantic space. The directory structure\
-  \ emphasizes the importance of the visualization tools in the overall project, highlighting\
-  \ their role as a crucial component for understanding the CIMM model."
-semantic_scope: []
+description: The visualization directory is a Python package containing visualization
+  modules and functionality. It provides a structured collection of related code organized
+  for easy import and use.
+semantic_scope:
+- visualization
 files:
 - __init__.py
 - plots.py
 child_directories: []
+generation_context:
+  generator: ai_enhanced
+  file_count: 3
+  directory_count: 0
+  primary_file_types:
+    .py: 2
+    .yaml: 1

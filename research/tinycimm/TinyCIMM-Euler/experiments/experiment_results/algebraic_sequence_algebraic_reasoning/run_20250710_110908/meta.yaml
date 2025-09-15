@@ -1,26 +1,19 @@
 schema_version: '2.0'
 directory_name: run_20250710_110908
-description: "This directory structure contains the configuration files necessary\
-  \ for executing a TinyCIMM-Euler experiment. The directory is named after the date\
-  \ and time of execution, highlighting the specific details surrounding this particular\
-  \ experiment. This directory contains 12 files, which include code files, documentation,\
-  \ and other metadata related to the experiment's execution.\nThe main file found\
-  \ in the directory is meta.yaml, which specifies the schema version used to create\
-  \ the files and specifies important experiment-related information such as the name\
-  \ of the experiment and a brief description. The directory also contains additional\
-  \ code files that provide the specific implementation for the TinyCIMM-Euler model.\
-  \ \nThe documentation component of this directory is also crucial, providing a record\
-  \ of the results obtained from the experiment and any insights or conclusions drawn\
-  \ based on them. Overall, this directory provides an important tool for researchers\
-  \ to analyze and evaluate the performance of the TinyCIMM-Euler model in various\
-  \ situations and provide valuable insights into its functionality and capabilities."
+description: The run_20250710_110908 directory organizes run components into logical
+  subdirectories. It serves as a container for related functionality, with each subdirectory
+  focusing on specific aspects of run.
 semantic_scope:
-- configuration
-- experiment
-- model
-- numerical
-- simulation
+- run
+- '110908'
+- '20250710'
 files: []
 child_directories:
 - images
 - logs
+generation_context:
+  generator: ai_enhanced
+  file_count: 1
+  directory_count: 2
+  primary_file_types:
+    .yaml: 1

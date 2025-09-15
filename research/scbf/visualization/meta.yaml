@@ -1,18 +1,18 @@
 schema_version: '2.0'
 directory_name: visualization
-description: 'The visualization module provides real-time and post-experiment visualization
-  of all SCBF metrics. It includes plotting and visualization tools for the SCBF framework''s
-  core collapse mechanism, symbolic entropy collapse, bifractal temporal collapse,
-  and activation ancestry stability. The directory includes two Python files: __init__.py
-  and scbf_plots.py. The __init__.py file contains documentation and a description
-  of the module''s purpose, while the scbf_plots.py file provides plotting and visualization
-  utilities for SCBF analysis results. The visualization module is essential for comprehending
-  and analyzing the complexity and structure emerging during learning using the SCBF
-  framework.'
+description: The visualization directory is a Python package containing visualization
+  modules and functionality. It provides a structured collection of related code organized
+  for easy import and use.
 semantic_scope:
 - visualization
-- scbf
 files:
 - __init__.py
 - scbf_plots.py
 child_directories: []
+generation_context:
+  generator: ai_enhanced
+  file_count: 3
+  directory_count: 0
+  primary_file_types:
+    .py: 2
+    .yaml: 1

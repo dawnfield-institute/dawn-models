@@ -1,14 +1,9 @@
 schema_version: '2.0'
 directory_name: plots
-description: This directory contains a collection of plots generated from the SCBF
-  experiments conducted on the tinycimm-fibonacci-ratios dataset. The plots provide
-  visual representations of the symbolic collapse and bifractal patterns in the neural
-  network weight evolution during learning. The directory serves as a record of these
-  findings, allowing for further analysis and interpretation of the data.
+description: The plots directory is reserved for plots functionality. It provides
+  a dedicated space for organizing related files and components.
 semantic_scope:
-- plot
-- tinycimm
-- fibonacci
+- plots
 files:
 - bifractal_evolution.png
 - complete_dashboard.png
@@ -19,3 +14,10 @@ files:
 - training_dynamics.png
 - weight_analysis.png
 child_directories: []
+generation_context:
+  generator: ai_enhanced
+  file_count: 9
+  directory_count: 0
+  primary_file_types:
+    .png: 8
+    .yaml: 1

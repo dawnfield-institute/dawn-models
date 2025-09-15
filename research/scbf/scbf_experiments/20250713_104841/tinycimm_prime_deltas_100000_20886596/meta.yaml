@@ -1,27 +1,25 @@
 schema_version: '2.0'
 directory_name: tinycimm_prime_deltas_100000_20886596
-description: 'This directory, `tinycimm_prime_deltas_100000_20886596`, contains the
-  results and data generated during an experiment using the TinyCIMM (Tiny Categorical
-  Information Memory Matrix) model. The directory includes 15 files, with code files
-  being empty and documentation including a summary of the SCBF (Symbolic Collapse
-  Bifractal Framework) experiment.
-
-
-  The `experiment_summary.txt` file provides an overview of the experiment, including
-  the name, ID, duration, start time, and other relevant details. The `checkpoint.json`
-  file contains metadata about the experiment, including the total number of steps
-  and a summary of the SCBF metrics collected during the experiment.
-
-
-  The directory also includes a `meta.yaml` file that provides information about the
-  schema version, directory name, and description of the experiment. Overall, this
-  directory appears to be used to store data and results related to a SCBF experiment
-  using the TinyCIMM model.'
+description: The tinycimm_prime_deltas_100000_20886596 directory organizes 20886596
+  components into logical subdirectories. It serves as a container for related functionality,
+  with each subdirectory focusing on specific aspects of 20886596.
 semantic_scope:
+- '20886596'
 - tinycimm
+- deltas
+- prime
+- '100000'
 files:
 - checkpoint.json
 - experiment_results.json
 - experiment_summary.txt
 child_directories:
 - plots
+generation_context:
+  generator: ai_enhanced
+  file_count: 4
+  directory_count: 1
+  primary_file_types:
+    .json: 2
+    .txt: 1
+    .yaml: 1

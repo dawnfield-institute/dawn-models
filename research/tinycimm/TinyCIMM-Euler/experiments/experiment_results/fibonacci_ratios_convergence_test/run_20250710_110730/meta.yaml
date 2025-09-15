@@ -1,15 +1,19 @@
 schema_version: '2.0'
 directory_name: run_20250710_110730
-description: This directory contains the output of a Fibonacci ratio convergence test,
-  with a schema version of 2.0 and a semantic scope of "test", "experiment", and "convergence".
-  The directory name includes a timestamp and a description of the test results. The
-  contents of the directory include 12 files, including the meta.yaml file that describes
-  the schema version and semantic scope, as well as 10 code files and 5 documentation
-  files. The purpose of this directory is to store and organize the results of a Fibonacci
-  ratio convergence test, which aimed to evaluate the stability and convergence properties
-  of Fibonacci numbers in various mathematical contexts.
-semantic_scope: []
+description: The run_20250710_110730 directory organizes run components into logical
+  subdirectories. It serves as a container for related functionality, with each subdirectory
+  focusing on specific aspects of run.
+semantic_scope:
+- run
+- '110730'
+- '20250710'
 files: []
 child_directories:
 - images
 - logs
+generation_context:
+  generator: ai_enhanced
+  file_count: 1
+  directory_count: 2
+  primary_file_types:
+    .yaml: 1
