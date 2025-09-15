@@ -1,4 +1,12 @@
-# 🧩 SCBF: Symbolic Collapse Benchmark Framework
+# � SCBF: Symbol## 🎯 Purpose
+SCBF provides:
+- Interpretability framework that measures symbolic collapse and bifractal patterns
+- Deep mathematical structure analysis during neural network learning
+- Entropy-based insights into emergent symbolic representations
+- Integration with Dawn Field Theory's core models (TinyCIMM, CIMM)
+- Visual and quantitative analysis tools for symbolic pattern formationlapse Bifractal Framework
+
+This directory contains the code, experiments, and metrics for the Symbolic Collapse Bifractal Framework (SCBF), Dawn Field Theory's interpretability framework for measuring symbolic collapse and bifractal patterns in neural network weight evolution.🧩 SCBF: Symbolic Collapse Benchmark Framework
 
 This directory contains the code, experiments, and metrics for the Symbolic Collapse Benchmark Framework (SCBF), Dawn Field Theory’s suite for explainable AI and symbolic benchmarking.
 

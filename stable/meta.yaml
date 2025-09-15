@@ -1,40 +1,23 @@
 schema_version: '2.0'
 directory_name: stable
-description: 'This directory structure represents a collection of files related to
-  the development and implementation of Cosmic Information Mining Model (CIMM), a
-  foundational research framework for post-symbolic artificial intelligence. The directory
-  is structured in a modular fashion, with separate directories for the CIMM core
-  codebase and documentation, as well as supporting files such as requirements and
-  readme files.
-
-
-  The CIMM core codebase contains the essential components of the model, including
-  the validate_imports.py file that validates the integrity of the imported modules,
-  the __init__.py file that initializes the CIMM framework, and the agents/ directories
-  that house the implementation of various cognitive architectures. The cimm_core/
-  directory contains the primary CIMM codebase, while the cimm-legacy/ directory houses
-  older versions of the model that may have been developed before the current stable
-  release.
-
-
-  The documentation directory includes files such as README.md and requirements.txt
-  that provide an overview of the CIMM framework and its capabilities, as well as
-  the results of various experiments and analyses conducted using the model. The prime_number_results.md
-  file, in particular, contains a detailed analysis of the performance of the Prime
-  Number Agent, which is a sample agent implemented within the CIMM framework.
-
-
-  Overall, this directory structure represents a comprehensive collection of files
-  related to the development and implementation of CIMM, including the core codebase,
-  supporting documentation, and older versions of the model. Its purpose is to provide
-  a stable and well-documented resource for researchers and developers interested
-  in exploring the potential of post-symbolic artificial intelligence and the Cosmic
-  Information Mining Model.'
+description: >
+  Production-ready stable models including CIMM-Legacy implementation.
+  All stable models licensed under Apache-2.0 for commercial adoption
+  and enterprise integration. Contains battle-tested implementations
+  of Dawn Field Theory principles suitable for production deployment.
 semantic_scope:
+- stable
+- production
 - cimm
-- tinycimm
-- gaia
+- commercial
+- apache-licensed
 files:
 - LICENSE
 child_directories:
 - cimm-legacy
+generation_context:
+  generator: ai_enhanced
+  file_count: 2
+  directory_count: 1
+  primary_file_types:
+    .yaml: 1

@@ -1,28 +1,20 @@
 schema_version: '2.0'
 directory_name: prime_number_structure
-description: 'This directory contains the results of analyzing the prime number structure
-  using the Cosmic Information Mining Model (CIMM). The contents include files that
-  contain error metrics for different distance measures, such as Kullback-Leibler
-  divergence, Jensen-Shannon divergence, and Wasserstein distance. There is also a
-  file called meta.yaml, which contains metadata about the directory, including its
-  name, description, and semantic scope. The directory also includes a text file called
-  error_metrics.txt, which provides a list of error metrics for different distance
-  measures.
-
-
-  The purpose of this directory is to store and share the results of analyzing the
-  prime number structure using the CIMM model. It is important to note that this is
-  not a standard directory for storing data files, but rather a custom directory created
-  for this specific project. The contents of this directory are designed to provide
-  a detailed analysis of the prime number structure and its relationship to the CIMM
-  model.'
+description: The prime_number_structure directory is reserved for structure functionality.
+  It provides a dedicated space for organizing related files and components.
 semantic_scope:
-- ciim
-- cimm
-- entropy
-- field-theoretic
-- form
+- structure
+- number
+- prime
 files:
 - error_metrics.txt
 - Screenshot 2025-06-12 123836.png
 child_directories: []
+generation_context:
+  generator: ai_enhanced
+  file_count: 3
+  directory_count: 0
+  primary_file_types:
+    .txt: 1
+    .yaml: 1
+    .png: 1

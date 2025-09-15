@@ -1,23 +1,10 @@
 schema_version: '2.0'
 directory_name: metrics
-description: 'This directory contains various metrics related to the analysis of neural
-  network weight evolution, activation ancestry, and symbolic collapse. The files
-  within this directory provide implementations for different metrics, including bifractal
-  lineage and entropy collapse, which are used to analyze the patterns of neural network
-  learning. The metrics in this directory are designed to provide insights into the
-  structure and function of neural networks, and can be used to evaluate their performance
-  and adaptability to changing conditions.
-
-
-  The purpose of this directory is to provide a comprehensive set of tools for analyzing
-  neural network weight evolution and understanding its underlying patterns and structures.
-  By providing a variety of metrics that can be used in combination, researchers and
-  developers can gain a deeper understanding of the complex relationships between
-  different components of a neural network and how they contribute to its overall
-  performance.'
+description: The metrics directory is a Python package containing metrics modules
+  and functionality. It provides a structured collection of related code organized
+  for easy import and use.
 semantic_scope:
-- ciimm
-- tinycimm
+- metrics
 files:
 - __init__.py
 - activation_ancestry.py
@@ -27,3 +14,10 @@ files:
 - semantic_attractors.py
 - validation.py
 child_directories: []
+generation_context:
+  generator: ai_enhanced
+  file_count: 8
+  directory_count: 0
+  primary_file_types:
+    .py: 7
+    .yaml: 1

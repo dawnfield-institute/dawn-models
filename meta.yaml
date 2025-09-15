@@ -1,35 +1,38 @@
 schema_version: '2.0'
-directory_name: ''
-description: "The research directory within the Dawn Models repository contains a\
-  \ comprehensive collection of resources related to the development, implementation,\
-  \ and evaluation of the SCBF (Symbolic Collapse Bifractal Framework) for symbolic\
-  \ cognition and recursive collapse. This directory includes a variety of files and\
-  \ subdirectories, each with its own specific purpose and role within the larger\
-  \ project.\n        \n        The top-level directories in this repository include:\n\
-  \        \n        * research/scbf: Contains the core implementation and experimentation\
-  \ code for the SCBF framework, including the scbf_runner.py file that defines the\
-  \ framework's architecture and various subdirectories containing scripts and files\
-  \ related to the experimentation and evaluation of the framework.\n        \n  \
-  \      * research/tinycimm: Contains a minimal version of the CIMM (Cosmic Information\
-  \ Mining Model) using the SCBF framework, demonstrating how lightweight, entropy-informed\
-  \ architectures can achieve adaptive learning, symbolic memory, and field-based\
-  \ intelligence using Dawn Field Theory principles.\n        \n        * research/scbf:\
-  \ Contains a range of metrics and analysis tools for evaluating the performance\
-  \ of the SCBF framework, including activation_ancestry.py, bifractal_lineage.py,\
-  \ entropy_collapse.py, and phase_alignment.py.\n        \n        Additionally,\
-  \ this repository includes documentation files such as README.md, CONTRIBUTING.md,\
-  \ LICENSING.md, and implementation_roadmap.md, which provide an overview of the\
-  \ project's goals, contributing guidelines, licensing information, and future development\
-  \ plans, respectively.\n        \n        The overall purpose of this research directory\
-  \ is to advance our understanding of how SCBF can be used for symbolic cognition\
-  \ and recursive collapse, and to develop new applications and use cases for the\
-  \ framework in various domains."
-semantic_scope: []
+directory_name: dawn-models
+description: >
+  Dawn Models is the official model repository for the Dawn Field Institute, 
+  implementing cutting-edge post-symbolic AI architectures including CIMM 
+  (Cosmic Information Mining Model), TinyCIMM variants for symbolic cognition, 
+  and SCBF (Symbolic Collapse Bifractal Framework) for interpretability analysis.
+  Features dual-licensing strategy with experimental research models (AGPL-3.0) 
+  and stable production models (Apache-2.0). Demonstrates entropy-informed 
+  architectures achieving adaptive learning, symbolic memory, and field-based 
+  intelligence using Dawn Field Theory principles.
+semantic_scope:
+- models
+- post-symbolic-ai
+- cimm
+- tinycimm
+- scbf
+- symbolic-collapse
+- field-theory
+- entropy-dynamics
 files:
 - CONTRIBUTING.md
 - LICENSE
 - LICENSING.md
 - README.md
 child_directories:
+- .cip
 - research
 - stable
+title: dawn-models
+repository_role: models
+generation_context:
+  generator: ai_enhanced
+  file_count: 5
+  directory_count: 3
+  primary_file_types:
+    .md: 3
+    .yaml: 1

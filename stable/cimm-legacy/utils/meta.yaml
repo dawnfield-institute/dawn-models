@@ -1,41 +1,20 @@
 schema_version: '2.0'
 directory_name: utils
-description: 'This directory, titled "utils," is a collection of various supportive
-  files and scripts that aid in the analysis and implementation of the Cosmic Information
-  Mining Model (CIMM). The utils directory serves as a crucial component of CIMM,
-  as it contains essential tools for data preprocessing, logging, and other utility
-  functions.
-
-
-  The directory comprises four main components:
-
-  1. Data processing: This module contains data preprocessing functions that enable
-  efficient and accurate processing of large datasets used in the CIMM model. Including
-  but not limited to outlier removal and signal filtering using Butterworth filters.
-
-  2. Logging: This component is responsible for managing all logs generated during
-  the execution of the CIMM model. The logging module contains pre-defined functions
-  for configuring log files, logging messages, and other operations.
-
-  3. __init__.py: This file serves as a namespace for utilities and utility modules
-  within the utils directory. It imports necessary dependencies, defines utility functions,
-  and provides essential functionality for other components of CIMM.
-
-  4. meta.yaml: The meta.yaml file contains metadata about the utils directory and
-  its contents. It specifies the schema version used for this directory, describes
-  the semantic scope (utils and CIMM), and lists all files contained within it.
-
-
-  Overall, the purpose of the utils directory is to assist in the efficient and accurate
-  operation of the CIMM model by providing essential utility functions and managing
-  logs generated during its execution.'
+description: The utils directory provides utility functions and helper modules used
+  throughout the CIP codebase. It contains common functionality for file operations,
+  data processing, and system interactions.
 semantic_scope:
-- data_processing
-- preprocessing
-- signal_filtering
-- butterworth_filter
+- utilities
+- helpers
 files:
 - __init__.py
 - data_processing.py
 - logging.py
 child_directories: []
+generation_context:
+  generator: ai_enhanced
+  file_count: 4
+  directory_count: 0
+  primary_file_types:
+    .py: 3
+    .yaml: 1

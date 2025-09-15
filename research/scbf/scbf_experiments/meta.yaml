@@ -1,29 +1,12 @@
 schema_version: '2.0'
 directory_name: scbf_experiments
-description: 'This directory, `scbf_experiments`, contains experimental results from
-  analyzing the Symbolic Collapse Bifractal Framework (SCBF) on various neural network
-  architectures. The SCBF is an interpretability framework that measures symbolic
-  collapse and bifractal patterns in neural network weight evolution. It provides
-  insight into deep mathematical structures that emerge during learning through entropy
-  analysis.
-
-
-  The directory contains a total of 95 files, with 10 code files representing the
-  first 10 experimental runs on various architectures. The remaining files are documentation
-  files containing experiment summaries and statistical results from SCBF analyses.
-  These documents provide detailed information about the performance of the SCBF in
-  detecting symbolic collapse and bifractal patterns in neural network weight evolution,
-  as well as their implications for deep learning interpretability.
-
-
-  The directory also includes a report titled `[cip][experiment][v1.0][2025-07-13]_scbf_interpretability_report.md`,
-  which provides an overview of the SCBF framework and its applications in deep learning
-  interpretability. This report serves as a comprehensive resource for researchers
-  and practitioners who seek to leverage the SCBF for understanding and improving
-  their neural network models.'
+description: The scbf_experiments directory contains experimental code and research
+  materials for scbf. It houses exploratory work, prototypes, and research findings
+  that may inform future development.
 semantic_scope:
 - scbf
-- interpretability
+- research
+- experiments
 files:
 - '[cip][experiment][v1.0][2025-07-13]_scbf_interpretability_report.md'
 - experiment_registry.json
@@ -36,3 +19,11 @@ child_directories:
 - '20250713_104841'
 - '20250714_104111'
 - '20250714_104436'
+generation_context:
+  generator: ai_enhanced
+  file_count: 3
+  directory_count: 8
+  primary_file_types:
+    .md: 1
+    .json: 1
+    .yaml: 1

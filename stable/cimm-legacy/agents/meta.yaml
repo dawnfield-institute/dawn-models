@@ -1,26 +1,9 @@
 schema_version: '2.0'
 directory_name: agents
-description: 'This directory structure represents the implementation of various agents
-  that work with the Cosmic Information Mining Model (CIMM) framework. The agents
-  in this directory are designed to perform specific tasks, such as base, supervisor,
-  and specialized agents. Each agent has its own unique functionality and is responsible
-  for a particular aspect of the CIMM framework.
-
-
-  The purpose of this directory is to provide a comprehensive set of agents that can
-  work together to perform complex information mining tasks. The agents in this directory
-  are designed to be highly customizable, allowing users to tailor them to their specific
-  needs. Additionally, the use of different types of agents can help improve the performance
-  and efficiency of the CIMM framework as a whole.
-
-
-  Overall, the purpose of this directory is to serve as a central location for storing
-  and managing all of the agents that work with the CIMM framework, providing a structured
-  approach to developing and deploying these agents. The various agents in this directory
-  can be used together to perform a wide range of information mining tasks, from simple
-  symbolic reasoning to complex field-theoretic stabilization.'
+description: The agents directory contains Python modules implementing agents functionality.
+  It houses the core logic and implementation details for this component of the system.
 semantic_scope:
-- supervisor
+- agents
 files:
 - agentic_mesh_runtime.py
 - base_agent.py
@@ -28,3 +11,10 @@ files:
 - prime_number_agent.py
 - supervisor_agent.py
 child_directories: []
+generation_context:
+  generator: ai_enhanced
+  file_count: 6
+  directory_count: 0
+  primary_file_types:
+    .py: 5
+    .yaml: 1

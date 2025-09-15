@@ -1,25 +1,19 @@
 schema_version: '2.0'
 directory_name: run_20250710_110836
-description: 'This directory contains the configuration files and data for a research
-  project on numerical analysis and modeling using the TinyCIMM-Euler framework. The
-  directory is named "run_20250710_110836" and contains 12 files in total, with 10
-  code files and 5 documentation files.
-
-
-  The meta.yaml file specifies the schema version used for this configuration and
-  provides information about the directory name, description, and purpose. The directory
-  is intended to provide a configuration for the TinyCIMM-Euler experiment, which
-  focuses on researching recursive sequence analysis and mathematical reasoning tasks
-  using the TinyCIMM model.
-
-
-  The code files in this directory are likely to contain source code for the TinyCIMM-Euler
-  project, including the implementation of the TinyCIMM framework and its usage in
-  a specific context or scenario. The documentation files provide information about
-  the project''s structure, components, and overall objectives, providing a comprehensive
-  overview of the research being conducted within this directory.'
-semantic_scope: []
+description: The run_20250710_110836 directory organizes 110836 components into logical
+  subdirectories. It serves as a container for related functionality, with each subdirectory
+  focusing on specific aspects of 110836.
+semantic_scope:
+- '110836'
+- run
+- '20250710'
 files: []
 child_directories:
 - images
 - logs
+generation_context:
+  generator: ai_enhanced
+  file_count: 1
+  directory_count: 2
+  primary_file_types:
+    .yaml: 1

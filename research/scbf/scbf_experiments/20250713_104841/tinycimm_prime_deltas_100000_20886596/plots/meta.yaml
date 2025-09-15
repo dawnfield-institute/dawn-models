@@ -1,27 +1,9 @@
 schema_version: '2.0'
 directory_name: plots
-description: 'This directory contains the plots used in the project, which serve as
-  visual representations of data. The files in this directory are primarily code-based
-  and contain functions that generate specific types of plots based on the input data.
-  The documentation contained within the first five files provides insight into the
-  functionality and role of each plot within the larger project.
-
-
-  The purpose of this directory is to provide a means for users to visualize and analyze
-  data in a more comprehensive manner than simple statistical analysis. By generating
-  various types of plots, such as line graphs, bar charts, and scatter plots, users
-  can gain a deeper understanding of their data''s trends and patterns.
-
-
-  Overall, the plots directory plays a crucial role in enhancing the usability and
-  functionality of the project by providing users with a visual representation of
-  their data that can be used to make more informed decisions.'
+description: The plots directory is reserved for plots functionality. It provides
+  a dedicated space for organizing related files and components.
 semantic_scope:
 - plots
-- data-visualization
-- plotting-functions
-- code-based
-- data-analysis
 files:
 - activation_ancestry.png
 - bifractal_evolution.png
@@ -34,3 +16,10 @@ files:
 - semantic_attractors.png
 - weight_analysis.png
 child_directories: []
+generation_context:
+  generator: ai_enhanced
+  file_count: 11
+  directory_count: 0
+  primary_file_types:
+    .png: 10
+    .yaml: 1

@@ -36,15 +36,15 @@ cd stable/
 ```
 dawn-models/
 ├── research/                 # AGPL-3.0 - Experimental variants
+│   ├── scbf/                # Symbolic Collapse Bifractal Framework
 │   ├── tinycimm/            # TinyCIMM architecture experiments
-│   ├── theoretical/         # Pure theory implementations
-│   ├── experiments/         # Research notebooks and explorations
+│   │   ├── TinyCIMM-Euler/  # Number theory and mathematical reasoning
+│   │   ├── TinyCIMM-Navier/ # Fluid dynamics and turbulence analysis
+│   │   └── TinyCIMM-Planck/ # Minimal foundational implementations
 │   └── LICENSE             # AGPL-3.0
 │
 ├── stable/                  # Apache-2.0 - Production models
-│   ├── cimm-legacy/        # First stable release
-│   ├── tinycimm-v1/        # General purpose (future)
-│   ├── gaia-v1/            # Flagship model (future)
+│   ├── cimm-legacy/        # Stable CIMM implementation
 │   └── LICENSE             # Apache-2.0
 │
 ├── README.md               # This file
@@ -78,15 +78,25 @@ dawn-models/
 ### Research Variants (AGPL-3.0)
 *Experimental models for research and specialized use*
 
-- **TinyCIMM Variants** - Various architectural experiments
-- **Theoretical Models** - Pure Dawn Field Theory implementations
-- **SCBF Framework** - Symbolic Collapse Bifractal experiments
+#### **SCBF (Symbolic Collapse Bifractal Framework)**
+- Interpretability framework for measuring symbolic collapse
+- Neural network weight evolution analysis
+- Entropy-based pattern detection and bifractal analysis
+- Integration with TinyCIMM for experimental validation
+
+#### **TinyCIMM Variants**
+- **TinyCIMM-Euler** - Number theory and mathematical sequence prediction
+- **TinyCIMM-Navier** - Fluid dynamics and turbulence analysis  
+- **TinyCIMM-Planck** - Minimal foundational implementations
 
 ### Stable Models (Apache-2.0)
 *Production-ready for any use*
 
-- **CIMM Legacy** - Original stable implementation
-- *More coming soon...*
+#### **CIMM Legacy**
+- Foundational post-symbolic AI framework
+- Entropy-based learning and collapse dynamics
+- Multi-agent agentic mesh runtime
+- Complete with testing suite and documentation
 
 ---
 
@@ -109,15 +119,33 @@ pip install -r requirements.txt
 
 ### Usage Examples
 ```python
-# Using a stable model (Apache-2.0)
-from stable.cimm_legacy import CIMMModel
-model = CIMMModel()
-result = model.process(data)
+# Using stable CIMM model (Apache-2.0)
+import sys
+sys.path.append('stable/cimm-legacy')
+from cimm_core.cimm import CIMM
+from agents.base_agent import BaseAgent
 
-# Using a research variant (AGPL-3.0)
-from research.tinycimm.attention_v2 import TinyCIMMAttention
-model = TinyCIMMAttention()
-result = model.process(data)
+# Initialize CIMM agent
+agent = BaseAgent(entropy_threshold=0.1)
+result = agent.process(data)
+
+# Using research TinyCIMM variant (AGPL-3.0)
+import sys
+sys.path.append('research/tinycimm/TinyCIMM-Euler')
+from tinycimm_euler import TinyCIMMEuler
+
+# Initialize for mathematical reasoning
+model = TinyCIMMEuler(sequence_length=1000)
+prediction = model.predict_sequence(input_sequence)
+
+# Using SCBF for interpretability (AGPL-3.0)
+import sys
+sys.path.append('research/scbf')
+from scbf_runner import SCBFRunner
+
+# Analyze model interpretability
+scbf = SCBFRunner(enable_visualization=True)
+analysis = scbf.analyze_model(model, input_data)
 ```
 
 ---

@@ -1,29 +1,25 @@
 schema_version: '2.0'
 directory_name: tinycimm_polynomial_sequence_10000_47bfb087
-description: 'This directory contains the checkpoint information for a Symbolic Collapse
-  Bifractal Framework (SCBF) experiment with an ID of 47bfb087, which was conducted
-  to study the formation of symbolic structures in neural network weight evolution.
-  The experiment lasted for 10,000 steps and took approximately 82 seconds to complete.
-
-  The directory contains three files: checkpoint.json, experiment_summary.txt, and
-  meta.yaml. The file checkpoint.json contains the checkpoint information for the
-  SCBF experiment, including metadata such as the name of the experiment, its ID,
-  start time, end time, total steps, and schema version.
-
-  The experiment_summary.txt file provides a summary report of the experiment, including
-  the experiment''s ID, duration, start time, and description. The meta.yaml file
-  contains information about the directory itself, such as its name, description,
-  and schema version.
-
-  Overall, this directory contains valuable information related to the SCBF experiment
-  with an ID of 47bfb087, including checkpoint information, summary reports, and metadata.
-  Its purpose is to provide a comprehensive record of the experiment''s progress and
-  results for future reference or analysis.'
+description: The tinycimm_polynomial_sequence_10000_47bfb087 directory organizes 47bfb087
+  components into logical subdirectories. It serves as a container for related functionality,
+  with each subdirectory focusing on specific aspects of 47bfb087.
 semantic_scope:
-- scbf
+- 47bfb087
+- sequence
+- polynomial
+- tinycimm
+- '10000'
 files:
 - checkpoint.json
 - experiment_results.json
 - experiment_summary.txt
 child_directories:
 - plots
+generation_context:
+  generator: ai_enhanced
+  file_count: 4
+  directory_count: 1
+  primary_file_types:
+    .json: 2
+    .txt: 1
+    .yaml: 1

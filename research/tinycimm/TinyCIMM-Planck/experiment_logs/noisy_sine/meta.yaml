@@ -1,25 +1,18 @@
 schema_version: '2.0'
 directory_name: noisy_sine
-description: "This directory contains data and metadata related to an experiment involving\
-  \ the TinyCIMM-Planck model, specifically the noisy_sine variant. The directory\
-  \ includes three files: meta.yaml, TinyplanckPlanck_planck_noisy_sine_log.csv, and\
-  \ TinyplanckPlanck_planck_noisy_sine_metrics.csv.\n\n        meta.yaml provides\
-  \ metadata about the experiment, including the schema version, directory name, and\
-  \ description. The semantic scope includes the TinyCIMM-Planck model and the experiment\
-  \ logs within this directory.\n\n        TinyplanckPlanck_planck_noisy_sine_log.csv\
-  \ contains the logs for the experiment, with columns corresponding to step, loss,\
-  \ entropy, and neurons. The file provides information about the evolution of the\
-  \ model's performance over time.\n\n        TinyplanckPlanck_planck_noisy_sine_metrics.csv\
-  \ provides additional metrics related to the experiment, including activation ancestry,\
-  \ entropy alignment, phase alignment, bifractal consistency, and attractor density.\
-  \ These metrics provide insight into the model's performance and its ability to\
-  \ learn from noise.\n\n        Overall, this directory contains data and metadata\
-  \ related to an experiment with the TinyCIMM-Planck model, specifically the noisy_sine\
-  \ variant. The data and metadata in this directory demonstrate how the model can\
-  \ be used for symbolic cognition and recursive collapse, as well as its ability\
-  \ to adapt to noise and learn from it."
-semantic_scope: []
+description: The noisy_sine directory is reserved for noisy functionality. It provides
+  a dedicated space for organizing related files and components.
+semantic_scope:
+- noisy
+- sine
 files:
 - TinyplanckPlanck_planck_noisy_sine_log.csv
 - TinyplanckPlanck_planck_noisy_sine_metrics.csv
 child_directories: []
+generation_context:
+  generator: ai_enhanced
+  file_count: 3
+  directory_count: 0
+  primary_file_types:
+    .yaml: 1
+    .csv: 2

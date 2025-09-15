@@ -1,15 +1,11 @@
 schema_version: '2.0'
 directory_name: experiment_images
-description: 'This directory contains the output images generated during various experiments
-  conducted with the TinyCIMM-Planck and MLP models, organized by signal type for
-  direct model comparison and diagnostics. The content includes meta.yaml file with
-  schema_version: ''2.0'' and directory_name: experiment_images, description of Output
-  images from TinyCIMM-Planck and MLP experiments, organized by signal type for direct
-  model comparison and diagnostics. semantically correct. It is crucial to have a
-  proper understanding of the data and its usage to ensure its integrity and avoid
-  errors. The directory can be used for various tasks such as training new models
-  or analyzing the results of previous experiments.'
-semantic_scope: []
+description: The experiment_images directory organizes images components into logical
+  subdirectories. It serves as a container for related functionality, with each subdirectory
+  focusing on specific aspects of images.
+semantic_scope:
+- images
+- experiment
 files: []
 child_directories:
 - amp_mod_sine
@@ -17,3 +13,9 @@ child_directories:
 - clean_sine
 - freq_mod_sine
 - noisy_sine
+generation_context:
+  generator: ai_enhanced
+  file_count: 1
+  directory_count: 5
+  primary_file_types:
+    .yaml: 1

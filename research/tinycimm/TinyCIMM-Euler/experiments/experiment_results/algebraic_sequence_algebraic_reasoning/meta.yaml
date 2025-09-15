@@ -1,20 +1,19 @@
 schema_version: '2.0'
 directory_name: algebraic_sequence_algebraic_reasoning
-description: 'The `algebraic_sequence_algebraic_reasoning` directory is likely to
-  contain the configuration file for the Algebraic Sequence Algebra Reasoning experiment,
-  which involves using CIMM (Cosmic Information Mining Model) for number theory tasks
-  like sequence prediction and mathematical reasoning. The directory may also contain
-  documentation related to the experiment, such as a README file that explains the
-  purpose of the experiment and how it works.
-
-  It''s possible that this folder contains code files for the Algebraic Sequence Algebra
-  Reasoning experiment, which is using CIMM (Cosmic Information Mining Model) for
-  number theory tasks like sequence prediction and mathematical reasoning. It might
-  also contain documentation related to the experiment, such as a README file that
-  explains the purpose of the experiment and how it works.'
+description: The algebraic_sequence_algebraic_reasoning directory organizes algebraic
+  components into logical subdirectories. It serves as a container for related functionality,
+  with each subdirectory focusing on specific aspects of algebraic.
 semantic_scope:
-- cimm
+- algebraic
+- sequence
+- reasoning
 files: []
 child_directories:
 - run_20250710_110908
 - run_20250710_125643
+generation_context:
+  generator: ai_enhanced
+  file_count: 1
+  directory_count: 2
+  primary_file_types:
+    .yaml: 1

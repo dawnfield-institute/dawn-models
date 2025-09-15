@@ -1,33 +1,19 @@
 schema_version: '2.0'
 directory_name: run_20250710_125610
-description: 'The "run_20250710_125610" directory is a configuration directory for
-  an AI/ML project, containing various files and documentation related to the project''s
-  setup, execution, and analysis. The directory structure includes 12 files in total,
-  with 10 code files and 5 documentation files.
-
-
-  The purpose of this directory is to manage the project''s configuration settings,
-  including the schema version, description, semantic scope, and other relevant information.
-  The "meta.yaml" file contains metadata about the project, such as its name, description,
-  and schema version.
-
-
-  The directory also includes code files for the AI/ML model being used in the project,
-  as well as documentation files related to the project''s setup, execution, and analysis.
-  The presence of a "Cognition Index Protocol (CIP)" file suggests that this directory
-  may contain information related to automated repository understanding and epistemic
-  benchmarking, which is an important aspect of CIMM (Cosmic Information Mining Model)
-  research.
-
-
-  Overall, the purpose of this directory is to manage the project''s configuration
-  settings and provide a central location for storing and organizing all relevant
-  information related to the AI/ML model, its setup, execution, and analysis.'
+description: The run_20250710_125610 directory organizes run components into logical
+  subdirectories. It serves as a container for related functionality, with each subdirectory
+  focusing on specific aspects of run.
 semantic_scope:
-- semantic-attractors
-- cimm
-- cognition-index-protocol
+- run
+- '125610'
+- '20250710'
 files: []
 child_directories:
 - images
 - logs
+generation_context:
+  generator: ai_enhanced
+  file_count: 1
+  directory_count: 2
+  primary_file_types:
+    .yaml: 1

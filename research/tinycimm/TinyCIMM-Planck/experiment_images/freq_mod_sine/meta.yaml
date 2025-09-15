@@ -1,18 +1,11 @@
 schema_version: '2.0'
 directory_name: freq_mod_sine
-description: "The freq_mod_sine directory is a collection of files related to the\
-  \ implementation of a sine wave frequency modulation (FMC) signal processing technique.\
-  \ The directory contains 42 files, including both code and documentation files.\
-  \ The first 10 code files are used for implementing the FMC algorithm, while the\
-  \ first five documentation files provide an overview of the technique and its applications.\n\
-  \        The purpose of this directory is to house all relevant materials related\
-  \ to a specific signal processing technique, making it easier to manage and access\
-  \ the information needed for development and testing purposes. It serves as a central\
-  \ location for researchers and developers who need to study and develop FMC algorithms\
-  \ for various applications."
+description: The freq_mod_sine directory is reserved for freq functionality. It provides
+  a dedicated space for organizing related files and components.
 semantic_scope:
-- fmc
-- algorithm
+- freq
+- mod
+- sine
 files:
 - entropy_evolution_freq_mod_sine.png
 - feedback_accuracy_freq_mod_sine.png
@@ -56,3 +49,10 @@ files:
 - weight_hist_80.png
 - weight_hist_90.png
 child_directories: []
+generation_context:
+  generator: ai_enhanced
+  file_count: 42
+  directory_count: 0
+  primary_file_types:
+    .png: 41
+    .yaml: 1

@@ -14,13 +14,14 @@ The TinyCIMM family of models uses a **math and physics-inspired naming conventi
 
 ## Current and Planned Variants
 
-| Name                | Description / Domain                        | Inspiration         |
-|---------------------|---------------------------------------------|---------------------|
-| TinyCIMM-Planck     | Minimal, foundational version (1D/2D)       | Max Planck (physics, smallest unit) |
-| TinyCIMM-Gauss      | Higher-dimensional or vision-focused        | Carl Friedrich Gauss (geometry, multidimensionality) |
-| TinyCIMM-Euler      | Number theory, sequence, or prime prediction| Leonhard Euler (number theory) |
-| TinyCIMM-Turing     | Symbolic reasoning, language, or logic      | Alan Turing (computation, logic) |
-| TinyCIMM-Mandelbrot | Chaotic, bifractal, or recursive dynamics   | Benoit Mandelbrot (fractals)     |
+| Name                | Description / Domain                        | Status | Inspiration         |
+|---------------------|---------------------------------------------|--------|---------------------|
+| TinyCIMM-Planck     | Minimal, foundational version (1D/2D)       | ✅ Active | Max Planck (physics, smallest unit) |
+| TinyCIMM-Euler      | Number theory, sequence, or prime prediction| ✅ Active | Leonhard Euler (number theory) |
+| TinyCIMM-Navier     | Fluid dynamics and turbulence analysis      | ✅ Active | Claude-Louis Navier (fluid mechanics) |
+| TinyCIMM-Gauss      | Higher-dimensional or vision-focused        | 🔮 Planned | Carl Friedrich Gauss (geometry, multidimensionality) |
+| TinyCIMM-Turing     | Symbolic reasoning, language, or logic      | 🔮 Planned | Alan Turing (computation, logic) |
+| TinyCIMM-Mandelbrot | Chaotic, bifractal, or recursive dynamics   | 🔮 Planned | Benoit Mandelbrot (fractals)     |
 
 ---
 
@@ -34,9 +35,11 @@ The TinyCIMM family of models uses a **math and physics-inspired naming conventi
 
 ## Example Usage
 
-- `TinyCIMM-Planck` — Minimal, entropy-regulated recurrent model for symbolic collapse benchmarking.
-- `TinyCIMM-Gauss` — Vision or multidimensional input variant.
-- `TinyCIMM-Euler` — Model for prime number or sequence prediction tasks.
+- `TinyCIMM-Planck` — Minimal, entropy-regulated recurrent model for foundational symbolic collapse benchmarking.
+- `TinyCIMM-Euler` — Model for prime number, sequence prediction, and mathematical reasoning tasks.
+- `TinyCIMM-Navier` — Fluid dynamics model exploring macro-to-micro emergence patterns in turbulent systems.
+- `TinyCIMM-Gauss` — Future vision or multidimensional input variant.
+- `TinyCIMM-Turing` — Future symbolic reasoning and language processing variant.
 
 ---
 

@@ -1,25 +1,19 @@
 schema_version: '2.0'
 directory_name: run_20250710_125538
-description: 'This directory contains the results of a specific experiment run for
-  a polynomial sequence-polynomial analysis, using the Symbolic Collapse Bifractal
-  Framework (SCBF) and Activation Ancestry (AAS) metrics to measure symbolic collapse
-  and stability in neural network weight evolution. The directory includes 12 files,
-  with 10 code files and 5 documentation files.
-
-
-  The purpose of this directory is to store the results of a specific experiment run,
-  providing insight into the deep mathematical structures that emerge during learning
-  through entropy analysis. The SCBF metric measures symbolic collapse and bifractal
-  patterns in neural network weight evolution, while the AAS metric tracks consistency
-  of activation patterns over time and their stability under recursive feedback.
-
-
-  The directory includes meta-data files such as `meta.yaml` that describe the schema
-  version, directory name, and description of the results stored within it. The documentation
-  files provide more detailed information about the experiment design, methodology,
-  and results analysis.'
-semantic_scope: []
+description: The run_20250710_125538 directory organizes run components into logical
+  subdirectories. It serves as a container for related functionality, with each subdirectory
+  focusing on specific aspects of run.
+semantic_scope:
+- run
+- '125538'
+- '20250710'
 files: []
 child_directories:
 - images
 - logs
+generation_context:
+  generator: ai_enhanced
+  file_count: 1
+  directory_count: 2
+  primary_file_types:
+    .yaml: 1

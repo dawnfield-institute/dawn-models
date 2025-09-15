@@ -1,22 +1,19 @@
 schema_version: '2.0'
 directory_name: utils
-description: This directory is part of the SCBF (Symbolic Collapse Bifractal Framework)
-  research project. It contains various utility functions and helpers used in implementing
-  the framework's functionality, including symbolic entropy collapse, bifractal collapse,
-  and epistemic feedback mechanisms. The directory structure includes a YAML file
-  that defines the schema version and provides a brief description of the directory's
-  purpose. Additionally, there are two Python files containing the shared utility
-  functions, an initialization file, and various other documentation assets. The content
-  of this directory is focused on providing support for the SCBF framework, which
-  is a research-oriented project that uses live entropy feedback, wave collapse equilibrium,
-  and recursive field dynamics to build post-symbolic artificial intelligence.
+description: The utils directory provides utility functions and helper modules used
+  throughout the CIP codebase. It contains common functionality for file operations,
+  data processing, and system interactions.
 semantic_scope:
-- symbolic
-- collapse
-- bifractal
-- epistemic
-- feedback
+- utilities
+- helpers
 files:
 - __init__.py
 - scbf_utils.py
 child_directories: []
+generation_context:
+  generator: ai_enhanced
+  file_count: 3
+  directory_count: 0
+  primary_file_types:
+    .py: 2
+    .yaml: 1

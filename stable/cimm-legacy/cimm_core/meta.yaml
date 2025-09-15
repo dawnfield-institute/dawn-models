@@ -1,28 +1,11 @@
 schema_version: '2.0'
 directory_name: cimm_core
-description: "This directory contains the source code for the CIMM (Cosmic Information\
-  \ Mining Model) framework, which is a foundational research framework for post-symbolic\
-  \ artificial intelligence. The directory structure includes several files that together\
-  \ form the CIMMCoreWrapper class, which serves as a wrapper for individual CIMM\
-  \ instances and allows each age to interact with the CIMM system in an independent\
-  \ manner while still benefiting from the shared knowledge and resources of the CIMM.\n\
-  \n        Additionally, this directory also includes code for the TinyCIMM (Tiny\
-  \ Categorical Information Memory Matrix), which is an ultra-minimal agentic model\
-  \ for symbolic cognition and recursive collapse. It demonstrates how lightweight,\
-  \ entropy-informed architectures can achieve adaptive learning, symbolic memory,\
-  \ and field-based intelligence using Dawn Field Theory principles.\n\n        The\
-  \ GAIA (Global Adaptive Intelligence Architecture) is another key component of the\
-  \ directory, representing the evolution of Dawn Field Theory principles into large-scale\
-  \ adaptive intelligence systems. It's designed for complex reasoning and emergence.\n\
-  \n        This directory also includes files related to entropy flow, wave collapse\
-  \ equilibrium, and recursive field dynamics, which are used in the CIMM framework\
-  \ to measure symbolic entropy collapse and form symbolic structures. Other files\
-  \ in this directory include a potential energy balance model, which replaces static\
-  \ potentials in quantum equations with adaptive, memory-aware field dynamics."
+description: The cimm_core directory is a Python package containing cimm modules and
+  functionality. It provides a structured collection of related code organized for
+  easy import and use.
 semantic_scope:
-- ciimm
 - cimm
-- tinycimm
+- core
 files:
 - __init__.py
 - cimm.py
@@ -34,3 +17,10 @@ child_directories:
 - learning
 - models
 - optimization
+generation_context:
+  generator: ai_enhanced
+  file_count: 6
+  directory_count: 4
+  primary_file_types:
+    .py: 5
+    .yaml: 1

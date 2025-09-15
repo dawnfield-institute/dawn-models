@@ -1,47 +1,11 @@
 schema_version: '2.0'
 directory_name: models
-description: 'This directory contains a collection of PyTorch models that implement
-  various aspects of CIMM (Cosmic Information Mining Model) architecture. The models
-  are designed to work with the `base_cimm_model.py` file, which provides the fundamental
-  building blocks for creating CIMM-based AI systems.
-
-
-  The directory includes several files that define different types of models, each
-  designed to perform specific tasks:
-
-
-  1. `base_cimm_model.py`: This file defines a base model class that represents the
-  fundamental structure and functionality of CIMM-based AI systems. It provides an
-  abstraction layer for implementing various components, such as neural networks,
-  probabilistic models, and decision-making algorithms.
-
-  2. `cryptography_model.py`: This file defines a cryptography model that demonstrates
-  how CIMM can be used for symbolic cognition and recursive collapse. The model uses
-  live entropy feedback to adaptively learn patterns in the data and form symbolic
-  structures.
-
-  3. `financial_model.py`: This file defines a financial model that demonstrates how
-  CIMM can be used for complex reasoning and emergence. The model uses recursive balance
-  fields to represent energy-information imbalances and adaptively learns patterns
-  in the data to make predictions about future market trends.
-
-  4. `prime_structure_model.py`: This file defines a prime structure model that demonstrates
-  how CIMM can be used for symbolic memory and field-based intelligence. The model
-  uses recursive balance fields to represent energy-information imbalances and adaptively
-  learns patterns in the data to form prime structures, which are fundamental concepts
-  in number theory.
-
-  5. `__init__.py`: This file contains initialization code that imports the necessary
-  dependencies and defines any global variables or constants used by the models.
-
-
-  Overall, this directory serves as a demonstration of how CIMM can be used to create
-  AI systems that are capable of symbolic cognition, recursive collapse, complex reasoning,
-  and emergence. The models in this directory provide a practical introduction to
-  the underlying principles and concepts of CIMM, making it easier for developers
-  and researchers to understand and work with the technology.'
+description: The models directory is a Python package containing models modules and
+  functionality. It provides a structured collection of related code organized for
+  easy import and use.
 semantic_scope:
-- cimm
+- models
+- ai_ml
 files:
 - __init__.py
 - base_cimm_model.py
@@ -49,3 +13,10 @@ files:
 - financial_model.py
 - prime_structure_model.py
 child_directories: []
+generation_context:
+  generator: ai_enhanced
+  file_count: 6
+  directory_count: 0
+  primary_file_types:
+    .py: 5
+    .yaml: 1

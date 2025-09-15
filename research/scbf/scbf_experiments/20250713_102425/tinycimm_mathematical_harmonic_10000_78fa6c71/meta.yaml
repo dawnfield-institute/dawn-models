@@ -1,39 +1,25 @@
 schema_version: '2.0'
 directory_name: tinycimm_mathematical_harmonic_10000_78fa6c71
-description: 'The "tinycimm_mathematical_harmonic_10000_78fa6c71" directory includes
-  13 files and a documentation file. It appears to be a research project directory
-  for a model named "tinycimm_mathematical_harmonic_10000." The directory provides
-  a configuration for the model, including its schema version, name, description,
-  and semantic scope.
-
-
-  The primary purpose of this directory is to store all relevant files associated
-  with the tinycimm_mathematical_harmonic_10000 model, including the model''s code,
-  documentation, and any other necessary resources. The presence of a checkpoint file
-  with metadata suggests that the project may have been actively developed or improved
-  over time.
-
-
-  The SCBF Experiment Summary Report in the documentation file provides an overview
-  of the experiment''s key details, including the model name, ID, duration, and start
-  time. This report likely contains detailed information about the results and findings
-  of the research project, which may include insights into the model''s performance,
-  capabilities, and limitations.
-
-
-  Overall, this directory appears to be a comprehensive repository for a research
-  project involving the tinycimm_mathematical_harmonic_10000 model, with a focus on
-  symbolic cognition, recursive collapse, and field-based intelligence. The directory
-  provides a structured approach to organizing files and resources related to the
-  project, which may be useful for collaboration or further analysis.'
+description: The tinycimm_mathematical_harmonic_10000_78fa6c71 directory organizes
+  tinycimm components into logical subdirectories. It serves as a container for related
+  functionality, with each subdirectory focusing on specific aspects of tinycimm.
 semantic_scope:
-- symbolic_cognition
-- recursive_collapse
-- field_based_intelligence
-- scbf_experiment_summary_report
+- tinycimm
+- harmonic
+- mathematical
+- '10000'
+- 78fa6c71
 files:
 - checkpoint.json
 - experiment_results.json
 - experiment_summary.txt
 child_directories:
 - plots
+generation_context:
+  generator: ai_enhanced
+  file_count: 4
+  directory_count: 1
+  primary_file_types:
+    .json: 2
+    .txt: 1
+    .yaml: 1

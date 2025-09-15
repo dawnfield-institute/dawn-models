@@ -1,31 +1,17 @@
 schema_version: '2.0'
 directory_name: results
-description: 'The "results" directory stores the output of several experiments conducted
-  with TinyCIMM-Navier, a specialized algorithm for symbolic cognition and recursive
-  collapse. The directory contains 111 files, including 10 code files that were executed
-  during the experimentation process and five documentation files that provide an
-  overview of the results and their interpretation.
-
-
-  The meta.yaml file is used to store metadata about the directory, such as its name,
-  description, semantic scope, and other relevant details. The live_cimm_experiment_20250816_171852
-  directory contains a DASHBOARD_INDEX.md file that serves as a dashboard for the
-  experiment results.
-
-
-  The TinyCIMM-Navier algorithm is designed to achieve adaptive learning, symbolic
-  memory, and field-based intelligence using Dawn Field Theory principles. The results
-  of these experiments demonstrate how lightweight, entropy-informed architectures
-  can create fractal patterns in both temporal directions and provide insight into
-  deep mathematical structures that emerge during learning through entropy analysis.
-
-
-  In summary, the "results" directory serves as a central location for storing and
-  organizing experimental results related to TinyCIMM-Navier, providing valuable insights
-  into the algorithm''s capabilities and applications in symbolic cognition and recursive
-  collapse.'
-semantic_scope: []
+description: The results directory organizes results components into logical subdirectories.
+  It serves as a container for related functionality, with each subdirectory focusing
+  on specific aspects of results.
+semantic_scope:
+- results
 files: []
 child_directories:
 - live_cimm_experiment_20250816_171852
 - live_cimm_experiment_20250818_091023
+generation_context:
+  generator: ai_enhanced
+  file_count: 1
+  directory_count: 2
+  primary_file_types:
+    .yaml: 1
