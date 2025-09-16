@@ -2,25 +2,41 @@
 
 Welcome to the Dawn Models project! We're excited about your interest in contributing to our dual-licensed model repository that implements Dawn Field Theory principles.
 
+## 📋 General Contribution Guidelines
+
+**For comprehensive contribution guidelines, please see the main Dawn Field Theory repository:**
+
+**👉 [Dawn Field Theory Contributing Guide](https://github.com/dawnfield-institute/dawn-field-theory/blob/main/CONTRIBUTION.md)**
+
+This covers:
+- Registration process (info@dawnfield.ca)
+- Engagement philosophy and boundaries
+- Citation and attribution guidelines
+- Community standards and code of conduct
+- Publishing boundaries for research work
+
 ---
 
-## 🎯 Quick Start
+## 🎯 Dawn Models Specific Guidelines
 
-### 1. Choose Your Contribution Path
+### Dual-License Contribution Paths
 
 #### 🔬 Research Contributions (AGPL-3.0)
+*Contributions to `/research` folder*
 - New experimental model variants
 - Theoretical implementations
 - Research notebooks and explorations
 - Ablation studies and architectural experiments
 
 #### 🚀 Stable Model Contributions (Apache-2.0)
+*Contributions to `/stable` folder*
 - Bug fixes in production models
 - Performance improvements
 - Documentation enhancements
 - General-purpose implementations
 
 #### 📚 Documentation & Infrastructure
+*Any folder*
 - README improvements
 - Tutorial development
 - Testing frameworks
@@ -53,7 +69,25 @@ cd dawn-models
 git remote add upstream https://github.com/dawnfield-institute/dawn-models.git
 ```
 
-### 2. Create a Branch
+## 🚀 Getting Started with Dawn Models
+
+### 1. Follow General Guidelines
+First, read and follow the main [Dawn Field Theory Contributing Guide](https://github.com/dawnfield-institute/dawn-field-theory/blob/main/CONTRIBUTION.md), including:
+- Contributor registration (info@dawnfield.ca)
+- Understanding project boundaries
+- Citation guidelines for substantial contributions
+
+### 2. Choose Your License Path
+Dawn Models uses a dual-licensing strategy:
+- **Research models** (`/research`) → AGPL-3.0
+- **Stable models** (`/stable`) → Apache-2.0
+
+### 3. Understand the Model Lifecycle
+- **Research variants never graduate** - they remain permanently in `/research`
+- **Stable models** are new, general-purpose implementations in `/stable`
+- Both paths accept contributions with different quality standards
+
+---
 ```bash
 # For research contributions
 git checkout -b research/your-feature-name
@@ -370,21 +404,21 @@ New contributors can request mentorship for:
 
 ## 📜 License Agreement
 
-By contributing to Dawn Models, you agree that:
+By contributing to Dawn Models, you agree that your contributions will be licensed according to the dual-licensing strategy outlined in [LICENSING.md](./LICENSING.md):
 
 1. **Research contributions** (`/research`) will be licensed under AGPL-3.0
 2. **Stable contributions** (`/stable`) will be licensed under Apache-2.0
 3. You have the right to submit the work under these licenses
 4. You understand the implications of the dual-licensing strategy
 
+For detailed contribution policies, citation guidelines, and community standards, see the main [Dawn Field Theory Contributing Guide](https://github.com/dawnfield-institute/dawn-field-theory/blob/main/CONTRIBUTION.md).
+
 ---
 
 ## 🙏 Thank You
 
-We appreciate your interest in advancing Dawn Field Theory through practical implementations. Your contributions help bridge the gap between cutting-edge research and real-world applications.
-
-Together, we're building a sustainable open science ecosystem that benefits researchers, practitioners, and society as a whole.
+We appreciate your interest in advancing Dawn Field Theory through practical model implementations. Your contributions help bridge the gap between cutting-edge research and real-world applications.
 
 ---
 
-*For questions about this contribution guide, please open an issue or contact research@dawnfield.ca*
+*For questions about this contribution guide, please open an issue or contact info@dawnfield.ca*
