@@ -3,17 +3,15 @@ GAIA v2.0 - Core Module
 Main components of the GAIA architecture
 """
 
-from .data_structures import FieldState, CollapseEvent, SymbolicStructure, GAIAState
-from .field_engine import FieldEngine
-from .collapse_core import CollapseCore
-from .gaia import GAIA
+# Import core modules individually to avoid circular dependencies
+# from .field_engine import FieldEngine
+# from .collapse_core import CollapseCore
 
 __all__ = [
-    'GAIA',
-    'GAIAState', 
-    'FieldEngine',
-    'FieldState',
-    'CollapseEvent',
-    'CollapseCore',
-    'SymbolicStructure'
+    'collapse_core',
+    'field_engine', 
+    'superfluid_memory',
+    'symbolic_crystallizer',
+    'meta_cognition_layer',
+    'resonance_mesh'
 ]
