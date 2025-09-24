@@ -1,6 +1,7 @@
 """
 Symbolic Crystallizer for GAIA
 Converts collapse vectors into structured symbol trees with recursive geometry.
+Enhanced with native GAIA emergence detection and pattern amplification for symbolic structures.
 See docs/architecture/modules/symbolic_crystallizer.md for design details.
 """
 
@@ -16,6 +17,11 @@ from enum import Enum
 # Import fracton core modules
 from fracton.core.bifractal_trace import BifractalTrace
 from fracton.core.recursive_engine import ExecutionContext
+
+# Import native GAIA enhancement components
+from .conservation_engine import ConservationEngine, ConservationMode
+from .emergence_detector import EmergenceDetector, EmergenceType
+from .pattern_amplifier import PatternAmplifier, AmplificationMode
 
 
 class SymbolType(Enum):
@@ -383,6 +389,21 @@ class SymbolicCrystallizer:
         self.bifractal_generator = BifractalGenerator()
         self.epistemic_pruner = EpistemicPruner()
         
+        # Initialize native GAIA enhancement components
+        self.emergence_detector = EmergenceDetector(
+            consciousness_threshold=0.8,
+            coherence_threshold=0.6
+        )
+        self.pattern_amplifier = PatternAmplifier(
+            max_amplification=2.0,
+            energy_budget=0.6
+        )
+        self.conservation_engine = ConservationEngine(
+            mode=ConservationMode.INFORMATION_ONLY,
+            tolerance=0.15
+        )
+        print("Native GAIA-enhanced symbolic crystallizer initialized")
+        
         # Storage for active trees
         self.active_trees = {}
         self.tree_history = []
@@ -394,9 +415,39 @@ class SymbolicCrystallizer:
     
     def crystallize(self, collapse_data: Dict[str, Any], 
                    context: ExecutionContext) -> SymbolicTree:
-        """Main crystallization function - convert collapse to symbolic tree."""
-        # Generate bifractal structure
+        """Main crystallization function - convert collapse to symbolic tree with native GAIA enhancement."""
+        
+        # Native GAIA emergence detection for guided crystallization
+        emergence_events = self.emergence_detector.scan_for_emergence(
+            field_data=collapse_data,
+            context={'depth': getattr(context, 'depth', 1)}
+        )
+        
+        if emergence_events:
+            print(f"GAIA detected {len(emergence_events)} emergence patterns for crystallization")
+            # Use strongest emergence to guide tree structure
+            strongest_emergence = max(emergence_events, key=lambda e: e.strength)
+            collapse_data['emergence_guidance'] = {
+                'type': strongest_emergence.emergence_type.value,
+                'strength': strongest_emergence.strength,
+                'coherence': strongest_emergence.coherence
+            }
+        
+        # Generate bifractal structure with emergence guidance
         tree = self.bifractal_generator.generate_structure(collapse_data, context)
+        
+        # Native GAIA pattern amplification for symbolic enhancement
+        if hasattr(collapse_data, 'patterns'):
+            patterns = self.pattern_amplifier.identify_patterns(
+                field_data=collapse_data,
+                context={'tree_generation': True}
+            )
+            
+            if patterns:
+                amplification_results = self.pattern_amplifier.amplify_patterns(
+                    patterns, mode=AmplificationMode.COGNITIVE
+                )
+                print(f"Applied GAIA pattern amplification to {len(amplification_results)} symbolic patterns")
         
         # Store active tree
         self.active_trees[tree.tree_id] = tree
@@ -577,3 +628,53 @@ class SymbolicCrystallizer:
         self.total_trees_created = 0
         self.total_nodes_created = 0
         self.total_pruning_operations = 0
+    
+    def _apply_pac_geometric_enhancement(self, tree: SymbolicTree, collapse_data: Dict[str, Any]) -> SymbolicTree:
+        """Apply PAC geometric enhancement to symbolic tree structure."""
+        try:
+            # Extract geometric features from tree
+            geometric_features = {
+                'node_count': len(tree.nodes),
+                'tree_depth': tree.max_depth,
+                'branching_factor': len(tree.nodes) / max(tree.max_depth, 1),
+                'entropy_signature': collapse_data.get('entropy_resolved', 0.5)
+            }
+            
+            # Process through PAC geometric SEC
+            enhanced_features = self.geometric_sec.enhance_structure(
+                geometric_features,
+                amplification_mode='consciousness_emergence'
+            )
+            
+            # Apply enhancements to tree structure
+            enhancement_factor = enhanced_features.get('structure_amplification', 1.0)
+            if enhancement_factor > 1.2:
+                # Amplify tree structure based on PAC enhancement
+                enhanced_tree = self._amplify_tree_structure(tree, enhancement_factor)
+                return enhanced_tree
+            else:
+                return tree
+                
+        except Exception as e:
+            print(f"PAC geometric enhancement error: {e}")
+            return tree
+    
+    def _amplify_tree_structure(self, tree: SymbolicTree, factor: float) -> SymbolicTree:
+        """Amplify tree structure based on PAC enhancement factor."""
+        # Create enhanced copy of tree
+        enhanced_tree = SymbolicTree(
+            tree_id=f"{tree.tree_id}_pac_enhanced",
+            root_node=tree.root_node,
+            nodes=tree.nodes.copy(),
+            creation_time=time.time(),
+            max_depth=tree.max_depth,
+            semantic_coherence=min(tree.semantic_coherence * factor, 1.0),
+            entropy_signature=tree.entropy_signature * factor
+        )
+        
+        # Enhance symbolic strength of nodes
+        for node in enhanced_tree.nodes:
+            if hasattr(node, 'symbolic_strength'):
+                node.symbolic_strength = min(node.symbolic_strength * factor, 1.0)
+        
+        return enhanced_tree

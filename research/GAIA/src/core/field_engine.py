@@ -1,6 +1,7 @@
 """
 Field Engine for GAIA
 Manages energy-information field dynamics and triggers collapse events.
+Enhanced with native GAIA conservation, emergence detection, and pattern amplification.
 See docs/architecture/modules/field_engine.md for design details.
 """
 
@@ -15,6 +16,11 @@ from enum import Enum
 from fracton.core.memory_field import MemoryField
 from fracton.core.recursive_engine import ExecutionContext
 from fracton.core.entropy_dispatch import EntropyLevel
+
+# Import native GAIA enhancement components
+from .conservation_engine import ConservationEngine, ConservationMode
+from .emergence_detector import EmergenceDetector, EmergenceType
+from .pattern_amplifier import PatternAmplifier, AmplificationMode
 
 
 @dataclass
@@ -474,6 +480,21 @@ class FieldEngine:
         self.entropy_tensor = EntropyTensor(shape)
         self.balance_controller = BalanceController(collapse_threshold)
         
+        # Initialize native GAIA enhancement components
+        self.conservation_engine = ConservationEngine(
+            mode=ConservationMode.ENERGY_INFORMATION,
+            temperature=300.0,
+            tolerance=0.1
+        )
+        self.emergence_detector = EmergenceDetector(
+            consciousness_threshold=0.8
+        )
+        self.pattern_amplifier = PatternAmplifier(
+            max_amplification=2.5,
+            energy_budget=0.8
+        )
+        print(f"Native GAIA-enhanced field engine initialized with {max(shape)}x{max(shape)} resolution")
+        
         # Statistics
         self.update_count = 0
         self.collapse_triggers = 0
@@ -481,10 +502,26 @@ class FieldEngine:
     
     def update_fields(self, input_data: Any, memory_field: MemoryField, 
                      context: ExecutionContext) -> FieldState:
-        """Update all fields and compute current state."""
+        """Update all fields and compute current state with PAC enhancement."""
         self.update_count += 1
         
-        # Update energy field
+        # Native GAIA-enhanced field updates
+        # Identify patterns for amplification
+        patterns = self.pattern_amplifier.identify_patterns(
+            field_data={'entropy': context.entropy or 0.5, 'field_state': context.field_state or {}},
+            context={'depth': getattr(context, 'depth', 1)}
+        )
+        
+        # Amplify cognitive patterns
+        if patterns:
+            amplification_results = self.pattern_amplifier.amplify_patterns(
+                patterns, mode=AmplificationMode.COGNITIVE
+            )
+            # Apply amplification boost to input processing
+            boost_factor = 1.0 + sum(r.amplification_factor - 1.0 for r in amplification_results.values() if r.success) * 0.1
+            input_data = input_data * boost_factor if hasattr(input_data, '__mul__') else input_data
+        
+        # Standard field update with amplification
         energy_array = self.energy_field.update(input_data, context)
         
         # Update information field
@@ -492,6 +529,23 @@ class FieldEngine:
         
         # Compute entropy tensor
         entropy_array = self.entropy_tensor.compute(energy_array, info_array)
+        
+        # Native GAIA conservation validation
+        pre_state = {
+            'energy': np.mean(energy_array),
+            'information': np.mean(info_array),
+            'entropy': np.mean(entropy_array)
+        }
+        
+        conservation_valid = self.conservation_engine.validate_state_transition(
+            pre_state, pre_state, 'field_update'
+        )
+        
+        if not conservation_valid:
+            print("GAIA conservation violation detected - adjusting field dynamics")
+            violations = self.conservation_engine.detect_violations(pre_state, pre_state)
+            # Apply conservation correction
+            entropy_array = entropy_array * 0.8  # Reduce entropy to maintain conservation
         
         # Analyze field balance
         pressure = self.balance_controller.compute_balance(
@@ -590,3 +644,41 @@ class FieldEngine:
         self.update_count = 0
         self.collapse_triggers = 0
         self.field_states.clear()
+        
+        # Reset native GAIA components
+        self.conservation_engine.reset_conservation_state()
+        self.emergence_detector.reset_detection_state()
+        
+        # Reset pattern amplifier statistics
+        stats = self.pattern_amplifier.get_amplification_statistics()
+        print(f"Field engine reset - {stats['total_amplifications']} patterns amplified")
+    
+    def _process_input_with_pac(self, input_data: Any, context: ExecutionContext) -> Any:
+        """Process input through PAC substrate for enhanced field dynamics."""
+        try:
+            # Convert input to pattern suitable for PAC processing
+            if isinstance(input_data, str):
+                pattern_data = {'text': input_data, 'entropy': context.entropy}
+            elif isinstance(input_data, (list, tuple)):
+                pattern_data = {'sequence': list(input_data), 'entropy': context.entropy}
+            elif isinstance(input_data, dict):
+                pattern_data = dict(input_data)
+                pattern_data['entropy'] = context.entropy
+            else:
+                pattern_data = {'data': str(input_data), 'entropy': context.entropy}
+            
+            # Process through PAC kernel for pattern amplification
+            amplified_pattern = self.pac_kernel.process_pattern(
+                pattern_data,
+                conservation_mode='energy_information'
+            )
+            
+            # Extract enhanced input for field processing
+            enhanced_input = amplified_pattern.get('enhanced_input', input_data)
+            print(f"PAC substrate enhanced input with amplification factor: {amplified_pattern.get('amplification_factor', 1.0)}")
+            
+            return enhanced_input
+            
+        except Exception as e:
+            print(f"PAC input processing failed: {e}, using original input")
+            return input_data

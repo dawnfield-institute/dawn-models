@@ -1,6 +1,7 @@
 """
 Meta-Cognition Layer for GAIA
 Provides meta-cognitive ancestry tracking, epistemic repair, and collapse front visualization.
+Enhanced with native GAIA consciousness emergence detection and pattern amplification.
 See docs/architecture/modules/meta_cognition_layer.md for design details.
 """
 
@@ -12,6 +13,11 @@ from collections import defaultdict, deque
 
 from fracton.core.recursive_engine import ExecutionContext
 from fracton.core.memory_field import MemoryField
+
+# Import native GAIA enhancement components
+from .conservation_engine import ConservationEngine, ConservationMode
+from .emergence_detector import EmergenceDetector, EmergenceType
+from .pattern_amplifier import PatternAmplifier, AmplificationMode
 
 
 @dataclass
@@ -50,6 +56,21 @@ class MetaCognitionLayer:
         self.ancestry_graph = defaultdict(list)
         self.epistemic_repairs = []
         self.collapse_front_data = deque(maxlen=1000)
+        
+        # Initialize native GAIA consciousness detection components
+        self.emergence_detector = EmergenceDetector(
+            consciousness_threshold=0.85,  # High threshold for meta-cognition
+            coherence_threshold=0.7
+        )
+        self.pattern_amplifier = PatternAmplifier(
+            max_amplification=1.5,  # Conservative amplification for meta-cognition
+            energy_budget=0.5
+        )
+        self.conservation_engine = ConservationEngine(
+            mode=ConservationMode.FULL_THERMODYNAMIC,  # Strictest conservation for meta-cognition
+            tolerance=0.05
+        )
+        print("Native GAIA-enhanced meta-cognition initialized with consciousness detection")
         
         # Statistics
         self.total_traces = 0
