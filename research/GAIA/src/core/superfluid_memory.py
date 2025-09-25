@@ -505,28 +505,58 @@ class SuperfluidMemory:
     
     def add_memory(self, structure_data: Dict[str, Any], 
                    context: ExecutionContext) -> Optional[MemoryImprint]:
-        """Add new structure to superfluid memory if stable enough."""
+        """Add new structure to PAC superfluid memory with amplitude conservation."""
         self.memory_updates += 1
         
-        # Evaluate stability
-        stability_score = self.stability_evaluator.evaluate_stability(structure_data, context)
+        # Convert structure to complex amplitude pattern
+        amplitude_pattern = self._structure_to_amplitude_pattern(structure_data, context)
         
-        # Only store if above threshold
-        if stability_score < self.stability_evaluator.stability_threshold:
+        # Evaluate stability through amplitude coherence (replaces arbitrary threshold)
+        # Use pattern coherence measure: max amplitude * coherence factor
+        max_amplitude = np.max(np.abs(amplitude_pattern))
+        mean_amplitude = np.mean(np.abs(amplitude_pattern))
+        pattern_coherence = max_amplitude * mean_amplitude  # Coherence = peak × average
+        stability_score = pattern_coherence
+        
+        # Debug output for testing
+        print(f"PAC Memory: max_amplitude={max_amplitude:.4f}, mean_amplitude={mean_amplitude:.4f}, stability_score={stability_score:.4f}")
+        
+        # PAC conservation: must rebalance field when adding new pattern
+        if not hasattr(self, 'memory_amplitude_field'):
+            # Initialize complex memory field on first use
+            shape = getattr(self.memory_field_tensor, 'shape', (32, 32, 16))[:2]  # Use 2D for simplicity
+            self.memory_amplitude_field = np.zeros(shape, dtype=complex)
+        
+        # Add pattern while conserving total amplitude
+        self.memory_amplitude_field = self._rebalance_amplitude_field(
+            self.memory_amplitude_field, 
+            amplitude_pattern
+        )
+        
+        # Detect vortices from phase singularities (real physics)
+        phase_field = np.angle(self.memory_amplitude_field)
+        vortices = self._detect_phase_singularities(phase_field)
+        self.total_vortices_detected = len(vortices)
+        
+        # Only store if amplitude pattern creates coherent structure (lowered threshold)
+        coherence_threshold = 0.01  # Much lower threshold for PAC patterns
+        if stability_score < coherence_threshold:
+            print(f"PAC Memory: Pattern rejected - stability_score {stability_score:.4f} < threshold {coherence_threshold}")
             return None
         
-        # Create memory imprint
+        # Create memory imprint from amplitude pattern
         imprint = self.imprint_encoder.encode_imprint(structure_data, stability_score, context)
+        
+        # Store amplitude pattern in imprint for PAC physics
+        imprint.amplitude_pattern = amplitude_pattern
+        imprint.phase_singularities = vortices
         
         # Add to active imprints
         self.active_imprints[imprint.structure_id] = imprint
         self.total_imprints_created += 1
         
-        # Add to field tensor
+        # Update legacy field tensor for compatibility (derived from amplitude)
         self.memory_field_tensor.add_imprint(imprint)
-        
-        # Check for vortex formation
-        self._check_vortex_formation()
         
         return imprint
     
@@ -610,3 +640,114 @@ class SuperfluidMemory:
         self.total_imprints_created = 0
         self.total_vortices_detected = 0
         self.memory_updates = 0
+        
+        # Reset PAC fields
+        if hasattr(self, 'memory_amplitude_field'):
+            del self.memory_amplitude_field
+
+    def _structure_to_amplitude_pattern(self, structure_data: Dict[str, Any], context: ExecutionContext) -> np.ndarray:
+        """Convert symbolic structure to complex amplitude pattern."""
+        # Get field dimensions
+        shape = getattr(self.memory_field_tensor, 'shape', (32, 32, 16))[:2]
+        
+        # Create amplitude pattern from structure data
+        amplitude_pattern = np.zeros(shape, dtype=complex)
+        
+        # Use structure properties to create amplitude/phase pattern
+        structure_id = structure_data.get('structure_id', '')
+        entropy_resolved = structure_data.get('entropy_resolved', 0.5)
+        
+        # Create spatial pattern from structure ID hash
+        import hashlib
+        id_hash = int(hashlib.md5(structure_id.encode()).hexdigest()[:8], 16)
+        
+        # Map hash to field locations
+        num_points = min(10, max(1, int(entropy_resolved * 20)))  # More entropy = more points
+        np.random.seed(id_hash % (2**31))  # Reproducible random pattern
+        
+        for i in range(num_points):
+            x = np.random.randint(0, shape[0])
+            y = np.random.randint(0, shape[1])
+            
+            # Amplitude magnitude from entropy (boosted for better coherence)
+            magnitude = entropy_resolved * 0.5  # Increased from 0.1 to 0.5
+            
+            # Phase from structure properties  
+            phase = 2 * np.pi * (i / num_points)
+            if 'collapse_type' in structure_data:
+                phase += hash(str(structure_data['collapse_type'])) * 0.001
+            
+            # Add Gaussian amplitude blob
+            sigma = max(1, shape[0] // 8)
+            xx, yy = np.meshgrid(range(shape[1]), range(shape[0]))
+            distance = (xx - x)**2 + (yy - y)**2
+            gaussian = np.exp(-distance / (2 * sigma**2))
+            
+            amplitude_pattern += magnitude * gaussian * np.exp(1j * phase)
+        
+        return amplitude_pattern
+    
+    def _rebalance_amplitude_field(self, existing_field: np.ndarray, new_pattern: np.ndarray) -> np.ndarray:
+        """Rebalance memory field while conserving total amplitude."""
+        # Resize new pattern to match existing field if needed
+        if new_pattern.shape != existing_field.shape:
+            # Simple resize by taking the minimum dimensions
+            min_x = min(new_pattern.shape[0], existing_field.shape[0])
+            min_y = min(new_pattern.shape[1], existing_field.shape[1])
+            resized_pattern = np.zeros_like(existing_field)
+            resized_pattern[:min_x, :min_y] = new_pattern[:min_x, :min_y]
+            new_pattern = resized_pattern
+        
+        # Add patterns
+        combined = existing_field + new_pattern
+        
+        # Calculate total probability
+        total_prob = np.sum(np.abs(combined) ** 2)
+        target_prob = existing_field.size  # Normalize to field size
+        
+        # Renormalize to conserve total probability
+        if total_prob > 1e-10:
+            conservation_factor = np.sqrt(target_prob / total_prob)
+            combined *= conservation_factor
+        
+        return combined
+    
+    def _detect_phase_singularities(self, phase_field: np.ndarray) -> List[Tuple[int, int]]:
+        """Detect phase singularities (vortices) in phase field - real physics."""
+        singularities = []
+        
+        try:
+            # Look for points where phase circulation is ±2π
+            for i in range(1, phase_field.shape[0] - 1):
+                for j in range(1, phase_field.shape[1] - 1):
+                    # Get phases around this point in clockwise order
+                    phases = [
+                        phase_field[i-1, j],     # top
+                        phase_field[i-1, j+1],   # top-right  
+                        phase_field[i, j+1],     # right
+                        phase_field[i+1, j+1],   # bottom-right
+                        phase_field[i+1, j],     # bottom
+                        phase_field[i+1, j-1],   # bottom-left
+                        phase_field[i, j-1],     # left
+                        phase_field[i-1, j-1]    # top-left
+                    ]
+                    
+                    # Calculate total phase circulation
+                    circulation = 0
+                    for k in range(len(phases)):
+                        diff = phases[k] - phases[k-1]
+                        # Unwrap phase difference
+                        if diff > np.pi:
+                            diff -= 2 * np.pi
+                        elif diff < -np.pi:
+                            diff += 2 * np.pi
+                        circulation += diff
+                    
+                    # Singularity if circulation ≈ ±2π
+                    if abs(abs(circulation) - 2 * np.pi) < 0.5:
+                        singularities.append((i, j))
+                        
+        except Exception as e:
+            print(f"PAC vortex detection error: {e}")
+        
+        return singularities

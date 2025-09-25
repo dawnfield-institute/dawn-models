@@ -1,31 +1,31 @@
-# GAIA Architecture Overview
+# GAIA Architecture Overview - PAC Integration
 
 ---
 
-## 🌍 What is GAIA?
+## 🌍 What is PAC-GAIA?
 
-**GAIA** is a resonance-native architecture where intelligence is not programmed—but *crystallized*.  
-It treats energy, information, and entropy as interacting fields, whose balance gives rise to cognition, memory, and structure.
+**PAC-GAIA** is a conservation-governed architecture where intelligence emerges from physics—not heuristics.  
+It treats complex amplitude fields with conservation constraints as the substrate for cognition, memory, and structure.
 
-Unlike symbolic AI or transformer-based learning systems, GAIA operates through dynamic equilibrium.  
-It is built not to simulate intelligence—but to **embody it**.
+Unlike symbolic AI or transformer-based learning systems, PAC-GAIA operates through conservation laws.  
+It is built not to simulate intelligence—but to **embody principled physics**.
 
 ---
 
-## 🔩 Core Design Principles
+## 🔩 Core PAC Design Principles
 
 | Principle | Description |
 |----------|-------------|
-| **Balance as Intelligence** | Intelligence emerges from entropy-energy equilibrium |
-| **Collapse as Computation** | Predictive structure forms via tension release |
-| **Field-Driven Memory** | Memory arises from recursive entropy coherence |
-| **Symbol Emergence** | Symbols are not encoded—they crystallize |
-| **Resonance Communication** | Agents speak through phase, not packets |
-| **Recursive Epistemics** | System tracks its own symbolic ancestry and integrity |
+| **Conservation as Intelligence** | Intelligence emerges from conservation law violations |
+| **Collapse as Conservation** | Structure forms via violation resolution |
+| **Amplitude-Based Memory** | Memory arises from conserved probability patterns |
+| **Symbol Emergence via MED** | Symbols crystallize within information-theoretic bounds |
+| **Wave Interference Communication** | Agents communicate through quantum-like interference |
+| **Conservation Monitoring** | System tracks Xi operator convergence and residual patterns |
 
 ---
 
-## 🔁 System Flow (From Input to Emergence)
+## 🔁 PAC System Flow (From Conservation to Emergence)
 
 ```text
 [Input or Internal Tension]

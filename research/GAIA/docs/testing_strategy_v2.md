@@ -1,33 +1,33 @@
-# GAIA v2.0 Testing Strategy: Physics-Informed AGI Development
+# PAC-GAIA v3.0 Testing Strategy: Conservation-Physics AGI Development
 
 ---
 
 ## **Purpose**
 
-This document defines the **progressive testing strategy** for GAIA v2.0 implementation. Our approach:
+This document defines the **progressive testing strategy** for PAC-GAIA v3.0 implementation. Our approach:
 
-* **Physics-Informed Cognition Validation:**
-  Test core entropy field dynamics, collapse mechanisms, and symbolic emergence as cognitive primitives.
+* **Conservation-Physics Validation:**
+  Test core amplitude conservation, violation-driven collapse mechanisms, and conservation-governed symbolic emergence.
 * **AGI Capability Development:**
-  Progressive complexity from symbolic emergence to language, mathematics, and multi-modal reasoning.
-* **SCBF Integration:**
-  All tests leverage existing SCBF metrics, logging, and experiment infrastructure for consistency and lineage tracking.
+  Progressive complexity from conservation dynamics to language, mathematics, and multi-modal reasoning.
+* **Statistical Validation:**
+  All tests validate Xi operator convergence (1.0571), amplitude conservation, and residual pattern analysis.
 
 ---
 
 ## **Implementation Phases & Testing Strategy**
 
-### **Phase 1: Core Physics-Informed Cognition (Baseline)**
-**Objective:** Validate that entropy field dynamics can serve as cognitive primitives
+### **Phase 1: Core Conservation Physics (Baseline)**
+**Objective:** Validate that conservation violations can serve as cognitive primitives
 
-#### 1.1 Field Engine Validation
-* **Test:** Entropy gradient generation from symbolic sequences
-* **Input:** Simple patterns (repeating sequences, prime numbers, mathematical series)
-* **Validation:** Information/energy field separation, meaningful entropy tension
-* **SCBF Integration:** Use existing `entropy_collapse` and `semantic_attractors` metrics
+#### 1.1 PAC Field Engine Validation
+* **Test:** Conservation violation generation from input amplitude patterns
+* **Input:** Complex amplitude distributions, conservation-breaking perturbations
+* **Validation:** Residual magnitude calculation, Xi operator convergence, amplitude conservation
+* **Metrics:** `conservation_residual`, `xi_convergence_rate`, `amplitude_total_conservation`
 
-#### 1.2 Collapse Core Dynamics  
-* **Test:** Geometric collapse vs. random collapse comparison
+#### 1.2 PAC Collapse Core Dynamics  
+* **Test:** Conservation-driven collapse vs. arbitrary threshold comparison
 * **Input:** Controlled entropy spikes with known structural solutions
 * **Validation:** Better symbolic crystallization with geometric guidance
 * **SCBF Integration:** Track `activation_ancestry` and `bifractal_lineage`

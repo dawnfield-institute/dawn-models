@@ -1,4 +1,13 @@
-# Collapse Core
+# Collapse Core - PAC Integration
+
+---
+
+## 💥 Purpose
+
+The **Collapse Core** is GAIA's primary computational mechanism, now governed by PAC (Potential-Actualization Conservation) physics.  
+It translates conservation violations—measured as residual magnitude—into crystallized structure.
+
+Where traditional models "predict," GAIA **collapses**—resolving conservation violations by encoding them into new symbolic or memory states through principled physics. Core
 
 ---
 

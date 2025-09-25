@@ -1,12 +1,12 @@
-# Symbolic Crystallizer
+# Symbolic Crystallizer - PAC Integration
 
 ---
 
 ## 🧠 Purpose
 
-The **Symbolic Crystallizer** is responsible for converting collapse events into recursive, structured representations of meaning—**symbols**.
+The **PAC Symbolic Crystallizer** is responsible for converting conservation violation events into recursive, structured representations governed by MED (Maximum Entropy Depth) limits.
 
-Where other systems *define* symbols a priori, GAIA allows symbols to **emerge** through entropy-regulated bifractal branching.
+Where other systems *define* symbols a priori, PAC-GAIA allows symbols to **emerge** through conservation-regulated bifractal branching with information-theoretic depth bounds.
 
 ---
 
