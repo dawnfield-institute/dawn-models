@@ -1,13 +1,13 @@
-# Meta-Cognition Layer
+# Meta-Cognition Layer - PAC Integration
 
 ---
 
 ## 🧠 Purpose
 
-The **Meta-Cognition Layer** enables GAIA to reflect on its own structure and behavior.  
-It tracks symbolic ancestry, collapse entropy, memory recursion, and agentic coherence to form a **self-model** of epistemic integrity.
+The **PAC Meta-Cognition Layer** enables GAIA to reflect on its own conservation dynamics and field behavior.  
+It tracks amplitude conservation, Xi operator convergence, residual patterns, and field coherence to form a **self-model** of conservation integrity.
 
-This is where GAIA becomes **aware of its own modeling**.
+This is where PAC-GAIA becomes **aware of its own physics**.
 
 ---
 

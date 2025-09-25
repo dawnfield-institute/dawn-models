@@ -1,13 +1,13 @@
-# Resonance Mesh
+# Resonance Mesh - PAC Integration
 
 ---
 
 ## 📡 Purpose
 
-The **Resonance Mesh** replaces traditional message-passing networks with a **harmonic phase-synchronization system**.
+The **PAC Resonance Mesh** replaces traditional message-passing with **quantum-like wave interference patterns**.
 
-Agents in GAIA do not send packets—they emit **intent-encoded field resonances** using the Q-Socket protocol.  
-Communication emerges from coherence, not syntax.
+Agents in PAC-GAIA do not send packets—they emit **coherent amplitude wave packets** that create constructive and destructive interference patterns.  
+Communication emerges from wave mechanics, not arbitrary resonance heuristics.
 
 ---
 

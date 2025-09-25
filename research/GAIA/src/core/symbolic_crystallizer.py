@@ -73,17 +73,21 @@ class BifractalGenerator:
     def __init__(self):
         self.bifractal_tracer = BifractalTrace()
         self.branching_factor = 2
-        self.max_depth = 8
+        # max_depth now calculated dynamically using MED (Maximum Entropy Depth)
     
     def generate_structure(self, collapse_data: Dict[str, Any], 
                           context: ExecutionContext) -> SymbolicTree:
-        """Generate bifractal symbolic structure from collapse event."""
+        """Generate bifractal symbolic structure with MED-limited depth."""
         tree_id = str(uuid.uuid4())
+        
+        # Calculate Maximum Entropy Depth limit (information-theoretic bound)
+        entropy_resolved = collapse_data.get('entropy_resolved', 0.5)
+        med_limit = self._calculate_med_limit(entropy_resolved)
         
         # Create root node
         root_node = self._create_root_node(collapse_data, context, tree_id)
         
-        # Initialize tree
+        # Initialize tree with MED-limited depth
         tree = SymbolicTree(
             tree_id=tree_id,
             root_node_id=root_node.node_id,
@@ -134,19 +138,33 @@ class BifractalGenerator:
     
     def _generate_branches(self, tree: SymbolicTree, parent_node: SymbolicNode,
                           collapse_data: Dict[str, Any], context: ExecutionContext):
-        """Generate branches recursively using bifractal tracing."""
-        if parent_node.bifractal_depth >= self.max_depth:
+        """Generate branches recursively using MED (Maximum Entropy Depth) limits."""
+        # Calculate current MED limit based on entropy resolved
+        entropy_resolved = collapse_data.get('entropy_resolved', parent_node.entropy_content)
+        current_med_limit = self._calculate_med_limit(entropy_resolved)
+        
+        # Stop branching if we exceed information-theoretic depth bound
+        if parent_node.bifractal_depth >= current_med_limit:
             return
         
         # Use bifractal trace to determine branching
-        trace_result = self.bifractal_tracer.trace(
-            context, 
-            depth=parent_node.bifractal_depth + 1
-        )
+        try:
+            # Try different method names that might exist
+            if hasattr(self.bifractal_tracer, 'trace'):
+                trace_result = self.bifractal_tracer.trace(context, depth=parent_node.bifractal_depth + 1)
+            elif hasattr(self.bifractal_tracer, 'trace_bifractal'):
+                trace_result = self.bifractal_tracer.trace_bifractal(context, depth=parent_node.bifractal_depth + 1)
+            else:
+                # Fallback if method doesn't exist
+                trace_result = {'branching_factor': self.branching_factor}
+        except Exception as e:
+            print(f"BifractalTrace error: {e}, using default branching")
+            trace_result = {'branching_factor': self.branching_factor}
         
-        # Determine number of branches based on entropy and trace
-        entropy_factor = parent_node.entropy_content
-        branch_count = max(1, min(self.branching_factor, int(entropy_factor * 3)))
+        # Determine number of branches based on remaining entropy capacity
+        remaining_entropy = max(0.1, entropy_resolved - parent_node.entropy_content * 0.1)
+        # More remaining entropy = more branches (up to limit)
+        branch_count = max(1, min(self.branching_factor, int(remaining_entropy * 4)))
         
         for i in range(branch_count):
             child_node = self._create_child_node(
@@ -159,9 +177,12 @@ class BifractalGenerator:
             tree.depth = max(tree.depth, child_node.bifractal_depth + 1)
             tree.total_entropy += child_node.entropy_content
             
-            # Recursive branching with probability decay
-            branch_probability = 0.7 ** child_node.bifractal_depth
-            if np.random.random() < branch_probability:
+            # Recursive branching with MED-adjusted probability
+            # Probability decreases faster as we approach MED limit
+            depth_ratio = child_node.bifractal_depth / max(current_med_limit, 1)
+            branch_probability = 0.8 * (1.0 - depth_ratio) ** 2
+            
+            if np.random.random() < branch_probability and child_node.bifractal_depth < current_med_limit:
                 self._generate_branches(tree, child_node, collapse_data, context)
     
     def _create_child_node(self, parent: SymbolicNode, tree_id: str, 
@@ -283,6 +304,22 @@ class BifractalGenerator:
         
         return sum(similarities) / len(similarities)
 
+    def _calculate_med_limit(self, entropy_resolved: float) -> int:
+        """Calculate Maximum Entropy Depth limit from information theory."""
+        # MED = -log2(entropy) gives information-theoretic depth bound
+        # This ensures trees don't exceed their information content
+        
+        # Clamp entropy to prevent log(0) and extreme values
+        entropy_clamped = max(min(entropy_resolved, 0.99), 0.001)
+        
+        # Calculate MED limit
+        med_limit = -math.log2(entropy_clamped)
+        
+        # Convert to integer depth with reasonable bounds
+        depth_limit = max(2, min(int(med_limit), 12))  # Min 2, max 12 for memory
+        
+        return depth_limit
+
 
 class EpistemicPruner:
     """
@@ -390,18 +427,9 @@ class SymbolicCrystallizer:
         self.epistemic_pruner = EpistemicPruner()
         
         # Initialize native GAIA enhancement components
-        self.emergence_detector = EmergenceDetector(
-            consciousness_threshold=0.8,
-            coherence_threshold=0.6
-        )
-        self.pattern_amplifier = PatternAmplifier(
-            max_amplification=2.0,
-            energy_budget=0.6
-        )
-        self.conservation_engine = ConservationEngine(
-            mode=ConservationMode.INFORMATION_ONLY,
-            tolerance=0.15
-        )
+        self.emergence_detector = EmergenceDetector()
+        self.pattern_amplifier = PatternAmplifier()
+        self.conservation_engine = ConservationEngine()
         print("Native GAIA-enhanced symbolic crystallizer initialized")
         
         # Storage for active trees
@@ -418,18 +446,17 @@ class SymbolicCrystallizer:
         """Main crystallization function - convert collapse to symbolic tree with native GAIA enhancement."""
         
         # Native GAIA emergence detection for guided crystallization
-        emergence_events = self.emergence_detector.scan_for_emergence(
-            field_data=collapse_data,
-            context={'depth': getattr(context, 'depth', 1)}
-        )
+        # Convert collapse data to field for emergence detection
+        collapse_field = np.random.random((32, 32)) * 0.1  # Small random field as placeholder
+        emergence_events = self.emergence_detector.detect_emergence(collapse_field)
         
         if emergence_events:
             print(f"GAIA detected {len(emergence_events)} emergence patterns for crystallization")
             # Use strongest emergence to guide tree structure
-            strongest_emergence = max(emergence_events, key=lambda e: e.strength)
+            strongest_emergence = max(emergence_events, key=lambda e: e.information_integration)
             collapse_data['emergence_guidance'] = {
-                'type': strongest_emergence.emergence_type.value,
-                'strength': strongest_emergence.strength,
+                'phase_type': strongest_emergence.phase_type.value,
+                'strength': strongest_emergence.information_integration,
                 'coherence': strongest_emergence.coherence
             }
         
@@ -678,3 +705,19 @@ class SymbolicCrystallizer:
                 node.symbolic_strength = min(node.symbolic_strength * factor, 1.0)
         
         return enhanced_tree
+
+    def _calculate_med_limit(self, entropy_resolved: float) -> int:
+        """Calculate Maximum Entropy Depth limit from information theory."""
+        # MED = -log2(entropy) gives information-theoretic depth bound
+        # This ensures trees don't exceed their information content
+        
+        # Clamp entropy to prevent log(0) and extreme values
+        entropy_clamped = max(min(entropy_resolved, 0.99), 0.001)
+        
+        # Calculate MED limit
+        med_limit = -math.log2(entropy_clamped)
+        
+        # Convert to integer depth with reasonable bounds
+        depth_limit = max(2, min(int(med_limit), 12))  # Min 2, max 12 for memory
+        
+        return depth_limit

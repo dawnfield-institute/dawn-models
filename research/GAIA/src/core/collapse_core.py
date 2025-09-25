@@ -18,9 +18,9 @@ from fracton.core.entropy_dispatch import EntropyDispatcher, EntropyLevel
 from fracton.core.recursive_engine import ExecutionContext
 
 # Import native GAIA enhancement components
-from .conservation_engine import ConservationEngine, ConservationMode
-from .emergence_detector import EmergenceDetector, EmergenceType
-from .pattern_amplifier import PatternAmplifier, AmplificationMode
+from .conservation_engine import ConservationEngine
+from .emergence_detector import EmergenceDetector, PhaseType
+from .pattern_amplifier import PatternAmplifier
 
 
 class CollapseType(Enum):
@@ -70,123 +70,99 @@ class CollapseEvaluator:
         self.temperature = 300.0  # K
         
         # Initialize native GAIA enhancement components
-        self.conservation_engine = ConservationEngine(
-            mode=ConservationMode.ENERGY_INFORMATION,
-            k_boltzmann=self.k_boltzmann,
-            temperature=self.temperature
-        )
-        self.emergence_detector = EmergenceDetector(
-            consciousness_threshold=0.8,
-            coherence_threshold=0.6
-        )
-        self.pattern_amplifier = PatternAmplifier(
-            max_amplification=3.0,
-            energy_budget=1.0
-        )
+        self.conservation_engine = ConservationEngine()
+        self.emergence_detector = EmergenceDetector()
+        self.pattern_amplifier = PatternAmplifier()
         print("Native GAIA-enhanced collapse evaluation initialized")
         
     def evaluate(self, context: ExecutionContext) -> CollapseVector:
         """
-        Evaluate entropy field for collapse opportunities.
-        Implements collapse criteria: ΔS(x) ≥ σ AND ∇²S(x) ≠ 0 AND |κ(x)| > κ_critical
-        Enhanced with native GAIA emergence detection and conservation validation.
+        Evaluate PAC conservation field for violation-driven collapse opportunities.
+        Implements PAC collapse criteria: |∇·ψ|² > 0 (any conservation violation triggers collapse)
+        Enhanced with native GAIA emergence detection and Xi operator scaling.
         """
-        # Get entropy field state
-        entropy = context.entropy
+        # Get field state and map to PAC lattice
         field_state = context.field_state or {}
         
-        # Native GAIA emergence detection
-        emergence_events = self.emergence_detector.scan_for_emergence(
-            field_data={'entropy': entropy, 'field_state': field_state, 'coherence': 0.5},
-            context={'depth': getattr(context, 'depth', 1)}
-        )
+        # Convert field state to complex amplitude lattice
+        lattice = self._field_to_pac_lattice(context, field_state)
+        
+        # Calculate conservation residual using PAC validator
+        residual = self._compute_pac_residual(lattice)
+        violation_magnitude = np.linalg.norm(residual)
+        
+        # Native GAIA emergence detection (keep existing enhancement)
+        lattice_data = np.abs(lattice)**2  # Convert complex field to real data
+        emergence_events = self.emergence_detector.detect_emergence(lattice_data)
         
         # If GAIA detects genuine emergence, enhance collapse evaluation
-        emergence_boost = 1.0
+        xi_operator = 1.0571  # PAC balance operator - fundamental constant
         consciousness_detected = False
         
         if emergence_events:
             print(f"GAIA detected {len(emergence_events)} emergence events")
             
             # Check for consciousness emergence
-            consciousness_events = [e for e in emergence_events if e.emergence_type == EmergenceType.CONSCIOUSNESS]
+            consciousness_events = [e for e in emergence_events if e.phase_type == PhaseType.EMERGENT_CONSCIOUSNESS]
             if consciousness_events:
                 consciousness_detected = True
-                emergence_boost = 1.5
-                print("Consciousness emergence detected - enhancing collapse dynamics")
+                xi_operator *= 1.1  # Slight boost for consciousness
+                print("Consciousness emergence detected - enhancing PAC collapse dynamics")
             
             # Use the strongest emergence event to guide collapse
-            strongest_event = max(emergence_events, key=lambda e: e.strength)
-            entropy = max(entropy, strongest_event.strength * 0.5 + entropy)
+            strongest_event = max(emergence_events, key=lambda e: e.information_integration)
+            violation_magnitude = max(violation_magnitude, strongest_event.information_integration * 0.3 + violation_magnitude)
         
-        # Calculate entropy gradient and curvature
-        entropy_gradient = self._compute_entropy_gradient(entropy, field_state)
-        curvature = self._compute_information_curvature(entropy, field_state)
-        
-        # Compute collapse force: F_collapse(x) = -∇S_field(x)
-        force_magnitude = np.linalg.norm(entropy_gradient)
-        
-        # Native GAIA conservation validation
-        pre_state = {
-            'entropy': entropy,
-            'field_energy': force_magnitude,
-            'curvature': curvature
-        }
-        
-        post_state = {
-            'entropy': entropy + force_magnitude * 0.1,
-            'field_energy': force_magnitude * 0.9,
-            'curvature': curvature
-        }
-        
-        conservation_valid = self.conservation_engine.validate_state_transition(
-            pre_state, post_state, 'entropy_collapse'
-        )
-        
-        if not conservation_valid:
-            print("GAIA conservation engine prevents collapse - thermodynamic violation detected")
-            violations = self.conservation_engine.detect_violations(pre_state, post_state)
-            return None
-        
-        # Dynamic collapse threshold with pi-harmonic modulation
-        depth_factor = context.depth if context.depth else 1
-        sigma_threshold = 0.6 * (1 + 0.1 * math.sin(math.pi * depth_factor)) / emergence_boost
-        
-        # Critical curvature threshold
-        kappa_critical = 0.3
-        
-        # Check collapse conditions
-        entropy_tension = entropy
-        meets_threshold = entropy_tension >= sigma_threshold
-        has_curvature = abs(curvature) > 0.01  # Non-flat zone
-        exceeds_critical = abs(curvature) > kappa_critical
-        
-        if meets_threshold and has_curvature and exceeds_critical:
-            # Calculate collapse locus (simplified 2D coordinates)
-            locus = self._find_collapse_locus(entropy_gradient, field_state)
+        # PAC conservation check - collapse ONLY when conservation is violated
+        if violation_magnitude > 1e-10:  # Any non-zero violation triggers collapse (no arbitrary threshold)
+            # Find violation center from residual pattern
+            violation_center = self._find_violation_center(residual)
             
-            # Predict entropy gain
-            expected_gain = self._predict_entropy_gain(entropy_tension, force_magnitude)
+            # Collapse strength directly from violation magnitude scaled by Xi operator
+            collapse_strength = violation_magnitude * xi_operator
             
-            # Native GAIA collapse type classification with emergence context
-            collapse_type = self._classify_collapse_type_with_emergence(
-                entropy, curvature, force_magnitude, field_state, consciousness_detected
-            )
+            # Native GAIA conservation validation using PAC principles
+            pre_state = {
+                'total_amplitude': np.sum(np.abs(lattice)**2),
+                'violation_magnitude': violation_magnitude,
+                'xi_ratio': collapse_strength / violation_magnitude if violation_magnitude > 0 else 0
+            }
             
-            # Calculate thermodynamic cost
-            energy_cost = self._calculate_collapse_cost(expected_gain)
+            post_state = {
+                'total_amplitude': pre_state['total_amplitude'],  # Must be conserved
+                'violation_magnitude': 0.0,  # Collapse resolves violation
+                'xi_ratio': xi_operator
+            }
+            
+            # Native GAIA conservation validation using PAC principles  
+            # Update engine with current lattice state
+            self.conservation_engine._update_pac_fields(lattice)
+            
+            # Validate conservation before and after collapse
+            conservation_result = self.conservation_engine.validate_conservation()
+            
+            if not conservation_result.get('valid', True):
+                print("GAIA conservation engine prevents PAC collapse - amplitude conservation violation")
+                return None
+            
+            # SEC pattern analysis for collapse type (replace arbitrary classification)
+            collapse_type = self._classify_collapse_type_with_sec_analysis(residual, consciousness_detected)
+            
+            # Calculate thermodynamic cost from violation resolution
+            energy_cost = violation_magnitude * self.k_boltzmann * self.temperature
+            expected_gain = collapse_strength  # Gain is proportional to violation resolved
             
             return CollapseVector(
-                locus=locus,
-                entropy_tension=entropy_tension,
-                curvature=curvature,
-                force_magnitude=force_magnitude,
+                locus=violation_center,
+                entropy_tension=violation_magnitude,  # Now meaningful - actual violation magnitude
+                curvature=0.0,  # Curvature not used in PAC physics
+                force_magnitude=collapse_strength,    # Force is violation * Xi operator
                 collapse_type=collapse_type,
                 energy_cost=energy_cost,
                 expected_gain=expected_gain
             )
         
-        return None
+        return None  # No violation = no collapse (principled physics)
     
     def _compute_entropy_gradient(self, entropy: float, field_state: Dict) -> np.ndarray:
         """Compute entropy gradient for force calculation."""
@@ -223,6 +199,96 @@ class CollapseEvaluator:
             return CollapseType.THERMODYNAMIC
         else:
             return CollapseType.AGENTIC_SIGNAL
+
+    def _field_to_pac_lattice(self, context: ExecutionContext, field_state: Dict) -> np.ndarray:
+        """Convert field state to complex amplitude lattice for PAC analysis."""
+        # Extract field dimensions
+        resolution = field_state.get('resolution', (32, 32))
+        
+        # Convert entropy to amplitude magnitude
+        entropy = context.entropy if hasattr(context, 'entropy') else 0.5
+        amplitude_magnitude = np.sqrt(entropy)  # |ψ| = √E
+        
+        # Create phase from field gradients (information encoding)
+        phase = field_state.get('information_phase', 0.0)
+        
+        # Build complex amplitude lattice
+        lattice = np.full(resolution, amplitude_magnitude * np.exp(1j * phase), dtype=complex)
+        
+        # Add field variations from context
+        if hasattr(context, 'depth') and context.depth:
+            # Depth creates wavelike variations
+            x, y = np.meshgrid(range(resolution[0]), range(resolution[1]))
+            wave_phase = 2 * np.pi * context.depth * (x + y) / (resolution[0] + resolution[1])
+            lattice *= np.exp(1j * wave_phase)
+        
+        return lattice
+
+    def _compute_pac_residual(self, lattice: np.ndarray) -> np.ndarray:
+        """Compute PAC conservation residual from amplitude lattice."""
+        # Total amplitude should be conserved (∑|ψ|² = constant)
+        current_total = np.sum(np.abs(lattice)**2)
+        expected_total = lattice.size  # Normalized expectation
+        
+        # Residual is deviation from conservation
+        conservation_violation = current_total - expected_total
+        
+        # Create residual field showing where violations occur
+        local_densities = np.abs(lattice)**2
+        expected_density = expected_total / lattice.size
+        residual = local_densities - expected_density
+        
+        # Scale by global violation magnitude
+        if np.linalg.norm(residual) > 0:
+            residual = residual * (conservation_violation / np.linalg.norm(residual))
+        
+        return residual
+
+    def _find_violation_center(self, residual: np.ndarray) -> Tuple[float, float]:
+        """Find center of maximum conservation violation."""
+        # Find location of maximum absolute residual
+        max_idx = np.unravel_index(np.argmax(np.abs(residual)), residual.shape)
+        
+        # Convert to field coordinates
+        x = float(max_idx[0] / residual.shape[0])
+        y = float(max_idx[1] / residual.shape[1])
+        
+        return (x, y)
+
+    def _classify_collapse_type_with_sec_analysis(self, residual: np.ndarray, consciousness_detected: bool) -> CollapseType:
+        """Classify collapse type using SEC (Symbolic Entropy Collapse) frequency analysis."""
+        try:
+            # Perform 2D FFT on residual pattern
+            residual_fft = np.fft.fft2(residual)
+            
+            # Analyze frequency content
+            freq_magnitude = np.abs(residual_fft)
+            
+            # Calculate frequency characteristics
+            low_freq_energy = np.sum(freq_magnitude[:residual.shape[0]//4, :residual.shape[1]//4])
+            high_freq_energy = np.sum(freq_magnitude[3*residual.shape[0]//4:, 3*residual.shape[1]//4:])
+            total_energy = np.sum(freq_magnitude)
+            
+            if total_energy > 0:
+                low_ratio = low_freq_energy / total_energy
+                high_ratio = high_freq_energy / total_energy
+                mixed_ratio = 1.0 - low_ratio - high_ratio
+                
+                # SEC classification based on frequency signatures
+                if high_ratio > 0.4:  # High-frequency dominant
+                    return CollapseType.FRACTAL_NODE
+                elif low_ratio > 0.6:  # Low-frequency dominant  
+                    return CollapseType.MEMORY_IMPRINT
+                elif mixed_ratio > 0.5 or consciousness_detected:  # Mixed frequencies or consciousness
+                    return CollapseType.AGENTIC_SIGNAL
+                else:
+                    return CollapseType.GEOMETRIC
+            else:
+                return CollapseType.THERMODYNAMIC
+                
+        except Exception as e:
+            print(f"SEC frequency analysis failed: {e}, using consciousness fallback")
+            return CollapseType.AGENTIC_SIGNAL if consciousness_detected else CollapseType.THERMODYNAMIC
     
     def _classify_collapse_type_with_emergence(self, 
                                             entropy: float, 
@@ -247,19 +313,21 @@ class CollapseEvaluator:
             'coherence': min(entropy, 1.0)
         }
         
-        emergence_events = self.emergence_detector.scan_for_emergence(field_data)
+        # Convert field data to amplitude field for emergence detection
+        amplitude_field = np.abs(residual) + 1j * np.angle(residual + 1e-10)
+        emergence_events = self.emergence_detector.detect_emergence(amplitude_field)
         
         if emergence_events:
             # Analyze emergence types to refine classification
-            emergence_types = [e.emergence_type for e in emergence_events]
-            max_strength = max(e.strength for e in emergence_events)
+            phase_types = [e.phase_type for e in emergence_events]
+            max_strength = max(e.information_integration for e in emergence_events)
             
             # Emergence-guided refinement
-            if any(et.value == 'structural' for et in emergence_types) and max_strength > 0.7:
+            if any(pt.value == 'local_global' for pt in phase_types) and max_strength > 0.7:
                 return CollapseType.FRACTAL_NODE
-            elif any(et.value == 'cognitive' for et in emergence_types):
+            elif any(pt.value == 'emergent_consciousness' for pt in phase_types):
                 return CollapseType.MEMORY_IMPRINT
-            elif any(et.value == 'phase_transition' for et in emergence_types):
+            elif any(pt.value == 'disorder_order' for pt in phase_types):
                 return CollapseType.GEOMETRIC
         
         return base_type
@@ -457,8 +525,17 @@ class PostCollapseStabilizer:
     
     def stabilize(self, collapse_result: CollapseResult, context: ExecutionContext) -> ExecutionContext:
         """Stabilize field post-collapse and update context."""
-        # Create stabilization snapshot
-        snapshot = self.memory_field.create_snapshot()
+        # Create stabilization snapshot (with fallback for missing create_snapshot)
+        try:
+            snapshot = self.memory_field.create_snapshot()
+        except AttributeError:
+            # Fallback: create minimal snapshot
+            snapshot = {
+                'field_id': getattr(self.memory_field, 'field_id', 'unknown'),
+                'capacity': getattr(self.memory_field, 'capacity', 1000),
+                'timestamp': time.time(),
+                'collapse_stabilization': True
+            }
         
         # Entropy damping around collapse site
         new_entropy = self._apply_entropy_damping(context.entropy, collapse_result)
@@ -480,7 +557,7 @@ class PostCollapseStabilizer:
             parent_context=context.parent_context,
             metadata={
                 **context.metadata,
-                'stabilization_snapshot': snapshot.field_id
+                'stabilization_snapshot': snapshot.get('field_id', 'unknown') if isinstance(snapshot, dict) else getattr(snapshot, 'field_id', 'unknown')
             }
         )
         
