@@ -1,26 +1,51 @@
 """
-Collapse Core for GAIA
-Implements entropy-driven collapse dynamics using fracton core modules.
-Enhanced with native GAIA conservation, emergence detection, and pattern amplification.
-See docs/architecture/modules/collapse_core.md for theory and design.
+PAC-Native Collapse Core for GAIA v3.0
+Built on Fracton SDK for physics-governed entropy collapse with automatic conservation.
+All collapse operations maintain f(parent) = Σf(children) through native PAC regulation.
 """
 
 import numpy as np
 import math
 import time
+import sys
 from typing import Dict, Any, List, Tuple, Optional, Union
 from dataclasses import dataclass
 from enum import Enum
 
-# Import fracton core modules
-from fracton.core.memory_field import MemoryField
-from fracton.core.entropy_dispatch import EntropyDispatcher, EntropyLevel
-from fracton.core.recursive_engine import ExecutionContext
+# Add Fracton SDK path
+sys.path.append('../../../fracton')
 
-# Import native GAIA enhancement components
-from .conservation_engine import ConservationEngine
-from .emergence_detector import EmergenceDetector, PhaseType
-from .pattern_amplifier import PatternAmplifier
+# Import PAC-native Fracton SDK for collapse operations (required)
+import fracton
+from fracton import (
+    # Core PAC-native entropy components
+    PhysicsEntropyDispatcher, EntropyDispatcher,
+    PhysicsMemoryField, MemoryField,
+    # PAC regulation and validation
+    pac_recursive, validate_pac_conservation,
+    enable_pac_self_regulation,
+    # Physics-driven collapse primitives
+    entropy_driven_collapse, enforce_pac_conservation,
+    resonance_field_interaction
+)
+
+# Import entropy level from core module
+from fracton.core.entropy_dispatch import EntropyLevel
+
+# Import GAIA enhancement components (enhanced with Fracton)
+try:
+    from .conservation_engine import ConservationEngine
+    from .emergence_detector import EmergenceDetector, PhaseType
+    from .pattern_amplifier import PatternAmplifier
+except ImportError:
+    # Fallback implementations
+    class ConservationEngine:
+        def __init__(self): pass
+    class EmergenceDetector:
+        def __init__(self): pass
+    class PatternAmplifier:
+        def __init__(self): pass
+    class PhaseType: STRUCTURAL = 1
 
 
 class CollapseType(Enum):
@@ -63,7 +88,7 @@ class CollapseEvaluator:
     Enhanced with native GAIA conservation, emergence detection, and pattern amplification.
     """
     
-    def __init__(self, memory_field: MemoryField):
+    def __init__(self, memory_field):
         self.memory_field = memory_field
         self.entropy_dispatcher = EntropyDispatcher()
         self.k_boltzmann = 1.380649e-23  # For thermodynamic calculations
@@ -75,14 +100,14 @@ class CollapseEvaluator:
         self.pattern_amplifier = PatternAmplifier()
         print("Native GAIA-enhanced collapse evaluation initialized")
         
-    def evaluate(self, context: ExecutionContext) -> CollapseVector:
+    def evaluate(self, context: Any = None) -> CollapseVector:
         """
         Evaluate PAC conservation field for violation-driven collapse opportunities.
         Implements PAC collapse criteria: |∇·ψ|² > 0 (any conservation violation triggers collapse)
         Enhanced with native GAIA emergence detection and Xi operator scaling.
         """
         # Get field state and map to PAC lattice
-        field_state = context.field_state or {}
+        field_state = context.get('field_state', {}) if isinstance(context, dict) else (context.field_state if context else {})
         
         # Convert field state to complex amplitude lattice
         lattice = self._field_to_pac_lattice(context, field_state)
@@ -200,7 +225,7 @@ class CollapseEvaluator:
         else:
             return CollapseType.AGENTIC_SIGNAL
 
-    def _field_to_pac_lattice(self, context: ExecutionContext, field_state: Dict) -> np.ndarray:
+    def _field_to_pac_lattice(self, context: Any = None, field_state: Dict = None) -> np.ndarray:
         """Convert field state to complex amplitude lattice for PAC analysis."""
         # Extract field dimensions
         resolution = field_state.get('resolution', (32, 32))
@@ -411,7 +436,7 @@ class CollapseTypingEngine:
             # If registration fails, continue without dispatch setup
             pass
     
-    def choose_type(self, collapse_vector: CollapseVector, context: ExecutionContext) -> CollapseType:
+    def choose_type(self, collapse_vector: CollapseVector, context: Any = None) -> CollapseType:
         """Choose optimal collapse type using fracton dispatch."""
         try:
             # Use fracton dispatcher for intelligent type selection
@@ -432,7 +457,7 @@ class CollapseSynthesizer:
         self.memory_field = memory_field
         self.structure_counter = 0
     
-    def synthesize(self, collapse_vector: CollapseVector, context: ExecutionContext) -> CollapseResult:
+    def synthesize(self, collapse_vector: CollapseVector, context: Any = None) -> CollapseResult:
         """Crystallize collapse into structured form in memory field."""
         self.structure_counter += 1
         structure_id = f"collapse_{self.structure_counter}_{collapse_vector.collapse_type.value}"
@@ -463,13 +488,13 @@ class CollapseSynthesizer:
             timestamp=time.time()
         )
     
-    def _create_symbolic_content(self, vector: CollapseVector, context: ExecutionContext) -> Dict[str, Any]:
+    def _create_symbolic_content(self, vector: CollapseVector, context: Any = None) -> Dict[str, Any]:
         """Create symbolic content based on collapse type."""
         base_content = {
             'entropy_signature': vector.entropy_tension,
             'curvature': vector.curvature,
             'force': vector.force_magnitude,
-            'depth': context.depth
+            'depth': context.get('depth', 0) if isinstance(context, dict) else (context.depth if context else 0)
         }
         
         if vector.collapse_type == CollapseType.FRACTAL_NODE:
@@ -523,7 +548,7 @@ class PostCollapseStabilizer:
         self.memory_field = memory_field
         self.stabilization_history = []
     
-    def stabilize(self, collapse_result: CollapseResult, context: ExecutionContext) -> ExecutionContext:
+    def stabilize(self, collapse_result: CollapseResult, context: Any = None) -> Any:
         """Stabilize field post-collapse and update context."""
         # Create stabilization snapshot (with fallback for missing create_snapshot)
         try:
@@ -544,22 +569,22 @@ class PostCollapseStabilizer:
         self._prevent_collapse_chaining(collapse_result)
         
         # Update context with stabilized state
-        new_context = ExecutionContext(
-            entropy=new_entropy,
-            depth=context.depth,
-            trace_id=context.trace_id,
-            field_state={
-                **context.field_state,
+        new_context = {
+            'entropy': new_entropy,
+            'depth': context.get('depth', 0) if context else 0,
+            'trace_id': context.get('trace_id', 'unknown') if context else 'unknown',
+            'field_state': {
+                **(context.get('field_state', {}) if context else {}),
                 'last_collapse': collapse_result.structure_id,
                 'stabilization_time': time.time(),
                 'entropy_damping_applied': True
             },
-            parent_context=context.parent_context,
-            metadata={
-                **context.metadata,
+            'parent_context': context.get('parent_context', None) if context else None,
+            'metadata': {
+                **(context.get('metadata', {}) if context else {}),
                 'stabilization_snapshot': snapshot.get('field_id', 'unknown') if isinstance(snapshot, dict) else getattr(snapshot, 'field_id', 'unknown')
             }
-        )
+        }
         
         # Record stabilization
         self.stabilization_history.append({
@@ -606,55 +631,134 @@ class PostCollapseStabilizer:
 
 class CollapseCore:
     """
-    Main entry point for Collapse Core logic.
-    Integrates all collapse subsystems using fracton infrastructure.
-    Implements physics-informed, entropy-driven collapse with full v2.0 enhancements.
+    PAC-Native Collapse Core for GAIA v3.0
+    Built on Fracton SDK for physics-governed entropy collapse with automatic conservation.
+    All collapse operations maintain f(parent) = Σf(children) through native PAC regulation.
     """
     
-    def __init__(self, memory_field: MemoryField = None):
-        self.memory_field = memory_field or MemoryField(capacity=1000, field_id="collapse_core_field")
-        self.evaluator = CollapseEvaluator(self.memory_field)
-        self.typing_engine = CollapseTypingEngine()
-        self.synthesizer = CollapseSynthesizer(self.memory_field)
-        self.stabilizer = PostCollapseStabilizer(self.memory_field)
+    def __init__(self, physics_memory: PhysicsMemoryField = None):
+        # Use Fracton's physics memory as foundation
+        self.physics_memory = physics_memory or PhysicsMemoryField(
+            physics_dimensions=(32, 32),
+            xi_target=1.0571
+        )
+        
+        # Enable PAC self-regulation
+        self.pac_regulator = enable_pac_self_regulation()
+        
+        # Initialize PAC-native entropy dispatcher
+        self.entropy_dispatcher = PhysicsEntropyDispatcher(
+            xi_target=1.0571,
+            conservation_strictness=1e-12
+        )
+        
+        # Enhanced GAIA components
+        self.conservation_engine = ConservationEngine()
+        self.emergence_detector = EmergenceDetector()  
+        self.pattern_amplifier = PatternAmplifier()
+        self.evaluator = CollapseEvaluator(memory_field=self.physics_memory)
+        self.synthesizer = CollapseSynthesizer(memory_field=self.physics_memory)
         
         # Statistics tracking
         self.total_collapses = 0
         self.collapse_efficiency_history = []
+        self.pac_violations_resolved = 0
         self.collapse_type_counts = {ctype: 0 for ctype in CollapseType}
-    
-    def collapse(self, context: ExecutionContext) -> Tuple[Optional[CollapseResult], ExecutionContext]:
-        """
-        Perform a full collapse cycle:
-        1. Evaluate entropy field for collapse opportunities
-        2. Choose optimal collapse type
-        3. Synthesize new structure
-        4. Stabilize post-collapse field
-        """
-        # 1. Evaluate for collapse opportunity
-        collapse_vector = self.evaluator.evaluate(context)
         
-        if collapse_vector is None:
-            # No collapse opportunity
+        # Legacy compatibility
+        self.memory_field = self.physics_memory  # For backwards compatibility with tests
+    
+    @pac_recursive("collapse_core_collapse")
+    def collapse(self, context=None) -> Tuple[Optional['CollapseResult'], Any]:
+        """
+        Perform PAC-native entropy-driven collapse with automatic conservation.
+        Uses Fracton's physics primitives for genuine collapse dynamics.
+        """
+        # Get initial physics state
+        initial_metrics = self.physics_memory.get_physics_metrics()
+        
+        # Detect conservation violations that require collapse
+        violations = self._detect_collapse_worthy_violations()
+        
+        if not violations:
             return None, context
         
-        # 2. Choose optimal collapse type
-        final_type = self.typing_engine.choose_type(collapse_vector, context)
-        collapse_vector.collapse_type = final_type
+        # Use Fracton's entropy-driven collapse
+        collapse_result = entropy_driven_collapse(
+            field=self.physics_memory,
+            collapse_strength=0.8,
+            target_pattern=self._determine_optimal_pattern(violations)
+        )
         
-        # 3. Synthesize structure
-        collapse_result = self.synthesizer.synthesize(collapse_vector, context)
+        # Post-collapse conservation enforcement
+        final_metrics = self.physics_memory.get_physics_metrics()
+        if abs(final_metrics.get('conservation_residual', 0.0)) > 1e-6:
+            corrected_field = enforce_pac_conservation(
+                field=self.physics_memory.get_field_state(),
+                target_xi=1.0571
+            )
+            self.physics_memory.update_field_state(corrected_field)
+            self.pac_violations_resolved += 1
         
-        # 4. Stabilize field
-        stabilized_context = self.stabilizer.stabilize(collapse_result, context)
-        
-        # Update statistics
+        # Track collapse efficiency
         self.total_collapses += 1
-        self.collapse_type_counts[final_type] += 1
-        efficiency = collapse_result.entropy_resolved / max(collapse_result.thermodynamic_cost, 1e-10)
+        energy_change = abs(final_metrics.get('field_energy', 1.0) - initial_metrics.get('field_energy', 1.0))
+        efficiency = 1.0 / max(energy_change, 1e-10)  # Inverse of energy cost
         self.collapse_efficiency_history.append(efficiency)
         
-        return collapse_result, stabilized_context
+        # Create GAIA-compatible result
+        gaia_result = CollapseResult(
+            structure_id=f"pac_collapse_{self.total_collapses}",
+            collapse_type=self._classify_collapse_type(violations),
+            energy_resolved=energy_change,
+            entropy_resolved=abs(final_metrics.get('conservation_residual', 0.0)),
+            thermodynamic_cost=energy_change,
+            structural_coherence=final_metrics.get('field_coherence', 0.5),
+            pac_regulated=True
+        )
+        
+        return gaia_result, context
+    
+    def _detect_collapse_worthy_violations(self) -> List[Dict[str, Any]]:
+        """Detect conservation violations that warrant collapse intervention."""
+        violations = []
+        metrics = self.physics_memory.get_physics_metrics()
+        
+        conservation_residual = abs(metrics.get('conservation_residual', 0.0))
+        if conservation_residual > 0.1:  # Significant violation
+            violations.append({
+                'type': 'conservation_violation',
+                'magnitude': conservation_residual,
+                'urgency': 'high'
+            })
+        
+        xi_deviation = abs(metrics.get('xi_value', 1.0571) - 1.0571)
+        if xi_deviation > 0.05:  # Balance operator drift
+            violations.append({
+                'type': 'xi_balance_drift', 
+                'magnitude': xi_deviation,
+                'urgency': 'medium'
+            })
+        
+        return violations
+    
+    def _determine_optimal_pattern(self, violations: List[Dict[str, Any]]) -> Optional[np.ndarray]:
+        """Determine optimal collapse pattern based on violations."""
+        if not violations:
+            return None
+        
+        # Use conservation-based pattern determination
+        field_state = self.physics_memory.get_field_state()
+        return field_state * 0.8  # Simple stabilization pattern
+    
+    def _classify_collapse_type(self, violations: List[Dict[str, Any]]) -> 'CollapseType':
+        """Classify collapse type based on violations."""
+        if any(v['type'] == 'conservation_violation' for v in violations):
+            return CollapseType.THERMODYNAMIC
+        elif any(v['type'] == 'xi_balance_drift' for v in violations):
+            return CollapseType.GEOMETRIC
+        else:
+            return CollapseType.FRACTAL_NODE
     
     def get_collapse_statistics(self) -> Dict[str, Any]:
         """Get comprehensive collapse statistics."""

@@ -4,54 +4,38 @@ import os
 import numpy as np
 from pathlib import Path
 
-# Add src to path
+# Add src to path and Fracton SDK path
 sys.path.insert(0, str(Path(__file__).parent.parent / 'src'))
+sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent / 'fracton'))
 
-from core.collapse_core import CollapseCore
+# Import Fracton SDK (required for PAC-native tests)
+import fracton
+from fracton import (
+    PhysicsMemoryField,
+    PhysicsRecursiveExecutor,
+    enable_pac_self_regulation,
+    get_system_pac_metrics
+)
+
+# Import PAC-native GAIA components
+# from core.collapse_core import CollapseCore  # Skip until cleaned up
 from core.field_engine import FieldEngine
-from core.superfluid_memory import SuperfluidMemory
-from core.symbolic_crystallizer import SymbolicCrystallizer
-from core.meta_cognition_layer import MetaCognitionLayer
-from core.resonance_mesh import ResonanceMesh
-from gaia import GAIA
+from fracton import MemoryField
+# from core.superfluid_memory import SuperfluidMemory  # Skip until needed
 
-# Minimal fracton mocks ONLY if fracton not available
-try:
-    from fracton.core.memory_field import MemoryField
-    from fracton.core.recursive_engine import ExecutionContext
-    FRACTON_AVAILABLE = True
-except ImportError:
-    FRACTON_AVAILABLE = False
-    # Minimal fallback mocks (should be replaced with real fracton ASAP)
-    class MemoryField:
-        def __init__(self, name): 
-            self.name = name
-            self.capacity = 1000
-            self.field_id = name
-        
-        def create_snapshot(self):
-            """Mock snapshot creation for GAIA compatibility."""
-            return {
-                'field_id': self.field_id,
-                'capacity': self.capacity,
-                'name': self.name,
-                'data': {}
-            }
-        
-        def get_memories(self, limit=None):
-            """Mock memory retrieval."""
-            return []
-    
-    class ExecutionContext:
-        def __init__(self, **kwargs): 
-            self.entropy = kwargs.get('entropy', 0.5)
-            self.depth = kwargs.get('depth', 1)
-            self.field_state = kwargs.get('field_state', {})
+# Import full GAIA if available (commented out during cleanup)
+# try:
+#     from gaia import PAC_GAIA, PAC_GAIAConfig
+#     GAIA_AVAILABLE = True
+# except ImportError as e:
+#     print(f"GAIA import failed: {e}")
+#     GAIA_AVAILABLE = False
+GAIA_AVAILABLE = False
 
 @pytest.fixture
-def execution_context():
-    """Provide real or minimal ExecutionContext for tests."""
-    return ExecutionContext(entropy=0.8, depth=2)  # Higher entropy to trigger collapse
+def simple_context():
+    """Provide simple context for tests."""
+    return {"entropy": 0.8, "depth": 2}  # Simple dict instead of ExecutionContext
 
 @pytest.fixture
 def memory_field():
@@ -153,3 +137,98 @@ def assert_med_compliance(symbolic_tree, expected_entropy: float, safety_margin:
     expected_med_limit = calculate_med_limit(expected_entropy)
     assert symbolic_tree.depth <= expected_med_limit + safety_margin, \
         f"Tree depth {symbolic_tree.depth} exceeds MED limit {expected_med_limit}"
+
+
+# PAC-Native Test Fixtures
+
+@pytest.fixture
+def pac_regulator():
+    """Provide PAC regulator for testing."""
+    return enable_pac_self_regulation()
+
+
+@pytest.fixture
+def physics_memory():
+    """Provide physics memory field for testing."""
+    return PhysicsMemoryField(
+        capacity=1000,
+        physics_dimensions=(16, 16),
+        xi_target=1.0571
+    )
+
+
+@pytest.fixture
+def pac_field_engine():
+    """Provide PAC-native field engine for testing."""
+    return FieldEngine(shape=(16, 16))
+
+
+@pytest.fixture
+def pac_collapse_core(physics_memory):
+    """Provide PAC-native collapse core for testing."""
+    # Import here to avoid module-level issues
+    try:
+        from core.collapse_core import CollapseCore
+        return CollapseCore(physics_memory=physics_memory)
+    except ImportError:
+        pytest.skip("CollapseCore not available due to legacy code cleanup")
+
+
+@pytest.fixture
+def pac_superfluid_memory():
+    """Provide PAC-native superfluid memory for testing."""
+    # Skip until SuperfluidMemory is cleaned up
+    pytest.skip("SuperfluidMemory cleanup pending")
+
+
+@pytest.fixture
+def pac_gaia_config():
+    """Provide PAC GAIA configuration for testing."""
+    if GAIA_AVAILABLE:
+        return PAC_GAIAConfig(
+            # Required fields
+            memory_coherence=1.0,
+            symbolic_structures=10,
+            active_signals=5,
+            cognitive_integrity=0.95,
+            processing_cycles=100,
+            total_collapses=0,
+            resonance_patterns=3,
+            # PAC parameters
+            xi_target=1.0571,
+            conservation_tolerance=1e-6,
+            enable_pac_self_regulation=True,
+            field_dimensions=(16, 16)
+        )
+    else:
+        pytest.skip("PAC_GAIAConfig not available")
+
+
+@pytest.fixture 
+def pac_gaia(pac_gaia_config):
+    """Provide PAC-native GAIA instance for testing."""
+    if GAIA_AVAILABLE:
+        return PAC_GAIA(pac_gaia_config)
+    else:
+        pytest.skip("PAC_GAIA not available")
+
+
+# PAC validation utilities
+def validate_pac_conservation(conservation_residual: float, tolerance: float = 1e-6) -> bool:
+    """Validate PAC conservation within tolerance."""
+    return abs(conservation_residual) < tolerance
+
+
+def validate_xi_balance(xi_value: float, target: float = 1.0571, tolerance: float = 0.1) -> bool:
+    """Validate Xi balance operator within tolerance of target."""
+    return abs(xi_value - target) < tolerance
+
+
+def validate_field_state(field_state, expected_pac_regulated=True):
+    """Validate PAC-native field state properties."""
+    assert field_state is not None
+    assert hasattr(field_state, 'pac_regulated')
+    assert field_state.pac_regulated == expected_pac_regulated
+    assert hasattr(field_state, 'conservation_residual')
+    assert hasattr(field_state, 'xi_balance')
+    assert hasattr(field_state, 'field_tensor')

@@ -1,18 +1,33 @@
 """
-Superfluid Memory for GAIA
-Implements entropy-responsive fluid memory with macro-coherence structures.
-See docs/architecture/modules/superfluid_memory.md for design details.
+PAC-Native Superfluid Memory for GAIA v3.0
+Built on Fracton SDK for physics-governed superfluid dynamics with automatic conservation.
+All memory operations maintain f(parent) = Σf(children) through native PAC regulation.
 """
 
 import numpy as np
 import time
 import math
+import sys
 from typing import Dict, Any, List, Tuple, Optional, Union
 from dataclasses import dataclass, field
 from collections import defaultdict
 
-# Import fracton core modules
-from fracton.core.memory_field import MemoryField
+# Add Fracton SDK path
+sys.path.append('../../../fracton')
+
+# Import PAC-native Fracton SDK for memory operations (required)
+import fracton
+from fracton import (
+    # Core PAC-native memory components
+    PhysicsMemoryField, MemoryField,
+    PhysicsRecursiveExecutor,
+    # PAC regulation and validation
+    pac_recursive, validate_pac_conservation,
+    enable_pac_self_regulation, get_system_pac_metrics,
+    # Physics primitives for superfluid dynamics
+    klein_gordon_evolution, enforce_pac_conservation,
+    resonance_field_interaction
+)
 from fracton.core.recursive_engine import ExecutionContext
 
 
@@ -484,27 +499,188 @@ class VortexTracker:
 
 class SuperfluidMemory:
     """
-    Main superfluid memory system coordinating all memory components.
-    Manages entropy-responsive field with macro-coherence structures.
+    PAC-Native Superfluid Memory for GAIA v3.0
+    Built on Fracton SDK for physics-governed superfluid memory with automatic conservation.
+    All memory operations maintain f(parent) = Σf(children) through native PAC regulation.
     """
     
     def __init__(self, field_shape: Tuple[int, int, int] = (32, 32, 16)):
-        self.memory_field_tensor = MemoryFieldTensor(field_shape)
-        self.stability_evaluator = StabilityEvaluator()
-        self.imprint_encoder = MemoryImrintEncoder()
-        self.vortex_tracker = VortexTracker(self.memory_field_tensor)
+        # Use Fracton's physics memory as foundation
+        self.physics_memory = PhysicsMemoryField(
+            field_shape=field_shape[:2],  # Use 2D for core field
+            xi_target=1.0571,
+            enable_conservation=True,
+            superfluid_mode=True
+        )
         
-        # Storage for active imprints
+        # Enable PAC self-regulation
+        self.pac_regulator = enable_pac_self_regulation()
+        
+        # Physics recursive executor for memory operations
+        self.physics_executor = PhysicsRecursiveExecutor(
+            max_depth=5,
+            pac_regulation=True
+        )
+        
+        # Enhanced components
+        self.field_shape = field_shape
         self.active_imprints = {}
         self.imprint_counter = 0
         
         # Statistics
         self.total_imprints_created = 0
-        self.total_vortices_detected = 0
         self.memory_updates = 0
+        self.conservation_violations_resolved = 0
     
+    @pac_recursive("superfluid_memory_add")
     def add_memory(self, structure_data: Dict[str, Any], 
-                   context: ExecutionContext) -> Optional[MemoryImprint]:
+                   context=None) -> Optional[MemoryImprint]:
+        """Add memory structure with PAC-native superfluid dynamics."""
+        self.memory_updates += 1
+        
+        # Get initial state for conservation tracking
+        initial_metrics = self.physics_memory.get_physics_metrics()
+        
+        # Encode structure into physics field
+        structure_field = self._encode_structure_to_field(structure_data)
+        
+        # Add to memory using Klein-Gordon superfluid evolution
+        current_field = self.physics_memory.get_field_state()
+        evolved_field = klein_gordon_evolution(
+            field=current_field,
+            dt=0.01,
+            mass_squared=0.01,  # Low mass for superfluid behavior
+            source_term=structure_field
+        )
+        
+        # Update physics memory
+        self.physics_memory.update_field_state(evolved_field)
+        
+        # Check and resolve conservation violations
+        final_metrics = self.physics_memory.get_physics_metrics()
+        conservation_residual = abs(final_metrics.get('conservation_residual', 0.0))
+        
+        if conservation_residual > 1e-6:
+            corrected_field = enforce_pac_conservation(
+                field=evolved_field,
+                target_xi=1.0571
+            )
+            self.physics_memory.update_field_state(corrected_field)
+            self.conservation_violations_resolved += 1
+        
+        # Create memory imprint
+        self.imprint_counter += 1
+        imprint = MemoryImprint(
+            structure_id=f"pac_imprint_{self.imprint_counter}",
+            field_coordinates=self._find_field_centroid(structure_field),
+            entropy_signature=final_metrics.get('entropy_measure', 0.5),
+            stability_score=1.0 - conservation_residual,
+            phase_coherence=final_metrics.get('field_coherence', 0.5),
+            recursion_depth=context.get('depth', 0) if context else 0,
+            temporal_decay=0.01,
+            creation_time=time.time(),
+            last_reinforcement=time.time(),
+            reinforcement_count=1,
+            vortex_strength=self._calculate_vortex_strength(structure_field)
+        )
+        
+        self.active_imprints[imprint.structure_id] = imprint
+        self.total_imprints_created += 1
+        
+        return imprint
+    
+    @pac_recursive("superfluid_memory_retrieve") 
+    def retrieve_memory(self, query_pattern: Any) -> List[MemoryImprint]:
+        """Retrieve memories using PAC-native resonance matching."""
+        # Encode query into physics field
+        query_field = self._encode_structure_to_field(query_pattern)
+        
+        # Use resonance field interaction for memory retrieval
+        memory_field = self.physics_memory.get_field_state()
+        resonance_result = resonance_field_interaction(
+            field1=memory_field,
+            field2=query_field,
+            coupling_strength=1.571  # PAC coupling
+        )
+        
+        # Find resonant imprints based on field overlap
+        resonant_imprints = []
+        for imprint in self.active_imprints.values():
+            # Calculate resonance strength
+            imprint_coords = imprint.field_coordinates
+            if len(imprint_coords) >= 2:
+                x, y = int(imprint_coords[0]), int(imprint_coords[1])
+                if 0 <= x < resonance_result.shape[0] and 0 <= y < resonance_result.shape[1]:
+                    resonance_strength = abs(resonance_result[x, y])
+                    if resonance_strength > 0.1:  # Resonance threshold
+                        resonant_imprints.append(imprint)
+        
+        return resonant_imprints
+    
+    def _encode_structure_to_field(self, structure_data: Any) -> np.ndarray:
+        """Encode structure data into physics field representation."""
+        if isinstance(structure_data, str):
+            # Hash-based encoding for strings
+            import hashlib
+            hash_bytes = hashlib.md5(structure_data.encode()).digest()
+            field_size = int(np.prod(self.field_shape[:2]))
+            hash_values = np.frombuffer(hash_bytes, dtype=np.uint8)
+            
+            if len(hash_values) >= field_size:
+                field = hash_values[:field_size].astype(np.float32)
+            else:
+                field = np.zeros(field_size, dtype=np.float32)
+                field[:len(hash_values)] = hash_values.astype(np.float32)
+            
+            field = field.reshape(self.field_shape[:2])
+            return (field - np.mean(field)) / (np.std(field) + 1e-8)
+        
+        elif isinstance(structure_data, dict):
+            # Encode dictionary as structured field
+            field = np.random.normal(0, 0.1, self.field_shape[:2])
+            # Add structure based on dict keys/values
+            for i, (k, v) in enumerate(structure_data.items()):
+                if i < field.size:
+                    field.flat[i] += hash(str(k)) % 100 * 0.01
+            return field
+        
+        else:
+            # Default: small random field
+            return np.random.normal(0, 0.05, self.field_shape[:2])
+    
+    def _find_field_centroid(self, field: np.ndarray) -> Tuple[float, float, float]:
+        """Find the centroid (center of mass) of a field."""
+        if field.size == 0:
+            return (0.0, 0.0, 0.0)
+        
+        # Calculate weighted centroid
+        intensity = np.abs(field) ** 2
+        total_intensity = np.sum(intensity)
+        
+        if total_intensity < 1e-10:
+            return (field.shape[0]/2, field.shape[1]/2, 0.0)
+        
+        y_indices, x_indices = np.meshgrid(range(field.shape[1]), range(field.shape[0]))
+        
+        centroid_x = np.sum(x_indices * intensity) / total_intensity
+        centroid_y = np.sum(y_indices * intensity) / total_intensity
+        
+        return (float(centroid_x), float(centroid_y), 0.0)
+    
+    def _calculate_vortex_strength(self, field: np.ndarray) -> float:
+        """Calculate vortex strength from field phase structure."""
+        if field.dtype == np.complex128 or field.dtype == np.complex64:
+            phase = np.angle(field)
+        else:
+            # Convert real field to complex for phase calculation
+            phase = np.arctan2(np.gradient(field, axis=1), np.gradient(field, axis=0))
+        
+        # Calculate phase circulation
+        phase_grad_x = np.gradient(phase, axis=0)
+        phase_grad_y = np.gradient(phase, axis=1)
+        circulation = np.sum(np.abs(phase_grad_x) + np.abs(phase_grad_y))
+        
+        return circulation / field.size
         """Add new structure to PAC superfluid memory with amplitude conservation."""
         self.memory_updates += 1
         
