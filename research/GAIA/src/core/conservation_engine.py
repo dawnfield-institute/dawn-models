@@ -117,21 +117,27 @@ class ConservationEngine:
         if total_energy == 0:
             return amplitude
         
-        # Calculate current balance ratio
-        potential_energy = np.sum(np.abs(self.potential_field) ** 2)
-        actualization_energy = np.sum(np.abs(self.actualization_field) ** 2)
+        # PAC conservation: energy should be conserved exactly
+        # The Xi operator 1.0571 represents the balance point, not a correction factor
         
-        if actualization_energy > 0:
-            current_ratio = potential_energy / actualization_energy
+        # Store initial energy if not set
+        if not hasattr(self, 'initial_total_energy'):
+            self.initial_total_energy = total_energy
+        
+        # Calculate genuine conservation residual
+        conservation_residual = abs(total_energy - self.initial_total_energy) / max(self.initial_total_energy, 1e-12)
+        
+        # Apply minimal energy renormalization only if conservation is severely violated
+        if conservation_residual > 1e-6:  # Only correct major violations
+            energy_correction = np.sqrt(self.initial_total_energy / total_energy)
+            balanced_amplitude = amplitude * energy_correction
+            self.total_conservation_violations += 1
         else:
-            current_ratio = self.xi_operator
-        
-        # Apply Xi balance correction
-        xi_correction = self.xi_operator / max(current_ratio, 0.1)
-        balanced_amplitude = amplitude * np.sqrt(xi_correction)
-        
-        # Track Xi convergence
-        self.xi_convergence_history.append(xi_correction)
+            balanced_amplitude = amplitude  # No correction needed
+            
+        # Track conservation quality
+        xi_deviation = conservation_residual  # Use conservation residual as Xi deviation
+        self.xi_convergence_history.append(xi_deviation)
         if len(self.xi_convergence_history) > 100:
             self.xi_convergence_history.pop(0)
         
@@ -189,17 +195,24 @@ class ConservationEngine:
     
     def compute_conservation_residual(self) -> float:
         """Compute genuine conservation violation magnitude."""
-        # Total amplitude conservation check
+        # Check if we have initial energy stored for comparison
+        if not hasattr(self, 'initial_total_energy'):
+            # Initialize with current energy
+            total_potential = np.sum(np.abs(self.potential_field) ** 2)
+            total_actualization = np.sum(np.abs(self.actualization_field) ** 2)
+            self.initial_total_energy = total_potential + total_actualization
+            return 0.0  # No violation initially
+        
+        # Current total energy
         total_potential = np.sum(np.abs(self.potential_field) ** 2)
         total_actualization = np.sum(np.abs(self.actualization_field) ** 2)
-        total_amplitude = total_potential + total_actualization
+        current_total_energy = total_potential + total_actualization
         
-        # Conservation residual from field dynamics
-        potential_flow = np.sum(np.abs(self.potential_dot) ** 2)
-        actualization_flow = np.sum(np.abs(self.actualization_dot) ** 2)
-        
-        # Genuine conservation violation
-        conservation_residual = abs(potential_flow - actualization_flow) / max(total_amplitude, 1e-10)
+        # Genuine conservation violation: energy should be exactly conserved
+        if self.initial_total_energy > 1e-12:
+            conservation_residual = abs(current_total_energy - self.initial_total_energy) / self.initial_total_energy
+        else:
+            conservation_residual = abs(current_total_energy)
         
         return conservation_residual
     

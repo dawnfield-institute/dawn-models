@@ -616,8 +616,8 @@ class GAIATestSuite:
         
         print("\nTest Status:")
         for name, data in self.results["tests"].items():
-            status = "✅" if data.get("passed", False) else "❌"
-            stable = "🔒" if data.get("stable", False) else "🔀"
+            status = "PASS" if data.get("passed", False) else "FAIL"
+            stable = "STABLE" if data.get("stable", False) else "UNSTABLE"
             
             score_info = ""
             if "mean_score" in data:

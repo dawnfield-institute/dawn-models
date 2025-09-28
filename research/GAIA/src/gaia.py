@@ -157,10 +157,10 @@ class PAC_GAIA:
         # Enable global PAC self-regulation
         if self.config.enable_pac_self_regulation:
             self.pac_regulator = enable_pac_self_regulation()
-            print(f"✅ PAC self-regulation enabled with Ξ = {self.config.xi_target}")
+            print(f"PAC self-regulation enabled with Xi = {self.config.xi_target}")
         else:
             self.pac_regulator = None
-            print("⚠️  Running without PAC regulation")
+            print("Running without PAC regulation")
         
         # Create PAC-native physics engine as foundation
         engine_components = create_physics_engine(
@@ -174,7 +174,7 @@ class PAC_GAIA:
         self.physics_engine = engine_components['executor']  # Use the executor as main engine
         self.physics_memory_core = engine_components['memory_field']  # Physics memory
         self.physics_dispatcher = engine_components['dispatcher']  # Entropy dispatcher
-        print("✅ PAC-native physics engine created")
+        print("PAC-native physics engine created")
         
         # Initialize core components with PAC foundation
         self._initialize_pac_components()
@@ -193,7 +193,7 @@ class PAC_GAIA:
         self.execution_history = []
         self.conservation_log = []
         
-        print("🚀 PAC-native GAIA v3.0 initialized successfully")
+        print("PAC-native GAIA v3.0 initialized successfully")
         
     def _initialize_pac_components(self):
         """Initialize GAIA components with PAC-native foundation."""
@@ -260,7 +260,7 @@ class PAC_GAIA:
         self.logger = logging.getLogger("PAC_GAIA")
         self.logger.setLevel(logging.INFO)
         
-        print("✅ PAC-native components initialized and linked")
+        print("PAC-native components initialized and linked")
     
     @pac_recursive("gaia_cognitive_process")
     def process_cognition(self, input_data: Any, context: Dict[str, Any] = None) -> GAIAResponse:
