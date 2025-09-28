@@ -13,7 +13,7 @@ from dataclasses import dataclass
 from enum import Enum
 
 # Add Fracton SDK path
-sys.path.append('../../../fracton')
+sys.path.append('../../../../fracton')
 
 # Import PAC-native Fracton SDK (required - no fallbacks)
 import fracton

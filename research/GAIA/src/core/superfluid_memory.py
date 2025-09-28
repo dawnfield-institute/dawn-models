@@ -13,7 +13,7 @@ from dataclasses import dataclass, field
 from collections import defaultdict
 
 # Add Fracton SDK path
-sys.path.append('../../../fracton')
+sys.path.append('../../../../fracton')
 
 # Import PAC-native Fracton SDK for memory operations (required)
 import fracton

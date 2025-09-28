@@ -61,6 +61,10 @@ def test_klein_gordon_evolution():
     
     gaia = GAIA()
     
+    # Initialize tracking lists
+    amplitude_conservations = []
+    xi_convergences = []
+    
     # Wave-like initial condition
     field = np.sin(np.linspace(0, 2*np.pi, 16)).reshape(4, 4)
     
@@ -118,6 +122,7 @@ def test_klein_gordon_evolution():
 
 def test_gaia_med_compliance_system():
     """Test system-wide MED (Maximum Entropy Depth) compliance."""
+    from gaia import GAIA
     gaia = GAIA()
     
     # Test with different entropy-inducing inputs
@@ -128,7 +133,7 @@ def test_gaia_med_compliance_system():
     ]
     
     for test_input in entropy_inputs:
-        response = gaia.process_input(test_input)
+        response = gaia.process_cognition(test_input)  # Use cognition for structured data
         
         # Validate MED bounds are respected in symbolic structures
         if hasattr(response, 'reasoning_trace'):

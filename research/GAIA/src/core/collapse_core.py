@@ -12,8 +12,8 @@ from typing import Dict, Any, List, Tuple, Optional, Union
 from dataclasses import dataclass
 from enum import Enum
 
-# Add Fracton SDK path
-sys.path.append('../../../fracton')
+# Add Fracton SDK path  
+sys.path.append('../../../../fracton')
 
 # Import PAC-native Fracton SDK for collapse operations (required)
 import fracton

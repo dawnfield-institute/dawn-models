@@ -16,6 +16,7 @@ from fracton import (
     enable_pac_self_regulation,
     get_system_pac_metrics
 )
+from fracton.core.recursive_engine import ExecutionContext
 
 # Import PAC-native GAIA components
 # from core.collapse_core import CollapseCore  # Skip until cleaned up
@@ -41,6 +42,16 @@ def simple_context():
 def memory_field():
     """Provide real or minimally mocked MemoryField."""
     return MemoryField("test_field")
+
+@pytest.fixture
+def execution_context():
+    """Provide execution context for integration tests."""
+    context = ExecutionContext(entropy=0.5, depth=1)
+    context.field_state = {
+        'resolution': (32, 32),
+        'information_phase': 0.5
+    }
+    return context
 
 # PAC-specific test fixtures
 
