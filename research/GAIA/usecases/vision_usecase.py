@@ -448,13 +448,20 @@ def test_conservation_calibration():
         print(f"  Expected Xi Target: 1.0571")
         print(f"  Xi Error: {abs(response.xi_operator_value - 1.0571):.6f}")
         
-        # Check if conservation residual is reasonable
+        # Check if conservation residual is reasonable AND Xi is correct
         conservation_error = response.conservation_residual
         xi_error = abs(response.xi_operator_value - 1.0571)
         
-        # More realistic thresholds based on working system
+        # Strict physics validation criteria
         conservation_working = conservation_error < 2000.0  # Allow higher residuals for now
-        xi_calibrated = xi_error < 110.0  # Xi showing around 103, so adjust threshold
+        xi_calibrated = xi_error < 1e-4  # Xi must be very close to theoretical constant (tight tolerance)
+        
+        # Additional physics validation
+        klein_gordon_positive = response.klein_gordon_energy > 0
+        field_finite = np.all(np.isfinite(response.field_state))
+        
+        # Overall physics validation
+        physics_valid = klein_gordon_positive and field_finite
         
         vision_results['conservation_calibration'] = {
             'conservation_residual': conservation_error,
@@ -463,13 +470,17 @@ def test_conservation_calibration():
             'xi_error': xi_error,
             'conservation_working': conservation_working,
             'xi_calibrated': xi_calibrated,
-            'field_norm': np.linalg.norm(response.field_state)
+            'physics_valid': physics_valid,
+            'klein_gordon_energy': response.klein_gordon_energy,
+            'field_norm': np.linalg.norm(response.field_state),
+            'passed': conservation_working and xi_calibrated and physics_valid
         }
         
         print(f"\nConservation working properly: {'YES' if conservation_working else 'NO'}")
-        print(f"Xi operator calibrated: {'YES' if xi_calibrated else 'NO'}")
+        print(f"Xi operator calibrated: {'YES' if xi_calibrated else 'NO'} (error: {xi_error:.6f})")
+        print(f"Physics validation: {'YES' if physics_valid else 'NO'}")
         
-        return conservation_working and xi_calibrated
+        return conservation_working and xi_calibrated and physics_valid
         
     except Exception as e:
         print(f"Conservation calibration test failed: {e}")

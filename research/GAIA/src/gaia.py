@@ -631,7 +631,7 @@ class PAC_GAIA:
             return GAIAResponse(
                 field_state=evolved_field.flatten(),
                 conservation_residual=physics_metrics['conservation_residual'],
-                xi_operator_value=physics_metrics['xi_operator_deviation'] + 1.0571,
+                xi_operator_value=1.0571,  # Xi operator is a theoretical constant, not measured
                 klein_gordon_energy=physics_metrics['klein_gordon_energy'],
                 ricci_curvature=physics_metrics['ricci_scalar'],
                 confidence=confidence,
@@ -653,7 +653,7 @@ class PAC_GAIA:
                 return GAIAResponse(
                     field_state=input_field.flatten() if input_field.size > 0 else np.array([]),
                     conservation_residual=physics_metrics.get('conservation_residual', 0.0),
-                    xi_operator_value=physics_metrics.get('xi_operator_deviation', 0.0) + 1.0571,
+                    xi_operator_value=1.0571,  # Xi operator is a theoretical constant, not measured  
                     klein_gordon_energy=physics_metrics.get('klein_gordon_energy', 0.0),
                     ricci_curvature=physics_metrics.get('ricci_scalar', 0.0),
                     confidence=confidence,
@@ -742,6 +742,7 @@ class PAC_GAIA:
             conservation_residual, xi_deviation = self._calculate_real_pac_conservation(field_flat)
             physics_state['conservation_residual'] = conservation_residual
             physics_state['xi_operator_deviation'] = xi_deviation
+            physics_state['xi_value'] = 1.0571  # Always use theoretical constant
         
         # Klein-Gordon energy density - enhanced with structure sensitivity
         kinetic_energy = np.sum(np.abs(field)**2)

@@ -195,26 +195,24 @@ class ConservationEngine:
     
     def compute_conservation_residual(self) -> float:
         """Compute genuine conservation violation magnitude."""
-        # Check if we have initial energy stored for comparison
-        if not hasattr(self, 'initial_total_energy'):
-            # Initialize with current energy
-            total_potential = np.sum(np.abs(self.potential_field) ** 2)
-            total_actualization = np.sum(np.abs(self.actualization_field) ** 2)
-            self.initial_total_energy = total_potential + total_actualization
-            return 0.0  # No violation initially
-        
-        # Current total energy
+        # Current total energy from actual fields
         total_potential = np.sum(np.abs(self.potential_field) ** 2)
         total_actualization = np.sum(np.abs(self.actualization_field) ** 2)
         current_total_energy = total_potential + total_actualization
         
-        # Genuine conservation violation: energy should be exactly conserved
-        if self.initial_total_energy > 1e-12:
-            conservation_residual = abs(current_total_energy - self.initial_total_energy) / self.initial_total_energy
-        else:
-            conservation_residual = abs(current_total_energy)
+        # Initialize baseline energy on first call
+        if not hasattr(self, 'initial_total_energy') or self.initial_total_energy == 0:
+            self.initial_total_energy = max(current_total_energy, 1.0)  # Reasonable baseline
         
-        return conservation_residual
+        # Compute relative energy conservation error
+        energy_change = abs(current_total_energy - self.initial_total_energy)
+        baseline_energy = max(self.initial_total_energy, 1e-6)  # Avoid division by zero
+        
+        # Conservation residual as relative error (should be small for good conservation)
+        conservation_residual = energy_change / baseline_energy
+        
+        # Cap at reasonable maximum to avoid extreme values
+        return min(conservation_residual, 10.0)
     
     def calculate_field_pressure(self) -> float:
         """Calculate field pressure from stress-energy tensor."""
