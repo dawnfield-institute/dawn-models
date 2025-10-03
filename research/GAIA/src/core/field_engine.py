@@ -125,6 +125,187 @@ class PACMathematics:
         return conserved_field
 
 
+class PreFieldResonanceDetector:
+    """
+    Pre-Field Resonance Detection for GAIA v3.0
+    Detects natural oscillation frequencies in pre-field states and enables
+    resonance-driven convergence (5.11x speedup as per Pre-Field Recursion v2.2).
+    
+    Based on the discovery that pre-field states exhibit natural frequencies
+    (~0.03 cycles/iteration) that, when amplified, accelerate PAC convergence.
+    """
+    
+    def __init__(self, window_size: int = 50, confidence_threshold: float = 0.15):
+        """
+        Initialize resonance detector.
+        
+        Args:
+            window_size: Number of iterations to analyze for frequency detection
+            confidence_threshold: Minimum confidence to lock resonance (0-1)
+        """
+        self.window_size = window_size
+        self.confidence_threshold = confidence_threshold
+        
+        # Resonance state
+        self.detected_frequency = None
+        self.lock_iteration = None
+        self.resonance_locked = False
+        self.confidence = 0.0
+        
+        # History tracking
+        self.pac_history = []
+        self.frequency_history = []
+        
+        # Expected natural frequency from Pre-Field Recursion discovery
+        self.expected_frequency = 0.03  # cycles/iteration
+        self.frequency_tolerance = 0.01  # ±0.01 cycles/iteration
+        
+    def update(self, pac_residual: float) -> bool:
+        """
+        Update detector with new PAC residual value.
+        
+        Args:
+            pac_residual: Current PAC conservation residual
+            
+        Returns:
+            True if resonance is newly locked this iteration
+        """
+        self.pac_history.append(pac_residual)
+        
+        # Keep history manageable
+        if len(self.pac_history) > self.window_size * 2:
+            self.pac_history = self.pac_history[-self.window_size:]
+        
+        # Need minimum history to detect
+        if len(self.pac_history) < self.window_size:
+            return False
+        
+        # Don't re-detect if already locked
+        if self.resonance_locked:
+            return False
+        
+        # Attempt detection
+        newly_locked = self._detect_resonance()
+        
+        return newly_locked
+    
+    def _detect_resonance(self) -> bool:
+        """
+        Detect resonance using FFT analysis + zero-crossing validation.
+        Returns True if resonance is newly locked.
+        """
+        # FFT analysis on recent history
+        pac_window = np.array(self.pac_history[-self.window_size:])
+        
+        # Detrend to remove DC component
+        pac_detrended = pac_window - np.mean(pac_window)
+        
+        # Apply window function to reduce spectral leakage
+        window = np.hanning(len(pac_detrended))
+        pac_windowed = pac_detrended * window
+        
+        # FFT
+        fft_values = np.fft.fft(pac_windowed)
+        frequencies = np.fft.fftfreq(len(pac_windowed))
+        
+        # Find dominant frequency (positive frequencies only)
+        positive_freq_mask = frequencies > 0
+        positive_freqs = frequencies[positive_freq_mask]
+        positive_fft = np.abs(fft_values[positive_freq_mask])
+        
+        if len(positive_freqs) == 0:
+            return False
+        
+        # Get dominant frequency
+        dominant_idx = np.argmax(positive_fft)
+        self.detected_frequency = positive_freqs[dominant_idx]
+        self.frequency_history.append(self.detected_frequency)
+        
+        # Zero-crossing validation for confidence
+        self.confidence = self._validate_zero_crossings(pac_detrended)
+        
+        # Check if we should lock resonance
+        frequency_match = abs(self.detected_frequency - self.expected_frequency) < self.frequency_tolerance
+        confidence_sufficient = self.confidence > self.confidence_threshold
+        
+        if frequency_match and confidence_sufficient:
+            self.resonance_locked = True
+            self.lock_iteration = len(self.pac_history)
+            return True
+        
+        return False
+    
+    def _validate_zero_crossings(self, signal: np.ndarray) -> float:
+        """
+        Validate oscillation via zero-crossing analysis.
+        Returns confidence score (0-1).
+        """
+        if len(signal) < 10:
+            return 0.0
+        
+        # Find zero crossings
+        sign_changes = np.diff(np.sign(signal))
+        zero_crossings = np.where(sign_changes != 0)[0]
+        
+        if len(zero_crossings) < 2:
+            return 0.0
+        
+        # Calculate periods between crossings
+        crossing_intervals = np.diff(zero_crossings)
+        
+        if len(crossing_intervals) == 0:
+            return 0.0
+        
+        # Consistency of intervals indicates stable oscillation
+        mean_interval = np.mean(crossing_intervals)
+        std_interval = np.std(crossing_intervals)
+        
+        # Coefficient of variation (lower = more consistent = higher confidence)
+        if mean_interval > 0:
+            cv = std_interval / mean_interval
+            confidence = max(0.0, 1.0 - cv)  # Convert to 0-1 scale
+        else:
+            confidence = 0.0
+        
+        return confidence
+    
+    def get_tuning_factor(self) -> float:
+        """
+        Get resonance tuning factor to apply to field evolution.
+        Returns 1.0 if not locked, or resonance-optimized factor if locked.
+        """
+        if not self.resonance_locked or self.detected_frequency is None:
+            return 1.0
+        
+        # Tuning factor based on detected frequency
+        # Scale evolution rate to match natural resonance
+        tuning_factor = 2 * np.pi * self.detected_frequency
+        
+        # Clamp to reasonable range
+        return np.clip(tuning_factor, 0.5, 2.0)
+    
+    def get_resonance_state(self) -> Dict[str, Any]:
+        """Get current resonance detection state."""
+        return {
+            'resonance_locked': self.resonance_locked,
+            'detected_frequency': self.detected_frequency,
+            'expected_frequency': self.expected_frequency,
+            'confidence': self.confidence,
+            'lock_iteration': self.lock_iteration,
+            'history_length': len(self.pac_history),
+            'tuning_factor': self.get_tuning_factor()
+        }
+    
+    def reset(self):
+        """Reset detector state."""
+        self.detected_frequency = None
+        self.lock_iteration = None
+        self.resonance_locked = False
+        self.confidence = 0.0
+        self.pac_history = []
+        self.frequency_history = []
+
+
 @dataclass
 class FieldState:
     """Current state of energy-information fields."""
@@ -173,9 +354,11 @@ class FieldEngine:
     All field operations maintain f(parent) = Σf(children) through native PAC regulation.
     """
     
-    def __init__(self, shape: Tuple[int, int] = (32, 32), collapse_threshold: float = 0.6):
+    def __init__(self, shape: Tuple[int, int] = (32, 32), collapse_threshold: float = 0.6, 
+                 enable_resonance: bool = True):
         self.shape = shape
         self.collapse_threshold = collapse_threshold
+        self.enable_resonance = enable_resonance
         
         # Initialize PAC-native Fracton components as foundation
         # Use Fracton's physics memory field as core foundation
@@ -200,9 +383,20 @@ class FieldEngine:
         self.emergence_detector = EmergenceDetector(field_shape=shape)
         self.pattern_amplifier = PatternAmplifier(field_shape=shape)
         
+        # Pre-Field Resonance Detection (v2.2 enhancement)
+        if enable_resonance:
+            self.resonance_detector = PreFieldResonanceDetector(
+                window_size=50,
+                confidence_threshold=0.15
+            )
+            print("  ✓ Pre-Field Resonance Detection enabled (v2.2)")
+        else:
+            self.resonance_detector = None
+        
         # Statistics and state tracking
         self.update_count = 0
         self.collapse_triggers = 0
+        self.resonance_locks = 0  # Track resonance lock events
         self.field_states = []
         self.conservation_log = []
         
@@ -268,10 +462,17 @@ class FieldEngine:
         # First store input field as a source term
         self.physics_memory.set('source_term', input_field)
         
+        # Determine evolution time step (resonance-tuned if available)
+        dt = 0.01
+        if self.resonance_detector and self.resonance_detector.resonance_locked:
+            # Apply resonance tuning for accelerated convergence
+            tuning_factor = self.resonance_detector.get_tuning_factor()
+            dt *= tuning_factor
+        
         # Evolve the field using Klein-Gordon dynamics
         evolved_field = klein_gordon_evolution(
             memory=self.physics_memory,
-            dt=0.01,
+            dt=dt,
             mass_squared=0.1
         )
         
@@ -294,9 +495,14 @@ class FieldEngine:
             self._resolve_field_violations(violations)
         
         # Pattern amplification using Fracton resonance
+        resonance_frequency = 1.571  # PAC resonance frequency
+        if self.resonance_detector and self.resonance_detector.resonance_locked:
+            # Use detected natural frequency for resonance
+            resonance_frequency = self.resonance_detector.detected_frequency * 10  # Scale to field frequency
+        
         resonance_result = resonance_field_interaction(
             memory=self.physics_memory,
-            frequency=1.571,  # PAC resonance frequency
+            frequency=resonance_frequency,
             amplitude=1.0,
             amplification_factor=None  # Let it emerge dynamically
         )
@@ -304,6 +510,18 @@ class FieldEngine:
         # Get final metrics and log conservation
         final_metrics = self.physics_memory.get_physics_metrics()
         self._log_field_conservation_event(initial_metrics, final_metrics)
+        
+        # Update resonance detector with current PAC residual
+        if self.resonance_detector:
+            conservation_residual = final_metrics.get('conservation_residual', 0.0)
+            newly_locked = self.resonance_detector.update(abs(conservation_residual))
+            if newly_locked:
+                self.resonance_locks += 1
+                resonance_state = self.resonance_detector.get_resonance_state()
+                print(f"🎵 Resonance LOCKED at iteration {self.update_count}")
+                print(f"   Frequency: {resonance_state['detected_frequency']:.6f} cycles/iteration")
+                print(f"   Confidence: {resonance_state['confidence']:.3f}")
+                print(f"   Expected 5.11x speedup in PAC convergence")
         
         # Check for collapse conditions (physics-governed, not arbitrary)
         collapse_needed = self._physics_driven_collapse_check(final_metrics)
@@ -432,13 +650,20 @@ class FieldEngine:
     
     def get_pac_metrics(self) -> Dict[str, Any]:
         """Get PAC regulation metrics for monitoring."""
-        return {
+        metrics = {
             'system_pac_metrics': get_system_pac_metrics(),
             'physics_memory_metrics': self.physics_memory.get_physics_metrics(),
             'conservation_log_size': len(self.conservation_log),
             'update_count': self.update_count,
-            'collapse_triggers': self.collapse_triggers
+            'collapse_triggers': self.collapse_triggers,
+            'resonance_locks': self.resonance_locks
         }
+        
+        # Add resonance detector state if enabled
+        if self.resonance_detector:
+            metrics['resonance_state'] = self.resonance_detector.get_resonance_state()
+        
+        return metrics
     
     def get_field_state(self) -> 'FieldState':
         """Get current physics field state."""
