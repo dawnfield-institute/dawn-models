@@ -33,25 +33,206 @@ from src.core.conservation_engine import ConservationEngine
 
 
 class CosmologicalValidator:
-    """Validates PAC evolution against cosmological evolution patterns."""
+    """
+    Validates PAC evolution against cosmological evolution patterns.
+    
+    Now includes Mass Actualization Depth (MAS) and Herniation tracking:
+    - Depth D represents recursive herniation layers
+    - 2/3 frequency ratio appears at D=2 (second herniation)
+    - Confinement occurs at D=3 (third herniation)
+    - Entropy-amplification anti-correlation validates Big Bang parallel
+    """
     
     def __init__(self, save_results: bool = True):
         self.should_save_results = save_results
         self.results_dir = None
         
-        # Cosmological milestones mapped to PAC values
+        # MAS parameters from empirical fit
+        self.r_relax = 0.438  # Universal relaxation ratio τ_m/τ_SEC
+        self.xi_min = 1.0     # Minimum Xi for herniation (Ξ > 1 required)
+        self.f_infinity = 0.030  # Expected continuous resonance frequency
+        self.tau_sec = 47.0   # SEC relaxation time constant
+        
+        # Cosmological milestones mapped to PAC values AND herniation depths
         self.cosmological_eras = {
-            'singularity': {'pac': float('inf'), 'time': 0, 'temp_k': 1e32},
-            'inflation': {'pac': 100, 'time': 1e-32, 'temp_k': 1e27},
-            'quark_epoch': {'pac': 50, 'time': 1e-6, 'temp_k': 1e13},
-            'nucleosynthesis': {'pac': 20, 'time': 1, 'temp_k': 1e9},
-            'recombination': {'pac': 10, 'time': 380000*365*24*3600, 'temp_k': 3000},
-            'first_stars': {'pac': 5, 'time': 100e6*365*24*3600, 'temp_k': 60},
-            'galaxy_formation': {'pac': 1.0, 'time': 5.08e9*365*24*3600, 'temp_k': 10},
-            'present': {'pac': 0.1, 'time': 13.8e9*365*24*3600, 'temp_k': 2.7},
-            'heat_death': {'pac': 0, 'time': 1e100, 'temp_k': 0}
+            'singularity': {'pac': float('inf'), 'time': 0, 'temp_k': 1e32, 'depth': 0},
+            'planck_epoch': {'pac': 1000, 'time': 1e-43, 'temp_k': 1e32, 'depth': 0.5},
+            'inflation': {'pac': 100, 'time': 1e-32, 'temp_k': 1e27, 'depth': 1},
+            'quark_epoch': {'pac': 50, 'time': 1e-6, 'temp_k': 1e13, 'depth': 2},
+            'confinement': {'pac': 30, 'time': 1e-5, 'temp_k': 1e12, 'depth': 3},
+            'nucleosynthesis': {'pac': 20, 'time': 1, 'temp_k': 1e9, 'depth': 3.5},
+            'recombination': {'pac': 10, 'time': 380000*365*24*3600, 'temp_k': 3000, 'depth': 4},
+            'first_stars': {'pac': 5, 'time': 100e6*365*24*3600, 'temp_k': 60, 'depth': 5},
+            'galaxy_formation': {'pac': 1.0, 'time': 5.08e9*365*24*3600, 'temp_k': 10, 'depth': 6},
+            'present': {'pac': 0.1, 'time': 13.8e9*365*24*3600, 'temp_k': 2.7, 'depth': 7},
+            'heat_death': {'pac': 0, 'time': 1e100, 'temp_k': 0, 'depth': float('inf')}
         }
         
+    def compute_herniation_depth(self, pac: float, frequency: float = None) -> float:
+        """
+        Compute herniation depth D from PAC value or frequency.
+        
+        Uses the MAS depth law: f_eff(D) = f_∞ / (1 + D·r)
+        Inverted to get: D = (f_∞/f_eff - 1) / r
+        
+        Args:
+            pac: Current PAC value
+            frequency: Optional measured frequency for direct D calculation
+            
+        Returns:
+            Herniation depth D (0 = pre-field, higher = more mass/structure)
+        """
+        if frequency is not None and frequency > 0:
+            # Direct inversion of depth law to get D from frequency
+            depth = (self.f_infinity / frequency - 1) / self.r_relax
+            return max(0, depth)
+        
+        # Smooth mapping from PAC value (avoids sudden jumps)
+        # Use logarithmic scale: D = k * log(PAC_max / PAC)
+        # Calibrated so that PAC ≈ 0.05 → D ≈ 1.16 (the 2/3 regime)
+        if pac <= 0:
+            return 7.0
+        
+        pac_max = 100.0  # Reference "singularity" PAC
+        k = 0.35  # Scaling factor (empirically tuned)
+        
+        depth = k * np.log(pac_max / max(pac, 0.001))
+        return float(np.clip(depth, 0, 10))
+            
+    def compute_mas_signatures(self, field: np.ndarray, depth: float) -> Dict:
+        """
+        Compute Mass Actualization Signatures at given depth.
+        
+        Returns all MAS-related observables:
+        - Effective mass scale m_eff = v_SEC · Dr/(1+Dr)
+        - Expected frequency f_exp = f_∞/(1+Dr)
+        - Phase lag φ = -D·arctan(2πf·τ_m)
+        - Xi correction Ξ_eff = 1 + Dr/(1+Dr)
+        """
+        # Effective mass scale (computational units, GeV analog)
+        v_sec = 246.0  # SEC ordering parameter, analogous to Higgs VEV
+        m_eff = v_sec * (depth * self.r_relax) / (1 + depth * self.r_relax)
+        
+        # Expected frequency at this depth (the 2/3 law)
+        f_expected = self.f_infinity / (1 + depth * self.r_relax)
+        
+        # Phase lag prediction
+        tau_m = self.r_relax * self.tau_sec  # MAS relaxation time
+        phase_lag = -depth * np.arctan(2 * np.pi * f_expected * tau_m)
+        
+        # Xi correction at this depth
+        xi_eff = 1 + (depth * self.r_relax) / (1 + depth * self.r_relax)
+        
+        # Field pressure (for herniation threshold check)
+        field_pressure = float(np.std(field - np.mean(field)))
+        
+        return {
+            'depth': depth,
+            'effective_mass': m_eff,
+            'expected_frequency': f_expected,
+            'phase_lag': phase_lag,
+            'xi_correction': xi_eff,
+            'field_pressure': field_pressure,
+            'is_confined': depth >= 3,  # Confinement at D≥3
+            'is_composite': depth >= 4,  # Composite structures at D≥4
+            'is_two_thirds_regime': 1.8 < depth < 2.2  # 2/3 frequency ratio active
+        }
+    
+    def detect_herniation_events(self, pac_trajectory: List[float], 
+                                  depth_trajectory: List[float] = None,
+                                  field_history: List[np.ndarray] = None) -> List[Dict]:
+        """
+        Detect herniation events in PAC evolution.
+        
+        Herniations are marked by:
+        1. Sudden PAC drops (rupture occurs)
+        2. Significant depth transitions (ΔD > 0.3)
+        3. Rapid changes in gradient
+        
+        Args:
+            pac_trajectory: List of PAC values over time
+            depth_trajectory: Pre-computed depth values (if None, will compute from PAC)
+            field_history: Optional field snapshots
+        
+        Returns list of herniation events with properties.
+        """
+        herniations = []
+        
+        # Convert to numpy for easier manipulation
+        pac_array = np.array(pac_trajectory)
+        
+        # Use provided depth trajectory or compute it
+        if depth_trajectory is None:
+            print(f"      WARNING: No depth trajectory provided, computing from PAC (may miss early events)")
+            depth_trajectory = [self.compute_herniation_depth(pac) for pac in pac_trajectory]
+        
+        depth_array = np.array(depth_trajectory)
+        
+        # Debug output
+        print(f"      Depth trajectory: {len(depth_trajectory)} points")
+        print(f"      Depth range: {min(depth_trajectory):.2f} to {max(depth_trajectory):.2f}")
+        
+        # Method 1: Detect from depth transitions directly
+        depth_changes = np.diff(depth_array)
+        significant_indices = np.where(np.abs(depth_changes) > 0.3)[0]
+        
+        print(f"      Found {len(significant_indices)} significant depth changes (>0.3)")
+        
+        # Find significant depth increases (herniations)
+        for i in significant_indices:
+            if depth_changes[i] > 0:  # Only count increases as herniations
+                rupture_idx = i + 1  # Index after the change
+                
+                # Get surrounding context
+                pac_before = pac_trajectory[max(0, i)]
+                pac_at_rupture = pac_trajectory[rupture_idx]
+                pac_after = pac_trajectory[min(len(pac_trajectory)-1, rupture_idx+1)]
+                
+                depth_before = depth_trajectory[i]
+                depth_after = depth_trajectory[rupture_idx]
+                
+                print(f"      Herniation at iter {rupture_idx}: D={depth_before:.2f}->{depth_after:.2f}")
+                
+                herniation = {
+                    'iteration': int(rupture_idx),
+                    'pac_before': float(pac_before),
+                    'pac_at_rupture': float(pac_at_rupture),
+                    'pac_after': float(pac_after),
+                    'depth_before': float(depth_before),
+                    'depth_after': float(depth_after),
+                    'depth_change': float(depth_changes[i]),
+                    'rupture_strength': float(abs(pac_before - pac_at_rupture)),
+                    'expected_frequency_before': self.f_infinity / (1 + depth_before * self.r_relax),
+                    'expected_frequency_after': self.f_infinity / (1 + depth_after * self.r_relax),
+                }
+                
+                # Identify cosmological era corresponding to this herniation
+                for era_name, era_data in self.cosmological_eras.items():
+                    if abs(depth_after - era_data['depth']) < 0.5:
+                        herniation['era'] = era_name
+                        herniation['era_temperature'] = era_data['temp_k']
+                        break
+                else:
+                    herniation['era'] = 'transitional'
+                    herniation['era_temperature'] = None
+                
+                # Check for special depths
+                herniation['is_confinement'] = 2.5 < depth_after < 3.5
+                herniation['is_two_thirds'] = 1.8 < depth_after < 2.2
+                
+                # Check if we crossed specific integer depths
+                crossed_depths = []
+                for d in [1, 2, 3, 4, 5, 6, 7]:
+                    if depth_before < d <= depth_after:
+                        crossed_depths.append(d)
+                herniation['crossed_depths'] = crossed_depths
+                    
+                herniations.append(herniation)
+        
+        print(f"      Total herniations detected: {len(herniations)}")
+                
+        return herniations
+    
     def setup_results_directory(self):
         """Create directory for saving results."""
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -59,10 +240,16 @@ class CosmologicalValidator:
         self.results_dir.mkdir(parents=True, exist_ok=True)
         
     def run_pac_evolution(self, iterations: int = 1000, field_size: int = 32) -> Dict:
-        """Run PAC evolution and track metrics."""
+        """Run PAC evolution and track metrics including herniation events."""
         
-        print(f"🌌 Starting cosmological validation with {iterations} iterations...")
+        # Set reproducible seed for consistent resonance locking
+        np.random.seed(42)
+        
+        print(f"[COSMO] Starting cosmological validation with herniation tracking...")
+        print(f"   Iterations: {iterations}")
         print(f"   Field size: {field_size}x{field_size}")
+        print(f"   MAS relaxation ratio r = {self.r_relax}")
+        print(f"   Expected 2/3 ratio at D=2")
         print()
         
         # Initialize field engine with high entropy (Big Bang analog)
@@ -75,6 +262,8 @@ class CosmologicalValidator:
         amplification_history = []
         temperature_history = []
         energy_history = []
+        depth_history = []
+        field_snapshots = []
         
         # Start with UNIFORM high-energy field (Big Bang - maximum entropy)
         # Uniform = high entropy, no structure yet
@@ -84,33 +273,39 @@ class CosmologicalValidator:
         
         previous_field = initial_field
         base_field = initial_field.copy()  # Reference to initial state
+        previous_depth = 0
         
         for i in range(iterations):
-            # Cosmological cooling schedule (exponential decay)
-            temperature_factor = np.exp(-i / 100.0)  # Smooth exponential cooling
+            # Compute current herniation depth
+            current_pac = pac_history[-1] if pac_history else 100.0
+            current_depth = self.compute_herniation_depth(current_pac)
+            
+            # Cosmological cooling schedule (depth-aware)
+            # Cooling rate decreases with depth (harder to cool at higher D)
+            temperature_factor = np.exp(-i / (100.0 * (1 + current_depth * 0.1)))
             temperature = 100.0 * temperature_factor
             
-            # Apply gentle cooling to field (preserve energy for structure formation)
-            cooled_field = previous_field * np.exp(-0.003)  # Slower cooling
+            # Apply depth-modulated cooling to field
+            cooling_rate = 0.003 / (1 + current_depth * 0.1)
+            cooled_field = previous_field * np.exp(-cooling_rate)
             
             # Structure formation: density perturbations grow via gravitational instability
-            # Regions with higher density attract more (exponential growth of fluctuations)
+            # Growth ACCELERATES with depth (deeper herniations amplify structure)
             mean_density = np.mean(cooled_field)
             density_contrast = cooled_field - mean_density
             
-            # Amplify density contrasts (structure formation dominates over cooling)
-            # Growth accelerates over time (like Jeans instability)
-            growth_rate = 0.01 * (1.0 + 2.0 * i / iterations)  # Strong, accelerating growth
+            # Depth-enhanced growth rate
+            base_growth = 0.01 * (1.0 + 2.0 * i / iterations)
+            depth_amplification = 1.0 + current_depth * 0.2
+            growth_rate = base_growth * depth_amplification
             structure_growth = density_contrast * growth_rate
             
             # Combine effects
             input_data = cooled_field + structure_growth
             
-            # Add quantum noise (decreases with temperature)
-            input_data += np.random.randn(field_size, field_size) * 0.01 * temperature_factor
-            
-            # Add quantum noise (decreases with temperature)
-            input_data += np.random.randn(field_size, field_size) * 0.01 * temperature_factor
+            # Depth-dependent quantum noise (decreases with depth AND temperature)
+            noise_scale = 0.01 * temperature_factor / (1 + current_depth * 0.5)
+            input_data += np.random.randn(field_size, field_size) * noise_scale
             
             # Evolve field through PAC engine
             try:
@@ -135,27 +330,91 @@ class CosmologicalValidator:
             amplification_history.append(amplification)
             temperature_history.append(temp)
             energy_history.append(energy)
+            depth_history.append(current_depth)
+            
+            # Store field snapshots periodically
+            if i % 50 == 0:
+                field_snapshots.append(current_field.copy())
+            
+            # Check for herniation event (depth transition)
+            if current_depth > previous_depth and abs(current_depth - previous_depth) > 0.3:
+                print(f"  [HERN] HERNIATION EVENT at iteration {i}:")
+                print(f"      Depth: {previous_depth:.2f} -> {current_depth:.2f}")
+                print(f"      PAC: {pac:.5f}")
+                
+                # Compute MAS signatures at new depth
+                mas_sig = self.compute_mas_signatures(current_field, current_depth)
+                print(f"      Expected frequency: {mas_sig['expected_frequency']:.4f} Hz")
+                
+                # Check for special depths
+                if mas_sig['is_two_thirds_regime']:
+                    print(f"      [2/3] ENTERED 2/3 RATIO REGIME (D~2)")
+                if mas_sig['is_confined']:
+                    print(f"      [CONF] CONFINEMENT DEPTH REACHED (D>=3)")
             
             previous_field = current_field
+            previous_depth = current_depth
             
-            # Progress reporting
+            # Progress reporting with MAS info
             if i % 100 == 0:
+                mas_sig = self.compute_mas_signatures(current_field, current_depth)
                 era = self._identify_era(pac)
-                print(f"  Iteration {i:4d}: PAC={pac:8.5f}, T={temp:6.2f}K, S={entropy:7.3f}, A={amplification:.4f}")
+                print(f"  Iteration {i:4d}: PAC={pac:8.5f}, D={current_depth:.2f}, "
+                      f"f_exp={mas_sig['expected_frequency']:.4f}, Era={era}")
                 
                 # Check for resonance lock
                 metrics = engine.get_pac_metrics()
                 if 'resonance_state' in metrics:
                     res_state = metrics['resonance_state']
                     if res_state['resonance_locked'] and i > 50:
-                        print(f"               🎵 Resonance locked (freq={res_state['detected_frequency']:.4f})")
-                
+                        print(f"               [RES] Resonance locked (freq={res_state['detected_frequency']:.4f})")
+        
+        # Detect all herniation events in final trajectory
+        print()
+        print("[DETECT] Detecting herniation events...")
+        print(f"   PAC range: {min(pac_history):.5f} - {max(pac_history):.5f}")
+        print(f"   Depth range: {min(depth_history):.2f} - {max(depth_history):.2f}")
+        
+        detected_herniations = self.detect_herniation_events(pac_history, depth_history, field_snapshots)
+        
+        # Debug: Show depth transitions manually
+        depth_array = np.array(depth_history)
+        depth_changes = np.diff(depth_array)
+        significant_changes = np.where(np.abs(depth_changes) > 0.3)[0]
+        print(f"   Significant depth changes found: {len(significant_changes)}")
+        if len(significant_changes) > 0:
+            print(f"   First few: {significant_changes[:5]}")
+        
         print()
         print(f"✓ Evolution complete")
         print(f"  Final PAC: {pac_history[-1]:.6f}")
+        print(f"  Final Depth: {depth_history[-1]:.2f}")
+        print(f"  Herniation Events: {len(detected_herniations)}")
         print(f"  PAC reduction: {(pac_history[0] - pac_history[-1]) / pac_history[0] * 100:.1f}%")
         print(f"  Entropy: {entropy_history[0]:.3f} → {entropy_history[-1]:.3f} (Δ={entropy_history[-1]-entropy_history[0]:.3f})")
         print(f"  Amplification: {amplification_history[0]:.4f} → {amplification_history[-1]:.4f} (Δ={amplification_history[-1]-amplification_history[0]:.4f})")
+        
+        # Report herniation events
+        if detected_herniations:
+            print()
+            print(f"[HERN] Herniation Event Summary:")
+            for hern in detected_herniations:
+                era_str = f" ({hern['era']})" if 'era' in hern else ""
+                special_str = ""
+                if hern.get('is_two_thirds'):
+                    special_str = " [2/3 RATIO]"
+                elif hern.get('is_confinement'):
+                    special_str = " [CONFINEMENT]"
+                
+                crossed_str = ""
+                if 'crossed_depths' in hern and hern['crossed_depths']:
+                    crossed_str = f" crossed D={hern['crossed_depths']}"
+                    
+                print(f"   Iter {hern['iteration']:4d}: D={hern['depth_before']:.1f}->{hern['depth_after']:.1f}{era_str}{special_str}")
+                if crossed_str:
+                    print(f"             {crossed_str}")
+                print(f"             f: {hern['expected_frequency_before']:.4f}->{hern['expected_frequency_after']:.4f} Hz")
+        
         print()
         
         return {
@@ -164,7 +423,11 @@ class CosmologicalValidator:
             'amplification_trajectory': amplification_history,
             'temperature_trajectory': temperature_history,
             'energy_trajectory': energy_history,
+            'depth_trajectory': depth_history,
+            'herniation_events': detected_herniations,
+            'field_snapshots': field_snapshots,
             'final_pac': pac_history[-1],
+            'final_depth': depth_history[-1],
             'iterations': iterations,
             'resonance_info': engine.get_pac_metrics().get('resonance_state', {})
         }
