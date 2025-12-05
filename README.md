@@ -6,11 +6,6 @@
 
 ---
 
-> **📢 Project Status Update (October 2025)**  
-> Due to increased work commitments over the next 2 months, all roadmaps are temporarily paused. The project is **not frozen**—work continues behind the scenes—but updates and documentation will be delayed. Expected to resume regular updates in December 2025. Thank you for your patience and continued interest.
-
----
-
 ## Overview
 
 Dawn Models implements post-symbolic AI architectures based on Dawn Field Theory principles. The repository provides experimental research models and production-ready implementations using entropy-driven learning, symbolic collapse dynamics, and bifractal computation patterns.
