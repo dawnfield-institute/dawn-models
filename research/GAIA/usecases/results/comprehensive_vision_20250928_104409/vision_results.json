@@ -1,0 +1,205 @@
+{
+  "conservation_calibration": {
+    "conservation_residual": 1023.0,
+    "xi_operator_value": 103.35710000000002,
+    "xi_target": 1.0571,
+    "xi_error": 102.30000000000001,
+    "conservation_working": false,
+    "xi_calibrated": false,
+    "field_norm": 32.0
+  },
+  "object_detection": {
+    "passed": true,
+    "detection_rate": 1.0,
+    "scenes_tested": 4,
+    "scene_results": {
+      "single_circle": {
+        "object_count": 1,
+        "klein_gordon_energy": 1349.345606360539,
+        "conservation_residual": 1023.0,
+        "xi_operator_value": 103.35710000000002,
+        "confidence": 0.2,
+        "field_norm": 32.0,
+        "entropy_change": -35.778274123748076
+      },
+      "single_square": {
+        "object_count": 1,
+        "klein_gordon_energy": 1339.6348537748308,
+        "conservation_residual": 1023.0,
+        "xi_operator_value": 103.35710000000002,
+        "confidence": 0.2,
+        "field_norm": 31.999999999999996,
+        "entropy_change": -157.8944637301982
+      },
+      "two_objects": {
+        "object_count": 2,
+        "klein_gordon_energy": 1353.0193339461048,
+        "conservation_residual": 1023.0000000000002,
+        "xi_operator_value": 103.35710000000003,
+        "confidence": 0.2,
+        "field_norm": 32.0,
+        "entropy_change": 107.25061377862673
+      },
+      "empty_scene": {
+        "object_count": 0,
+        "klein_gordon_energy": 1323.2110092074367,
+        "conservation_residual": 1023.0,
+        "xi_operator_value": 103.35710000000002,
+        "confidence": 0.2,
+        "field_norm": 32.00000000000001,
+        "entropy_change": -28.174847776627686
+      }
+    }
+  },
+  "spatial_localization": {
+    "passed": true,
+    "spatial_sensitivity": 0.0012872429024172664,
+    "position_results": {
+      "circle_center": {
+        "position": [
+          0.5,
+          0.5
+        ],
+        "klein_gordon_energy": 1341.2435201709327,
+        "conservation_residual": 1022.9999999999998,
+        "confidence": 0.2,
+        "field_state_signature": 32.0
+      },
+      "circle_top_left": {
+        "position": [
+          0.25,
+          0.75
+        ],
+        "klein_gordon_energy": 1345.3121869100776,
+        "conservation_residual": 1022.9999999999998,
+        "confidence": 0.2,
+        "field_state_signature": 31.999999999999993
+      },
+      "circle_bottom_right": {
+        "position": [
+          0.75,
+          0.25
+        ],
+        "klein_gordon_energy": 1344.3004582130338,
+        "conservation_residual": 1023.0,
+        "confidence": 0.2,
+        "field_state_signature": 32.0
+      }
+    }
+  },
+  "object_count": {
+    "passed": true,
+    "correlation_strength": 0.9940114373446987,
+    "count_results": {
+      "0": {
+        "klein_gordon_energy": 1321.4983609882188,
+        "conservation_residual": 1023.0000000000002,
+        "confidence": 0.2,
+        "field_norm": 32.0
+      },
+      "1": {
+        "klein_gordon_energy": 1341.2435201709327,
+        "conservation_residual": 1022.9999999999998,
+        "confidence": 0.2,
+        "field_norm": 32.0
+      },
+      "2": {
+        "klein_gordon_energy": 1353.309181834301,
+        "conservation_residual": 1023.0000000000002,
+        "confidence": 0.2,
+        "field_norm": 32.0
+      },
+      "3": {
+        "klein_gordon_energy": 1375.8878657612731,
+        "conservation_residual": 1023.0000000000002,
+        "confidence": 0.2,
+        "field_norm": 32.00000000000001
+      }
+    }
+  },
+  "equal_area_discrimination": {
+    "passed": true,
+    "energy_cv": 0.050449640775544854,
+    "xi_cv": 2.1739516877786703e-16,
+    "shape_responses": {
+      "circle": {
+        "klein_gordon_energy": 1368.3901610140492,
+        "conservation_residual": 1023.0,
+        "xi_operator_value": 103.35710000000002,
+        "confidence": 0.2,
+        "field_norm": 32.0,
+        "entropy_change": 30.325720047568694
+      },
+      "square": {
+        "klein_gordon_energy": 1349.8559480031452,
+        "conservation_residual": 1022.9999999999998,
+        "xi_operator_value": 103.35709999999999,
+        "confidence": 0.2,
+        "field_norm": 31.999999999999993,
+        "entropy_change": 24.0117196986061
+      },
+      "cross": {
+        "klein_gordon_energy": 1478.4975156538896,
+        "conservation_residual": 1023.0000000000002,
+        "xi_operator_value": 103.35710000000003,
+        "confidence": 0.2,
+        "field_norm": 32.0,
+        "entropy_change": 11.195886126695399
+      },
+      "x_shape": {
+        "klein_gordon_energy": 1520.7235501009845,
+        "conservation_residual": 1023.0000000000002,
+        "xi_operator_value": 103.35710000000003,
+        "confidence": 0.2,
+        "field_norm": 31.999999999999993,
+        "entropy_change": -115.91160016785028
+      }
+    },
+    "discrimination_type": "structure"
+  },
+  "spatial_arrangement": {
+    "passed": true,
+    "energy_cv": 0.013986771528799688,
+    "xi_cv": 6.87463885654783e-17,
+    "close_vs_far_diff": 4.268210800970564,
+    "vertical_vs_horizontal_diff": 54.189391689072636,
+    "arrangement_responses": {
+      "close_circles": {
+        "klein_gordon_energy": 1372.6381685757012,
+        "conservation_residual": 1023.0000000000005,
+        "xi_operator_value": 103.35710000000006,
+        "confidence": 0.2,
+        "field_norm": 31.999999999999996
+      },
+      "far_circles": {
+        "klein_gordon_energy": 1376.9063793766718,
+        "conservation_residual": 1023.0000000000005,
+        "xi_operator_value": 103.35710000000006,
+        "confidence": 0.2,
+        "field_norm": 31.99999999999999
+      },
+      "vertical_line": {
+        "klein_gordon_energy": 1346.8386070591887,
+        "conservation_residual": 1023.0000000000005,
+        "xi_operator_value": 103.35710000000006,
+        "confidence": 0.2,
+        "field_norm": 31.999999999999996
+      },
+      "horizontal_line": {
+        "klein_gordon_energy": 1401.0279987482613,
+        "conservation_residual": 1023.0000000000007,
+        "xi_operator_value": 103.35710000000007,
+        "confidence": 0.2,
+        "field_norm": 31.999999999999993
+      }
+    }
+  },
+  "summary": {
+    "timestamp": "20250928_104409",
+    "tests_passed": 5,
+    "total_tests": 6,
+    "pass_rate": 0.8333333333333334,
+    "vision_level": "ADVANCED VISION (structural discrimination)",
+    "processing_time": 0.9172103404998779
+  }
+}

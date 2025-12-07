@@ -216,11 +216,17 @@ raw_data/
 processed_data/
 
 # Experiment outputs
-results/
 outputs/
 checkpoints/
-experiments/
 runs/
+
+# Experiments folder (but keep scbf experiments tracked)
+experiments/
+!research/scbf/experiments/
+research/scbf/experiments/**/pythia_cache/
+research/scbf/experiments/**/__pycache__/
+# Track results in scbf experiments
+!research/scbf/experiments/**/results/
 
 # GAIA-specific ignores
 research/GAIA/src/__pycache__/
