@@ -7,7 +7,8 @@ This journal documents the research process for validating the PAC (Phi-Structur
 | Date | Entry | Summary |
 |------|-------|---------|
 | 2025-12-07 | [000_four_derivations](000_four_derivations.md) | Completed formal derivation papers |
-| 2025-12-07 | [001_pythia_phi_convergence](001_pythia_phi_convergence.md) | Breakthrough: Training dynamics converge toward phi |
+| 2025-12-07 | [001_pythia_phi_convergence](001_pythia_phi_convergence.md) | Initial finding: Training dynamics converge toward phi |
+| 2025-12-07 | [002_phi_phase_transition](002_phi_phase_transition.md) | Deep dive: Phi is transition marker, not attractor |
 
 ## Context
 
