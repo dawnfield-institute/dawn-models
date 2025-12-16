@@ -1,0 +1,198 @@
+{
+  "timestamp": "2025-12-16T12:56:42.919335",
+  "device": "cuda",
+  "tests": {
+    "extended_generation": {
+      "prompt": [
+        "the",
+        "king"
+      ],
+      "generated": [
+        "the",
+        "king",
+        "sees",
+        "in",
+        "she",
+        "him",
+        "they",
+        "he",
+        "with",
+        "from",
+        "a",
+        "to",
+        "loves",
+        "you"
+      ],
+      "length": 14,
+      "passed": true
+    },
+    "no_degeneration": {
+      "generated": [
+        "I",
+        "see",
+        "he",
+        "to",
+        "the",
+        "queen",
+        "we",
+        "she",
+        "find",
+        "him",
+        "a",
+        "sees"
+      ],
+      "has_repetition": false,
+      "passed": true
+    },
+    "topical_consistency": {
+      "generated": [
+        "the",
+        "cat",
+        "finds",
+        "food",
+        "a",
+        "dog",
+        "walks",
+        "slow",
+        "bird"
+      ],
+      "scores": [
+        0.8378618955612183,
+        0.6870920658111572,
+        0.6698944568634033,
+        0.8227164149284363,
+        0.9106207489967346,
+        0.6627783179283142
+      ],
+      "consistency": 1.0587413424755576,
+      "passed": true
+    },
+    "energy_stability": {
+      "context": [
+        "the",
+        "man",
+        "takes",
+        "they",
+        "find",
+        "him",
+        "he"
+      ],
+      "energies": [
+        9786.283203125,
+        8754.193359375,
+        8604.0,
+        7678.09814453125,
+        7805.0751953125,
+        8099.1630859375
+      ],
+      "ratio": 1.27457125695838,
+      "passed": true
+    },
+    "diverse_prompts": {
+      "generations": [
+        [
+          [
+            "I"
+          ],
+          [
+            "I",
+            "so",
+            "it",
+            "good",
+            "we",
+            "him",
+            "then"
+          ]
+        ],
+        [
+          [
+            "the",
+            "big"
+          ],
+          [
+            "the",
+            "big",
+            "cat",
+            "with",
+            "loves",
+            "to",
+            "takes",
+            "him"
+          ]
+        ],
+        [
+          [
+            "she",
+            "loves"
+          ],
+          [
+            "she",
+            "loves",
+            "him",
+            "he",
+            "helps",
+            "you",
+            "it",
+            "a"
+          ]
+        ],
+        [
+          [
+            "and",
+            "then"
+          ],
+          [
+            "and",
+            "then",
+            "it",
+            "to",
+            "the",
+            "bird",
+            "but",
+            "I"
+          ]
+        ]
+      ],
+      "all_extended": true,
+      "passed": true
+    },
+    "connector_integration": {
+      "prompt": [
+        "the",
+        "cat",
+        "runs",
+        "and"
+      ],
+      "predictions": [
+        [
+          "loves",
+          0.7841446995735168
+        ],
+        [
+          "him",
+          0.6886875629425049
+        ],
+        [
+          "love",
+          0.6884562969207764
+        ],
+        [
+          "gives",
+          0.670946478843689
+        ],
+        [
+          "he",
+          0.6704719066619873
+        ]
+      ],
+      "matches": 3,
+      "passed": true
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "success_rate": 1.0
+  }
+}

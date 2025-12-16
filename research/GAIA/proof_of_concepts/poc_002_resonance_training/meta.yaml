@@ -1,0 +1,10 @@
+schema_version: "2.0"
+description: "POC-002: Resonance-based semantic training for GAIA"
+semantic_scope: "research"
+proficiency_level: "experimental"
+files:
+  - "[README.md]": "Experiment overview and success criteria"
+child_directories:
+  - scripts: "Experiment implementations"
+  - results: "JSON output data"
+  - journals: "Daily research logs"

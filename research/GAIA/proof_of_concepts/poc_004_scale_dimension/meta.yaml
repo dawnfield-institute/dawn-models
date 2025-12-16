@@ -1,0 +1,29 @@
+schema_version: "2.0"
+description: "POC-004: Scale field-native transformers to 3D and 10K+ patterns using Reality Engine"
+semantic_scope: "research"
+proficiency_level: "experimental"
+validation_type: "empirical"
+estimated_context_weight: 0.9
+
+status: "in_progress"
+created: "2025-01-06"
+hypothesis: "Dawn Field constants generalize to 3D via (φ×ξ)^(3/2) scaling"
+
+success_criteria:
+  - "φ × ξ works at 10K patterns"
+  - "Performance > 100 patterns/sec at 64³"
+  - "3D attention achieves > 0.8 within-class similarity"
+  - "Reality Engine conservation integrates cleanly"
+
+dependencies:
+  - "../poc_002_resonance_training"
+  - "../poc_003_field_attention"
+  - "../../../../reality-engine/core/rearrangement_tensor.py"
+
+child_directories:
+  - "[scripts/]": "Experiment implementations"
+  - "[results/]": "JSON output from experiments"
+  - "[journals/]": "Daily research logs"
+
+files:
+  - "[README.md]": "POC overview and hypothesis"

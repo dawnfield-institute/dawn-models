@@ -1,0 +1,69 @@
+{
+  "experiment_id": "exp02_characters_20251216_091117",
+  "timestamp": "2025-12-16T09:11:17.182383",
+  "device": "cuda",
+  "parameters": {
+    "field_dims": [
+      64,
+      64
+    ],
+    "xi_target": 1.0571
+  },
+  "encodings": [],
+  "metrics": {
+    "tests_passed": 6,
+    "tests_total": 6,
+    "test_results": [
+      {
+        "test": "alphabet_distinctiveness",
+        "chars_tested": 26,
+        "avg_distance": 1.4880677560659554,
+        "min_distance": 1.1644794940948486,
+        "min_pair": [
+          "a",
+          "z"
+        ],
+        "success": true
+      },
+      {
+        "test": "adjacent_similarity",
+        "avg_adjacent_sim": 0.22786145210266112,
+        "avg_distant_sim": 0.07770040999166668,
+        "separation": 0.15016104211099446,
+        "success": true
+      },
+      {
+        "test": "digit_encoding",
+        "digits_tested": 10,
+        "avg_distance": 1.4364972511927288,
+        "min_distance": 1.0598070621490479,
+        "success": true
+      },
+      {
+        "test": "letter_digit_separation",
+        "avg_within_letter": -0.004537677607731894,
+        "avg_within_digit": 0.07448857749186573,
+        "avg_cross_class": -0.01150913894191035,
+        "separation": 0.04648458888397727,
+        "success": true
+      },
+      {
+        "test": "character_evolution",
+        "steps": 100,
+        "chars_tested": 5,
+        "survival_rate": 1.0,
+        "avg_correlation": 0.9527428030967713,
+        "success": true
+      },
+      {
+        "test": "encoding_speed",
+        "total_chars": 62,
+        "total_time_ms": 27.814000000034866,
+        "per_char_ms": 0.4486129032263688,
+        "success": true
+      }
+    ]
+  },
+  "success": true,
+  "notes": "Character-level encoding experiment"
+}

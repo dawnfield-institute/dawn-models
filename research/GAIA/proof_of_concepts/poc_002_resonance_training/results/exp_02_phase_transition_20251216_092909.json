@@ -1,0 +1,95 @@
+{
+  "experiment": "poc_002_exp_02_phase_transition",
+  "timestamp": "2025-12-16T09:29:08.507366",
+  "device": "cuda",
+  "constants": {
+    "phi_xi": 1.710424,
+    "phi": 1.618034,
+    "lambda_star": 0.9816
+  },
+  "tests": {
+    "phase_detection": {
+      "low": 4.198764,
+      "high": 4.21383,
+      "threshold": 1.710424,
+      "passed": true
+    },
+    "with_vs_without": {
+      "no_phase": {
+        "sep": 0.645741,
+        "same": 0.798805,
+        "diff": 0.153064
+      },
+      "with_phase": {
+        "sep": 0.751709,
+        "same": 0.899881,
+        "diff": 0.148172
+      },
+      "improvement": 0.105968,
+      "passed": true
+    },
+    "crystallization": {
+      "transitions_count": 29,
+      "avg_at_transition": 0.844362,
+      "avg_between": 0,
+      "passed": true
+    },
+    "lambda_decay": {
+      "0.5": {
+        "final_energy": 0.0,
+        "survived": false
+      },
+      "0.8": {
+        "final_energy": 0.0,
+        "survived": false
+      },
+      "0.9816": {
+        "final_energy": 1.559871,
+        "survived": true
+      },
+      "0.99": {
+        "final_energy": 8.574714,
+        "survived": true
+      },
+      "1.0": {
+        "final_energy": 64.0,
+        "survived": true
+      },
+      "passed": true
+    },
+    "golden_ratio": {
+      "avg_ratio": 1.118999,
+      "phi": 1.618034,
+      "distance": 0.499035,
+      "passed": true
+    },
+    "scaling": {
+      "2": {
+        "transitions": 20,
+        "steps": 20,
+        "ratio": 1.0
+      },
+      "4": {
+        "transitions": 40,
+        "steps": 40,
+        "ratio": 1.0
+      },
+      "8": {
+        "transitions": 80,
+        "steps": 80,
+        "ratio": 1.0
+      },
+      "16": {
+        "transitions": 160,
+        "steps": 160,
+        "ratio": 1.0
+      },
+      "passed": true
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "total": 6,
+    "success": true
+  }
+}

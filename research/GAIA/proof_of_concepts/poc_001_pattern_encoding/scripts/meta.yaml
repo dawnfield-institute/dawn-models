@@ -1,0 +1,12 @@
+schema_version: "2.0"
+description: "Experiment scripts for pattern encoding POC"
+semantic_scope: "implementation"
+proficiency_level: "research"
+files:
+  - "[__init__.py]": "Package init"
+  - "[utils.py]": "Shared utilities - FieldEncoder, FieldEvolver, GPU support"
+  - "[gaia_encoder.py]": "GPU-native encoder for GAIA integration"
+  - "[exp_01_binary.py]": "Binary pattern encoding - 5/5 tests passed"
+  - "[exp_02_characters.py]": "Character-level encoding - 6/6 tests passed"
+  - "[exp_03_words.py]": "Word-level semantic encoding - 4/6 tests passed"
+  - "[exp_04_gaia_integration.py]": "GAIA integration test - 6/6 tests passed"

@@ -1,0 +1,11 @@
+schema_version: "2.0"
+description: "Experiment scripts for POC-004 scale and dimension testing"
+semantic_scope: "implementation"
+proficiency_level: "experimental"
+
+files:
+  - "[scale_field.py]": "Core 3D field operations with Reality Engine integration"
+  - "[exp_01_adaptive_3d.py]": "Test Reality Engine + 3D encoding"
+  - "[exp_02_scale_invariance.py]": "Test constants at 1K/10K/100K patterns"
+  - "[exp_03_spherical_attention.py]": "3D attention with spherical harmonics"
+  - "[exp_04_critical_density.py]": "Find 3D phase transition point"

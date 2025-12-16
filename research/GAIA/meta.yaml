@@ -1,19 +1,26 @@
-schema_version: 2.0
+schema_version: "2.0"
 directory_name: GAIA
-description: 'GAIA framework models, documentation, and protocols for Dawn Field Theory.
-
-  '
+description: >
+  GAIA (Generalized Architectures for Intelligent Actualization) - 
+  Physics-native cognitive architecture implementing Dawn Field Theory 
+  through conservation laws, field dynamics, and emergent intelligence.
+  v3.0 PAC-Native with Fracton SDK foundation.
 semantic_scope:
-- GAIA
-- model
-- protocol
+  - GAIA
+  - model
+  - protocol
+  - cognition
+  - physics-native
 files:
-- gaia_runtime.py
-- phase3_agi_validation_report.md
+  - "[README.md]": "Main GAIA documentation and overview"
+  - "[test_bifractal_memory.py]": "Bifractal memory validation tests"
 child_directories:
-- applications
-- long_term_training_output
-- modules
-- sdk
-- src
-- tests
+  - .spec
+  - docs
+  - results
+  - src
+  - tests
+  - usecases
+proficiency_level: research
+estimated_context_weight: high
+validation_type: tests

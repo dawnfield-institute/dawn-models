@@ -1,0 +1,19 @@
+schema_version: "2.0"
+directory_name: proof_of_concepts
+description: >
+  Experimental proof-of-concept implementations for GAIA Phase 4 
+  field-native transformer architecture. Each POC explores a specific
+  research challenge with journaling, scripts, and results.
+semantic_scope:
+  - research
+  - experimentation
+  - validation
+  - proof-of-concept
+files:
+  - "[JOURNAL_SCHEMA.md]": "Central specification for research journals"
+  - "[POC_REGISTRY.md]": "Registry of all proof-of-concept experiments"
+child_directories:
+  - poc_001_pattern_encoding
+proficiency_level: research
+estimated_context_weight: high
+validation_type: experimental

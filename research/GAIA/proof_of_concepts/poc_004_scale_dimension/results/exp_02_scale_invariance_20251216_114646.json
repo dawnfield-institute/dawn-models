@@ -1,0 +1,91 @@
+{
+  "experiment": "exp_02_scale_invariance",
+  "timestamp": "2025-12-16T11:46:46.833479",
+  "device": "cuda",
+  "constants": {
+    "phi": 1.618033988749895,
+    "xi": 1.0571,
+    "phi_xi": 1.7104237295075138,
+    "threshold_3d": 2.2369463568689776,
+    "lambda_star": 0.9816
+  },
+  "tests": [
+    {
+      "test": "scale_1k",
+      "passed": true,
+      "n_patterns": 1000,
+      "field_size": 64,
+      "encode_time": 1.1163299083709717,
+      "throughput": 895.7925363294005,
+      "memory_mb": 1004.2451171875,
+      "mean_within": 0.9635809489300377,
+      "mean_between": 0.3688847696306184,
+      "separation": 0.5946961792994192
+    },
+    {
+      "test": "scale_5k",
+      "passed": true,
+      "n_patterns": 5000,
+      "field_size": 64,
+      "encode_time": 5.862909555435181,
+      "throughput": 852.8188867189288,
+      "memory_mb": 6005.2216796875,
+      "mean_within": 0.9744444806235177,
+      "mean_between": 0.39064588959235697,
+      "separation": 0.5837985910311607
+    },
+    {
+      "test": "scale_10k",
+      "passed": true,
+      "n_patterns": 10000,
+      "n_sampled": 250,
+      "field_size": 32,
+      "encode_time": 0.27812862396240234,
+      "throughput": 898.864692307956,
+      "estimated_full_time": 11.125144958496094,
+      "memory_mb": 31.76318359375,
+      "estimated_full_memory_mb": 1251.00830078125,
+      "mean_within": 0.9753007923301897,
+      "mean_between": 0.4064500334612094,
+      "separation": 0.5688507588689804
+    },
+    {
+      "test": "constants_at_scale",
+      "passed": true,
+      "phi_xi": 1.7104237295075138,
+      "threshold_3d": 2.2369463568689776,
+      "lambda_star": 0.9816,
+      "mean_coherence": 1.1622360050678253,
+      "weight_match": 1.0000001192092896
+    },
+    {
+      "test": "attention_at_scale",
+      "passed": true,
+      "details": [
+        {
+          "batch_size": 32,
+          "throughput": 377.34934447725743,
+          "ms_per_batch": 84.80205535888672,
+          "valid_output": true
+        },
+        {
+          "batch_size": 64,
+          "throughput": 362.7994470607125,
+          "ms_per_batch": 176.40600204467773,
+          "valid_output": true
+        },
+        {
+          "batch_size": 128,
+          "throughput": 345.62245476697063,
+          "ms_per_batch": 370.3463077545166,
+          "valid_output": true
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "total": 5,
+    "success": true
+  }
+}

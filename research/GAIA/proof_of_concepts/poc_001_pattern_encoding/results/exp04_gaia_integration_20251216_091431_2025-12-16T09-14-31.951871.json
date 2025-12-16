@@ -1,0 +1,32 @@
+{
+  "experiment_id": "exp04_gaia_integration_20251216_091431",
+  "timestamp": "2025-12-16T09:14:31.951871",
+  "device": "cuda",
+  "parameters": {
+    "field_dims": [
+      64,
+      64
+    ],
+    "xi_target": 1.0571
+  },
+  "encodings": [],
+  "metrics": {
+    "tests_passed": 1,
+    "tests_total": 2,
+    "test_results": [
+      {
+        "test": "encoder_standalone",
+        "tests_passed": 3,
+        "tests_total": 3,
+        "success": true
+      },
+      {
+        "test": "gaia_import",
+        "success": false,
+        "error": "cannot import name 'PAC_GAIA' from 'gaia' (unknown location)"
+      }
+    ]
+  },
+  "success": false,
+  "notes": "GAIA integration test with GPU encoding"
+}

@@ -1,0 +1,72 @@
+{
+  "experiment": "poc_003_exp_02_harmonic_heads",
+  "timestamp": "2025-12-16T09:45:39.317499",
+  "device": "cuda",
+  "primes": [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19
+  ],
+  "tests": {
+    "harmonic_weights": {
+      "weights": [
+        0.25,
+        0.111111,
+        0.04,
+        0.020408,
+        0.008264,
+        0.005917,
+        0.00346,
+        0.00277
+      ],
+      "primes": [
+        2,
+        3,
+        5,
+        7,
+        11,
+        13,
+        17,
+        19
+      ],
+      "total": 0.441931,
+      "passed": true
+    },
+    "head_hierarchy": {
+      "is_decreasing": true,
+      "first_head_fraction": 0.565699,
+      "passed": true
+    },
+    "harmonic_vs_uniform": {
+      "harmonic_std": 0.014006,
+      "uniform_std": 0.062352,
+      "passed": true
+    },
+    "semantic_specialization": {
+      "heads_analyzed": 4,
+      "passed": true
+    },
+    "prime_series": {
+      "our_sum": 0.441931,
+      "theoretical": 0.452247,
+      "fraction": 0.977189,
+      "passed": true
+    },
+    "eigenvalue_connection": {
+      "pi_sq_inv": 0.101321,
+      "first_prime": 0.25,
+      "avg_prime": 0.055241,
+      "passed": true
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "total": 6,
+    "success": true
+  }
+}

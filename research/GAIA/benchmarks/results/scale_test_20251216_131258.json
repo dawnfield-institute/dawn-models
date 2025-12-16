@@ -1,0 +1,47 @@
+{
+  "timestamp": "2025-12-16T13:12:36.951579",
+  "device": "cuda",
+  "tests": {
+    "vocab_building": {
+      "vocab_size": 442,
+      "elapsed": 7.361222982406616,
+      "throughput": 60.04437048794523,
+      "passed": true
+    },
+    "training": {
+      "num_sentences": 73,
+      "num_transitions": 258,
+      "elapsed": 0.0020368099212646484,
+      "passed": true
+    },
+    "prediction": {
+      "correct": 3,
+      "total": 4,
+      "accuracy": 0.75,
+      "passed": true
+    },
+    "generation": {
+      "passed": true
+    },
+    "memory_scale": {
+      "correct": 5,
+      "total": 5,
+      "accuracy": 1.0,
+      "passed": true
+    },
+    "throughput": {
+      "num_predictions": 50,
+      "elapsed": 5.568317890167236,
+      "throughput": 8.97937240405977,
+      "passed": true
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "vocab_size": 442,
+    "num_transitions": 258,
+    "success_rate": 1.0
+  }
+}

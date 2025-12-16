@@ -1,0 +1,19 @@
+schema_version: "2.0"
+description: "Language generation through field dynamics"
+semantic_scope: "implementation"
+proficiency_level: "research"
+estimated_context_weight: 0.3
+
+files:
+  - "[README.md]": "POC overview and hypothesis"
+
+child_directories:
+  - journals:
+      description: "Research logs"
+      semantic_scope: "documentation"
+  - scripts:
+      description: "Experiment implementations"
+      semantic_scope: "implementation"
+  - results:
+      description: "Generated data"
+      semantic_scope: "data"

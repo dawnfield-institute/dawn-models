@@ -1,0 +1,159 @@
+{
+  "experiment": "exp_01_adaptive_3d",
+  "timestamp": "2025-12-16T10:41:10.466873",
+  "device": "cuda",
+  "constants": {
+    "phi": 1.618033988749895,
+    "xi": 1.0571,
+    "phi_xi": 1.7104237295075138,
+    "threshold_3d": 2.2369463568689776,
+    "lambda_star": 0.9816
+  },
+  "tests": [
+    {
+      "test": "conservation_at_scale",
+      "passed": true,
+      "details": [
+        {
+          "size": 16,
+          "initial_total": 1.7104237079620361,
+          "final_total": 1.7104237079620361,
+          "violation": 0.0,
+          "n_transfers": 300,
+          "passed": true
+        },
+        {
+          "size": 32,
+          "initial_total": 1.7104237079620361,
+          "final_total": 1.7104237079620361,
+          "violation": 0.0,
+          "n_transfers": 300,
+          "passed": true
+        },
+        {
+          "size": 64,
+          "initial_total": 1.7104237079620361,
+          "final_total": 1.7104238271713257,
+          "violation": 1.1920928955078125e-07,
+          "n_transfers": 300,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "test": "spherical_encoding_similarity",
+      "passed": false,
+      "mean_within": 0.9331426077418857,
+      "mean_between": 0.9088182218869527,
+      "separation": 0.024324385854933017
+    },
+    {
+      "test": "adaptive_sizing",
+      "passed": true,
+      "monotonic": true,
+      "details": [
+        {
+          "n_patterns": 100,
+          "recommended_size": 32,
+          "volume": 32768
+        },
+        {
+          "n_patterns": 500,
+          "recommended_size": 64,
+          "volume": 262144
+        },
+        {
+          "n_patterns": 1000,
+          "recommended_size": 64,
+          "volume": 262144
+        },
+        {
+          "n_patterns": 5000,
+          "recommended_size": 128,
+          "volume": 2097152
+        },
+        {
+          "n_patterns": 10000,
+          "recommended_size": 128,
+          "volume": 2097152
+        },
+        {
+          "n_patterns": 50000,
+          "recommended_size": 128,
+          "volume": 2097152
+        }
+      ]
+    },
+    {
+      "test": "3d_critical_density",
+      "passed": false,
+      "threshold_2d": 1.7104237295075138,
+      "threshold_3d": 2.2369463568689776,
+      "peak_pattern_count": 10,
+      "details": [
+        {
+          "n_patterns": 10,
+          "raw_density": 0.00030517578125,
+          "normalized_density": 0.30517578125,
+          "coherence": 0.4413618743419647
+        },
+        {
+          "n_patterns": 50,
+          "raw_density": 0.00152587890625,
+          "normalized_density": 1.52587890625,
+          "coherence": 0.3904978334903717
+        },
+        {
+          "n_patterns": 100,
+          "raw_density": 0.0030517578125,
+          "normalized_density": 3.0517578125,
+          "coherence": 0.3690449297428131
+        },
+        {
+          "n_patterns": 200,
+          "raw_density": 0.006103515625,
+          "normalized_density": 6.103515625,
+          "coherence": 0.35667574405670166
+        },
+        {
+          "n_patterns": 500,
+          "raw_density": 0.0152587890625,
+          "normalized_density": 15.2587890625,
+          "coherence": 0.36086374521255493
+        }
+      ]
+    },
+    {
+      "test": "scaled_attention_output",
+      "passed": true,
+      "shape_correct": true,
+      "no_nans": true,
+      "no_infs": true,
+      "conservation_violation": 2.1545477624229648e-08,
+      "time_ms": 372.0376491546631
+    },
+    {
+      "test": "throughput_at_scale",
+      "passed": true,
+      "details": [
+        {
+          "field_size": 16,
+          "batch_size": 16,
+          "patterns_per_sec": 687.5894106774372,
+          "ms_per_batch": 23.26970100402832
+        },
+        {
+          "field_size": 32,
+          "batch_size": 16,
+          "patterns_per_sec": 731.6638192603866,
+          "ms_per_batch": 21.867966651916504
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "total": 6,
+    "success": false
+  }
+}

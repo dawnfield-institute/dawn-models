@@ -1,0 +1,83 @@
+{
+  "experiment_id": "exp04_gaia_integration_20251216_091501",
+  "timestamp": "2025-12-16T09:15:01.928773",
+  "device": "cuda",
+  "parameters": {
+    "field_dims": [
+      64,
+      64
+    ],
+    "xi_target": 1.0571
+  },
+  "encodings": [],
+  "metrics": {
+    "tests_passed": 6,
+    "tests_total": 6,
+    "test_results": [
+      {
+        "test": "encoder_standalone",
+        "tests_passed": 3,
+        "tests_total": 3,
+        "success": true
+      },
+      {
+        "test": "gaia_import",
+        "success": true,
+        "error": null
+      },
+      {
+        "test": "gaia_creation",
+        "success": true,
+        "config": {
+          "field_dimensions": [
+            64,
+            64
+          ],
+          "xi_target": 1.0571
+        }
+      },
+      {
+        "test": "gaia_patching",
+        "success": true,
+        "device": "cuda"
+      },
+      {
+        "test": "gaia_processing",
+        "success": true,
+        "results": [
+          {
+            "input": "Hello GAIA!",
+            "processing_time_ms": 8.72879999997167,
+            "confidence": 1.0,
+            "conservation_residual": 0.0,
+            "xi_value": 1.0571
+          },
+          {
+            "input": "Pattern encoding test",
+            "processing_time_ms": 9.716399999888381,
+            "confidence": 1.0,
+            "conservation_residual": 0.0,
+            "xi_value": 1.0571
+          },
+          {
+            "input": "Physics-governed cognition",
+            "processing_time_ms": 8.783499999935884,
+            "confidence": 1.0,
+            "conservation_residual": 0.0,
+            "xi_value": 1.0571
+          }
+        ],
+        "avg_confidence": 1.0
+      },
+      {
+        "test": "speed_comparison",
+        "success": true,
+        "original_time_ms": 4.450399999768706,
+        "gpu_time_ms": 390.8955000001697,
+        "speedup": 0.011385140017643524
+      }
+    ]
+  },
+  "success": true,
+  "notes": "GAIA integration test with GPU encoding"
+}

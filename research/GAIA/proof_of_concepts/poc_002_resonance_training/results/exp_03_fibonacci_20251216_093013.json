@@ -1,0 +1,84 @@
+{
+  "experiment": "poc_002_exp_03_fibonacci_rates",
+  "timestamp": "2025-12-16T09:30:11.454506",
+  "device": "cuda",
+  "fibonacci_sequence": [
+    1,
+    1,
+    2,
+    3,
+    5,
+    8,
+    13,
+    21,
+    34,
+    55,
+    89,
+    144,
+    233,
+    377,
+    610
+  ],
+  "tests": {
+    "scheduler": {
+      "rates": [
+        0.1,
+        0.05,
+        0.033333,
+        0.02
+      ],
+      "start": 0.1,
+      "end": 0.02,
+      "passed": true
+    },
+    "complexity_lr": {
+      "1": 0.1,
+      "3": 0.033333,
+      "5": 0.0125,
+      "8": 0.002941,
+      "10": 0.001124,
+      "passed": true
+    },
+    "fixed_vs_fib": {
+      "fixed": {
+        "final": 0.899997,
+        "variance": 0.0,
+        "conv_epochs": 8
+      },
+      "fibonacci": {
+        "final": 0.802901,
+        "variance": 1e-06,
+        "conv_epochs": 21
+      },
+      "passed": true
+    },
+    "semantic_quality": {
+      "fixed": {
+        "within": 0.9,
+        "between": 0.132852,
+        "separation": 0.767148
+      },
+      "fibonacci": {
+        "within": 0.692889,
+        "between": 0.133874,
+        "separation": 0.559015
+      },
+      "passed": true
+    },
+    "training_speed": {
+      "fixed_ms": 134.4718,
+      "fib_ms": 122.3626,
+      "overhead_pct": -9.005011,
+      "passed": true
+    },
+    "conservation": {
+      "residual": 2e-06,
+      "passed": true
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "total": 6,
+    "success": true
+  }
+}

@@ -1,0 +1,213 @@
+{
+  "timestamp": "2025-12-16T12:50:48.329256",
+  "device": "cuda",
+  "tests": {
+    "basic_prediction": {
+      "context": [
+        "I",
+        "am"
+      ],
+      "predictions": [
+        [
+          "happy",
+          0.7847544550895691
+        ],
+        [
+          "sad",
+          0.7693353891372681
+        ],
+        [
+          "good",
+          0.692574679851532
+        ],
+        [
+          "you",
+          0.684502124786377
+        ],
+        [
+          "he",
+          0.6458239555358887
+        ]
+      ],
+      "passed": true
+    },
+    "context_sensitivity": {
+      "context1": [
+        "the",
+        "cat",
+        "is"
+      ],
+      "context2": [
+        "I",
+        "like"
+      ],
+      "predictions1": [
+        [
+          "hot",
+          0.7657240033149719
+        ],
+        [
+          "big",
+          0.7353663444519043
+        ],
+        [
+          "good",
+          0.7256070375442505
+        ]
+      ],
+      "predictions2": [
+        [
+          "the",
+          0.8433041572570801
+        ],
+        [
+          "they",
+          0.7331607341766357
+        ],
+        [
+          "he",
+          0.709260106086731
+        ]
+      ],
+      "different": true,
+      "passed": true
+    },
+    "sequence_generation": {
+      "prompt": [
+        "I",
+        "like"
+      ],
+      "generated": [
+        "I",
+        "like",
+        "the",
+        "home",
+        "a",
+        "to",
+        "in"
+      ],
+      "tokens_added": 5,
+      "passed": true
+    },
+    "resonance_generation": {
+      "prompt": [
+        "the",
+        "cat"
+      ],
+      "generated": [
+        "the",
+        "cat",
+        "is",
+        "hot",
+        "a",
+        "an",
+        "are"
+      ],
+      "scores": [
+        0.8202154636383057,
+        0.7657240033149719,
+        0.7080578804016113,
+        0.8275415897369385,
+        0.6518540382385254
+      ],
+      "passed": true
+    },
+    "transition_learning": {
+      "pattern": [
+        "I",
+        "love",
+        "cat"
+      ],
+      "reinforcements": 10,
+      "predictions": [
+        [
+          "cat",
+          0.851518988609314
+        ],
+        [
+          "you",
+          0.789460301399231
+        ],
+        [
+          "loves",
+          0.6854888200759888
+        ],
+        [
+          "dog",
+          0.6788347959518433
+        ],
+        [
+          "she",
+          0.6313730478286743
+        ]
+      ],
+      "cat_in_top3": true,
+      "passed": true
+    },
+    "generation_diversity": {
+      "samples": [
+        [
+          [
+            "I"
+          ],
+          [
+            "I",
+            "see",
+            "an",
+            "a",
+            "am"
+          ]
+        ],
+        [
+          [
+            "the"
+          ],
+          [
+            "the",
+            "house",
+            "to",
+            "a",
+            "she"
+          ]
+        ],
+        [
+          [
+            "you",
+            "are"
+          ],
+          [
+            "you",
+            "are",
+            "I",
+            "am",
+            "very",
+            "we"
+          ]
+        ],
+        [
+          [
+            "I",
+            "see"
+          ],
+          [
+            "I",
+            "see",
+            "the",
+            "moon",
+            "was",
+            "they"
+          ]
+        ]
+      ],
+      "all_unique": true,
+      "all_extended": true,
+      "passed": true
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "success_rate": 1.0
+  }
+}

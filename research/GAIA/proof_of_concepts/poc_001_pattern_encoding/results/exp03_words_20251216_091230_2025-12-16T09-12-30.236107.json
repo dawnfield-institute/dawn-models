@@ -1,0 +1,69 @@
+{
+  "experiment_id": "exp03_words_20251216_091230",
+  "timestamp": "2025-12-16T09:12:30.236107",
+  "device": "cuda",
+  "parameters": {
+    "field_dims": [
+      64,
+      64
+    ],
+    "xi_target": 1.0571
+  },
+  "encodings": [],
+  "metrics": {
+    "tests_passed": 4,
+    "tests_total": 6,
+    "test_results": [
+      {
+        "test": "word_distinctiveness",
+        "words_tested": 8,
+        "avg_distance": 1.3213723482830184,
+        "min_distance": 0.4205913841724396,
+        "min_pair": [
+          "cat",
+          "car"
+        ],
+        "success": true
+      },
+      {
+        "test": "semantic_clustering",
+        "groups": 4,
+        "avg_within": 0.1436060610227287,
+        "avg_between": 0.1776225719077047,
+        "separation": -0.03401651088497601,
+        "success": false
+      },
+      {
+        "test": "similar_vs_dissimilar",
+        "avg_similar": 0.08215733096003533,
+        "avg_dissimilar": 0.1046002784743905,
+        "separation": -0.022442947514355174,
+        "success": false
+      },
+      {
+        "test": "length_invariance",
+        "short_energy": 1.117460513114929,
+        "medium_energy": 1.1174604892730713,
+        "long_energy": 1.1174605786800385,
+        "energy_variance": 8.940696716308594e-08,
+        "success": true
+      },
+      {
+        "test": "word_evolution",
+        "steps": 100,
+        "survival_rate": 1.0,
+        "avg_correlation": 0.9577021598815918,
+        "success": true
+      },
+      {
+        "test": "prefix_similarity",
+        "avg_with_prefix": 0.9675315618515015,
+        "avg_no_prefix": 0.09183796658180654,
+        "separation": 0.8756935952696949,
+        "success": true
+      }
+    ]
+  },
+  "success": true,
+  "notes": "Word-level encoding experiment - baseline without training"
+}

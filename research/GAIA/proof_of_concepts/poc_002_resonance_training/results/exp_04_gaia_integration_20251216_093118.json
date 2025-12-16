@@ -1,0 +1,63 @@
+{
+  "experiment": "poc_002_exp_04_gaia_integration",
+  "timestamp": "2025-12-16T09:31:17.239482",
+  "device": "cuda",
+  "gaia_available": false,
+  "constants": {
+    "phi_xi": 1.710424,
+    "lambda_star": 0.9816,
+    "eigenvalue_decay": 0.101321
+  },
+  "tests": {
+    "gaia_imports": {
+      "available": false,
+      "passed": true
+    },
+    "embedding_transfer": {
+      "patterns": [
+        "hello",
+        "world",
+        "foo",
+        "bar"
+      ],
+      "dim": 64,
+      "passed": true
+    },
+    "semantic_preservation": {
+      "combined": {
+        "same": 0.897895,
+        "diff": 0.203766
+      },
+      "raw_cosine": {
+        "same": 0.995791,
+        "diff": 0.407532
+      },
+      "passed": true
+    },
+    "pac_conservation": {
+      "residual": 0.0,
+      "patterns": 51,
+      "passed": true
+    },
+    "gpu_execution": {
+      "device": "cuda",
+      "vocab_size": 100,
+      "time_ms": 283.6875,
+      "steps_per_sec": 3454.505398,
+      "passed": true
+    },
+    "full_pipeline": {
+      "separation": 0.83332,
+      "within": 0.899999,
+      "between": 0.066679,
+      "transitions": 270,
+      "conservation": 1e-06,
+      "passed": true
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "total": 6,
+    "success": true
+  }
+}

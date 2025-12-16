@@ -1,0 +1,6 @@
+schema_version: "2.0"
+description: "Experiment results and output data"
+semantic_scope: "data"
+proficiency_level: "research"
+files: []
+validation_type: "auto-generated"

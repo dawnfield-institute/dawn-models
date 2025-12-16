@@ -1,0 +1,292 @@
+{
+  "timestamp": "2025-12-16T12:52:09.996728",
+  "device": "cuda",
+  "tests": {
+    "phrase_completion": {
+      "cases": [
+        {
+          "prompt": [
+            "nice",
+            "to"
+          ],
+          "expected": "meet",
+          "predictions": [
+            [
+              "help",
+              0.7547295689582825
+            ],
+            [
+              "say",
+              0.7205451130867004
+            ],
+            [
+              "see",
+              0.6936338543891907
+            ]
+          ],
+          "found": false
+        },
+        {
+          "prompt": [
+            "how",
+            "are"
+          ],
+          "expected": "you",
+          "predictions": [
+            [
+              "good",
+              0.7864579558372498
+            ],
+            [
+              "you",
+              0.7773247361183167
+            ],
+            [
+              "I",
+              0.7166987061500549
+            ]
+          ],
+          "found": true
+        },
+        {
+          "prompt": [
+            "I",
+            "want",
+            "to"
+          ],
+          "expected": "go",
+          "predictions": [
+            [
+              "help",
+              0.7436383962631226
+            ],
+            [
+              "say",
+              0.7319871187210083
+            ],
+            [
+              "see",
+              0.6947839260101318
+            ]
+          ],
+          "found": true
+        }
+      ],
+      "correct": 2,
+      "total": 3,
+      "passed": true
+    },
+    "multi_token": {
+      "prompt": [
+        "nice",
+        "to"
+      ],
+      "generated": [
+        "nice",
+        "to",
+        "look",
+        "now",
+        "hot"
+      ],
+      "suffix_length": 3,
+      "passed": true
+    },
+    "semantic_consistency": {
+      "prompt1": [
+        "I",
+        "want"
+      ],
+      "prompt2": [
+        "I",
+        "need"
+      ],
+      "predictions1": [
+        "to",
+        "the",
+        "you"
+      ],
+      "predictions2": [
+        "want",
+        "to",
+        "he"
+      ],
+      "overlap": 1,
+      "passed": true
+    },
+    "resonance_strength": {
+      "high_freq_predictions": [
+        [
+          "hot",
+          0.8573083877563477
+        ],
+        [
+          "cold",
+          0.7427845001220703
+        ],
+        [
+          "happy",
+          0.7193163633346558
+        ]
+      ],
+      "low_freq_predictions": [
+        [
+          "fast",
+          0.8396782875061035
+        ],
+        [
+          "high",
+          0.5793057680130005
+        ],
+        [
+          "eat",
+          0.5679019689559937
+        ]
+      ],
+      "high_score": 0.8573083877563477,
+      "low_score": 0.8396782875061035,
+      "passed": true
+    },
+    "imperative_patterns": {
+      "cases": [
+        {
+          "prompt": [
+            "please",
+            "help"
+          ],
+          "expected": "me",
+          "top_3": [
+            [
+              "you",
+              0.8525397777557373
+            ],
+            [
+              "me",
+              0.8300749063491821
+            ],
+            [
+              "I",
+              0.731238842010498
+            ]
+          ],
+          "found": true
+        },
+        {
+          "prompt": [
+            "come",
+            "here"
+          ],
+          "expected": "now",
+          "top_3": [
+            [
+              "now",
+              0.8914755582809448
+            ],
+            [
+              "this",
+              0.6351325511932373
+            ],
+            [
+              "more",
+              0.6141988039016724
+            ]
+          ],
+          "found": true
+        },
+        {
+          "prompt": [
+            "look",
+            "at"
+          ],
+          "expected": "this",
+          "top_3": [
+            [
+              "this",
+              0.8671860098838806
+            ],
+            [
+              "help",
+              0.6598678827285767
+            ],
+            [
+              "he",
+              0.6514508724212646
+            ]
+          ],
+          "found": true
+        }
+      ],
+      "correct": 3,
+      "total": 3,
+      "passed": true
+    },
+    "generation_flow": {
+      "generations": [
+        {
+          "prompt": [
+            "I",
+            "want"
+          ],
+          "generated": [
+            "I",
+            "want",
+            "to",
+            "help",
+            "you",
+            "he"
+          ],
+          "scores": [
+            0.8908610343933105,
+            0.7436383962631226,
+            0.890557587146759,
+            0.707060694694519
+          ]
+        },
+        {
+          "prompt": [
+            "the",
+            "cat"
+          ],
+          "generated": [
+            "the",
+            "cat",
+            "runs",
+            "fast",
+            "run",
+            "is"
+          ],
+          "scores": [
+            0.8393850326538086,
+            0.8879480361938477,
+            0.6396529674530029,
+            0.6049877405166626
+          ]
+        },
+        {
+          "prompt": [
+            "please"
+          ],
+          "generated": [
+            "please",
+            "help",
+            "you",
+            "this",
+            "how"
+          ],
+          "scores": [
+            0.8487983345985413,
+            0.8525397777557373,
+            0.6895772218704224,
+            0.6600175499916077
+          ]
+        }
+      ],
+      "passed": true
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "success_rate": 1.0
+  }
+}

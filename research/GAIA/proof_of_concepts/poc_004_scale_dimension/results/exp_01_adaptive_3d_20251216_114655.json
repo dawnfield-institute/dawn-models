@@ -1,0 +1,155 @@
+{
+  "experiment": "exp_01_adaptive_3d",
+  "timestamp": "2025-12-16T11:46:55.496596",
+  "device": "cuda",
+  "constants": {
+    "phi": 1.618033988749895,
+    "xi": 1.0571,
+    "phi_xi": 1.7104237295075138,
+    "threshold_3d": 2.2369463568689776,
+    "lambda_star": 0.9816
+  },
+  "tests": [
+    {
+      "test": "conservation_at_scale",
+      "passed": true,
+      "details": [
+        {
+          "size": 16,
+          "initial_total": 1.7104237079620361,
+          "final_total": 1.7104237079620361,
+          "violation": 0.0,
+          "n_transfers": 300,
+          "passed": true
+        },
+        {
+          "size": 32,
+          "initial_total": 1.7104237079620361,
+          "final_total": 1.7104237079620361,
+          "violation": 0.0,
+          "n_transfers": 300,
+          "passed": true
+        },
+        {
+          "size": 64,
+          "initial_total": 1.7104237079620361,
+          "final_total": 1.7104237079620361,
+          "violation": 0.0,
+          "n_transfers": 300,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "test": "spherical_encoding_similarity",
+      "passed": true,
+      "mean_within": 0.9700532776338083,
+      "mean_between": 0.21202803111906784,
+      "separation": 0.7580252465147405
+    },
+    {
+      "test": "adaptive_sizing",
+      "passed": true,
+      "monotonic": true,
+      "details": [
+        {
+          "n_patterns": 100,
+          "recommended_size": 32,
+          "volume": 32768
+        },
+        {
+          "n_patterns": 500,
+          "recommended_size": 64,
+          "volume": 262144
+        },
+        {
+          "n_patterns": 1000,
+          "recommended_size": 64,
+          "volume": 262144
+        },
+        {
+          "n_patterns": 5000,
+          "recommended_size": 128,
+          "volume": 2097152
+        },
+        {
+          "n_patterns": 10000,
+          "recommended_size": 128,
+          "volume": 2097152
+        },
+        {
+          "n_patterns": 50000,
+          "recommended_size": 128,
+          "volume": 2097152
+        }
+      ]
+    },
+    {
+      "test": "3d_critical_density",
+      "passed": true,
+      "threshold_2d": 1.7104237295075138,
+      "threshold_3d": 2.2369463568689776,
+      "snr_mean": 33.72956744384766,
+      "snr_cv": 0.8629957925322943,
+      "details": [
+        {
+          "n_patterns": 5,
+          "density": 0.152587890625,
+          "snr_normalized": 4.873945617675781
+        },
+        {
+          "n_patterns": 10,
+          "density": 0.30517578125,
+          "snr_normalized": 9.614514160156249
+        },
+        {
+          "n_patterns": 25,
+          "density": 0.762939453125,
+          "snr_normalized": 23.26333251953125
+        },
+        {
+          "n_patterns": 50,
+          "density": 1.52587890625,
+          "snr_normalized": 46.73077148437499
+        },
+        {
+          "n_patterns": 100,
+          "density": 3.0517578125,
+          "snr_normalized": 84.1652734375
+        }
+      ]
+    },
+    {
+      "test": "scaled_attention_output",
+      "passed": true,
+      "shape_correct": true,
+      "no_nans": true,
+      "no_infs": true,
+      "conservation_violation": 2.1545477624229648e-08,
+      "time_ms": 355.6797504425049
+    },
+    {
+      "test": "throughput_at_scale",
+      "passed": true,
+      "details": [
+        {
+          "field_size": 16,
+          "batch_size": 16,
+          "patterns_per_sec": 411.7711983536236,
+          "ms_per_batch": 38.85653018951416
+        },
+        {
+          "field_size": 32,
+          "batch_size": 16,
+          "patterns_per_sec": 399.25504446554487,
+          "ms_per_batch": 40.07463455200195
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "total": 6,
+    "success": true
+  }
+}

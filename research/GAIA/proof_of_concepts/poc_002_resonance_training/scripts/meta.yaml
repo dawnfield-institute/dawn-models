@@ -1,0 +1,10 @@
+schema_version: "2.0"
+description: "Experiment scripts for resonance training"
+semantic_scope: "implementation"
+proficiency_level: "research"
+files:
+  - "[__init__.py]": "Package init"
+  - "[physics_trainer.py]": "Dawn Field Theory training components"
+  - "[exp_01_cooccurrence.py]": "Co-occurrence based training"
+  - "[exp_02_phase_transition.py]": "SEC phase transition monitoring"
+  - "[exp_03_fibonacci_rates.py]": "Fibonacci learning rate comparison"

@@ -1,0 +1,85 @@
+{
+  "timestamp": "2025-12-16T13:09:45.931937",
+  "device": "cuda",
+  "tests": {
+    "vocab_building": {
+      "vocab_size": 44,
+      "elapsed": 1.6334948539733887,
+      "passed": true
+    },
+    "training": {
+      "num_sequences": 10,
+      "num_transitions": 24,
+      "passed": true
+    },
+    "prediction": {
+      "correct": 3,
+      "total": 3,
+      "passed": true
+    },
+    "generation": {
+      "generations": [
+        [
+          [
+            "the",
+            "cat"
+          ],
+          [
+            "the",
+            "cat",
+            "a",
+            "were",
+            "was",
+            "are",
+            "but"
+          ]
+        ],
+        [
+          [
+            "I",
+            "see"
+          ],
+          [
+            "I",
+            "see",
+            "good",
+            "now",
+            "man",
+            "I",
+            "we"
+          ]
+        ],
+        [
+          [
+            "he"
+          ],
+          [
+            "he",
+            "good",
+            "so",
+            "or",
+            "then",
+            "good"
+          ]
+        ]
+      ],
+      "passed": true
+    },
+    "memory": {
+      "target_id": 14,
+      "retrieved_id": 14,
+      "passed": true
+    },
+    "perplexity": {
+      "perplexity": 16.80302435893032,
+      "num_samples": 15,
+      "passed": true
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "success_rate": 1.0
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "experiment": "exp_01_adaptive_3d",
+  "timestamp": "2025-12-16T10:43:29.729304",
+  "device": "cuda",
+  "constants": {
+    "phi": 1.618033988749895,
+    "xi": 1.0571,
+    "phi_xi": 1.7104237295075138,
+    "threshold_3d": 2.2369463568689776,
+    "lambda_star": 0.9816
+  },
+  "tests": [
+    {
+      "test": "conservation_at_scale",
+      "passed": true,
+      "details": [
+        {
+          "size": 16,
+          "initial_total": 1.7104237079620361,
+          "final_total": 1.7104237079620361,
+          "violation": 0.0,
+          "n_transfers": 300,
+          "passed": true
+        },
+        {
+          "size": 32,
+          "initial_total": 1.7104237079620361,
+          "final_total": 1.7104237079620361,
+          "violation": 0.0,
+          "n_transfers": 300,
+          "passed": true
+        },
+        {
+          "size": 64,
+          "initial_total": 1.7104237079620361,
+          "final_total": 1.7104237079620361,
+          "violation": 0.0,
+          "n_transfers": 300,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "test": "spherical_encoding_similarity",
+      "passed": false,
+      "mean_within": 0.30726692826935537,
+      "mean_between": 0.1418287576114138,
+      "separation": 0.16543817065794156
+    },
+    {
+      "test": "adaptive_sizing",
+      "passed": true,
+      "monotonic": true,
+      "details": [
+        {
+          "n_patterns": 100,
+          "recommended_size": 32,
+          "volume": 32768
+        },
+        {
+          "n_patterns": 500,
+          "recommended_size": 64,
+          "volume": 262144
+        },
+        {
+          "n_patterns": 1000,
+          "recommended_size": 64,
+          "volume": 262144
+        },
+        {
+          "n_patterns": 5000,
+          "recommended_size": 128,
+          "volume": 2097152
+        },
+        {
+          "n_patterns": 10000,
+          "recommended_size": 128,
+          "volume": 2097152
+        },
+        {
+          "n_patterns": 50000,
+          "recommended_size": 128,
+          "volume": 2097152
+        }
+      ]
+    },
+    {
+      "test": "3d_critical_density",
+      "passed": false,
+      "threshold_2d": 1.7104237295075138,
+      "threshold_3d": 2.2369463568689776,
+      "peak_pattern_count": 200,
+      "peak_index": 5,
+      "details": [
+        {
+          "n_patterns": 5,
+          "raw_density": 0.000152587890625,
+          "normalized_density": 0.152587890625,
+          "structure_ratio": 2.5269566593556894
+        },
+        {
+          "n_patterns": 10,
+          "raw_density": 0.00030517578125,
+          "normalized_density": 0.30517578125,
+          "structure_ratio": 2.900010385211783
+        },
+        {
+          "n_patterns": 20,
+          "raw_density": 0.0006103515625,
+          "normalized_density": 0.6103515625,
+          "structure_ratio": 12.627059906811306
+        },
+        {
+          "n_patterns": 50,
+          "raw_density": 0.00152587890625,
+          "normalized_density": 1.52587890625,
+          "structure_ratio": 27.884831835392653
+        },
+        {
+          "n_patterns": 100,
+          "raw_density": 0.0030517578125,
+          "normalized_density": 3.0517578125,
+          "structure_ratio": 175.89614240222883
+        },
+        {
+          "n_patterns": 200,
+          "raw_density": 0.006103515625,
+          "normalized_density": 6.103515625,
+          "structure_ratio": 557.1187292264652
+        }
+      ]
+    },
+    {
+      "test": "scaled_attention_output",
+      "passed": true,
+      "shape_correct": true,
+      "no_nans": true,
+      "no_infs": true,
+      "conservation_violation": 2.1545477624229648e-08,
+      "time_ms": 490.9060001373291
+    },
+    {
+      "test": "throughput_at_scale",
+      "passed": true,
+      "details": [
+        {
+          "field_size": 16,
+          "batch_size": 16,
+          "patterns_per_sec": 274.89944146664675,
+          "ms_per_batch": 58.20310115814209
+        },
+        {
+          "field_size": 32,
+          "batch_size": 16,
+          "patterns_per_sec": 289.74829768374457,
+          "ms_per_batch": 55.22034168243408
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "total": 6,
+    "success": false
+  }
+}

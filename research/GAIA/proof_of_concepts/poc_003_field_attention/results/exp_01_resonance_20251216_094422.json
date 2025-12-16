@@ -1,0 +1,51 @@
+{
+  "experiment": "poc_003_exp_01_resonance_attention",
+  "timestamp": "2025-12-16T09:44:21.540231",
+  "device": "cuda",
+  "constants": {
+    "pi_squared_inv": 0.101321,
+    "entanglement_limit": 0.8
+  },
+  "tests": {
+    "basic_resonance": {
+      "output_shape": [
+        2,
+        8,
+        64
+      ],
+      "weight_sum_error": 0.0,
+      "passed": true
+    },
+    "self_attention": {
+      "diagonal": 0.241237,
+      "off_diagonal": 0.094845,
+      "passed": true
+    },
+    "similar_patterns": {
+      "within_01": 0.344911,
+      "within_23": 0.344911,
+      "between": 0.155089,
+      "passed": true
+    },
+    "semantic_attention": {
+      "within_class": 0.219773,
+      "between_class": 0.113536,
+      "separation": 0.106237,
+      "passed": true
+    },
+    "max_coupling": {
+      "max_resonance": 1.0,
+      "after_clamp": 0.8,
+      "passed": true
+    },
+    "gradient_flow": {
+      "grad_norm": 32.20113,
+      "passed": true
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "total": 6,
+    "success": true
+  }
+}

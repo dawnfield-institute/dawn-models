@@ -1,0 +1,62 @@
+{
+  "experiment": "exp_03_real_embeddings",
+  "timestamp": "2025-12-16T11:29:11.064956",
+  "device": "cuda",
+  "model": "all-MiniLM-L6-v2",
+  "constants": {
+    "phi": 1.618033988749895,
+    "xi": 1.0571,
+    "phi_xi": 1.7104237295075138,
+    "lambda_star": 0.9816
+  },
+  "tests": [
+    {
+      "test": "category_clustering",
+      "passed": true,
+      "original": {
+        "within": 0.5210281093205724,
+        "between": 0.2705474617580573,
+        "separation": 0.25048064756251515
+      },
+      "field": {
+        "within": 0.45075293867183586,
+        "between": 0.19216439947485925,
+        "separation": 0.2585885391969766
+      },
+      "preservation": 1.032369292357187
+    },
+    {
+      "test": "similar_vs_dissimilar",
+      "passed": true,
+      "field": {
+        "similar": 0.5643381178379059,
+        "dissimilar": 0.4003034830093384
+      },
+      "original": {
+        "similar": 0.6427077770233154,
+        "dissimilar": 0.2169961377978325
+      }
+    },
+    {
+      "test": "analogy_preservation",
+      "passed": true,
+      "accuracy_field": 0.4,
+      "accuracy_orig": 1.0,
+      "correct_field": 2,
+      "correct_orig": 5,
+      "total": 5
+    },
+    {
+      "test": "throughput_real",
+      "passed": true,
+      "vocab_size": 89,
+      "time": 0.22484803199768066,
+      "throughput": 395.82289962368026
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "total": 4,
+    "success": true
+  }
+}

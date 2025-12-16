@@ -1,0 +1,6 @@
+schema_version: "2.0"
+description: "JSON outputs from POC-004 experiments"
+semantic_scope: "data"
+proficiency_level: "experimental"
+
+files: []

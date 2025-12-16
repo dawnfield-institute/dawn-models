@@ -1,0 +1,122 @@
+{
+  "timestamp": "2025-12-16T13:01:56.393840",
+  "device": "cuda",
+  "tests": {
+    "basic_storage": {
+      "pattern_count": 50,
+      "field_energy": 43943.5703125,
+      "passed": true
+    },
+    "retrieval_by_id": {
+      "recalls": [
+        [
+          0,
+          0.9999999403953552
+        ],
+        [
+          25,
+          0.9999998807907104
+        ],
+        [
+          49,
+          0.9999999403953552
+        ]
+      ],
+      "passed": true
+    },
+    "resonance_retrieval": {
+      "query_id": 10,
+      "retrieved": [
+        [
+          10,
+          1.0
+        ],
+        [
+          46,
+          0.1637440323829651
+        ],
+        [
+          45,
+          0.09756367653608322
+        ],
+        [
+          33,
+          0.09311595559120178
+        ],
+        [
+          27,
+          0.07483391463756561
+        ]
+      ],
+      "correct_top": true,
+      "passed": true
+    },
+    "depth_degradation": {
+      "accuracies": [
+        [
+          0,
+          1.0
+        ],
+        [
+          10,
+          1.0
+        ],
+        [
+          25,
+          0.9999999403953552
+        ],
+        [
+          50,
+          1.0
+        ],
+        [
+          75,
+          1.0
+        ],
+        [
+          99,
+          0.9999999403953552
+        ]
+      ],
+      "is_gradual": true,
+      "passed": true
+    },
+    "interference": {
+      "first_pattern_id": 0,
+      "interference": 0.9079670011997223,
+      "passed": false
+    },
+    "energy_stability": {
+      "energies": [
+        [
+          0,
+          13822.9765625
+        ],
+        [
+          20,
+          73020.5625
+        ],
+        [
+          40,
+          66650.75
+        ],
+        [
+          60,
+          57237.3515625
+        ],
+        [
+          80,
+          45941.4609375
+        ]
+      ],
+      "ratio": 5.282549830699678,
+      "passed": true
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "success_rate": 0.8333333333333334
+  }
+}

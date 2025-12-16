@@ -1,0 +1,19 @@
+schema_version: "2.0"
+directory_name: poc_001_pattern_encoding
+description: >
+  POC-001: Pattern Encoding - Testing whether meaningful patterns can be 
+  encoded into GAIA's field in a way that preserves semantic relationships.
+  This is the foundational experiment for field-native learning.
+semantic_scope:
+  - research
+  - experimentation
+  - symbol-grounding
+files:
+  - "[README.md]": "POC overview and key results"
+child_directories:
+  - journals
+  - scripts
+  - results
+proficiency_level: research
+estimated_context_weight: medium
+validation_type: experimental

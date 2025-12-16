@@ -1,0 +1,60 @@
+{
+  "experiment": "poc_003_exp_04_integration",
+  "timestamp": "2025-12-16T09:48:05.692552",
+  "device": "cuda",
+  "constants": {
+    "phi_xi": 1.710424,
+    "pi_squared_inv": 0.101321
+  },
+  "tests": {
+    "stacked_layers": {
+      "n_layers": 4,
+      "conservation": [
+        0.061605,
+        0.019569,
+        0.094563,
+        0.082994
+      ],
+      "passed": true
+    },
+    "compare_standard": {
+      "field_std": 1.050861,
+      "standard_std": 1.000057,
+      "passed": true
+    },
+    "semantic_e2e": {
+      "animal_sim": 0.997886,
+      "vehicle_sim": 0.999286,
+      "mixed_sim": 0.735318,
+      "passed": true
+    },
+    "gpu_perf": {
+      "device": "cuda",
+      "ms_per_forward": 17.182018,
+      "tokens_per_sec": 29798.595252,
+      "passed": true
+    },
+    "pac_conservation": {
+      "input_energy": 1974.715088,
+      "output_energy": 2636.86377,
+      "layer_residuals": [
+        0.026954,
+        0.024159,
+        0.033787,
+        0.070991
+      ],
+      "total_residual": 0.335314,
+      "passed": true
+    },
+    "gradient_flow": {
+      "input_grad": 46.617836,
+      "param_count": 30,
+      "passed": true
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "total": 6,
+    "success": true
+  }
+}

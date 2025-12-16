@@ -1,0 +1,11 @@
+schema_version: "2.0"
+description: "Field attention experiment scripts"
+semantic_scope: "implementation"
+proficiency_level: "research"
+files:
+  - "[__init__.py]": "Package init"
+  - "[field_attention.py]": "Core field-native attention components"
+  - "[exp_01_resonance_attention.py]": "Attention as field resonance"
+  - "[exp_02_harmonic_heads.py]": "Prime harmonic multi-head structure"
+  - "[exp_03_field_qkv.py]": "Field-derived Q, K, V"
+  - "[exp_04_integration.py]": "Full integration test"

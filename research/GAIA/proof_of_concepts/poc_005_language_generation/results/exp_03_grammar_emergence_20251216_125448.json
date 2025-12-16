@@ -1,0 +1,132 @@
+{
+  "timestamp": "2025-12-16T12:54:44.106957",
+  "device": "cuda",
+  "tests": {
+    "category_clustering": {
+      "noun_noun_avg": 0.4516422271728516,
+      "noun_verb_avg": 0.3318784134462476,
+      "passed": true
+    },
+    "article_transition": {
+      "predictions_after_the": [
+        [
+          "dog",
+          0.7647813558578491
+        ],
+        [
+          "cat",
+          0.7392343282699585
+        ],
+        [
+          "bird",
+          0.7343971133232117
+        ],
+        [
+          "big",
+          0.6820785999298096
+        ],
+        [
+          "a",
+          0.6731747984886169
+        ]
+      ],
+      "nouns_adj_in_top3": 3,
+      "passed": true
+    },
+    "noun_verb_transition": {
+      "predictions_after_noun": [
+        [
+          "runs",
+          0.7884570360183716
+        ],
+        [
+          "sleeps",
+          0.7189743518829346
+        ],
+        [
+          "loves",
+          0.6205654144287109
+        ],
+        [
+          "a",
+          0.614323616027832
+        ],
+        [
+          "an",
+          0.610411524772644
+        ]
+      ],
+      "verbs_in_top3": 3,
+      "passed": true
+    },
+    "adjective_position": {
+      "predictions_after_adj": [
+        [
+          "cat",
+          0.8481216430664062
+        ],
+        [
+          "dog",
+          0.6624107360839844
+        ],
+        [
+          "a",
+          0.6574913859367371
+        ],
+        [
+          "an",
+          0.6532155871391296
+        ],
+        [
+          "loves",
+          0.6187987327575684
+        ]
+      ],
+      "nouns_in_top3": 2,
+      "passed": true
+    },
+    "svo_generation": {
+      "generated": [
+        "the",
+        "big",
+        "a",
+        "dog"
+      ],
+      "valid_structure": true,
+      "passed": true
+    },
+    "pronoun_verb": {
+      "predictions_after_I": [
+        [
+          "see",
+          0.770169734954834
+        ],
+        [
+          "he",
+          0.7038251161575317
+        ],
+        [
+          "you",
+          0.6995355486869812
+        ],
+        [
+          "good",
+          0.6711380481719971
+        ],
+        [
+          "knows",
+          0.6349050402641296
+        ]
+      ],
+      "top_is_verb": true,
+      "verbs_in_top5": 2,
+      "passed": true
+    }
+  },
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "success_rate": 1.0
+  }
+}

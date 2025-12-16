@@ -1,0 +1,86 @@
+{
+  "experiment_id": "exp04_gaia_integration_20251216_091552",
+  "timestamp": "2025-12-16T09:15:52.085255",
+  "device": "cuda",
+  "parameters": {
+    "field_dims": [
+      64,
+      64
+    ],
+    "xi_target": 1.0571
+  },
+  "encodings": [],
+  "metrics": {
+    "tests_passed": 6,
+    "tests_total": 6,
+    "test_results": [
+      {
+        "test": "encoder_standalone",
+        "tests_passed": 3,
+        "tests_total": 3,
+        "success": true
+      },
+      {
+        "test": "gaia_import",
+        "success": true,
+        "error": null
+      },
+      {
+        "test": "gaia_creation",
+        "success": true,
+        "config": {
+          "field_dimensions": [
+            64,
+            64
+          ],
+          "xi_target": 1.0571
+        }
+      },
+      {
+        "test": "gaia_patching",
+        "success": true,
+        "device": "cuda"
+      },
+      {
+        "test": "gaia_processing",
+        "success": true,
+        "results": [
+          {
+            "input": "Hello GAIA!",
+            "processing_time_ms": 9.085499999855529,
+            "confidence": 1.0,
+            "conservation_residual": 0.0,
+            "xi_value": 1.0571
+          },
+          {
+            "input": "Pattern encoding test",
+            "processing_time_ms": 7.9023999996934435,
+            "confidence": 1.0,
+            "conservation_residual": 0.0,
+            "xi_value": 1.0571
+          },
+          {
+            "input": "Physics-governed cognition",
+            "processing_time_ms": 8.374499999717955,
+            "confidence": 1.0,
+            "conservation_residual": 0.0,
+            "xi_value": 1.0571
+          }
+        ],
+        "avg_confidence": 1.0
+      },
+      {
+        "test": "speed_comparison",
+        "success": true,
+        "speedup_64": 0.012541234539282591,
+        "speedup_256": 0.04789650744129519,
+        "original_64_ms": 3.7615000001096632,
+        "gpu_64_ms": 299.9306000001525,
+        "original_256_ms": 15.474599999834027,
+        "gpu_256_ms": 323.08410000041476
+      }
+    ]
+  },
+  "success": true,
+  "notes": "GAIA integration test with GPU encoding"
+}

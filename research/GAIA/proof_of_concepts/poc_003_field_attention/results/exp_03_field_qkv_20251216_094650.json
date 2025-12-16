@@ -1,0 +1,69 @@
+{
+  "experiment": "poc_003_exp_03_field_qkv",
+  "timestamp": "2025-12-16T09:46:49.909896",
+  "device": "cuda",
+  "constants": {
+    "lambda_star": 0.9816,
+    "pi_squared_inv": 0.101321
+  },
+  "tests": {
+    "shapes": {
+      "shape": [
+        2,
+        16,
+        64
+      ],
+      "passed": true
+    },
+    "differentiation": {
+      "qk": 0.980249,
+      "qv": 1.970572,
+      "kv": 2.285672,
+      "xk": 0.0,
+      "passed": true
+    },
+    "gradient_query": {
+      "early": 5.702366,
+      "evolved": 63.781013,
+      "passed": true
+    },
+    "evolution_value": {
+      "diff": 0.0,
+      "vx_diff": 2.178154,
+      "passed": true
+    },
+    "lambda_decay": {
+      "decay": 0.9816,
+      "energies": [
+        8.0,
+        10.051369,
+        14.963008,
+        23.101435,
+        37.177299,
+        62.58427,
+        108.629028,
+        190.670547,
+        334.424927,
+        584.348267,
+        1018.858093
+      ],
+      "passed": true
+    },
+    "full_attention": {
+      "conservation": 0.022418,
+      "input_energy": 63.74321,
+      "output_energy": 65.172226,
+      "passed": true
+    },
+    "semantic_qkv": {
+      "within": 0.254042,
+      "between": 0.243294,
+      "passed": true
+    }
+  },
+  "summary": {
+    "passed": 7,
+    "total": 7,
+    "success": true
+  }
+}
