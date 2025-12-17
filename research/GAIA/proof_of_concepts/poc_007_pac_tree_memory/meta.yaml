@@ -1,0 +1,30 @@
+schema_version: "2.0"
+description: "POC-007: PAC Tree Memory - Hierarchical navigation replacing brute-force search"
+semantic_scope: "implementation"
+proficiency_level: "research"
+estimated_context_weight: 0.4
+
+files:
+  - "[README.md]": "POC overview, hypothesis, and success criteria"
+
+child_directories:
+  - journals:
+      description: "Research logs for PAC tree experiments"
+      semantic_scope: "documentation"
+  - scripts:
+      description: "Experiment implementations"
+      semantic_scope: "implementation"
+  - results:
+      description: "Benchmark results"
+      semantic_scope: "data"
+
+key_insights:
+  - "Brain navigates hierarchy, doesn't search all memories"
+  - "Store deltas between levels for compression"
+  - "Transitions guide traversal (learned paths)"
+  - "ξ-modulation creates natural clustering"
+
+physics_grounding:
+  - "PAC Conservation: f(parent) = Σf(children)"
+  - "φ × ξ = 1.710: Crystallization threshold"
+  - "ξ = 0.0618: Structural coupling for clustering"

@@ -1,0 +1,63 @@
+{
+  "timestamp": "2025-12-17T15:04:01.006297",
+  "config": {
+    "n_patterns": 1000,
+    "n_queries": 100,
+    "field_shape": [
+      32,
+      32,
+      32
+    ]
+  },
+  "results": {
+    "v1": {
+      "accuracy": 0.634,
+      "speed_ms": 202.1785269999964,
+      "memory": {
+        "total_nodes": 1001,
+        "leaf_nodes": 634,
+        "internal_nodes": 367,
+        "patterns_stored": 1000,
+        "memory_bytes": "131203072",
+        "memory_mb": 125.125,
+        "flat_memory_mb": 125.0,
+        "compression_ratio": 0.999000999000999,
+        "max_depth": 4,
+        "avg_children": 2.7247956403269753,
+        "stats": {
+          "stores": 1000,
+          "retrievals": 1110,
+          "nodes_visited": 76837,
+          "cache_hits": 0
+        }
+      }
+    },
+    "v2": {
+      "accuracy": 0.634,
+      "reconstruction_mse": 1.290688146352768,
+      "speed_ms": 9.110810999991372,
+      "memory": {
+        "total_nodes": 1001,
+        "leaf_nodes": 634,
+        "internal_nodes": 367,
+        "patterns_stored": 1000,
+        "memory_bytes": "262406144",
+        "memory_mb": 250.25,
+        "flat_memory_mb": 125.0,
+        "compression_ratio": 0.4995004995004995,
+        "max_depth": 4,
+        "avg_children": 2.7247956403269753,
+        "stats": {
+          "stores": 1000,
+          "retrievals": 1110,
+          "nodes_visited": 59131,
+          "reconstructions": 12
+        }
+      }
+    },
+    "brute_force": {
+      "speed_ms": 1.6729119999945397,
+      "memory_mb": 125.0
+    }
+  }
+}

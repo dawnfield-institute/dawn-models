@@ -1,0 +1,82 @@
+{
+  "timestamp": "2025-12-17T14:58:52.662577",
+  "device": "cuda",
+  "constants": {
+    "PHI": 1.618033988749895,
+    "XI": 0.0618,
+    "PHI_XI": 0.09999450050474351
+  },
+  "tests": [
+    {
+      "test": "basic_store_retrieve",
+      "n_patterns": 100,
+      "accuracy": 0.7,
+      "passed": false
+    },
+    {
+      "test": "similar_pattern_retrieval",
+      "recall": 0.1,
+      "passed": false
+    },
+    {
+      "test": "transition_learning",
+      "rank_with_context": 0,
+      "rank_without_context": null,
+      "passed": true
+    },
+    {
+      "test": "memory_efficiency",
+      "results": [
+        {
+          "n_patterns": 100,
+          "tree_memory_mb": 12.625,
+          "flat_memory_mb": 12.5,
+          "compression": 0.9900990099009901,
+          "depth": 3
+        },
+        {
+          "n_patterns": 500,
+          "tree_memory_mb": 62.625,
+          "flat_memory_mb": 62.5,
+          "compression": 0.998003992015968,
+          "depth": 4
+        },
+        {
+          "n_patterns": 1000,
+          "tree_memory_mb": 125.125,
+          "flat_memory_mb": 125.0,
+          "compression": 0.999000999000999,
+          "depth": 4
+        },
+        {
+          "n_patterns": 2000,
+          "tree_memory_mb": 250.125,
+          "flat_memory_mb": 250.0,
+          "compression": 0.9995002498750625,
+          "depth": 4
+        }
+      ],
+      "passed": true
+    },
+    {
+      "test": "retrieval_speed",
+      "tree_ms": 198.9383699999962,
+      "brute_ms": 3.387944999994943,
+      "speedup": 0.017030123449764907,
+      "n_patterns": 2000,
+      "passed": true
+    },
+    {
+      "test": "tree_structure",
+      "total_nodes": 501,
+      "max_depth": 4,
+      "avg_children": 5.376344086021505,
+      "depth_ratio": 2.0,
+      "passed": true
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "total": 6
+  }
+}

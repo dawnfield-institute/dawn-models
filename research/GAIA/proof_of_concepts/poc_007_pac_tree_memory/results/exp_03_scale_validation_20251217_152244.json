@@ -1,0 +1,209 @@
+{
+  "timestamp": "2025-12-17T15:22:44.627044",
+  "tests": [
+    {
+      "n_patterns": 1000,
+      "gpu_cache_size": 200,
+      "cache_ratio": 0.2,
+      "store_time_sec": 13.64431440000044,
+      "patterns_per_sec": 73.2906008087858,
+      "sequential": {
+        "access_pattern": "sequential",
+        "hit_rate": 1.0,
+        "ms_per_query": 3.44339019999461,
+        "prefetch_hits": 300,
+        "evictions": 300
+      },
+      "random": {
+        "access_pattern": "random",
+        "hit_rate": 1.0,
+        "ms_per_query": 1.1207976000005146,
+        "prefetch_hits": 705,
+        "evictions": 705
+      },
+      "burst": {
+        "access_pattern": "burst",
+        "hit_rate": 1.0,
+        "ms_per_query": 1.0658393999983673,
+        "prefetch_hits": 1106,
+        "evictions": 1106
+      },
+      "memory": {
+        "gpu_memory_mb": 25.0,
+        "full_memory_mb": 125.0,
+        "savings_ratio": 5.0,
+        "pac_tree_stats": {
+          "total_nodes": 1001,
+          "leaf_nodes": 652,
+          "internal_nodes": 349,
+          "patterns_stored": 1000,
+          "memory_bytes": 262406144.0,
+          "memory_mb": 250.25,
+          "flat_memory_mb": 125.0,
+          "compression_ratio": 0.4995004995004995,
+          "max_depth": 4,
+          "avg_children": 2.865329512893983,
+          "stats": {
+            "stores": 1000,
+            "retrievals": 0,
+            "nodes_visited": 0,
+            "reconstructions": 630
+          }
+        }
+      }
+    },
+    {
+      "n_patterns": 5000,
+      "gpu_cache_size": 500,
+      "cache_ratio": 0.1,
+      "store_time_sec": 99.13377929999842,
+      "patterns_per_sec": 50.4368948233983,
+      "sequential": {
+        "access_pattern": "sequential",
+        "hit_rate": 1.0,
+        "ms_per_query": 1.7728788000022178,
+        "prefetch_hits": 0,
+        "evictions": 0
+      },
+      "random": {
+        "access_pattern": "random",
+        "hit_rate": 1.0,
+        "ms_per_query": 2.0068558000057237,
+        "prefetch_hits": 450,
+        "evictions": 450
+      },
+      "burst": {
+        "access_pattern": "burst",
+        "hit_rate": 1.0,
+        "ms_per_query": 1.9731643999984951,
+        "prefetch_hits": 919,
+        "evictions": 919
+      },
+      "memory": {
+        "gpu_memory_mb": 62.5,
+        "full_memory_mb": 625.0,
+        "savings_ratio": 10.0,
+        "pac_tree_stats": {
+          "total_nodes": 5001,
+          "leaf_nodes": 3874,
+          "internal_nodes": 1127,
+          "patterns_stored": 5000,
+          "memory_bytes": 1310982144.0,
+          "memory_mb": 1250.25,
+          "flat_memory_mb": 625.0,
+          "compression_ratio": 0.4999000199960008,
+          "max_depth": 5,
+          "avg_children": 4.436557231588288,
+          "stats": {
+            "stores": 5000,
+            "retrievals": 0,
+            "nodes_visited": 0,
+            "reconstructions": 749
+          }
+        }
+      }
+    },
+    {
+      "n_patterns": 10000,
+      "gpu_cache_size": 1000,
+      "cache_ratio": 0.1,
+      "store_time_sec": 197.49739060000138,
+      "patterns_per_sec": 50.63358037095975,
+      "sequential": {
+        "access_pattern": "sequential",
+        "hit_rate": 1.0,
+        "ms_per_query": 2.5497919999979786,
+        "prefetch_hits": 0,
+        "evictions": 0
+      },
+      "random": {
+        "access_pattern": "random",
+        "hit_rate": 1.0,
+        "ms_per_query": 3.3173664000059944,
+        "prefetch_hits": 455,
+        "evictions": 455
+      },
+      "burst": {
+        "access_pattern": "burst",
+        "hit_rate": 1.0,
+        "ms_per_query": 3.310081000003265,
+        "prefetch_hits": 924,
+        "evictions": 924
+      },
+      "memory": {
+        "gpu_memory_mb": 125.0,
+        "full_memory_mb": 1250.0,
+        "savings_ratio": 10.0,
+        "pac_tree_stats": {
+          "total_nodes": 10001,
+          "leaf_nodes": 6362,
+          "internal_nodes": 3639,
+          "patterns_stored": 10000,
+          "memory_bytes": -1673265152.0,
+          "memory_mb": -1595.75,
+          "flat_memory_mb": 1250.0,
+          "compression_ratio": 1310720000.0,
+          "max_depth": 5,
+          "avg_children": 2.7480076944215446,
+          "stats": {
+            "stores": 10000,
+            "retrievals": 0,
+            "nodes_visited": 0,
+            "reconstructions": 693
+          }
+        }
+      }
+    },
+    {
+      "n_patterns": 25000,
+      "gpu_cache_size": 2000,
+      "cache_ratio": 0.08,
+      "store_time_sec": 616.0144392000002,
+      "patterns_per_sec": 40.58346429747128,
+      "sequential": {
+        "access_pattern": "sequential",
+        "hit_rate": 1.0,
+        "ms_per_query": 4.534883800006355,
+        "prefetch_hits": 0,
+        "evictions": 0
+      },
+      "random": {
+        "access_pattern": "random",
+        "hit_rate": 1.0,
+        "ms_per_query": 6.838506400003098,
+        "prefetch_hits": 454,
+        "evictions": 454
+      },
+      "burst": {
+        "access_pattern": "burst",
+        "hit_rate": 1.0,
+        "ms_per_query": 6.917432999995071,
+        "prefetch_hits": 865,
+        "evictions": 865
+      },
+      "memory": {
+        "gpu_memory_mb": 250.0,
+        "full_memory_mb": 3125.0,
+        "savings_ratio": 12.5,
+        "pac_tree_stats": {
+          "total_nodes": 25001,
+          "leaf_nodes": 20199,
+          "internal_nodes": 4802,
+          "patterns_stored": 25000,
+          "memory_bytes": -2036072448.0,
+          "memory_mb": -1941.75,
+          "flat_memory_mb": -971.0,
+          "compression_ratio": -1018167296.0,
+          "max_depth": 6,
+          "avg_children": 5.206164098292378,
+          "stats": {
+            "stores": 25000,
+            "retrievals": 0,
+            "nodes_visited": 0,
+            "reconstructions": 733
+          }
+        }
+      }
+    }
+  ]
+}

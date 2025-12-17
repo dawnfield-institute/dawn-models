@@ -127,6 +127,7 @@ class SphericalEncoderV6(nn.Module):
 class FieldMemory(nn.Module):
     """
     Field-based memory with resonance retrieval (POC-006).
+    GPU-optimized with batched operations.
     """
     
     def __init__(self, config: GAIAConfig):
@@ -138,6 +139,24 @@ class FieldMemory(nn.Module):
         self.next_id = 0
         self.transitions: Dict[Tuple[int, int], float] = {}
         
+        # GPU-optimized: cached pattern matrix and ID mapping
+        self._pattern_matrix: Optional[torch.Tensor] = None
+        self._pattern_ids: List[int] = []
+        self._cache_dirty = True
+        
+        # Transition index: from_id -> [(to_id, strength), ...]
+        self._transition_index: Dict[int, List[Tuple[int, float]]] = {}
+        
+    def _rebuild_cache(self):
+        """Rebuild GPU pattern cache."""
+        if not self._cache_dirty or not self.patterns:
+            return
+            
+        self._pattern_ids = list(self.patterns.keys())
+        patterns_flat = [self.patterns[pid].flatten() for pid in self._pattern_ids]
+        self._pattern_matrix = torch.stack(patterns_flat).to(self.device)
+        self._cache_dirty = False
+        
     def store(self, field: torch.Tensor, token_id: Optional[int] = None) -> int:
         """Store pattern."""
         if token_id is None:
@@ -145,6 +164,7 @@ class FieldMemory(nn.Module):
         self.next_id = max(self.next_id, token_id + 1)
         
         self.patterns[token_id] = field.clone()
+        self._cache_dirty = True
         
         if len(self.patterns) > self.config.memory_capacity:
             oldest = min(self.patterns.keys())
@@ -154,26 +174,56 @@ class FieldMemory(nn.Module):
         
     def retrieve(self, query: torch.Tensor, top_k: int = 5,
                 exclude: Optional[set] = None) -> List[Tuple[int, float]]:
-        """Retrieve by resonance."""
-        exclude = exclude or set()
-        scores = []
-        
-        for pid, field in self.patterns.items():
-            if pid in exclude:
-                continue
-            sim = F.cosine_similarity(
-                query.flatten().unsqueeze(0),
-                field.flatten().unsqueeze(0)
-            ).item()
-            scores.append((pid, sim))
+        """Retrieve by resonance - GPU batched."""
+        if not self.patterns:
+            return []
             
-        scores.sort(key=lambda x: -x[1])
-        return scores[:top_k]
+        self._rebuild_cache()
+        exclude = exclude or set()
+        
+        # Batched cosine similarity on GPU
+        query_flat = query.flatten().unsqueeze(0).to(self.device)
+        
+        # Normalize for cosine similarity
+        query_norm = F.normalize(query_flat, dim=1)
+        patterns_norm = F.normalize(self._pattern_matrix, dim=1)
+        
+        # Single matrix multiply for all similarities
+        similarities = torch.mm(query_norm, patterns_norm.t()).squeeze(0)
+        
+        # Get top-k (with buffer for exclusions)
+        k_buffer = min(top_k + len(exclude) + 10, len(self._pattern_ids))
+        top_vals, top_indices = torch.topk(similarities, k_buffer)
+        
+        # Filter exclusions and build result
+        results = []
+        for i in range(len(top_indices)):
+            pid = self._pattern_ids[top_indices[i].item()]
+            if pid not in exclude:
+                results.append((pid, top_vals[i].item()))
+                if len(results) >= top_k:
+                    break
+                    
+        return results
         
     def learn_transition(self, from_id: int, to_id: int):
-        """Learn transition."""
+        """Learn transition with indexed lookup."""
         key = (from_id, to_id)
         self.transitions[key] = self.transitions.get(key, 0) + 0.1
+        
+        # Update index for fast lookup
+        if from_id not in self._transition_index:
+            self._transition_index[from_id] = []
+        # Update or add
+        for i, (tid, _) in enumerate(self._transition_index[from_id]):
+            if tid == to_id:
+                self._transition_index[from_id][i] = (to_id, self.transitions[key])
+                return
+        self._transition_index[from_id].append((to_id, self.transitions[key]))
+    
+    def get_transitions_from(self, from_id: int) -> List[Tuple[int, float]]:
+        """Get all transitions from a token - O(1) lookup."""
+        return self._transition_index.get(from_id, [])
 
 
 class KleinGordonEvolution(nn.Module):
@@ -345,11 +395,12 @@ class GAIAUnified(nn.Module):
         context_field = self.get_context_field()
         evolved = self.evolution(context_field)
         
-        # Transition boost
+        # Transition boost - O(1) lookup instead of O(n) iteration
         if self.context_ids:
             last_id = self.context_ids[-1]
-            for (from_id, to_id), strength in self.memory.transitions.items():
-                if from_id == last_id and to_id in self.memory.patterns:
+            transitions = self.memory.get_transitions_from(last_id)
+            for to_id, strength in transitions:
+                if to_id in self.memory.patterns:
                     evolved = evolved + 0.5 * strength * self.memory.patterns[to_id]
                     
         exclude = set(self.context_ids[-3:])

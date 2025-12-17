@@ -1,0 +1,11 @@
+{
+  "timestamp": "2025-12-16T21:29:47.481816",
+  "gaia_perplexity": 5.908540356365719,
+  "gaia_accuracy": 0.0015904271432899122,
+  "gpt2_small_perplexity": 29.41,
+  "gpt2_xl_perplexity": 18.34,
+  "improvement_over_gpt2_small": 4.977540682837915,
+  "tokens_evaluated": 13204,
+  "vocab_size": 7553,
+  "transitions": 88022
+}

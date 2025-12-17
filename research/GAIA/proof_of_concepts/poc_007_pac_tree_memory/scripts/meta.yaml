@@ -1,0 +1,17 @@
+schema_version: "2.0"
+description: "PAC Tree Memory implementation and experiments"
+semantic_scope: "implementation"
+proficiency_level: "research"
+estimated_context_weight: 0.3
+
+files:
+  - "[pac_tree_memory.py]": "Core PAC tree memory implementation with hierarchical navigation"
+  - "[exp_01_basic_tree.py]": "Basic tree operations validation"
+  - "[exp_02_navigation_benchmark.py]": "Navigation vs brute force comparison"
+  - "[exp_03_transition_guided.py]": "Transition-guided retrieval validation"
+  - "[exp_04_scale_validation.py]": "Scale testing (10K, 25K, 50K patterns)"
+  - "[exp_05_wikitext_integration.py]": "WikiText-2 integration test"
+
+child_directories: []
+
+validation_type: "experiment"
