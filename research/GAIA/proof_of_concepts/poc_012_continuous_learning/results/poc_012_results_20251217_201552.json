@@ -1,0 +1,41 @@
+{
+  "config": {
+    "device": "cuda",
+    "field_dim": 64,
+    "train_steps": 5000,
+    "live_steps": 2000
+  },
+  "metrics": {
+    "train_time": 0.08642125129699707,
+    "live_time": 0.5444467067718506,
+    "total_predictions": 2000,
+    "correct_predictions": 341,
+    "accuracy": 0.1705,
+    "recent_accuracy": 0.09,
+    "patterns_stored": 307,
+    "transitions_learned": 3505,
+    "crystallizations": 28
+  },
+  "accuracy_history": [
+    0.12,
+    0.12,
+    0.11,
+    0.25,
+    0.17,
+    0.16,
+    0.14,
+    0.2,
+    0.21,
+    0.18,
+    0.17,
+    0.26,
+    0.31,
+    0.18,
+    0.24,
+    0.11,
+    0.12,
+    0.13,
+    0.14,
+    0.09
+  ]
+}

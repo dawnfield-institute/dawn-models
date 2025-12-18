@@ -1,0 +1,18 @@
+schema_version: "2.0"
+description: "POC-014: Persistent Consciousness - GAIA learns, saves state, restarts, continues learning"
+semantic_scope: "research"
+proficiency_level: "research"
+experiment_status: "in-progress"
+hypothesis: "GAIA can maintain learning continuity across process restarts using Kronos persistence"
+success_criteria:
+  - "Learn patterns in session 1"
+  - "Save consciousness state"
+  - "Restart (new process)"
+  - "Restore state"
+  - "Resume learning with retained patterns"
+  - "Accuracy improvement carries over"
+files:
+  - "[poc_014_persistent_consciousness.py]": "Main POC script with session simulation"
+  - "[README.md]": "Results and analysis"
+child_directories: []
+estimated_context_weight: 0.3

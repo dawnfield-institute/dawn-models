@@ -1,0 +1,15 @@
+completed: '2025-12-17T20:36:21.644968'
+created: '2025-12-17T20:36:21.604248'
+episode_id: episode_20251217_203621_66de6695
+last_updated: '2025-12-17T20:36:21.632836'
+metadata:
+  description: Initial pattern injection
+  pattern_count: 10
+  total_potential: 7.749999999999999
+name: learning_session_1
+node_count: 10
+status: complete
+summary:
+  crystallized_count: 4
+  node_count: 10
+  total_energy: 0

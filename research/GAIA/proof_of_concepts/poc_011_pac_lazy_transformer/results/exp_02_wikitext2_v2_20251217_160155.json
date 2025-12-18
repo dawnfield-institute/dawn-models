@@ -1,0 +1,38 @@
+{
+  "timestamp": "2025-12-17T16:01:55.332806",
+  "device": "cuda",
+  "baseline": 5.91,
+  "results": {
+    "epochs": [
+      {
+        "epoch": 1,
+        "train_loss": 7.166011674063546,
+        "train_ppl": 1294.6707232785525,
+        "time_s": 2.9407219999993686
+      },
+      {
+        "epoch": 2,
+        "train_loss": 6.065450168791271,
+        "train_ppl": 430.7165291752963,
+        "time_s": 2.0130126000003656
+      },
+      {
+        "epoch": 3,
+        "train_loss": 5.956399054754348,
+        "train_ppl": 386.2168714227958,
+        "time_s": 2.022180899999512
+      }
+    ],
+    "test": {
+      "loss": 5.530826151371002,
+      "perplexity": 252.3523061323942,
+      "time_s": 0.17673439999998664
+    },
+    "pac_stats": {
+      "current_potential": 100.0,
+      "utilization": 0.0,
+      "expansions": 205,
+      "collapses": 0
+    }
+  }
+}

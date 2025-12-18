@@ -1,0 +1,89 @@
+{
+  "version": "1.0",
+  "entries": [
+    {
+      "doc_id": "0000000000000000",
+      "node_id": 0,
+      "timestamp": "2025-12-17T20:36:21.443645",
+      "crystallized": true,
+      "importance": 1.618033988749895
+    },
+    {
+      "doc_id": "0000000000000001",
+      "node_id": 1,
+      "timestamp": "2025-12-17T20:36:21.448622",
+      "crystallized": false,
+      "importance": 0.0
+    },
+    {
+      "doc_id": "0000000000000002",
+      "node_id": 2,
+      "timestamp": "2025-12-17T20:36:21.452136",
+      "crystallized": false,
+      "importance": 0.0
+    },
+    {
+      "doc_id": "0000000000000003",
+      "node_id": 3,
+      "timestamp": "2025-12-17T20:36:21.454139",
+      "crystallized": true,
+      "importance": 1.618033988749895
+    },
+    {
+      "doc_id": "0000000000000004",
+      "node_id": 4,
+      "timestamp": "2025-12-17T20:36:21.457140",
+      "crystallized": false,
+      "importance": 0.0
+    },
+    {
+      "doc_id": "0000000000000005",
+      "node_id": 5,
+      "timestamp": "2025-12-17T20:36:21.459157",
+      "crystallized": false,
+      "importance": 0.0
+    },
+    {
+      "doc_id": "0000000000000006",
+      "node_id": 6,
+      "timestamp": "2025-12-17T20:36:21.461137",
+      "crystallized": true,
+      "importance": 1.618033988749895
+    },
+    {
+      "doc_id": "0000000000000007",
+      "node_id": 7,
+      "timestamp": "2025-12-17T20:36:21.465221",
+      "crystallized": false,
+      "importance": 0.0
+    },
+    {
+      "doc_id": "0000000000000008",
+      "node_id": 8,
+      "timestamp": "2025-12-17T20:36:21.467269",
+      "crystallized": false,
+      "importance": 0.0
+    },
+    {
+      "doc_id": "0000000000000009",
+      "node_id": 9,
+      "timestamp": "2025-12-17T20:36:21.470330",
+      "crystallized": true,
+      "importance": 1.618033988749895
+    }
+  ],
+  "by_date": {
+    "2025-12-17": [
+      "0000000000000000",
+      "0000000000000001",
+      "0000000000000002",
+      "0000000000000003",
+      "0000000000000004",
+      "0000000000000005",
+      "0000000000000006",
+      "0000000000000007",
+      "0000000000000008",
+      "0000000000000009"
+    ]
+  }
+}

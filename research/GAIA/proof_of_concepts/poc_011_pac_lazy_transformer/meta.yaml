@@ -1,0 +1,33 @@
+schema_version: "2.0"
+description: "PAC-Lazy Transformer integration - unifying PAC/SEC substrate with GAIA"
+semantic_scope: "implementation"
+proficiency_level: "research"
+estimated_context_weight: 0.4
+
+key_insights:
+  - "Tokens are nodes with deltas, not absolute embeddings"
+  - "Attention is causal activation through neighbor links"
+  - "Context windows are PAC-bounded frontiers"
+  - "Depth is adaptive via SEC expansion"
+  - "Structural mutation enables continuous learning"
+
+invariants:
+  - "PAC: No expansion without consuming potential"
+  - "SEC: Structure is symbolic until pressure demands refinement"
+  - "Locality: Nodes only interact through explicit neighbors"
+
+physics_grounding:
+  - "PAC conservation replaces memory management"
+  - "SEC provides lazy depth (infinite possible, finite realized)"
+  - "Causal locality enables infinite scale"
+
+dependencies:
+  - poc_007_pac_tree_memory: "Tiered cache = active/latent node mapping"
+  - test.py: "Core Node/PACSystem primitives"
+
+child_directories:
+  - scripts: "Implementation and experiments"
+  - journals: "Research logs"
+  - results: "Experiment outputs"
+
+validation_type: "poc"

@@ -1,0 +1,17 @@
+schema_version: fdo-v2.0
+doc_type: pac_node
+doc_id: '0000000000000005'
+node:
+  id: 5
+  parent_id: -1
+  children_ids: []
+  label: pattern_5
+physics:
+  potential: 0.75
+  phase: stable
+metadata:
+  created: '2025-12-17T20:36:21.457140'
+  token_id: 542
+  crystallized: false
+  importance: 0.0
+delta_file: 0000000000000005_delta.npy

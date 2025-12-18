@@ -1,0 +1,21 @@
+{
+  "timestamp": "2025-12-17T18:25:56.128917",
+  "device": "cuda",
+  "training": {
+    "tokens": 1725603,
+    "time_s": 6.84105339999951
+  },
+  "model_stats": {
+    "vocab_size": 66051,
+    "n_transitions": 690324,
+    "n_patterns": 66051
+  },
+  "evaluation": {
+    "perplexity": 38856.60547813917,
+    "accuracy": 0.15151515151515152,
+    "tokens_evaluated": 9999,
+    "oov_tokens": 2729
+  },
+  "baseline": 5.91,
+  "ratio": 6574.721739109843
+}

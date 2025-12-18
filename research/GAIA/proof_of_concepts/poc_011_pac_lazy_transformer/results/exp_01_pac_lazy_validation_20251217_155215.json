@@ -1,0 +1,71 @@
+{
+  "timestamp": "2025-12-17T15:52:15.645123",
+  "device": "cuda",
+  "results": {
+    "sequence_processing": [
+      {
+        "seq_len": 10,
+        "time_ms": 449.2285999986052,
+        "active_nodes": 10,
+        "utilization": 0.01956187610626221,
+        "expansions": 0
+      },
+      {
+        "seq_len": 25,
+        "time_ms": 4.306800001359079,
+        "active_nodes": 20,
+        "utilization": 0.06859464569091797,
+        "expansions": 0
+      },
+      {
+        "seq_len": 50,
+        "time_ms": 6.940900002518902,
+        "active_nodes": 20,
+        "utilization": 0.1660692441940307,
+        "expansions": 0
+      },
+      {
+        "seq_len": 100,
+        "time_ms": 15.262699998856988,
+        "active_nodes": 60,
+        "utilization": 0.3613186910629265,
+        "expansions": 10
+      }
+    ],
+    "prediction_accuracy": {
+      "pattern_test": true,
+      "predictions": [
+        [
+          2,
+          0.5767534375190735
+        ],
+        [
+          1,
+          0.5640653967857361
+        ],
+        [
+          0,
+          0.5277301073074341
+        ]
+      ]
+    },
+    "pac_budget": {
+      "tokens_processed": 100,
+      "utilization": 0.9824308071136473,
+      "collapses": 0
+    },
+    "sec_expansion": {
+      "expansions": 1,
+      "total_nodes": 5
+    },
+    "continuous_learning": {
+      "vocab_after_a": 4,
+      "vocab_after_b": 8,
+      "fractures": 0
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "total": 5
+  }
+}

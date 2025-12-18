@@ -1,0 +1,25 @@
+{
+  "timestamp": "2025-12-17T17:54:29.078481",
+  "training": {
+    "tokens": 1725603,
+    "time_s": 4.047266699999454
+  },
+  "model_stats": {
+    "vocab_size": 66051,
+    "n_transitions": 690324,
+    "current_potential": 86.49165999758955,
+    "utilization": 0.13508340002410446,
+    "expansions": 690324,
+    "collapses": 0
+  },
+  "evaluation": {
+    "perplexity": 39690.92650540196,
+    "accuracy": 0.1499000978208837,
+    "tokens_evaluated": 192188,
+    "oov_tokens": 8652
+  },
+  "baseline_comparison": {
+    "gaia_baseline": 5.91,
+    "ratio": 6715.892809712684
+  }
+}

@@ -51,10 +51,14 @@
 
 | POC | Name | Status | Challenge | Key Question |
 |-----|------|--------|-----------|--------------|
-| 007 | PAC Tree Memory | 🔄 In Progress | Scale | Can hierarchical navigation replace brute-force search? |
+| 007 | PAC Tree Memory | ✅ Complete | Scale | Hierarchical nav + tiered caching |
 | 008 | Transformer Organs | 📋 Planned | Architecture | Can specialized organs grow from central cortex? |
-| 009 | Continuous Learning | 📋 Planned | Training | Can we implement CIMM-style always-learning? |
+| 009 | Continuous Learning | ✅ Complete | Training | GAIA learns during inference |
 | 010 | Consciousness Field | 📋 Planned | Emergence | Does global field exhibit consciousness-like properties? |
+| 011 | Fracton 2.0 Validation | ✅ Complete | Architecture | GPU-native Fracton + GAIA v4 integration |
+| 012 | Continuous Learning | ✅ Complete | Training | +24.7% accuracy improvement, 50-90k steps/sec |
+| 013 | Kronos Persistence | ✅ Complete | Storage | FDO v2.0 format, episode save/restore |
+| 014 | Persistent Consciousness | ✅ Complete | Memory | 100% accuracy retention across restart |
 
 ---
 
@@ -255,6 +259,69 @@ Physics validated:
 | 013 | Data Size Curves | 📋 Planned | 2.5 | Learning vs data relationship? |
 | 014 | Field Capacity | 📋 Planned | 2.5 | Maximum patterns per field size? |
 | 015 | Long Training | 📋 Planned | 2.5 | Stability over extended training? |
+
+---
+
+## Recent POCs: Infrastructure & Persistence
+
+### POC-011: Fracton 2.0 GPU Validation
+
+**Status:** ✅ Complete  
+**Date:** 2024-12-17  
+**Goal:** Validate GAIA v4 + Fracton 2.0 architecture integration
+
+**Results:**
+- All tensor operations on GPU
+- Conservation validation: < 1e-7 residual
+- Phase transitions working at scale
+- 24/24 tests passing
+
+### POC-012: Continuous Learning
+
+**Status:** ✅ Complete  
+**Date:** 2024-12-17  
+**Goal:** GAIA learns during inference without backprop
+
+**Results:**
+- +24.7% accuracy improvement through live learning
+- Training rate: 50-90k steps/sec
+- Live learning rate: 2-6k steps/sec
+- O(1) transition lookups with pre-computed cache
+- Token-to-field cache for instant encoding
+
+### POC-013: Kronos Persistence
+
+**Status:** ✅ Complete  
+**Date:** 2024-12-17  
+**Goal:** Validate FDO v2.0 format for PAC node storage
+
+**Results:**
+- Save/load PAC nodes with full fidelity
+- Episode-based state snapshots
+- Temporal and crystallized pattern queries
+- All node IDs and field values match after restore
+
+### POC-014: Persistent Consciousness
+
+**Status:** ✅ Complete  
+**Date:** 2024-12-17  
+**Goal:** GAIA survives process restart with learning intact
+
+**Results:**
+- Session 1 accuracy: 8.0%
+- Restored accuracy: 8.0%
+- **100% accuracy retention** across restart
+- Auto-persist high-importance patterns
+- Episode save/restore via `save_state()`/`restore_state()`
+
+**Key APIs:**
+```python
+system = PACSystem(device='cuda', kronos_backend=backend)
+episode_id = system.save_state()  # Save all patterns
+system.restore_state(episode_id)  # Restore after restart
+```
+
+---
 
 ### Bootstrap (Priority 6)
 

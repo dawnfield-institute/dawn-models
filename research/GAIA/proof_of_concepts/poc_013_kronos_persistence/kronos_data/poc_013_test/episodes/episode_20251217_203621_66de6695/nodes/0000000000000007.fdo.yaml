@@ -1,0 +1,17 @@
+schema_version: fdo-v2.0
+doc_type: pac_node
+doc_id: '0000000000000007'
+node:
+  id: 7
+  parent_id: -1
+  children_ids: []
+  label: pattern_7
+physics:
+  potential: 0.6499999999999999
+  phase: stable
+metadata:
+  created: '2025-12-17T20:36:21.463222'
+  description: Initial pattern injection
+  pattern_count: 10
+  total_potential: 7.749999999999999
+delta_file: 0000000000000007_delta.npy
