@@ -1,0 +1,133 @@
+{
+  "proxy": {
+    "queries": [
+      {
+        "source": "layer:transformer_0",
+        "target_score": 0.32583215832710266,
+        "graft_score": 0.8149187564849854,
+        "graft_helps": true
+      },
+      {
+        "source": "layer:transformer_1",
+        "target_score": 0.4728001058101654,
+        "graft_score": 0.9526547789573669,
+        "graft_helps": true
+      },
+      {
+        "source": "layer:transformer_2",
+        "target_score": 0.5256312489509583,
+        "graft_score": 0.9664294719696045,
+        "graft_helps": true
+      },
+      {
+        "source": "layer:transformer_3",
+        "target_score": 0.4935736060142517,
+        "graft_score": 0.9709333777427673,
+        "graft_helps": true
+      },
+      {
+        "source": "layer:transformer_4",
+        "target_score": 0.4764213263988495,
+        "graft_score": 0.9598758220672607,
+        "graft_helps": true
+      },
+      {
+        "source": "layer:transformer_5",
+        "target_score": 0.5283104181289673,
+        "graft_score": 0.9752274751663208,
+        "graft_helps": true
+      }
+    ],
+    "graft_helps": 6,
+    "target_only": 0,
+    "no_match": 0,
+    "graft_improvement_rate": 1.0
+  },
+  "information": {
+    "grafts_analyzed": 8,
+    "avg_source_entropy": 5.319039404392242,
+    "avg_graft_entropy": 5.319039404392242,
+    "avg_entropy_preservation": 1.0,
+    "details": [
+      {
+        "source": "layer:transformer_11",
+        "source_entropy": 5.541048049926758,
+        "graft_entropy": 5.541048049926758,
+        "preservation": 1
+      },
+      {
+        "source": "layer:transformer_11",
+        "source_entropy": 5.541048049926758,
+        "graft_entropy": 5.541048049926758,
+        "preservation": 1
+      },
+      {
+        "source": "layer:transformer_11",
+        "source_entropy": 5.541048049926758,
+        "graft_entropy": 5.541048049926758,
+        "preservation": 1
+      },
+      {
+        "source": "layer:transformer_9",
+        "source_entropy": 5.543565273284912,
+        "graft_entropy": 5.543565273284912,
+        "preservation": 1
+      },
+      {
+        "source": "layer:transformer_10",
+        "source_entropy": 5.543282508850098,
+        "graft_entropy": 5.543282508850098,
+        "preservation": 1
+      },
+      {
+        "source": "layer:layers_0",
+        "source_entropy": 5.479150772094727,
+        "graft_entropy": 5.479150772094727,
+        "preservation": 1
+      },
+      {
+        "source": "layer:layers_1",
+        "source_entropy": 5.089458465576172,
+        "graft_entropy": 5.089458465576172,
+        "preservation": 1
+      },
+      {
+        "source": "layer:layers_2",
+        "source_entropy": 4.273714065551758,
+        "graft_entropy": 4.273714065551758,
+        "preservation": 1
+      }
+    ]
+  },
+  "prediction": {
+    "predictions": [
+      {
+        "text": "The quick brown fox",
+        "direct_sim": -0.031080862507224083,
+        "via_graft": -0.018841255456209183,
+        "improvement": 0.0122396070510149
+      },
+      {
+        "text": "Machine learning models",
+        "direct_sim": -0.04363183304667473,
+        "via_graft": -0.10842426866292953,
+        "improvement": -0.0647924356162548
+      },
+      {
+        "text": "Hello world program",
+        "direct_sim": -0.03215218707919121,
+        "via_graft": -0.09807482361793518,
+        "improvement": -0.06592263653874397
+      },
+      {
+        "text": "Natural language processing",
+        "direct_sim": -0.05013251677155495,
+        "via_graft": 0.0014818385243415833,
+        "improvement": 0.05161435529589653
+      }
+    ],
+    "avg_prediction_accuracy": -0.05596462730318308,
+    "avg_improvement": -0.016715277452021837
+  },
+  "overall_score": 0.8277615741826594
+}

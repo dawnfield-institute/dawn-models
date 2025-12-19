@@ -1,0 +1,246 @@
+{
+  "timestamp": "2025-12-19T13:59:13.049918",
+  "small_oracles": {
+    "name": "small_oracles",
+    "oracles": [
+      "gpt2",
+      "pythia"
+    ],
+    "num_oracles": 2,
+    "overall_hit_rate": 70.81545064377683,
+    "total_transitions": 1389,
+    "crystallized": 2690,
+    "results": [
+      {
+        "prompt": "The cat",
+        "output": "The cat was found with its own blood, but it was not the fir...",
+        "hit_rate": 75.0,
+        "hits": 15,
+        "misses": 5
+      },
+      {
+        "prompt": "A dog",
+        "output": "A dog is a language that has been used in many cultures.",
+        "hit_rate": 100.0,
+        "hits": 11,
+        "misses": 0
+      },
+      {
+        "prompt": "Birds fly",
+        "output": "Birds fly in and out of feathers.",
+        "hit_rate": 50.0,
+        "hits": 3,
+        "misses": 3
+      },
+      {
+        "prompt": "Scientists study",
+        "output": "Scientists study the effects of high concentrations of methy...",
+        "hit_rate": 15.384615384615385,
+        "hits": 2,
+        "misses": 11
+      },
+      {
+        "prompt": "Research shows",
+        "output": "Research shows that the rate of growth in the water often fo...",
+        "hit_rate": 75.0,
+        "hits": 15,
+        "misses": 5
+      },
+      {
+        "prompt": "Experiments reveal",
+        "output": "Experiments reveal that, we must learn to do something, we c...",
+        "hit_rate": 57.14285714285714,
+        "hits": 8,
+        "misses": 6
+      },
+      {
+        "prompt": "Love is",
+        "output": "Love is about to become so popular you'd think the people wh...",
+        "hit_rate": 90.0,
+        "hits": 18,
+        "misses": 2
+      },
+      {
+        "prompt": "Time is",
+        "output": "Time is a language that has been used in many cultures.",
+        "hit_rate": 100.0,
+        "hits": 10,
+        "misses": 0
+      },
+      {
+        "prompt": "Knowledge helps",
+        "output": "Knowledge helps us to live better. To achieve that, we must ...",
+        "hit_rate": 100.0,
+        "hits": 20,
+        "misses": 0
+      },
+      {
+        "prompt": "Trees grow",
+        "output": "Trees grow in many cultures.\n\nThis year's tree was created b...",
+        "hit_rate": 75.0,
+        "hits": 15,
+        "misses": 5
+      },
+      {
+        "prompt": "Water flows",
+        "output": "Water flows into the lake at an average annual rate of growt...",
+        "hit_rate": 100.0,
+        "hits": 20,
+        "misses": 0
+      },
+      {
+        "prompt": "Fire burns",
+        "output": "Fire burns and is covered in black smoke.",
+        "hit_rate": 100.0,
+        "hits": 7,
+        "misses": 0
+      },
+      {
+        "prompt": "The future of",
+        "output": "The future of the world a little more like that of a small i...",
+        "hit_rate": 100.0,
+        "hits": 12,
+        "misses": 0
+      },
+      {
+        "prompt": "In nature we",
+        "output": "In nature we are not limited to a certain number of objects;...",
+        "hit_rate": 5.0,
+        "hits": 1,
+        "misses": 19
+      },
+      {
+        "prompt": "History teaches us",
+        "output": "History teaches us the importance of our time, our place in ...",
+        "hit_rate": 40.0,
+        "hits": 8,
+        "misses": 12
+      }
+    ]
+  },
+  "large_oracles": {
+    "name": "large_oracles",
+    "oracles": [
+      "gpt2",
+      "pythia",
+      "qwen",
+      "phi"
+    ],
+    "num_oracles": 4,
+    "overall_hit_rate": 80.078125,
+    "total_transitions": 1207,
+    "crystallized": 2704,
+    "results": [
+      {
+        "prompt": "The cat",
+        "output": "The cat was about three feet tall when he arrived in the wat...",
+        "hit_rate": 100.0,
+        "hits": 20,
+        "misses": 0
+      },
+      {
+        "prompt": "A dog",
+        "output": "A dog in a van in the water, and he was on a boat the whole ...",
+        "hit_rate": 95.0,
+        "hits": 19,
+        "misses": 1
+      },
+      {
+        "prompt": "Birds fly",
+        "output": "Birds fly in the water, and he was on a boat the whole day o...",
+        "hit_rate": 80.0,
+        "hits": 16,
+        "misses": 4
+      },
+      {
+        "prompt": "Scientists study",
+        "output": "Scientists study the effects of long-term exposure to the st...",
+        "hit_rate": 36.36363636363637,
+        "hits": 4,
+        "misses": 7
+      },
+      {
+        "prompt": "Research shows",
+        "output": "Research shows that at least 5.3 million people over the age...",
+        "hit_rate": 75.0,
+        "hits": 15,
+        "misses": 5
+      },
+      {
+        "prompt": "Experiments reveal",
+        "output": "Experiments reveal that only one of the world a.",
+        "hit_rate": 37.5,
+        "hits": 3,
+        "misses": 5
+      },
+      {
+        "prompt": "Love is",
+        "output": "Love is a language that's pretty easy to learn, but you'll a...",
+        "hit_rate": 75.0,
+        "hits": 15,
+        "misses": 5
+      },
+      {
+        "prompt": "Time is",
+        "output": "Time is a language that's pretty easy to learn, but you'll a...",
+        "hit_rate": 100.0,
+        "hits": 20,
+        "misses": 0
+      },
+      {
+        "prompt": "Knowledge helps",
+        "output": "Knowledge helps us to understand what it means to be a mothe...",
+        "hit_rate": 100.0,
+        "hits": 11,
+        "misses": 0
+      },
+      {
+        "prompt": "Trees grow",
+        "output": "Trees grow in the water, and he was on a boat the whole day ...",
+        "hit_rate": 100.0,
+        "hits": 20,
+        "misses": 0
+      },
+      {
+        "prompt": "Water flows",
+        "output": "Water flows from the ocean.\n\nAnd the birds, the birds that l...",
+        "hit_rate": 100.0,
+        "hits": 20,
+        "misses": 0
+      },
+      {
+        "prompt": "Fire burns",
+        "output": "Fire burns. And as the night came to an end, she moved out i...",
+        "hit_rate": 80.0,
+        "hits": 16,
+        "misses": 4
+      },
+      {
+        "prompt": "The future of",
+        "output": "The future of the world a.k.",
+        "hit_rate": 100.0,
+        "hits": 6,
+        "misses": 0
+      },
+      {
+        "prompt": "In nature we",
+        "output": "In nature we see that certain kinds of human beings behave i...",
+        "hit_rate": 50.0,
+        "hits": 10,
+        "misses": 10
+      },
+      {
+        "prompt": "History teaches us",
+        "output": "History teaches us the importance of having your own private...",
+        "hit_rate": 50.0,
+        "hits": 10,
+        "misses": 10
+      }
+    ]
+  },
+  "comparison": {
+    "small_wins": 4,
+    "large_wins": 6,
+    "ties": 5
+  }
+}

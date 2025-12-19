@@ -1,0 +1,272 @@
+{
+  "root_id": "root",
+  "nodes": {
+    "root": {
+      "label": "model_pythia-70m",
+      "entropy": 1.0,
+      "importance": 1.0,
+      "parent_id": null,
+      "children": [
+        "zone_token_encoding",
+        "zone_pattern_recognition",
+        "zone_semantic_integration"
+      ],
+      "metadata": {
+        "source_model": "EleutherAI/pythia-70m"
+      },
+      "crystallized": true
+    },
+    "zone_token_encoding": {
+      "label": "token_encoding",
+      "entropy": 0.4152238315076848,
+      "importance": 0.5847761684923152,
+      "parent_id": "root",
+      "children": [
+        "layer_token_encoding_0",
+        "layer_token_encoding_1",
+        "layer_token_encoding_2",
+        "layer_token_encoding_3",
+        "layer_token_encoding_4"
+      ],
+      "metadata": {
+        "description": "Low-level token/position encoding patterns",
+        "num_layers": 8,
+        "collapse_ratio": 0.5847761684923152
+      },
+      "crystallized": true
+    },
+    "layer_token_encoding_0": {
+      "label": "dense",
+      "entropy": 0.4467229019369059,
+      "importance": 0.5532770980630941,
+      "parent_id": "zone_token_encoding",
+      "children": [],
+      "metadata": {
+        "full_layer_name": "gpt_neox.layers.0.attention.dense",
+        "sparsity": 0.06354166567325592,
+        "activation_std": 0.18345944583415985
+      },
+      "crystallized": true
+    },
+    "layer_token_encoding_1": {
+      "label": "query_key_value",
+      "entropy": 0.5274660464335023,
+      "importance": 0.47253395356649774,
+      "parent_id": "zone_token_encoding",
+      "children": [],
+      "metadata": {
+        "full_layer_name": "gpt_neox.layers.0.attention.query_key_value",
+        "sparsity": 0.02408854104578495,
+        "activation_std": 2.208212375640869
+      },
+      "crystallized": true
+    },
+    "layer_token_encoding_2": {
+      "label": "dense_4h_to_h",
+      "entropy": 0.35703246304041536,
+      "importance": 0.6429675369595846,
+      "parent_id": "zone_token_encoding",
+      "children": [],
+      "metadata": {
+        "full_layer_name": "gpt_neox.layers.0.mlp.dense_4h_to_h",
+        "sparsity": 0.07708333432674408,
+        "activation_std": 0.1958412081003189
+      },
+      "crystallized": true
+    },
+    "layer_token_encoding_3": {
+      "label": "post_attention_layer",
+      "entropy": 0.21906572408389097,
+      "importance": 0.7809342759161091,
+      "parent_id": "zone_token_encoding",
+      "children": [],
+      "metadata": {
+        "full_layer_name": "gpt_neox.layers.0.post_attention_layernorm",
+        "sparsity": 0.0511067695915699,
+        "activation_std": 0.47378548979759216
+      },
+      "crystallized": true
+    },
+    "layer_token_encoding_4": {
+      "label": "query_key_value",
+      "entropy": 0.4983167022432883,
+      "importance": 0.5016832977567117,
+      "parent_id": "zone_token_encoding",
+      "children": [],
+      "metadata": {
+        "full_layer_name": "gpt_neox.layers.1.attention.query_key_value",
+        "sparsity": 0.01727430522441864,
+        "activation_std": 3.5985147953033447
+      },
+      "crystallized": true
+    },
+    "zone_pattern_recognition": {
+      "label": "pattern_recognition",
+      "entropy": 0.36744250901191167,
+      "importance": 0.6325574909880883,
+      "parent_id": "root",
+      "children": [
+        "layer_pattern_recognition_0",
+        "layer_pattern_recognition_1",
+        "layer_pattern_recognition_2",
+        "layer_pattern_recognition_3",
+        "layer_pattern_recognition_4"
+      ],
+      "metadata": {
+        "description": "Mid-level pattern recognition and composition",
+        "num_layers": 7,
+        "collapse_ratio": 0.6325574909880883
+      },
+      "crystallized": true
+    },
+    "layer_pattern_recognition_0": {
+      "label": "query_key_value",
+      "entropy": 0.44541777054556464,
+      "importance": 0.5545822294544354,
+      "parent_id": "zone_pattern_recognition",
+      "children": [],
+      "metadata": {
+        "full_layer_name": "gpt_neox.layers.2.attention.query_key_value",
+        "sparsity": 0.01588541641831398,
+        "activation_std": 4.674514293670654
+      },
+      "crystallized": true
+    },
+    "layer_pattern_recognition_1": {
+      "label": "dense_4h_to_h",
+      "entropy": 0.15020479914286788,
+      "importance": 0.8497952008571321,
+      "parent_id": "zone_pattern_recognition",
+      "children": [],
+      "metadata": {
+        "full_layer_name": "gpt_neox.layers.2.mlp.dense_4h_to_h",
+        "sparsity": 0.0283203125,
+        "activation_std": 1.6628854274749756
+      },
+      "crystallized": true
+    },
+    "layer_pattern_recognition_2": {
+      "label": "dense_h_to_4h",
+      "entropy": 0.11842125391776732,
+      "importance": 0.8815787460822326,
+      "parent_id": "zone_pattern_recognition",
+      "children": [],
+      "metadata": {
+        "full_layer_name": "gpt_neox.layers.2.mlp.dense_h_to_4h",
+        "sparsity": 0.01429036445915699,
+        "activation_std": 0.7202808856964111
+      },
+      "crystallized": true
+    },
+    "layer_pattern_recognition_3": {
+      "label": "post_attention_layer",
+      "entropy": 0.4022718914477704,
+      "importance": 0.5977281085522296,
+      "parent_id": "zone_pattern_recognition",
+      "children": [],
+      "metadata": {
+        "full_layer_name": "gpt_neox.layers.2.post_attention_layernorm",
+        "sparsity": 0.01803385466337204,
+        "activation_std": 0.8217730522155762
+      },
+      "crystallized": true
+    },
+    "layer_pattern_recognition_4": {
+      "label": "query_key_value",
+      "entropy": 0.4717079113044167,
+      "importance": 0.5282920886955833,
+      "parent_id": "zone_pattern_recognition",
+      "children": [],
+      "metadata": {
+        "full_layer_name": "gpt_neox.layers.3.attention.query_key_value",
+        "sparsity": 0.015538194216787815,
+        "activation_std": 25.144453048706055
+      },
+      "crystallized": true
+    },
+    "zone_semantic_integration": {
+      "label": "semantic_integration",
+      "entropy": 0.46357587032723496,
+      "importance": 0.536424129672765,
+      "parent_id": "root",
+      "children": [
+        "layer_semantic_integration_0",
+        "layer_semantic_integration_1",
+        "layer_semantic_integration_2",
+        "layer_semantic_integration_3",
+        "layer_semantic_integration_4"
+      ],
+      "metadata": {
+        "description": "High-level semantic integration and generation",
+        "num_layers": 7,
+        "collapse_ratio": 0.536424129672765
+      },
+      "crystallized": true
+    },
+    "layer_semantic_integration_0": {
+      "label": "dense",
+      "entropy": 0.5549049436486581,
+      "importance": 0.44509505635134194,
+      "parent_id": "zone_semantic_integration",
+      "children": [],
+      "metadata": {
+        "full_layer_name": "gpt_neox.layers.4.attention.dense",
+        "sparsity": 0.08977864682674408,
+        "activation_std": 0.10817421972751617
+      },
+      "crystallized": true
+    },
+    "layer_semantic_integration_1": {
+      "label": "query_key_value",
+      "entropy": 0.5190875041493938,
+      "importance": 0.48091249585060625,
+      "parent_id": "zone_semantic_integration",
+      "children": [],
+      "metadata": {
+        "full_layer_name": "gpt_neox.layers.4.attention.query_key_value",
+        "sparsity": 0.014431423507630825,
+        "activation_std": 70.92919921875
+      },
+      "crystallized": true
+    },
+    "layer_semantic_integration_2": {
+      "label": "dense_4h_to_h",
+      "entropy": 0.28612072454636733,
+      "importance": 0.7138792754536327,
+      "parent_id": "zone_semantic_integration",
+      "children": [],
+      "metadata": {
+        "full_layer_name": "gpt_neox.layers.4.mlp.dense_4h_to_h",
+        "sparsity": 0.01992187462747097,
+        "activation_std": 1.2038434743881226
+      },
+      "crystallized": true
+    },
+    "layer_semantic_integration_3": {
+      "label": "post_attention_layer",
+      "entropy": 0.47230201311246856,
+      "importance": 0.5276979868875314,
+      "parent_id": "zone_semantic_integration",
+      "children": [],
+      "metadata": {
+        "full_layer_name": "gpt_neox.layers.4.post_attention_layernorm",
+        "sparsity": 0.01790364645421505,
+        "activation_std": 0.8358050584793091
+      },
+      "crystallized": true
+    },
+    "layer_semantic_integration_4": {
+      "label": "query_key_value",
+      "entropy": 0.5011112192341367,
+      "importance": 0.4988887807658633,
+      "parent_id": "zone_semantic_integration",
+      "children": [],
+      "metadata": {
+        "full_layer_name": "gpt_neox.layers.5.attention.query_key_value",
+        "sparsity": 0.01200086809694767,
+        "activation_std": 98.4013900756836
+      },
+      "crystallized": true
+    }
+  }
+}

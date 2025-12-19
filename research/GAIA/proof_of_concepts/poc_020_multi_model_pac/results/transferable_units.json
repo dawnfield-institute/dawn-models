@@ -1,0 +1,4258 @@
+{
+  "units": [
+    {
+      "unit_id": "bert_emb_cluster_0",
+      "unit_type": "embedding_cluster",
+      "source_model": "bert",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": -0.022006630897521973,
+      "pattern_std": 0.03536668419837952,
+      "metadata": {
+        "cluster_size": 151,
+        "sample_tokens": [
+          13,
+          16,
+          20,
+          28,
+          43
+        ],
+        "inertia": 2.31992769241333
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "bert_emb_cluster_1",
+      "unit_type": "embedding_cluster",
+      "source_model": "bert",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": 0.00014233605179470032,
+      "pattern_std": 0.05560509115457535,
+      "metadata": {
+        "cluster_size": 1,
+        "sample_tokens": [
+          103
+        ],
+        "inertia": 9.14608600511538e-16
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "bert_emb_cluster_2",
+      "unit_type": "embedding_cluster",
+      "source_model": "bert",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": -0.011880651116371155,
+      "pattern_std": 0.030872931703925133,
+      "metadata": {
+        "cluster_size": 1,
+        "sample_tokens": [
+          999
+        ],
+        "inertia": 1.209568554393298e-15
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "bert_emb_cluster_3",
+      "unit_type": "embedding_cluster",
+      "source_model": "bert",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": 0.0008936969097703695,
+      "pattern_std": 0.07327646762132645,
+      "metadata": {
+        "cluster_size": 1,
+        "sample_tokens": [
+          101
+        ],
+        "inertia": 1.184330148938672e-15
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "bert_emb_cluster_4",
+      "unit_type": "embedding_cluster",
+      "source_model": "bert",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": -0.021999960765242577,
+      "pattern_std": 0.03537026792764664,
+      "metadata": {
+        "cluster_size": 131,
+        "sample_tokens": [
+          7,
+          31,
+          36,
+          51,
+          55
+        ],
+        "inertia": 2.0047404766082764
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "bert_emb_cluster_5",
+      "unit_type": "embedding_cluster",
+      "source_model": "bert",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": -0.02197684347629547,
+      "pattern_std": 0.03537970408797264,
+      "metadata": {
+        "cluster_size": 100,
+        "sample_tokens": [
+          4,
+          17,
+          18,
+          29,
+          34
+        ],
+        "inertia": 1.5242421627044678
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "bert_emb_cluster_6",
+      "unit_type": "embedding_cluster",
+      "source_model": "bert",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": -0.02202468551695347,
+      "pattern_std": 0.035373467952013016,
+      "metadata": {
+        "cluster_size": 28,
+        "sample_tokens": [
+          11,
+          14,
+          22,
+          39,
+          67
+        ],
+        "inertia": 0.4178168475627899
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "bert_emb_cluster_7",
+      "unit_type": "embedding_cluster",
+      "source_model": "bert",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": -0.016986357048153877,
+      "pattern_std": 0.038745708763599396,
+      "metadata": {
+        "cluster_size": 1,
+        "sample_tokens": [
+          100
+        ],
+        "inertia": 1.2004932316381786e-15
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "bert_emb_cluster_8",
+      "unit_type": "embedding_cluster",
+      "source_model": "bert",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": -0.0002439218369545415,
+      "pattern_std": 0.027629157528281212,
+      "metadata": {
+        "cluster_size": 1,
+        "sample_tokens": [
+          102
+        ],
+        "inertia": 9.144840866682916e-16
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "bert_emb_cluster_9",
+      "unit_type": "embedding_cluster",
+      "source_model": "bert",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": -0.022033728659152985,
+      "pattern_std": 0.035369228571653366,
+      "metadata": {
+        "cluster_size": 24,
+        "sample_tokens": [
+          19,
+          72,
+          152,
+          176,
+          193
+        ],
+        "inertia": 0.354330837726593
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "bert_emb_cluster_10",
+      "unit_type": "embedding_cluster",
+      "source_model": "bert",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": -0.022034095600247383,
+      "pattern_std": 0.03534310311079025,
+      "metadata": {
+        "cluster_size": 25,
+        "sample_tokens": [
+          41,
+          42,
+          45,
+          56,
+          97
+        ],
+        "inertia": 0.3696604073047638
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "bert_emb_cluster_11",
+      "unit_type": "embedding_cluster",
+      "source_model": "bert",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": -0.02197904884815216,
+      "pattern_std": 0.03537740185856819,
+      "metadata": {
+        "cluster_size": 83,
+        "sample_tokens": [
+          1,
+          23,
+          54,
+          70,
+          74
+        ],
+        "inertia": 1.2816593647003174
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "bert_emb_cluster_12",
+      "unit_type": "embedding_cluster",
+      "source_model": "bert",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": -0.022066177800297737,
+      "pattern_std": 0.03533611819148064,
+      "metadata": {
+        "cluster_size": 29,
+        "sample_tokens": [
+          2,
+          21,
+          24,
+          159,
+          200
+        ],
+        "inertia": 0.4339207410812378
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "bert_emb_cluster_13",
+      "unit_type": "embedding_cluster",
+      "source_model": "bert",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": -0.02205488085746765,
+      "pattern_std": 0.03532618656754494,
+      "metadata": {
+        "cluster_size": 48,
+        "sample_tokens": [
+          9,
+          33,
+          87,
+          149,
+          150
+        ],
+        "inertia": 0.7220335006713867
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "bert_emb_cluster_14",
+      "unit_type": "embedding_cluster",
+      "source_model": "bert",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": -0.022008001804351807,
+      "pattern_std": 0.035354968160390854,
+      "metadata": {
+        "cluster_size": 51,
+        "sample_tokens": [
+          26,
+          30,
+          53,
+          71,
+          77
+        ],
+        "inertia": 0.7721409797668457
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "bert_emb_cluster_15",
+      "unit_type": "embedding_cluster",
+      "source_model": "bert",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": -0.022015580907464027,
+      "pattern_std": 0.035353608429431915,
+      "metadata": {
+        "cluster_size": 142,
+        "sample_tokens": [
+          5,
+          12,
+          25,
+          32,
+          37
+        ],
+        "inertia": 2.17470121383667
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "bert_emb_cluster_16",
+      "unit_type": "embedding_cluster",
+      "source_model": "bert",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": -0.021996086463332176,
+      "pattern_std": 0.03540094569325447,
+      "metadata": {
+        "cluster_size": 16,
+        "sample_tokens": [
+          69,
+          161,
+          312,
+          320,
+          345
+        ],
+        "inertia": 0.22684071958065033
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "bert_emb_cluster_17",
+      "unit_type": "embedding_cluster",
+      "source_model": "bert",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": -0.02205791138112545,
+      "pattern_std": 0.03538141027092934,
+      "metadata": {
+        "cluster_size": 8,
+        "sample_tokens": [
+          6,
+          275,
+          342,
+          652,
+          800
+        ],
+        "inertia": 0.1041509285569191
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "bert_emb_cluster_18",
+      "unit_type": "embedding_cluster",
+      "source_model": "bert",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": -0.021961413323879242,
+      "pattern_std": 0.035394471138715744,
+      "metadata": {
+        "cluster_size": 63,
+        "sample_tokens": [
+          0,
+          3,
+          35,
+          38,
+          46
+        ],
+        "inertia": 0.9575267434120178
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "bert_emb_cluster_19",
+      "unit_type": "embedding_cluster",
+      "source_model": "bert",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": -0.021996721625328064,
+      "pattern_std": 0.035371966660022736,
+      "metadata": {
+        "cluster_size": 96,
+        "sample_tokens": [
+          8,
+          10,
+          15,
+          27,
+          44
+        ],
+        "inertia": 1.4609956741333008
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "bert_confluence_0",
+      "unit_type": "confluence_pattern",
+      "source_model": "bert",
+      "level": 2,
+      "pattern_shape": [
+        4
+      ],
+      "pattern_mean": -0.05492969136284887,
+      "pattern_std": 0.09514537262733382,
+      "metadata": {
+        "layer": 0,
+        "type": "bidirectional_confluence",
+        "original_data_keys": [
+          "query_mean",
+          "key_mean",
+          "value_mean",
+          "qk_alignment"
+        ]
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "bert_confluence_1",
+      "unit_type": "confluence_pattern",
+      "source_model": "bert",
+      "level": 2,
+      "pattern_shape": [
+        4
+      ],
+      "pattern_mean": -0.022239371836279852,
+      "pattern_std": 0.03836893838700921,
+      "metadata": {
+        "layer": 1,
+        "type": "bidirectional_confluence",
+        "original_data_keys": [
+          "query_mean",
+          "key_mean",
+          "value_mean",
+          "qk_alignment"
+        ]
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "bert_confluence_2",
+      "unit_type": "confluence_pattern",
+      "source_model": "bert",
+      "level": 2,
+      "pattern_shape": [
+        4
+      ],
+      "pattern_mean": 0.043793251049556066,
+      "pattern_std": 0.07583427381221745,
+      "metadata": {
+        "layer": 2,
+        "type": "bidirectional_confluence",
+        "original_data_keys": [
+          "query_mean",
+          "key_mean",
+          "value_mean",
+          "qk_alignment"
+        ]
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "bert_confluence_3",
+      "unit_type": "confluence_pattern",
+      "source_model": "bert",
+      "level": 2,
+      "pattern_shape": [
+        4
+      ],
+      "pattern_mean": 0.054397695515759424,
+      "pattern_std": 0.09408325519181926,
+      "metadata": {
+        "layer": 3,
+        "type": "bidirectional_confluence",
+        "original_data_keys": [
+          "query_mean",
+          "key_mean",
+          "value_mean",
+          "qk_alignment"
+        ]
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "bert_confluence_4",
+      "unit_type": "confluence_pattern",
+      "source_model": "bert",
+      "level": 2,
+      "pattern_shape": [
+        4
+      ],
+      "pattern_mean": 0.008751913875582846,
+      "pattern_std": 0.015188190398625363,
+      "metadata": {
+        "layer": 4,
+        "type": "bidirectional_confluence",
+        "original_data_keys": [
+          "query_mean",
+          "key_mean",
+          "value_mean",
+          "qk_alignment"
+        ]
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "bert_confluence_5",
+      "unit_type": "confluence_pattern",
+      "source_model": "bert",
+      "level": 2,
+      "pattern_shape": [
+        4
+      ],
+      "pattern_mean": 0.028452145599568514,
+      "pattern_std": 0.0493522223185037,
+      "metadata": {
+        "layer": 5,
+        "type": "bidirectional_confluence",
+        "original_data_keys": [
+          "query_mean",
+          "key_mean",
+          "value_mean",
+          "qk_alignment"
+        ]
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "bert_confluence_6",
+      "unit_type": "confluence_pattern",
+      "source_model": "bert",
+      "level": 2,
+      "pattern_shape": [
+        4
+      ],
+      "pattern_mean": 0.041766722545982925,
+      "pattern_std": 0.0723215452511983,
+      "metadata": {
+        "layer": 6,
+        "type": "bidirectional_confluence",
+        "original_data_keys": [
+          "query_mean",
+          "key_mean",
+          "value_mean",
+          "qk_alignment"
+        ]
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "bert_confluence_7",
+      "unit_type": "confluence_pattern",
+      "source_model": "bert",
+      "level": 2,
+      "pattern_shape": [
+        4
+      ],
+      "pattern_mean": 0.002388580745837242,
+      "pattern_std": 0.0040926031533504055,
+      "metadata": {
+        "layer": 7,
+        "type": "bidirectional_confluence",
+        "original_data_keys": [
+          "query_mean",
+          "key_mean",
+          "value_mean",
+          "qk_alignment"
+        ]
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "bert_confluence_8",
+      "unit_type": "confluence_pattern",
+      "source_model": "bert",
+      "level": 2,
+      "pattern_shape": [
+        4
+      ],
+      "pattern_mean": -0.003405669214201505,
+      "pattern_std": 0.005949839224424353,
+      "metadata": {
+        "layer": 8,
+        "type": "bidirectional_confluence",
+        "original_data_keys": [
+          "query_mean",
+          "key_mean",
+          "value_mean",
+          "qk_alignment"
+        ]
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "bert_confluence_9",
+      "unit_type": "confluence_pattern",
+      "source_model": "bert",
+      "level": 2,
+      "pattern_shape": [
+        4
+      ],
+      "pattern_mean": 0.07753164124447011,
+      "pattern_std": 0.13433053046214705,
+      "metadata": {
+        "layer": 9,
+        "type": "bidirectional_confluence",
+        "original_data_keys": [
+          "query_mean",
+          "key_mean",
+          "value_mean",
+          "qk_alignment"
+        ]
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "bert_confluence_10",
+      "unit_type": "confluence_pattern",
+      "source_model": "bert",
+      "level": 2,
+      "pattern_shape": [
+        4
+      ],
+      "pattern_mean": 0.04723217348206955,
+      "pattern_std": 0.08175418237417936,
+      "metadata": {
+        "layer": 10,
+        "type": "bidirectional_confluence",
+        "original_data_keys": [
+          "query_mean",
+          "key_mean",
+          "value_mean",
+          "qk_alignment"
+        ]
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "bert_confluence_11",
+      "unit_type": "confluence_pattern",
+      "source_model": "bert",
+      "level": 2,
+      "pattern_shape": [
+        4
+      ],
+      "pattern_mean": 0.01691883842222314,
+      "pattern_std": 0.029255902950092946,
+      "metadata": {
+        "layer": 11,
+        "type": "bidirectional_confluence",
+        "original_data_keys": [
+          "query_mean",
+          "key_mean",
+          "value_mean",
+          "qk_alignment"
+        ]
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_emb_cluster_0",
+      "unit_type": "embedding_cluster",
+      "source_model": "gpt2",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": 0.0005998246488161385,
+      "pattern_std": 0.09728246182203293,
+      "metadata": {
+        "cluster_size": 47,
+        "sample_tokens": [
+          126,
+          127,
+          128,
+          129,
+          130
+        ],
+        "inertia": 479.74658203125
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_emb_cluster_1",
+      "unit_type": "embedding_cluster",
+      "source_model": "gpt2",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": -0.0003659639332909137,
+      "pattern_std": 0.07070282101631165,
+      "metadata": {
+        "cluster_size": 11,
+        "sample_tokens": [
+          448,
+          503,
+          510,
+          572,
+          625
+        ],
+        "inertia": 53.067386627197266
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_emb_cluster_2",
+      "unit_type": "embedding_cluster",
+      "source_model": "gpt2",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": -0.0024721724912524223,
+      "pattern_std": 0.09884362667798996,
+      "metadata": {
+        "cluster_size": 64,
+        "sample_tokens": [
+          94,
+          95,
+          96,
+          97,
+          98
+        ],
+        "inertia": 546.1318359375
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_emb_cluster_3",
+      "unit_type": "embedding_cluster",
+      "source_model": "gpt2",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": 4.008924588561058e-05,
+      "pattern_std": 0.07046442478895187,
+      "metadata": {
+        "cluster_size": 260,
+        "sample_tokens": [
+          80,
+          84,
+          260,
+          261,
+          265
+        ],
+        "inertia": 3037.6259765625
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_emb_cluster_4",
+      "unit_type": "embedding_cluster",
+      "source_model": "gpt2",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": -9.295375639339909e-05,
+      "pattern_std": 0.1570763885974884,
+      "metadata": {
+        "cluster_size": 1,
+        "sample_tokens": [
+          888
+        ],
+        "inertia": 5.21361992748999e-15
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_emb_cluster_5",
+      "unit_type": "embedding_cluster",
+      "source_model": "gpt2",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": -0.0003021326847374439,
+      "pattern_std": 0.07834108918905258,
+      "metadata": {
+        "cluster_size": 26,
+        "sample_tokens": [
+          32,
+          33,
+          34,
+          35,
+          36
+        ],
+        "inertia": 124.74465942382812
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_emb_cluster_6",
+      "unit_type": "embedding_cluster",
+      "source_model": "gpt2",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": 0.0026405323296785355,
+      "pattern_std": 0.10727051645517349,
+      "metadata": {
+        "cluster_size": 59,
+        "sample_tokens": [
+          124,
+          125,
+          153,
+          154,
+          155
+        ],
+        "inertia": 160.62088012695312
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_emb_cluster_7",
+      "unit_type": "embedding_cluster",
+      "source_model": "gpt2",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": -0.00043180366628803313,
+      "pattern_std": 0.0661618709564209,
+      "metadata": {
+        "cluster_size": 42,
+        "sample_tokens": [
+          257,
+          262,
+          281,
+          326,
+          339
+        ],
+        "inertia": 188.45249938964844
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_emb_cluster_8",
+      "unit_type": "embedding_cluster",
+      "source_model": "gpt2",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": -0.0004567159339785576,
+      "pattern_std": 0.09620799124240875,
+      "metadata": {
+        "cluster_size": 4,
+        "sample_tokens": [
+          401,
+          725,
+          785,
+          955
+        ],
+        "inertia": 20.35654067993164
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_emb_cluster_9",
+      "unit_type": "embedding_cluster",
+      "source_model": "gpt2",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": 0.0005782688967883587,
+      "pattern_std": 0.1122988685965538,
+      "metadata": {
+        "cluster_size": 6,
+        "sample_tokens": [
+          258,
+          372,
+          704,
+          722,
+          831
+        ],
+        "inertia": 45.56034851074219
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_emb_cluster_10",
+      "unit_type": "embedding_cluster",
+      "source_model": "gpt2",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": 0.0005199853330850601,
+      "pattern_std": 0.06152591109275818,
+      "metadata": {
+        "cluster_size": 123,
+        "sample_tokens": [
+          220,
+          256,
+          264,
+          266,
+          267
+        ],
+        "inertia": 949.3885498046875
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_emb_cluster_11",
+      "unit_type": "embedding_cluster",
+      "source_model": "gpt2",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": 0.0005981625872664154,
+      "pattern_std": 0.07672148942947388,
+      "metadata": {
+        "cluster_size": 11,
+        "sample_tokens": [
+          294,
+          348,
+          400,
+          536,
+          609
+        ],
+        "inertia": 73.63375854492188
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_emb_cluster_12",
+      "unit_type": "embedding_cluster",
+      "source_model": "gpt2",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": -0.0005146611947566271,
+      "pattern_std": 0.06043632701039314,
+      "metadata": {
+        "cluster_size": 196,
+        "sample_tokens": [
+          0,
+          1,
+          6,
+          8,
+          11
+        ],
+        "inertia": 1154.2935791015625
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_emb_cluster_13",
+      "unit_type": "embedding_cluster",
+      "source_model": "gpt2",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": -0.0012903708266094327,
+      "pattern_std": 0.15491847693920135,
+      "metadata": {
+        "cluster_size": 1,
+        "sample_tokens": [
+          677
+        ],
+        "inertia": 4.475817808014763e-15
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_emb_cluster_14",
+      "unit_type": "embedding_cluster",
+      "source_model": "gpt2",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": 0.0004021294880658388,
+      "pattern_std": 0.09606355428695679,
+      "metadata": {
+        "cluster_size": 4,
+        "sample_tokens": [
+          15,
+          405,
+          486,
+          830
+        ],
+        "inertia": 14.902326583862305
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_emb_cluster_15",
+      "unit_type": "embedding_cluster",
+      "source_model": "gpt2",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": -0.00019853322010021657,
+      "pattern_std": 0.08305022120475769,
+      "metadata": {
+        "cluster_size": 13,
+        "sample_tokens": [
+          53,
+          85,
+          303,
+          332,
+          410
+        ],
+        "inertia": 108.84700012207031
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_emb_cluster_16",
+      "unit_type": "embedding_cluster",
+      "source_model": "gpt2",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": -0.00013195334759075195,
+      "pattern_std": 0.10419110208749771,
+      "metadata": {
+        "cluster_size": 5,
+        "sample_tokens": [
+          333,
+          377,
+          495,
+          870,
+          942
+        ],
+        "inertia": 34.09114074707031
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_emb_cluster_17",
+      "unit_type": "embedding_cluster",
+      "source_model": "gpt2",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": 0.0008753135916776955,
+      "pattern_std": 0.06726275384426117,
+      "metadata": {
+        "cluster_size": 53,
+        "sample_tokens": [
+          2,
+          3,
+          4,
+          5,
+          7
+        ],
+        "inertia": 346.5580139160156
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_emb_cluster_18",
+      "unit_type": "embedding_cluster",
+      "source_model": "gpt2",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": -1.8557533621788025e-05,
+      "pattern_std": 0.078104168176651,
+      "metadata": {
+        "cluster_size": 70,
+        "sample_tokens": [
+          274,
+          276,
+          278,
+          282,
+          291
+        ],
+        "inertia": 812.0730590820312
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_emb_cluster_19",
+      "unit_type": "embedding_cluster",
+      "source_model": "gpt2",
+      "level": 1,
+      "pattern_shape": [
+        768
+      ],
+      "pattern_mean": 4.949490539729595e-05,
+      "pattern_std": 0.10788645595312119,
+      "metadata": {
+        "cluster_size": 4,
+        "sample_tokens": [
+          444,
+          494,
+          798,
+          893
+        ],
+        "inertia": 22.390785217285156
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_layer_0",
+      "unit_type": "layer_pattern",
+      "source_model": "gpt2",
+      "level": 2,
+      "pattern_shape": [
+        2
+      ],
+      "pattern_mean": -0.00034757780849759,
+      "pattern_std": 0.00040095326949085575,
+      "metadata": {
+        "layer": 0,
+        "type": null,
+        "original_data_keys": [
+          "attn_shape",
+          "mlp_shape",
+          "attn_mean",
+          "mlp_mean"
+        ]
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L0_H0",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0016625552671030164,
+      "pattern_std": 0.011357305571436882,
+      "metadata": {
+        "layer": 0,
+        "head": 0
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L0_H1",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0008065239526331425,
+      "pattern_std": 0.013861005194485188,
+      "metadata": {
+        "layer": 0,
+        "head": 1
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L0_H2",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0005746792885474861,
+      "pattern_std": 0.011222909204661846,
+      "metadata": {
+        "layer": 0,
+        "head": 2
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L0_H3",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0018297096248716116,
+      "pattern_std": 0.0195891335606575,
+      "metadata": {
+        "layer": 0,
+        "head": 3
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L0_H4",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0005809300928376615,
+      "pattern_std": 0.015324109233915806,
+      "metadata": {
+        "layer": 0,
+        "head": 4
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L0_H5",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.002025861293077469,
+      "pattern_std": 0.018092000856995583,
+      "metadata": {
+        "layer": 0,
+        "head": 5
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L0_H6",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0013044684892520308,
+      "pattern_std": 0.01173615362495184,
+      "metadata": {
+        "layer": 0,
+        "head": 6
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L0_H7",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.00021845335140824318,
+      "pattern_std": 0.015599817037582397,
+      "metadata": {
+        "layer": 0,
+        "head": 7
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L0_H8",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0004245191812515259,
+      "pattern_std": 0.01345819141715765,
+      "metadata": {
+        "layer": 0,
+        "head": 8
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L0_H9",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0017057823715731502,
+      "pattern_std": 0.009742164053022861,
+      "metadata": {
+        "layer": 0,
+        "head": 9
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L0_H10",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0004903902299702168,
+      "pattern_std": 0.007242080755531788,
+      "metadata": {
+        "layer": 0,
+        "head": 10
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L0_H11",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0019784956239163876,
+      "pattern_std": 0.01273106038570404,
+      "metadata": {
+        "layer": 0,
+        "head": 11
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_layer_1",
+      "unit_type": "layer_pattern",
+      "source_model": "gpt2",
+      "level": 2,
+      "pattern_shape": [
+        2
+      ],
+      "pattern_mean": 0.00033505922965559876,
+      "pattern_std": 0.00030697127021994675,
+      "metadata": {
+        "layer": 1,
+        "type": null,
+        "original_data_keys": [
+          "attn_shape",
+          "mlp_shape",
+          "attn_mean",
+          "mlp_mean"
+        ]
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L1_H0",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0002883280685637146,
+      "pattern_std": 0.0071635437197983265,
+      "metadata": {
+        "layer": 1,
+        "head": 0
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L1_H1",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0006450300570577383,
+      "pattern_std": 0.007731255143880844,
+      "metadata": {
+        "layer": 1,
+        "head": 1
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L1_H2",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.00018624105723574758,
+      "pattern_std": 0.006473241839557886,
+      "metadata": {
+        "layer": 1,
+        "head": 2
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L1_H3",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0007179082604125142,
+      "pattern_std": 0.005740616004914045,
+      "metadata": {
+        "layer": 1,
+        "head": 3
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L1_H4",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 4.9031892558559775e-05,
+      "pattern_std": 0.005764048546552658,
+      "metadata": {
+        "layer": 1,
+        "head": 4
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L1_H5",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0016255800146609545,
+      "pattern_std": 0.011907299980521202,
+      "metadata": {
+        "layer": 1,
+        "head": 5
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L1_H6",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.00010768928041215986,
+      "pattern_std": 0.007615677081048489,
+      "metadata": {
+        "layer": 1,
+        "head": 6
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L1_H7",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0003079026355408132,
+      "pattern_std": 0.00704384408891201,
+      "metadata": {
+        "layer": 1,
+        "head": 7
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L1_H8",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0021980339661240578,
+      "pattern_std": 0.02019663341343403,
+      "metadata": {
+        "layer": 1,
+        "head": 8
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L1_H9",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.004168391227722168,
+      "pattern_std": 0.019177384674549103,
+      "metadata": {
+        "layer": 1,
+        "head": 9
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L1_H10",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.00024874007795006037,
+      "pattern_std": 0.003935583401471376,
+      "metadata": {
+        "layer": 1,
+        "head": 10
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L1_H11",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0005932589410804212,
+      "pattern_std": 0.01216791570186615,
+      "metadata": {
+        "layer": 1,
+        "head": 11
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_layer_2",
+      "unit_type": "layer_pattern",
+      "source_model": "gpt2",
+      "level": 2,
+      "pattern_shape": [
+        2
+      ],
+      "pattern_mean": -0.002489551974576898,
+      "pattern_std": 0.0025717079843161628,
+      "metadata": {
+        "layer": 2,
+        "type": null,
+        "original_data_keys": [
+          "attn_shape",
+          "mlp_shape",
+          "attn_mean",
+          "mlp_mean"
+        ]
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L2_H0",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.00021917695994488895,
+      "pattern_std": 0.004446638748049736,
+      "metadata": {
+        "layer": 2,
+        "head": 0
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L2_H1",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0003414444800000638,
+      "pattern_std": 0.004050110932439566,
+      "metadata": {
+        "layer": 2,
+        "head": 1
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L2_H2",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0004730805230792612,
+      "pattern_std": 0.0042378646321594715,
+      "metadata": {
+        "layer": 2,
+        "head": 2
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L2_H3",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -1.714463360258378e-05,
+      "pattern_std": 0.003451787866652012,
+      "metadata": {
+        "layer": 2,
+        "head": 3
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L2_H4",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.00013265528832562268,
+      "pattern_std": 0.005097166635096073,
+      "metadata": {
+        "layer": 2,
+        "head": 4
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L2_H5",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.00035137758823111653,
+      "pattern_std": 0.004193063825368881,
+      "metadata": {
+        "layer": 2,
+        "head": 5
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L2_H6",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.000590585870668292,
+      "pattern_std": 0.003180817002430558,
+      "metadata": {
+        "layer": 2,
+        "head": 6
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L2_H7",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.002153691602870822,
+      "pattern_std": 0.007941856980323792,
+      "metadata": {
+        "layer": 2,
+        "head": 7
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L2_H8",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.00021695345640182495,
+      "pattern_std": 0.0038347600493580103,
+      "metadata": {
+        "layer": 2,
+        "head": 8
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L2_H9",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0005173816462047398,
+      "pattern_std": 0.004538773559033871,
+      "metadata": {
+        "layer": 2,
+        "head": 9
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L2_H10",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.00019009719835594296,
+      "pattern_std": 0.005273043178021908,
+      "metadata": {
+        "layer": 2,
+        "head": 10
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L2_H11",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.00039729781565256417,
+      "pattern_std": 0.004991255700588226,
+      "metadata": {
+        "layer": 2,
+        "head": 11
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_layer_3",
+      "unit_type": "layer_pattern",
+      "source_model": "gpt2",
+      "level": 2,
+      "pattern_shape": [
+        2
+      ],
+      "pattern_mean": -0.0029872546601836802,
+      "pattern_std": 0.0029627706226165174,
+      "metadata": {
+        "layer": 3,
+        "type": null,
+        "original_data_keys": [
+          "attn_shape",
+          "mlp_shape",
+          "attn_mean",
+          "mlp_mean"
+        ]
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L3_H0",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.001209117821417749,
+      "pattern_std": 0.0068716611713171005,
+      "metadata": {
+        "layer": 3,
+        "head": 0
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L3_H1",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.001735989237204194,
+      "pattern_std": 0.005471214652061462,
+      "metadata": {
+        "layer": 3,
+        "head": 1
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L3_H2",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0007994897896423936,
+      "pattern_std": 0.005722422618418932,
+      "metadata": {
+        "layer": 3,
+        "head": 2
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L3_H3",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.00017849872529041022,
+      "pattern_std": 0.006894315127283335,
+      "metadata": {
+        "layer": 3,
+        "head": 3
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L3_H4",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -5.043548298999667e-06,
+      "pattern_std": 0.004830959253013134,
+      "metadata": {
+        "layer": 3,
+        "head": 4
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L3_H5",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 3.259402001276612e-05,
+      "pattern_std": 0.005080753471702337,
+      "metadata": {
+        "layer": 3,
+        "head": 5
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L3_H6",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -4.0262966649606824e-05,
+      "pattern_std": 0.005262231919914484,
+      "metadata": {
+        "layer": 3,
+        "head": 6
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L3_H7",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0008799272472970188,
+      "pattern_std": 0.0058986106887459755,
+      "metadata": {
+        "layer": 3,
+        "head": 7
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L3_H8",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0005815955810248852,
+      "pattern_std": 0.006059841252863407,
+      "metadata": {
+        "layer": 3,
+        "head": 8
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L3_H9",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0005320459604263306,
+      "pattern_std": 0.005738126579672098,
+      "metadata": {
+        "layer": 3,
+        "head": 9
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L3_H10",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0005035566864535213,
+      "pattern_std": 0.006174460984766483,
+      "metadata": {
+        "layer": 3,
+        "head": 10
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L3_H11",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0012656431645154953,
+      "pattern_std": 0.005211913958191872,
+      "metadata": {
+        "layer": 3,
+        "head": 11
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_layer_4",
+      "unit_type": "layer_pattern",
+      "source_model": "gpt2",
+      "level": 2,
+      "pattern_shape": [
+        2
+      ],
+      "pattern_mean": -0.0015558032173430547,
+      "pattern_std": 0.0017078630771720782,
+      "metadata": {
+        "layer": 4,
+        "type": null,
+        "original_data_keys": [
+          "attn_shape",
+          "mlp_shape",
+          "attn_mean",
+          "mlp_mean"
+        ]
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L4_H0",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0008870417368598282,
+      "pattern_std": 0.007339341100305319,
+      "metadata": {
+        "layer": 4,
+        "head": 0
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L4_H1",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 8.884788258001208e-05,
+      "pattern_std": 0.00665906211361289,
+      "metadata": {
+        "layer": 4,
+        "head": 1
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L4_H2",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0012827287428081036,
+      "pattern_std": 0.005870314780622721,
+      "metadata": {
+        "layer": 4,
+        "head": 2
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L4_H3",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.00015721697127446532,
+      "pattern_std": 0.006260531488806009,
+      "metadata": {
+        "layer": 4,
+        "head": 3
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L4_H4",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0008489444153383374,
+      "pattern_std": 0.006054284051060677,
+      "metadata": {
+        "layer": 4,
+        "head": 4
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L4_H5",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0011891949689015746,
+      "pattern_std": 0.007352237123996019,
+      "metadata": {
+        "layer": 4,
+        "head": 5
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L4_H6",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0019015221623703837,
+      "pattern_std": 0.006804814096540213,
+      "metadata": {
+        "layer": 4,
+        "head": 6
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L4_H7",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0018277637427672744,
+      "pattern_std": 0.006191164720803499,
+      "metadata": {
+        "layer": 4,
+        "head": 7
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L4_H8",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0016344371251761913,
+      "pattern_std": 0.006591056939214468,
+      "metadata": {
+        "layer": 4,
+        "head": 8
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L4_H9",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.001114255515858531,
+      "pattern_std": 0.006690078880637884,
+      "metadata": {
+        "layer": 4,
+        "head": 9
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L4_H10",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0007331276428885758,
+      "pattern_std": 0.006601229775696993,
+      "metadata": {
+        "layer": 4,
+        "head": 10
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L4_H11",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0013469378463923931,
+      "pattern_std": 0.010310685262084007,
+      "metadata": {
+        "layer": 4,
+        "head": 11
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_layer_5",
+      "unit_type": "layer_pattern",
+      "source_model": "gpt2",
+      "level": 2,
+      "pattern_shape": [
+        2
+      ],
+      "pattern_mean": -0.002151173943275353,
+      "pattern_std": 0.0020427024610398803,
+      "metadata": {
+        "layer": 5,
+        "type": null,
+        "original_data_keys": [
+          "attn_shape",
+          "mlp_shape",
+          "attn_mean",
+          "mlp_mean"
+        ]
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L5_H0",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0012431582435965538,
+      "pattern_std": 0.00851499568670988,
+      "metadata": {
+        "layer": 5,
+        "head": 0
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L5_H1",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.003954383544623852,
+      "pattern_std": 0.016810905188322067,
+      "metadata": {
+        "layer": 5,
+        "head": 1
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L5_H2",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0009738428052514791,
+      "pattern_std": 0.0072749024257063866,
+      "metadata": {
+        "layer": 5,
+        "head": 2
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L5_H3",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0001390838879160583,
+      "pattern_std": 0.006583229172974825,
+      "metadata": {
+        "layer": 5,
+        "head": 3
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L5_H4",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.00049923564074561,
+      "pattern_std": 0.008288460783660412,
+      "metadata": {
+        "layer": 5,
+        "head": 4
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L5_H5",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.001799427205696702,
+      "pattern_std": 0.010624770075082779,
+      "metadata": {
+        "layer": 5,
+        "head": 5
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L5_H6",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0007704830495640635,
+      "pattern_std": 0.009287316352128983,
+      "metadata": {
+        "layer": 5,
+        "head": 6
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L5_H7",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.00026021053781732917,
+      "pattern_std": 0.008243627846240997,
+      "metadata": {
+        "layer": 5,
+        "head": 7
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L5_H8",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.00041284196777269244,
+      "pattern_std": 0.010361924767494202,
+      "metadata": {
+        "layer": 5,
+        "head": 8
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L5_H9",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.001176032004877925,
+      "pattern_std": 0.006619640160351992,
+      "metadata": {
+        "layer": 5,
+        "head": 9
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L5_H10",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.00032323517370969057,
+      "pattern_std": 0.005266980268061161,
+      "metadata": {
+        "layer": 5,
+        "head": 10
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L5_H11",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0011957708047702909,
+      "pattern_std": 0.006509214174002409,
+      "metadata": {
+        "layer": 5,
+        "head": 11
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_layer_6",
+      "unit_type": "layer_pattern",
+      "source_model": "gpt2",
+      "level": 2,
+      "pattern_shape": [
+        2
+      ],
+      "pattern_mean": -0.001353761228529038,
+      "pattern_std": 0.001465391553210793,
+      "metadata": {
+        "layer": 6,
+        "type": null,
+        "original_data_keys": [
+          "attn_shape",
+          "mlp_shape",
+          "attn_mean",
+          "mlp_mean"
+        ]
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L6_H0",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0010246422607451677,
+      "pattern_std": 0.006311395205557346,
+      "metadata": {
+        "layer": 6,
+        "head": 0
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L6_H1",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0007524464162997901,
+      "pattern_std": 0.00956809427589178,
+      "metadata": {
+        "layer": 6,
+        "head": 1
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L6_H2",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.001305352314375341,
+      "pattern_std": 0.008621293120086193,
+      "metadata": {
+        "layer": 6,
+        "head": 2
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L6_H3",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -8.532917127013206e-05,
+      "pattern_std": 0.007141537498682737,
+      "metadata": {
+        "layer": 6,
+        "head": 3
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L6_H4",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0012363896239548922,
+      "pattern_std": 0.005778964143246412,
+      "metadata": {
+        "layer": 6,
+        "head": 4
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L6_H5",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -5.832122405990958e-05,
+      "pattern_std": 0.00910170003771782,
+      "metadata": {
+        "layer": 6,
+        "head": 5
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L6_H6",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0026950433384627104,
+      "pattern_std": 0.008958232589066029,
+      "metadata": {
+        "layer": 6,
+        "head": 6
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L6_H7",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0013988376595079899,
+      "pattern_std": 0.0069244541227817535,
+      "metadata": {
+        "layer": 6,
+        "head": 7
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L6_H8",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0019270849879831076,
+      "pattern_std": 0.007941490970551968,
+      "metadata": {
+        "layer": 6,
+        "head": 8
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L6_H9",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0012987061636522412,
+      "pattern_std": 0.019203923642635345,
+      "metadata": {
+        "layer": 6,
+        "head": 9
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L6_H10",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0005972844664938748,
+      "pattern_std": 0.010646875016391277,
+      "metadata": {
+        "layer": 6,
+        "head": 10
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L6_H11",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.00216249143704772,
+      "pattern_std": 0.007695180829614401,
+      "metadata": {
+        "layer": 6,
+        "head": 11
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_layer_7",
+      "unit_type": "layer_pattern",
+      "source_model": "gpt2",
+      "level": 2,
+      "pattern_shape": [
+        2
+      ],
+      "pattern_mean": -0.0018070069309032988,
+      "pattern_std": 0.0017159810122393537,
+      "metadata": {
+        "layer": 7,
+        "type": null,
+        "original_data_keys": [
+          "attn_shape",
+          "mlp_shape",
+          "attn_mean",
+          "mlp_mean"
+        ]
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L7_H0",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0005498980171978474,
+      "pattern_std": 0.009278506971895695,
+      "metadata": {
+        "layer": 7,
+        "head": 0
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L7_H1",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0006144606159068644,
+      "pattern_std": 0.011809643357992172,
+      "metadata": {
+        "layer": 7,
+        "head": 1
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L7_H2",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0029124817810952663,
+      "pattern_std": 0.019629843533039093,
+      "metadata": {
+        "layer": 7,
+        "head": 2
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L7_H3",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.001581311458721757,
+      "pattern_std": 0.009049494750797749,
+      "metadata": {
+        "layer": 7,
+        "head": 3
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L7_H4",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0011390408035367727,
+      "pattern_std": 0.009310435503721237,
+      "metadata": {
+        "layer": 7,
+        "head": 4
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L7_H5",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0005619999137707055,
+      "pattern_std": 0.006129749584943056,
+      "metadata": {
+        "layer": 7,
+        "head": 5
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L7_H6",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0009628753759898245,
+      "pattern_std": 0.009335552342236042,
+      "metadata": {
+        "layer": 7,
+        "head": 6
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L7_H7",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.00025790842482820153,
+      "pattern_std": 0.010676395148038864,
+      "metadata": {
+        "layer": 7,
+        "head": 7
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L7_H8",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0003102365881204605,
+      "pattern_std": 0.008933951146900654,
+      "metadata": {
+        "layer": 7,
+        "head": 8
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L7_H9",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0003723346162587404,
+      "pattern_std": 0.00867445208132267,
+      "metadata": {
+        "layer": 7,
+        "head": 9
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L7_H10",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0007233346113935113,
+      "pattern_std": 0.015010050497949123,
+      "metadata": {
+        "layer": 7,
+        "head": 10
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L7_H11",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0016434035496786237,
+      "pattern_std": 0.011714653111994267,
+      "metadata": {
+        "layer": 7,
+        "head": 11
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_layer_8",
+      "unit_type": "layer_pattern",
+      "source_model": "gpt2",
+      "level": 2,
+      "pattern_shape": [
+        2
+      ],
+      "pattern_mean": -0.0011184032409801148,
+      "pattern_std": 0.0009481305387453176,
+      "metadata": {
+        "layer": 8,
+        "type": null,
+        "original_data_keys": [
+          "attn_shape",
+          "mlp_shape",
+          "attn_mean",
+          "mlp_mean"
+        ]
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L8_H0",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.002526359399780631,
+      "pattern_std": 0.013082621619105339,
+      "metadata": {
+        "layer": 8,
+        "head": 0
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L8_H1",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0004284242750145495,
+      "pattern_std": 0.012242722325026989,
+      "metadata": {
+        "layer": 8,
+        "head": 1
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L8_H2",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0006338084349408746,
+      "pattern_std": 0.009311261586844921,
+      "metadata": {
+        "layer": 8,
+        "head": 2
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L8_H3",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0019233134808018804,
+      "pattern_std": 0.007971856743097305,
+      "metadata": {
+        "layer": 8,
+        "head": 3
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L8_H4",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0003850873908959329,
+      "pattern_std": 0.009251857176423073,
+      "metadata": {
+        "layer": 8,
+        "head": 4
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L8_H5",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0007622888078913093,
+      "pattern_std": 0.007823361083865166,
+      "metadata": {
+        "layer": 8,
+        "head": 5
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L8_H6",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0007841327460482717,
+      "pattern_std": 0.007652394939213991,
+      "metadata": {
+        "layer": 8,
+        "head": 6
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L8_H7",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0009595987503416836,
+      "pattern_std": 0.008750615641474724,
+      "metadata": {
+        "layer": 8,
+        "head": 7
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L8_H8",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0004093434545211494,
+      "pattern_std": 0.007011743728071451,
+      "metadata": {
+        "layer": 8,
+        "head": 8
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L8_H9",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.00010021013440564275,
+      "pattern_std": 0.008587905205786228,
+      "metadata": {
+        "layer": 8,
+        "head": 9
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L8_H10",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 2.4351422325707972e-05,
+      "pattern_std": 0.009785829111933708,
+      "metadata": {
+        "layer": 8,
+        "head": 10
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L8_H11",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0018774103373289108,
+      "pattern_std": 0.009744420647621155,
+      "metadata": {
+        "layer": 8,
+        "head": 11
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_layer_9",
+      "unit_type": "layer_pattern",
+      "source_model": "gpt2",
+      "level": 2,
+      "pattern_shape": [
+        2
+      ],
+      "pattern_mean": -0.0014053683335077949,
+      "pattern_std": 0.0013355130722629838,
+      "metadata": {
+        "layer": 9,
+        "type": null,
+        "original_data_keys": [
+          "attn_shape",
+          "mlp_shape",
+          "attn_mean",
+          "mlp_mean"
+        ]
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L9_H0",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0009717551874928176,
+      "pattern_std": 0.00820152834057808,
+      "metadata": {
+        "layer": 9,
+        "head": 0
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L9_H1",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0006278196815401316,
+      "pattern_std": 0.010705125518143177,
+      "metadata": {
+        "layer": 9,
+        "head": 1
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L9_H2",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0002504530129954219,
+      "pattern_std": 0.007252951618283987,
+      "metadata": {
+        "layer": 9,
+        "head": 2
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L9_H3",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0007050831336528063,
+      "pattern_std": 0.009346029721200466,
+      "metadata": {
+        "layer": 9,
+        "head": 3
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L9_H4",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0016607630532234907,
+      "pattern_std": 0.013550163246691227,
+      "metadata": {
+        "layer": 9,
+        "head": 4
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L9_H5",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0009406870813108981,
+      "pattern_std": 0.011552990414202213,
+      "metadata": {
+        "layer": 9,
+        "head": 5
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L9_H6",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.00050840008771047,
+      "pattern_std": 0.013658454641699791,
+      "metadata": {
+        "layer": 9,
+        "head": 6
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L9_H7",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.00045987602788954973,
+      "pattern_std": 0.008255012333393097,
+      "metadata": {
+        "layer": 9,
+        "head": 7
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L9_H8",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.00010757721611298621,
+      "pattern_std": 0.00926778744906187,
+      "metadata": {
+        "layer": 9,
+        "head": 8
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L9_H9",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0011529744369909167,
+      "pattern_std": 0.013822809793055058,
+      "metadata": {
+        "layer": 9,
+        "head": 9
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L9_H10",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.001038436545059085,
+      "pattern_std": 0.010147904977202415,
+      "metadata": {
+        "layer": 9,
+        "head": 10
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L9_H11",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0006988798268139362,
+      "pattern_std": 0.012027492746710777,
+      "metadata": {
+        "layer": 9,
+        "head": 11
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_layer_10",
+      "unit_type": "layer_pattern",
+      "source_model": "gpt2",
+      "level": 2,
+      "pattern_shape": [
+        2
+      ],
+      "pattern_mean": -0.001557771651278017,
+      "pattern_std": 0.0016502744292665739,
+      "metadata": {
+        "layer": 10,
+        "type": null,
+        "original_data_keys": [
+          "attn_shape",
+          "mlp_shape",
+          "attn_mean",
+          "mlp_mean"
+        ]
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L10_H0",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.000870025425683707,
+      "pattern_std": 0.01145160011947155,
+      "metadata": {
+        "layer": 10,
+        "head": 0
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L10_H1",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.000556611455976963,
+      "pattern_std": 0.013740764930844307,
+      "metadata": {
+        "layer": 10,
+        "head": 1
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L10_H2",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.00033481238642707467,
+      "pattern_std": 0.011613341048359871,
+      "metadata": {
+        "layer": 10,
+        "head": 2
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L10_H3",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 5.952015635557473e-05,
+      "pattern_std": 0.008805357851088047,
+      "metadata": {
+        "layer": 10,
+        "head": 3
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L10_H4",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0018094147089868784,
+      "pattern_std": 0.008520924486219883,
+      "metadata": {
+        "layer": 10,
+        "head": 4
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L10_H5",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0005612093373201787,
+      "pattern_std": 0.01137365773320198,
+      "metadata": {
+        "layer": 10,
+        "head": 5
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L10_H6",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.001121225068345666,
+      "pattern_std": 0.0114576555788517,
+      "metadata": {
+        "layer": 10,
+        "head": 6
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L10_H7",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.00019233080092817545,
+      "pattern_std": 0.01129416935145855,
+      "metadata": {
+        "layer": 10,
+        "head": 7
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L10_H8",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0003301951801404357,
+      "pattern_std": 0.01190113928169012,
+      "metadata": {
+        "layer": 10,
+        "head": 8
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L10_H9",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0004451305139809847,
+      "pattern_std": 0.009309216402471066,
+      "metadata": {
+        "layer": 10,
+        "head": 9
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L10_H10",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.002841182751581073,
+      "pattern_std": 0.013318737037479877,
+      "metadata": {
+        "layer": 10,
+        "head": 10
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L10_H11",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0008316366001963615,
+      "pattern_std": 0.011942814104259014,
+      "metadata": {
+        "layer": 10,
+        "head": 11
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_layer_11",
+      "unit_type": "layer_pattern",
+      "source_model": "gpt2",
+      "level": 2,
+      "pattern_shape": [
+        2
+      ],
+      "pattern_mean": -0.0008962008905655239,
+      "pattern_std": 0.0009502139837422874,
+      "metadata": {
+        "layer": 11,
+        "type": null,
+        "original_data_keys": [
+          "attn_shape",
+          "mlp_shape",
+          "attn_mean",
+          "mlp_mean"
+        ]
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L11_H0",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.00013730459613725543,
+      "pattern_std": 0.009587602689862251,
+      "metadata": {
+        "layer": 11,
+        "head": 0
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L11_H1",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0008360446081496775,
+      "pattern_std": 0.007907327264547348,
+      "metadata": {
+        "layer": 11,
+        "head": 1
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L11_H2",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.00030555552802979946,
+      "pattern_std": 0.009786785580217838,
+      "metadata": {
+        "layer": 11,
+        "head": 2
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L11_H3",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -8.238808368332684e-05,
+      "pattern_std": 0.011309848167002201,
+      "metadata": {
+        "layer": 11,
+        "head": 3
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L11_H4",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0009218130726367235,
+      "pattern_std": 0.013944771140813828,
+      "metadata": {
+        "layer": 11,
+        "head": 4
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L11_H5",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.00030410161707550287,
+      "pattern_std": 0.010040810331702232,
+      "metadata": {
+        "layer": 11,
+        "head": 5
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L11_H6",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0005456336657516658,
+      "pattern_std": 0.010676618665456772,
+      "metadata": {
+        "layer": 11,
+        "head": 6
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L11_H7",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -4.0217419154942036e-05,
+      "pattern_std": 0.00851944275200367,
+      "metadata": {
+        "layer": 11,
+        "head": 7
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L11_H8",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0004408416571095586,
+      "pattern_std": 0.00862843543291092,
+      "metadata": {
+        "layer": 11,
+        "head": 8
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L11_H9",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.0003543542989064008,
+      "pattern_std": 0.009983359836041927,
+      "metadata": {
+        "layer": 11,
+        "head": 9
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L11_H10",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": 0.00014098407700657845,
+      "pattern_std": 0.008287426084280014,
+      "metadata": {
+        "layer": 11,
+        "head": 10
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "gpt2_head_L11_H11",
+      "unit_type": "attention_head",
+      "source_model": "gpt2",
+      "level": 3,
+      "pattern_shape": [
+        64
+      ],
+      "pattern_mean": -0.0008081601117737591,
+      "pattern_std": 0.010603195056319237,
+      "metadata": {
+        "layer": 11,
+        "head": 11
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "pythia_emb_cluster_0",
+      "unit_type": "embedding_cluster",
+      "source_model": "pythia",
+      "level": 1,
+      "pattern_shape": [
+        512
+      ],
+      "pattern_mean": 0.0002023619890678674,
+      "pattern_std": 0.01673080585896969,
+      "metadata": {
+        "cluster_size": 6,
+        "sample_tokens": [
+          127,
+          128,
+          129,
+          132,
+          446
+        ],
+        "inertia": 2.053445339202881
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "pythia_emb_cluster_1",
+      "unit_type": "embedding_cluster",
+      "source_model": "pythia",
+      "level": 1,
+      "pattern_shape": [
+        512
+      ],
+      "pattern_mean": -0.0004003650392405689,
+      "pattern_std": 0.012490534223616123,
+      "metadata": {
+        "cluster_size": 46,
+        "sample_tokens": [
+          42,
+          247,
+          253,
+          271,
+          309
+        ],
+        "inertia": 15.76159381866455
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "pythia_emb_cluster_2",
+      "unit_type": "embedding_cluster",
+      "source_model": "pythia",
+      "level": 1,
+      "pattern_shape": [
+        512
+      ],
+      "pattern_mean": 4.1367296944372356e-05,
+      "pattern_std": 0.015725228935480118,
+      "metadata": {
+        "cluster_size": 23,
+        "sample_tokens": [
+          102,
+          106,
+          108,
+          109,
+          110
+        ],
+        "inertia": 8.935332298278809
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "pythia_emb_cluster_3",
+      "unit_type": "embedding_cluster",
+      "source_model": "pythia",
+      "level": 1,
+      "pattern_shape": [
+        512
+      ],
+      "pattern_mean": -1.1395517503842711e-05,
+      "pattern_std": 0.013660140335559845,
+      "metadata": {
+        "cluster_size": 32,
+        "sample_tokens": [
+          276,
+          297,
+          302,
+          304,
+          317
+        ],
+        "inertia": 13.582883834838867
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "pythia_emb_cluster_4",
+      "unit_type": "embedding_cluster",
+      "source_model": "pythia",
+      "level": 1,
+      "pattern_shape": [
+        512
+      ],
+      "pattern_mean": -0.0003261741658207029,
+      "pattern_std": 0.014782430604100227,
+      "metadata": {
+        "cluster_size": 12,
+        "sample_tokens": [
+          60,
+          92,
+          95,
+          315,
+          397
+        ],
+        "inertia": 4.285905838012695
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "pythia_emb_cluster_5",
+      "unit_type": "embedding_cluster",
+      "source_model": "pythia",
+      "level": 1,
+      "pattern_shape": [
+        512
+      ],
+      "pattern_mean": 7.189072493929416e-05,
+      "pattern_std": 0.011031866073608398,
+      "metadata": {
+        "cluster_size": 32,
+        "sample_tokens": [
+          130,
+          131,
+          133,
+          134,
+          135
+        ],
+        "inertia": 12.053890228271484
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "pythia_emb_cluster_6",
+      "unit_type": "embedding_cluster",
+      "source_model": "pythia",
+      "level": 1,
+      "pattern_shape": [
+        512
+      ],
+      "pattern_mean": -0.00033437740057706833,
+      "pattern_std": 0.015897108241915703,
+      "metadata": {
+        "cluster_size": 15,
+        "sample_tokens": [
+          6,
+          17,
+          18,
+          19,
+          20
+        ],
+        "inertia": 4.746705532073975
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "pythia_emb_cluster_7",
+      "unit_type": "embedding_cluster",
+      "source_model": "pythia",
+      "level": 1,
+      "pattern_shape": [
+        512
+      ],
+      "pattern_mean": -0.0002738896291702986,
+      "pattern_std": 0.008982120081782341,
+      "metadata": {
+        "cluster_size": 89,
+        "sample_tokens": [
+          249,
+          251,
+          255,
+          257,
+          261
+        ],
+        "inertia": 38.28410339355469
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "pythia_emb_cluster_8",
+      "unit_type": "embedding_cluster",
+      "source_model": "pythia",
+      "level": 1,
+      "pattern_shape": [
+        512
+      ],
+      "pattern_mean": -0.0004414387803990394,
+      "pattern_std": 0.011452257633209229,
+      "metadata": {
+        "cluster_size": 96,
+        "sample_tokens": [
+          0,
+          2,
+          3,
+          4,
+          5
+        ],
+        "inertia": 32.9789924621582
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "pythia_emb_cluster_9",
+      "unit_type": "embedding_cluster",
+      "source_model": "pythia",
+      "level": 1,
+      "pattern_shape": [
+        512
+      ],
+      "pattern_mean": -0.0001788801746442914,
+      "pattern_std": 0.01534345280379057,
+      "metadata": {
+        "cluster_size": 39,
+        "sample_tokens": [
+          246,
+          256,
+          260,
+          268,
+          269
+        ],
+        "inertia": 14.540836334228516
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "pythia_emb_cluster_10",
+      "unit_type": "embedding_cluster",
+      "source_model": "pythia",
+      "level": 1,
+      "pattern_shape": [
+        512
+      ],
+      "pattern_mean": 5.404409603215754e-05,
+      "pattern_std": 0.013996832072734833,
+      "metadata": {
+        "cluster_size": 14,
+        "sample_tokens": [
+          259,
+          303,
+          358,
+          385,
+          516
+        ],
+        "inertia": 5.894222736358643
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "pythia_emb_cluster_11",
+      "unit_type": "embedding_cluster",
+      "source_model": "pythia",
+      "level": 1,
+      "pattern_shape": [
+        512
+      ],
+      "pattern_mean": -0.0002498315880075097,
+      "pattern_std": 0.011747234500944614,
+      "metadata": {
+        "cluster_size": 84,
+        "sample_tokens": [
+          262,
+          263,
+          264,
+          267,
+          272
+        ],
+        "inertia": 36.57802963256836
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "pythia_emb_cluster_12",
+      "unit_type": "embedding_cluster",
+      "source_model": "pythia",
+      "level": 1,
+      "pattern_shape": [
+        512
+      ],
+      "pattern_mean": -0.00030739791691303253,
+      "pattern_std": 0.012335335835814476,
+      "metadata": {
+        "cluster_size": 54,
+        "sample_tokens": [
+          66,
+          67,
+          68,
+          69,
+          70
+        ],
+        "inertia": 22.242462158203125
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "pythia_emb_cluster_13",
+      "unit_type": "embedding_cluster",
+      "source_model": "pythia",
+      "level": 1,
+      "pattern_shape": [
+        512
+      ],
+      "pattern_mean": 6.135244620963931e-05,
+      "pattern_std": 0.009434140287339687,
+      "metadata": {
+        "cluster_size": 107,
+        "sample_tokens": [
+          161,
+          162,
+          163,
+          164,
+          165
+        ],
+        "inertia": 50.453277587890625
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "pythia_emb_cluster_14",
+      "unit_type": "embedding_cluster",
+      "source_model": "pythia",
+      "level": 1,
+      "pattern_shape": [
+        512
+      ],
+      "pattern_mean": 0.00010069440759252757,
+      "pattern_std": 0.0062478757463395596,
+      "metadata": {
+        "cluster_size": 73,
+        "sample_tokens": [
+          1,
+          50,
+          126,
+          147,
+          148
+        ],
+        "inertia": 22.518951416015625
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "pythia_emb_cluster_15",
+      "unit_type": "embedding_cluster",
+      "source_model": "pythia",
+      "level": 1,
+      "pattern_shape": [
+        512
+      ],
+      "pattern_mean": -0.00016075826715677977,
+      "pattern_std": 0.014632097445428371,
+      "metadata": {
+        "cluster_size": 14,
+        "sample_tokens": [
+          48,
+          80,
+          258,
+          274,
+          287
+        ],
+        "inertia": 5.616379737854004
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "pythia_emb_cluster_16",
+      "unit_type": "embedding_cluster",
+      "source_model": "pythia",
+      "level": 1,
+      "pattern_shape": [
+        512
+      ],
+      "pattern_mean": 2.4073146050795913e-05,
+      "pattern_std": 0.009181645698845387,
+      "metadata": {
+        "cluster_size": 182,
+        "sample_tokens": [
+          290,
+          291,
+          300,
+          307,
+          311
+        ],
+        "inertia": 86.60462188720703
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "pythia_emb_cluster_17",
+      "unit_type": "embedding_cluster",
+      "source_model": "pythia",
+      "level": 1,
+      "pattern_shape": [
+        512
+      ],
+      "pattern_mean": 7.435752195306122e-06,
+      "pattern_std": 0.014665558934211731,
+      "metadata": {
+        "cluster_size": 41,
+        "sample_tokens": [
+          96,
+          97,
+          98,
+          99,
+          100
+        ],
+        "inertia": 16.376541137695312
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "pythia_emb_cluster_18",
+      "unit_type": "embedding_cluster",
+      "source_model": "pythia",
+      "level": 1,
+      "pattern_shape": [
+        512
+      ],
+      "pattern_mean": -0.0003983287315350026,
+      "pattern_std": 0.017399124801158905,
+      "metadata": {
+        "cluster_size": 23,
+        "sample_tokens": [
+          34,
+          35,
+          36,
+          37,
+          38
+        ],
+        "inertia": 7.461185455322266
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "pythia_emb_cluster_19",
+      "unit_type": "embedding_cluster",
+      "source_model": "pythia",
+      "level": 1,
+      "pattern_shape": [
+        512
+      ],
+      "pattern_mean": -0.0003102593473158777,
+      "pattern_std": 0.018914636224508286,
+      "metadata": {
+        "cluster_size": 18,
+        "sample_tokens": [
+          23,
+          24,
+          25,
+          26,
+          520
+        ],
+        "inertia": 5.456592559814453
+      },
+      "compatible_with": []
+    },
+    {
+      "unit_id": "pythia_scaling_curve",
+      "unit_type": "scaling_curve",
+      "source_model": "pythia",
+      "level": 2,
+      "pattern_shape": [
+        3,
+        6
+      ],
+      "pattern_mean": 29.459448785476948,
+      "pattern_std": 51.85294057353207,
+      "metadata": {
+        "n_layers": 6,
+        "norm_trend": [
+          29.243179321289062,
+          10.140003840128557
+        ],
+        "scale_trend": [
+          0.9239997823167035,
+          0.32039475728784433
+        ]
+      },
+      "compatible_with": []
+    }
+  ],
+  "alignments": {
+    "bert_vs_gpt2": {
+      "compatible_units": 0,
+      "total_compared": 400,
+      "type_alignments": {
+        "embedding_cluster": {
+          "compatible": 0,
+          "total": 400,
+          "rate": 0.0
+        }
+      },
+      "overall_rate": 0.0
+    },
+    "bert_vs_pythia": {
+      "compatible_units": 0,
+      "total_compared": 0,
+      "type_alignments": {
+        "embedding_cluster": {
+          "compatible": 0,
+          "total": 0,
+          "rate": 0
+        }
+      },
+      "overall_rate": 0
+    },
+    "gpt2_vs_pythia": {
+      "compatible_units": 0,
+      "total_compared": 0,
+      "type_alignments": {
+        "embedding_cluster": {
+          "compatible": 0,
+          "total": 0,
+          "rate": 0
+        }
+      },
+      "overall_rate": 0
+    }
+  },
+  "summary": {
+    "total_units": 229,
+    "compatible_units": 0,
+    "unit_types": [
+      "embedding_cluster",
+      "confluence_pattern",
+      "layer_pattern",
+      "attention_head",
+      "scaling_curve"
+    ]
+  }
+}

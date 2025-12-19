@@ -1,0 +1,22 @@
+{
+  "timestamp": "2025-12-19T13:06:20.088397",
+  "metrics": {
+    "models_loaded": 2,
+    "nodes_created": 10000,
+    "categories_created": 8,
+    "byref_links": 70,
+    "phase_transitions": 1187,
+    "field_evolutions": 1187,
+    "confluence_contexts": 368,
+    "generations": 24,
+    "transitions_learned": 1118
+  },
+  "architecture": {
+    "pac_system": true,
+    "klein_gordon": true,
+    "resonance_attention": true,
+    "byref_composition": true,
+    "sec_phases": true,
+    "tiered_cache": true
+  }
+}

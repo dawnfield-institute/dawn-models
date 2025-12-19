@@ -1,0 +1,7 @@
+schema_version: "2.0"
+description: "Research journals documenting POC-021 experiments and findings"
+semantic_scope: "documentation"
+proficiency_level: "research"
+
+files:
+  - "[2024-12-19_multi_level_pac_learning.md]": "Multi-level PAC learning breakthrough - generalization without backprop"

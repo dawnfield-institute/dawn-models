@@ -1,0 +1,12 @@
+{
+  "instances": 7596,
+  "categories": 10,
+  "supercategories": 4,
+  "confluence_contexts": 2942,
+  "metrics": {
+    "delta_updates": 70,
+    "confluence_added": 975,
+    "byref_adjustments": 0,
+    "conservation_checks": 5
+  }
+}

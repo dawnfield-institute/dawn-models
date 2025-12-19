@@ -1,0 +1,27 @@
+schema_version: "2.0"
+description: "Extract learned knowledge from trained models as PAC trees"
+semantic_scope: "implementation"
+proficiency_level: "research"
+estimated_context_weight: 0.8
+
+hypothesis: |
+  Trained model capabilities can be extracted as architecture-agnostic PAC trees
+  by analyzing entropy collapse patterns and mapping information geometry.
+
+success_criteria:
+  - Extract coherent PAC tree from Pythia-70M
+  - PAC tree shows clear capability zones
+  - Export format compatible with GAIA import
+  - No training data required
+
+files:
+  - "[extractor.py]": "Main PAC extraction pipeline"
+  - "[test_extraction.py]": "Test extraction with Pythia-70M"
+  - "[README.md]": "POC documentation"
+
+dependencies:
+  - transformers
+  - fracton
+
+status: in_progress
+started: 2024-12-18

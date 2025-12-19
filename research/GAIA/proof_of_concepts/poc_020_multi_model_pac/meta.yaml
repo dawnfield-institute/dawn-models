@@ -1,0 +1,13 @@
+schema_version: "2.0"
+description: "Extract multiple models into PAC trees and compare their confluence structures"
+semantic_scope: "implementation"
+proficiency_level: "research"
+files:
+  - "[README.md]": "Multi-model PAC comparison overview"
+  - "[multi_model_extractor.py]": "Extract multiple models into PAC trees"
+  - "[pac_tree_comparator.py]": "Compare PAC tree structures"
+  - "[run_comparison.py]": "Main experiment script"
+child_directories:
+  - "journals": "Daily research logs"
+  - "extracted_trees": "PAC trees from different models"
+  - "results": "Comparison results"

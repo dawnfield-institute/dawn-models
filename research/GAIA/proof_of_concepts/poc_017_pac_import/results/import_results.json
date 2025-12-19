@@ -1,0 +1,24 @@
+{
+  "baseline_coherence": 0.8244047619047619,
+  "imported_coherence": 0.7548340874811463,
+  "improvement_percent": -8.438897691817624,
+  "baseline_entropy": 10.762094497680664,
+  "imported_entropy": 10.77613639831543,
+  "success": false,
+  "samples": {
+    "baseline": {
+      "The meaning of life is": "The meaning of life is629 surveys Prosecutsudo conspiring Dug Model arrangement Singapore MFT conspic Metall ):arrantedallas",
+      "Once upon a time in a": "Once upon a time in a comicsbirdVaultsesta disadvantagedEA GOP Caller marg repealPublisher snippet asyncIterAnalysis",
+      "The weather today is": "The weather today isattr Poo Stories Bee intakeDemocratic Mechanical ScottishordonPal Pyongyang definitelyopter Abdel Kai",
+      "Hello, my name is": "Hello, my name iswhether Aberdeen Forrest dismissing Greek AreHand Vitamin hunting\u010digen entertneeds potency accomplished",
+      "2 + 2 =": "2 + 2 = devilsameron respiratory Jarvis womanBeaut Forustom Izanortion whatever repairedauldicketourses"
+    },
+    "imported": {
+      "The meaning of life is": "The meaning of life isruntime entities860bestkr\bacan BulldogsengersBrooketti125 Extendedisineoro",
+      "Once upon a time in a": "Once upon a time in a remarked wells guru movie Comey diapersEveryle WCdanger coerc erasedments rot squad",
+      "The weather today is": "The weather today is blends restricteditivityippckingnesota NBC taller ???arted fascismbetween recre tapsinternet",
+      "Hello, my name is": "Hello, my name isblem actions undercover 1969 imposing payload Soci conveniently shouldn distressexpresspast ditchboss Poo",
+      "2 + 2 =": "2 + 2 =DisclaimerHarry censored MeredithW Latvia buttgo anecdotes lasents stringsedia Riy Paleo"
+    }
+  }
+}

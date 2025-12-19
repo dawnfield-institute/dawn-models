@@ -1,0 +1,14 @@
+{
+  "final_layers": 10,
+  "target_layers": 13,
+  "final_dim": 256,
+  "target_dim": 640,
+  "confluence_depth": 5,
+  "confluence_contexts": 146,
+  "growth_events": 9,
+  "final_loss": {
+    "total": 0.38011073408221463,
+    "layer_ratio": 0.7692307692307693,
+    "pattern_sim": 0.011885137817896086
+  }
+}

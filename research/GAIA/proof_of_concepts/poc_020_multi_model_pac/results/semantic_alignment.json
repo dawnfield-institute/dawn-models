@@ -1,0 +1,247 @@
+{
+  "embedding_alignments": {
+    "bert_vs_gpt2": {
+      "avg_best_match_score": 0.24532856047153473,
+      "mutual_matches": 77,
+      "mutual_rate": 0.385,
+      "high_similarity_pairs": 0,
+      "similarity_distribution": {
+        "mean": 0.0005335757741704583,
+        "std": 0.0912480503320694,
+        "max": 0.6474942564964294,
+        "p90": 0.11531947404146194
+      }
+    },
+    "bert_vs_pythia": {
+      "avg_best_match_score": 0.2426566630601883,
+      "mutual_matches": 95,
+      "mutual_rate": 0.475,
+      "high_similarity_pairs": 0,
+      "similarity_distribution": {
+        "mean": 0.0010669741313904524,
+        "std": 0.0896894559264183,
+        "max": 0.39079663157463074,
+        "p90": 0.11622045636177063
+      }
+    },
+    "gpt2_vs_pythia": {
+      "avg_best_match_score": 0.29286739230155945,
+      "mutual_matches": 79,
+      "mutual_rate": 0.395,
+      "high_similarity_pairs": 0,
+      "similarity_distribution": {
+        "mean": -0.0001928462297655642,
+        "std": 0.12486571818590164,
+        "max": 0.4538901448249817,
+        "p90": 0.1587378352880478
+      }
+    }
+  },
+  "cluster_alignments": {
+    "bert_vs_gpt2": {
+      "mutual_cluster_matches": 9,
+      "avg_best_cluster_sim": 0.26275819540023804,
+      "aligned_pairs": [
+        {
+          "cluster1": 15,
+          "cluster2": 0,
+          "similarity": 0.35178226232528687
+        },
+        {
+          "cluster1": 14,
+          "cluster2": 8,
+          "similarity": 0.33248576521873474
+        },
+        {
+          "cluster1": 13,
+          "cluster2": 4,
+          "similarity": 0.31132134795188904
+        },
+        {
+          "cluster1": 18,
+          "cluster2": 5,
+          "similarity": 0.3103604018688202
+        },
+        {
+          "cluster1": 11,
+          "cluster2": 13,
+          "similarity": 0.29769018292427063
+        },
+        {
+          "cluster1": 10,
+          "cluster2": 11,
+          "similarity": 0.2808920443058014
+        },
+        {
+          "cluster1": 4,
+          "cluster2": 2,
+          "similarity": 0.2743102014064789
+        },
+        {
+          "cluster1": 2,
+          "cluster2": 12,
+          "similarity": 0.259977787733078
+        },
+        {
+          "cluster1": 12,
+          "cluster2": 10,
+          "similarity": 0.2468307614326477
+        }
+      ]
+    },
+    "bert_vs_pythia": {
+      "mutual_cluster_matches": 6,
+      "avg_best_cluster_sim": 0.2843415439128876,
+      "aligned_pairs": [
+        {
+          "cluster1": 15,
+          "cluster2": 11,
+          "similarity": 0.42230525612831116
+        },
+        {
+          "cluster1": 7,
+          "cluster2": 5,
+          "similarity": 0.3876116871833801
+        },
+        {
+          "cluster1": 13,
+          "cluster2": 6,
+          "similarity": 0.348708838224411
+        },
+        {
+          "cluster1": 0,
+          "cluster2": 1,
+          "similarity": 0.3453117311000824
+        },
+        {
+          "cluster1": 11,
+          "cluster2": 8,
+          "similarity": 0.3347162902355194
+        },
+        {
+          "cluster1": 9,
+          "cluster2": 4,
+          "similarity": 0.16201646625995636
+        }
+      ]
+    },
+    "gpt2_vs_pythia": {
+      "mutual_cluster_matches": 8,
+      "avg_best_cluster_sim": 0.47965264320373535,
+      "aligned_pairs": [
+        {
+          "cluster1": 3,
+          "cluster2": 7,
+          "similarity": 0.711823582649231
+        },
+        {
+          "cluster1": 19,
+          "cluster2": 19,
+          "similarity": 0.6557167768478394
+        },
+        {
+          "cluster1": 13,
+          "cluster2": 6,
+          "similarity": 0.6266189813613892
+        },
+        {
+          "cluster1": 17,
+          "cluster2": 4,
+          "similarity": 0.6154640913009644
+        },
+        {
+          "cluster1": 0,
+          "cluster2": 11,
+          "similarity": 0.48480305075645447
+        },
+        {
+          "cluster1": 9,
+          "cluster2": 18,
+          "similarity": 0.4825606942176819
+        },
+        {
+          "cluster1": 5,
+          "cluster2": 5,
+          "similarity": 0.47354835271835327
+        },
+        {
+          "cluster1": 15,
+          "cluster2": 10,
+          "similarity": 0.4531252384185791
+        }
+      ]
+    }
+  },
+  "isomorphisms": [
+    {
+      "level": 0,
+      "type": "root",
+      "count": 1,
+      "isomorphic": true,
+      "models": [
+        "bert",
+        "gpt2"
+      ]
+    },
+    {
+      "level": 1,
+      "type": "embedding",
+      "count": 1000,
+      "isomorphic": true,
+      "models": [
+        "bert",
+        "gpt2"
+      ]
+    },
+    {
+      "level": 3,
+      "type": "attention_head",
+      "count": 144,
+      "isomorphic": true,
+      "models": [
+        "bert",
+        "gpt2"
+      ]
+    },
+    {
+      "level": 0,
+      "type": "root",
+      "count": 1,
+      "isomorphic": true,
+      "models": [
+        "bert",
+        "pythia"
+      ]
+    },
+    {
+      "level": 1,
+      "type": "embedding",
+      "count": 1000,
+      "isomorphic": true,
+      "models": [
+        "bert",
+        "pythia"
+      ]
+    },
+    {
+      "level": 0,
+      "type": "root",
+      "count": 1,
+      "isomorphic": true,
+      "models": [
+        "gpt2",
+        "pythia"
+      ]
+    },
+    {
+      "level": 1,
+      "type": "embedding",
+      "count": 1000,
+      "isomorphic": true,
+      "models": [
+        "gpt2",
+        "pythia"
+      ]
+    }
+  ]
+}

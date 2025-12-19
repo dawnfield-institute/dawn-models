@@ -1,0 +1,31 @@
+{
+  "tests": [
+    {
+      "name": "Delta Pattern Preservation",
+      "passed": 8,
+      "total": 8,
+      "rate": 1.0
+    },
+    {
+      "name": "Cross-Model Resonance",
+      "passed": 5,
+      "total": 5,
+      "in_grafts": 5
+    },
+    {
+      "name": "Bidirectional Transfer",
+      "passed": 3,
+      "total": 3
+    },
+    {
+      "name": "Tree Structure Integrity",
+      "passed": 1,
+      "total": 1
+    }
+  ],
+  "summary": {
+    "total_passed": 17,
+    "total_tests": 17,
+    "success_rate": 1.0
+  }
+}

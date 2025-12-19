@@ -1,0 +1,300 @@
+{
+  "embedding_stats": {
+    "bert": {
+      "count": 1000,
+      "dim": 768,
+      "norm_mean": 1.1615124940872192,
+      "norm_std": 0.03343556076288223,
+      "cos_sim_mean": 0.9884654879570007,
+      "cos_sim_std": 0.0005902682896703482,
+      "cos_sim_min": 0.9862884879112244,
+      "cos_sim_max": 0.9905118346214294
+    },
+    "gpt2": {
+      "count": 1000,
+      "dim": 768,
+      "norm_mean": 3.5042293071746826,
+      "norm_std": 0.5496227741241455,
+      "cos_sim_mean": 0.3278869390487671,
+      "cos_sim_std": 0.09402621537446976,
+      "cos_sim_min": 0.07257568836212158,
+      "cos_sim_max": 0.8593092560768127
+    },
+    "pythia": {
+      "count": 1000,
+      "dim": 512,
+      "norm_mean": 0.6843088865280151,
+      "norm_std": 0.08618924766778946,
+      "cos_sim_mean": 0.1083100438117981,
+      "cos_sim_std": 0.1043054461479187,
+      "cos_sim_min": -0.11928799003362656,
+      "cos_sim_max": 0.6484941244125366
+    }
+  },
+  "isomorphisms": [
+    {
+      "models": [
+        "bert",
+        "gpt2"
+      ],
+      "depth_sim": 1.0,
+      "branch_sim": 1.0,
+      "width_corr": 1.0,
+      "overall": 1.0
+    },
+    {
+      "models": [
+        "bert",
+        "pythia"
+      ],
+      "depth_sim": 0.6666666666666667,
+      "branch_sim": 0.08839272059948004,
+      "width_corr": 0.9999862554902866,
+      "overall": 0.5850152142521444
+    },
+    {
+      "models": [
+        "gpt2",
+        "pythia"
+      ],
+      "depth_sim": 0.6666666666666667,
+      "branch_sim": 0.08839272059948004,
+      "width_corr": 0.9999862554902866,
+      "overall": 0.5850152142521444
+    }
+  ],
+  "primitives": {
+    "embedding_blocks": [
+      {
+        "model": "bert",
+        "count": 1000,
+        "sample_stats": [
+          {
+            "norm": 1.1604856252670288,
+            "mean": -0.02202569879591465,
+            "std": 0.035614874213933945
+          },
+          {
+            "norm": 1.1611380577087402,
+            "mean": -0.02214179001748562,
+            "std": 0.03557055443525314
+          },
+          {
+            "norm": 1.1599611043930054,
+            "mean": -0.022219443693757057,
+            "std": 0.035471994429826736
+          },
+          {
+            "norm": 1.1612019538879395,
+            "mean": -0.021851161494851112,
+            "std": 0.035752519965171814
+          },
+          {
+            "norm": 1.1612452268600464,
+            "mean": -0.021901709958910942,
+            "std": 0.03572341427206993
+          }
+        ]
+      },
+      {
+        "model": "gpt2",
+        "count": 1000,
+        "sample_stats": [
+          {
+            "norm": 3.0683786869049072,
+            "mean": 0.0004903291701339185,
+            "std": 0.11071948707103729
+          },
+          {
+            "norm": 3.0900771617889404,
+            "mean": 0.004479709547013044,
+            "std": 0.11141352355480194
+          },
+          {
+            "norm": 3.5134739875793457,
+            "mean": 0.002641599625349045,
+            "std": 0.1267540454864502
+          },
+          {
+            "norm": 3.6932809352874756,
+            "mean": 0.0018080825684592128,
+            "std": 0.13325752317905426
+          },
+          {
+            "norm": 3.2104291915893555,
+            "mean": 0.00021939475846011192,
+            "std": 0.115846186876297
+          }
+        ]
+      },
+      {
+        "model": "pythia",
+        "count": 1000,
+        "sample_stats": [
+          {
+            "norm": 0.5967004299163818,
+            "mean": 0.00047309277579188347,
+            "std": 0.02636643871665001
+          },
+          {
+            "norm": 0.0003781203122343868,
+            "mean": -1.085689291357994e-06,
+            "std": 1.6675408915034495e-05
+          },
+          {
+            "norm": 0.6756375432014465,
+            "mean": -0.0006259221117943525,
+            "std": 0.02985268086194992
+          },
+          {
+            "norm": 0.6341140866279602,
+            "mean": -0.00045297679025679827,
+            "std": 0.02802048623561859
+          },
+          {
+            "norm": 0.6929372549057007,
+            "mean": -0.00010659266263246536,
+            "std": 0.030623605474829674
+          }
+        ]
+      }
+    ],
+    "attention_blocks": [
+      {
+        "model": "bert",
+        "type": "attention_head",
+        "count": 144
+      },
+      {
+        "model": "gpt2",
+        "type": "attention_head",
+        "count": 144
+      }
+    ],
+    "layer_blocks": [
+      {
+        "model": "gpt2",
+        "count": 12
+      }
+    ],
+    "confluence_points": [
+      {
+        "model": "bert",
+        "layer": 0,
+        "type": "bidirectional_confluence",
+        "qk_alignment": -0.21972630548579855
+      },
+      {
+        "model": "bert",
+        "layer": 1,
+        "type": "bidirectional_confluence",
+        "qk_alignment": -0.08869595254800075
+      },
+      {
+        "model": "bert",
+        "layer": 2,
+        "type": "bidirectional_confluence",
+        "qk_alignment": 0.17514205009174624
+      },
+      {
+        "model": "bert",
+        "layer": 3,
+        "type": "bidirectional_confluence",
+        "qk_alignment": 0.2173545137404139
+      },
+      {
+        "model": "bert",
+        "layer": 4,
+        "type": "bidirectional_confluence",
+        "qk_alignment": 0.035058374175596166
+      },
+      {
+        "model": "bert",
+        "layer": 5,
+        "type": "bidirectional_confluence",
+        "qk_alignment": 0.1139326997850779
+      },
+      {
+        "model": "bert",
+        "layer": 6,
+        "type": "bidirectional_confluence",
+        "qk_alignment": 0.16703129288144644
+      },
+      {
+        "model": "bert",
+        "layer": 7,
+        "type": "bidirectional_confluence",
+        "qk_alignment": 0.00947679358907378
+      },
+      {
+        "model": "bert",
+        "layer": 8,
+        "type": "bidirectional_confluence",
+        "qk_alignment": -0.01371058387712149
+      },
+      {
+        "model": "bert",
+        "layer": 9,
+        "type": "bidirectional_confluence",
+        "qk_alignment": 0.3101989226064768
+      },
+      {
+        "model": "bert",
+        "layer": 10,
+        "type": "bidirectional_confluence",
+        "qk_alignment": 0.1888345126141529
+      },
+      {
+        "model": "bert",
+        "layer": 11,
+        "type": "bidirectional_confluence",
+        "qk_alignment": 0.0675909480894832
+      }
+    ],
+    "scaling_patterns": [
+      {
+        "model": "pythia",
+        "layer": 0,
+        "weight_norm": 31.648469924926758,
+        "relative_scale": 1.0
+      },
+      {
+        "model": "pythia",
+        "layer": 1,
+        "weight_norm": 31.421323776245117,
+        "relative_scale": 0.9928228394857491
+      },
+      {
+        "model": "pythia",
+        "layer": 2,
+        "weight_norm": 28.718318939208984,
+        "relative_scale": 0.9074157141666446
+      },
+      {
+        "model": "pythia",
+        "layer": 3,
+        "weight_norm": 87.0690689086914,
+        "relative_scale": 2.7511304374343433
+      },
+      {
+        "model": "pythia",
+        "layer": 4,
+        "weight_norm": 192.74290466308594,
+        "relative_scale": 6.090117630340134
+      },
+      {
+        "model": "pythia",
+        "layer": 5,
+        "weight_norm": 127.88762664794922,
+        "relative_scale": 4.040878657050754
+      }
+    ]
+  },
+  "common_patterns": [
+    {
+      "name": "root_to_embeddings",
+      "description": "All models have root \u2192 embeddings pattern",
+      "universal": true
+    }
+  ]
+}

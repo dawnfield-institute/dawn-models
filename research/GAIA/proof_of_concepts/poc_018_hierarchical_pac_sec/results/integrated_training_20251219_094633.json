@@ -1,0 +1,43 @@
+{
+  "timestamp": "20251219_094633",
+  "model_stats": {
+    "materialized_layers": 12,
+    "max_layers": 12,
+    "sec_crystallized": 0,
+    "pac_nodes": 643,
+    "skill_stats": {
+      "total_skills": 16,
+      "levels_with_skills": 3,
+      "skills_by_level": {
+        "2": 8,
+        "1": 8,
+        "0": 0
+      },
+      "skill_chains_discovered": 0
+    },
+    "layer_usage": {
+      "0": 106,
+      "1": 106,
+      "2": 67,
+      "3": 67,
+      "4": 42,
+      "5": 42,
+      "6": 33,
+      "7": 33,
+      "8": 33,
+      "9": 33,
+      "10": 33,
+      "11": 33
+    },
+    "level_usage": {
+      "phrase": 39,
+      "paragraph": 9,
+      "document": 33,
+      "sentence": 25
+    }
+  },
+  "training_results": {
+    "n_levels_trained": 5,
+    "skill_chains_discovered": 0
+  }
+}

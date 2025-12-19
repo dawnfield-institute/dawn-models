@@ -1,0 +1,85 @@
+{
+  "semantic_similarity": {
+    "pairs": [
+      {
+        "words": [
+          "king",
+          "queen"
+        ],
+        "source_similarity": 0.23962435126304626,
+        "graft_similarity": 0.9999999403953552
+      },
+      {
+        "words": [
+          "cat",
+          "dog"
+        ],
+        "source_similarity": 0.23962435126304626,
+        "graft_similarity": 0.9999999403953552
+      },
+      {
+        "words": [
+          "happy",
+          "sad"
+        ],
+        "source_similarity": 0.23962435126304626,
+        "graft_similarity": 0.9999999403953552
+      },
+      {
+        "words": [
+          "run",
+          "walk"
+        ],
+        "source_similarity": 0.23962435126304626,
+        "graft_similarity": 0.9999999403953552
+      },
+      {
+        "words": [
+          "big",
+          "large"
+        ],
+        "source_similarity": 0.23962435126304626,
+        "graft_similarity": 0.9999999403953552
+      }
+    ],
+    "avg_source_similarity": 0.23962435126304626,
+    "avg_graft_similarity": 0.9999999403953552,
+    "preservation_rate": 0.0
+  },
+  "layer_activation": {
+    "test_inputs": [
+      {
+        "text": "The cat sat on the mat.",
+        "source_target_sim": -0.04089801385998726,
+        "graft_source_sim": -0.006267145276069641
+      },
+      {
+        "text": "Hello world!",
+        "source_target_sim": -0.033919185400009155,
+        "graft_source_sim": -0.002236496191471815
+      },
+      {
+        "text": "Machine learning is fascinating.",
+        "source_target_sim": -0.04592807590961456,
+        "graft_source_sim": -0.0016144445398822427
+      }
+    ],
+    "source_target_similarity": -0.040248425056536995,
+    "graft_source_similarity": -0.0033726953358078995
+  },
+  "pattern_retrieval": {
+    "queries": 6,
+    "found_via_graft": 6,
+    "found_in_target": 0,
+    "not_found": 0,
+    "retrieval_rate": 1.0
+  },
+  "delta_transfer": {
+    "grafts_evaluated": 8,
+    "high_fidelity": 8,
+    "medium_fidelity": 0,
+    "low_fidelity": 0,
+    "avg_fidelity": 0.9999999552965164
+  },
+  "overall_score": 0.49915681499017717
+}

@@ -1,0 +1,136 @@
+{
+  "summary": {
+    "final_layers": 6,
+    "token_skills": 1125,
+    "word_skills": 3810,
+    "sentence_skills": 600,
+    "token_confluence": 280,
+    "word_confluence": 243,
+    "sentence_confluence": 40,
+    "epochs": 15,
+    "history": [
+      {
+        "tokens": 355,
+        "words": 314,
+        "sentences": 60,
+        "token_skills": 75,
+        "word_skills": 254,
+        "sentence_skills": 40
+      },
+      {
+        "tokens": 355,
+        "words": 314,
+        "sentences": 60,
+        "token_skills": 75,
+        "word_skills": 254,
+        "sentence_skills": 40
+      },
+      {
+        "tokens": 355,
+        "words": 314,
+        "sentences": 60,
+        "token_skills": 75,
+        "word_skills": 254,
+        "sentence_skills": 40
+      },
+      {
+        "tokens": 355,
+        "words": 314,
+        "sentences": 60,
+        "token_skills": 75,
+        "word_skills": 254,
+        "sentence_skills": 40
+      },
+      {
+        "tokens": 355,
+        "words": 314,
+        "sentences": 60,
+        "token_skills": 75,
+        "word_skills": 254,
+        "sentence_skills": 40
+      },
+      {
+        "tokens": 355,
+        "words": 314,
+        "sentences": 60,
+        "token_skills": 75,
+        "word_skills": 254,
+        "sentence_skills": 40
+      },
+      {
+        "tokens": 355,
+        "words": 314,
+        "sentences": 60,
+        "token_skills": 75,
+        "word_skills": 254,
+        "sentence_skills": 40
+      },
+      {
+        "tokens": 355,
+        "words": 314,
+        "sentences": 60,
+        "token_skills": 75,
+        "word_skills": 254,
+        "sentence_skills": 40
+      },
+      {
+        "tokens": 355,
+        "words": 314,
+        "sentences": 60,
+        "token_skills": 75,
+        "word_skills": 254,
+        "sentence_skills": 40
+      },
+      {
+        "tokens": 355,
+        "words": 314,
+        "sentences": 60,
+        "token_skills": 75,
+        "word_skills": 254,
+        "sentence_skills": 40
+      },
+      {
+        "tokens": 355,
+        "words": 314,
+        "sentences": 60,
+        "token_skills": 75,
+        "word_skills": 254,
+        "sentence_skills": 40
+      },
+      {
+        "tokens": 355,
+        "words": 314,
+        "sentences": 60,
+        "token_skills": 75,
+        "word_skills": 254,
+        "sentence_skills": 40
+      },
+      {
+        "tokens": 355,
+        "words": 314,
+        "sentences": 60,
+        "token_skills": 75,
+        "word_skills": 254,
+        "sentence_skills": 40
+      },
+      {
+        "tokens": 355,
+        "words": 314,
+        "sentences": 60,
+        "token_skills": 75,
+        "word_skills": 254,
+        "sentence_skills": 40
+      },
+      {
+        "tokens": 355,
+        "words": 314,
+        "sentences": 60,
+        "token_skills": 75,
+        "word_skills": 254,
+        "sentence_skills": 40
+      }
+    ]
+  },
+  "corpus_size": 20,
+  "total_sentences": 80
+}

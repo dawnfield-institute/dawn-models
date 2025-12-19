@@ -1,0 +1,18 @@
+{
+  "instances": 7596,
+  "categories": 10,
+  "supercategories": 4,
+  "confluence_contexts": 1848,
+  "clusters": [
+    "animal",
+    "color",
+    "number",
+    "time",
+    "body",
+    "action",
+    "emotion",
+    "nature",
+    "place",
+    "food"
+  ]
+}

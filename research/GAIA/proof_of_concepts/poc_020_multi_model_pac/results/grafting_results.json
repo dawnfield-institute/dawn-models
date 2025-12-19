@@ -1,0 +1,73 @@
+{
+  "verification": {
+    "total_grafts": 8,
+    "successful": 8,
+    "failed": 0,
+    "success_rate": 1.0,
+    "avg_similarity_improvement": 0.9999999552965164
+  },
+  "transfer_test": {
+    "source_queries": 10,
+    "matches_before": 0,
+    "matches_after": 0,
+    "improvement": 0
+  },
+  "grafts": [
+    {
+      "source_label": "layer:transformer_11",
+      "target_label": "hub:layers:EleutherAI/pythia-70m",
+      "similarity_before": 0.0,
+      "similarity_after": 0.9999999403953552,
+      "success": true
+    },
+    {
+      "source_label": "layer:transformer_11",
+      "target_label": "hub:layers:EleutherAI/pythia-70m",
+      "similarity_before": 0.0,
+      "similarity_after": 0.9999999403953552,
+      "success": true
+    },
+    {
+      "source_label": "layer:transformer_11",
+      "target_label": "hub:layers:EleutherAI/pythia-70m",
+      "similarity_before": 0.0,
+      "similarity_after": 0.9999999403953552,
+      "success": true
+    },
+    {
+      "source_label": "layer:transformer_9",
+      "target_label": "hub:layers:EleutherAI/pythia-70m",
+      "similarity_before": 0.0,
+      "similarity_after": 0.9999998211860657,
+      "success": true
+    },
+    {
+      "source_label": "layer:transformer_10",
+      "target_label": "hub:layers:EleutherAI/pythia-70m",
+      "similarity_before": 0.0,
+      "similarity_after": 1.0,
+      "success": true
+    },
+    {
+      "source_label": "layer:layers_0",
+      "target_label": "hub:layers:gpt2",
+      "similarity_before": 0.0,
+      "similarity_after": 1.0000001192092896,
+      "success": true
+    },
+    {
+      "source_label": "layer:layers_1",
+      "target_label": "hub:layers:gpt2",
+      "similarity_before": 0.0,
+      "similarity_after": 0.9999999403953552,
+      "success": true
+    },
+    {
+      "source_label": "layer:layers_2",
+      "target_label": "hub:layers:gpt2",
+      "similarity_before": 0.0,
+      "similarity_after": 0.9999999403953552,
+      "success": true
+    }
+  ]
+}

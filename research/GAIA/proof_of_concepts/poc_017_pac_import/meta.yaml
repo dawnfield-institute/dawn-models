@@ -1,0 +1,27 @@
+schema_version: "2.0"
+description: "Import extracted PAC trees into GAIA for training-free capability transfer"
+semantic_scope: "implementation"
+proficiency_level: "research"
+estimated_context_weight: 0.9
+
+hypothesis: |
+  GAIA can acquire language capabilities from imported PAC trees 
+  WITHOUT any training, by configuring field patterns from extracted knowledge.
+
+success_criteria:
+  - Load PAC tree from POC-016 extraction
+  - Configure GAIA-1 field patterns from PAC
+  - Test language generation quality
+  - Compare performance: imported vs untrained vs trained
+
+files:
+  - "[importer.py]": "PAC to GAIA import pipeline"
+  - "[test_import.py]": "Test importing Pythia PAC into GAIA"
+  - "[README.md]": "POC documentation"
+
+dependencies:
+  - poc_016_pac_extraction
+  - gaia_1 (v4)
+
+status: in_progress
+started: 2024-12-18

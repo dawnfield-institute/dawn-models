@@ -1,0 +1,11 @@
+schema_version: "2.0"
+description: "True no-backprop training with complete model transfer - back to first principles"
+semantic_scope: "implementation"
+proficiency_level: "research"
+files:
+  - "[README.md]": "POC overview - correcting backprop drift"
+  - "[no_backprop_training.py]": "Training without any gradients"
+  - "[complete_transfer.py]": "Full model behavior transfer from extraction"
+  - "[test_no_backprop.py]": "Validation that no gradients are used"
+estimated_context_weight: 15
+validation_type: "test_suite"

@@ -1,0 +1,14 @@
+schema_version: "2.0"
+description: "Hierarchical PAC-SEC training with lazy transformer layers"
+semantic_scope: "implementation"
+proficiency_level: "research"
+files:
+  - "[README.md]": "POC overview and hypothesis"
+  - "[hierarchical_pac_sec.py]": "Core implementation"
+  - "[test_hierarchical.py]": "Test demonstrations"
+child_directories:
+  - "journals": "Daily research logs"
+  - "scripts": "Experiment scripts"
+  - "results": "Experiment outputs"
+estimated_context_weight: 0.8
+validation_type: "experimental"

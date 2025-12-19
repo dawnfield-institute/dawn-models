@@ -1,0 +1,209 @@
+{
+  "structures": {
+    "gpt2": {
+      "model": "gpt2",
+      "total_nodes": 78,
+      "delta_stats": {
+        "embeddings": {
+          "count": 50,
+          "avg_norm": 4.027040295600891,
+          "avg_sparsity": 0.055963543206453324,
+          "norm_std": 0.4418387864216898,
+          "potential_mean": 0.9816000000000001
+        },
+        "layers": {
+          "count": 12,
+          "avg_norm": 0.9210711171229681,
+          "avg_sparsity": 0.8916015625,
+          "norm_std": 0.25215589705987246,
+          "potential_mean": 0.9816000000000001
+        },
+        "attention": {
+          "count": 12,
+          "avg_norm": 0.3092867297430833,
+          "avg_sparsity": 0.9840494791666666,
+          "norm_std": 0.08564608842255206,
+          "potential_mean": 0.9816000000000001
+        }
+      },
+      "topology": {
+        "depth": 2,
+        "hubs": 3,
+        "branching": {
+          "embedding_fan_out": 50,
+          "layer_fan_out": 12,
+          "attention_fan_out": 12
+        },
+        "total_leaves": 74
+      },
+      "potential_distribution": {}
+    },
+    "bert-base-uncased": {
+      "model": "bert-base-uncased",
+      "total_nodes": 78,
+      "delta_stats": {
+        "embeddings": {
+          "count": 50,
+          "avg_norm": 1.3855448365211487,
+          "avg_sparsity": 0.1462500046938658,
+          "norm_std": 0.16970101107082514,
+          "potential_mean": 0.9816000000000001
+        },
+        "layers": {
+          "count": 12,
+          "avg_norm": 1.7293452024459839,
+          "avg_sparsity": 0.8619791666666666,
+          "norm_std": 0.07002400742417672,
+          "potential_mean": 0.9816000000000001
+        },
+        "attention": {
+          "count": 12,
+          "avg_norm": 0.19287731871008873,
+          "avg_sparsity": 0.9791666666666666,
+          "norm_std": 0.04278331694883345,
+          "potential_mean": 0.9816000000000001
+        }
+      },
+      "topology": {
+        "depth": 2,
+        "hubs": 3,
+        "branching": {
+          "embedding_fan_out": 50,
+          "layer_fan_out": 12,
+          "attention_fan_out": 12
+        },
+        "total_leaves": 74
+      },
+      "potential_distribution": {}
+    },
+    "EleutherAI/pythia-70m": {
+      "model": "EleutherAI/pythia-70m",
+      "total_nodes": 60,
+      "delta_stats": {
+        "embeddings": {
+          "count": 50,
+          "avg_norm": 0.7084242820739746,
+          "avg_sparsity": 0.251328125,
+          "norm_std": 0.010429340747559326,
+          "potential_mean": 0.9816000000000001
+        },
+        "layers": {
+          "count": 6,
+          "avg_norm": 18.831459681193035,
+          "avg_sparsity": 0.8834635416666666,
+          "norm_std": 14.087961660148556,
+          "potential_mean": 0.9816000000000001
+        }
+      },
+      "topology": {
+        "depth": 2,
+        "hubs": 3,
+        "branching": {
+          "embedding_fan_out": 50,
+          "layer_fan_out": 6,
+          "attention_fan_out": 0
+        },
+        "total_leaves": 56
+      },
+      "potential_distribution": {}
+    }
+  },
+  "delta_comparisons": {
+    "gpt2_vs_bert-base-uncased": {
+      "models": [
+        "gpt2",
+        "bert-base-uncased"
+      ],
+      "component_similarity": {
+        "embeddings": {
+          "distribution_similarity": 0.5573180106620028,
+          "mean_difference": 0.7166391108370953,
+          "model1_stats": {
+            "avg_norm": 4.027040295600891,
+            "avg_sparsity": 0.055963543206453324
+          },
+          "model2_stats": {
+            "avg_norm": 1.3855448365211487,
+            "avg_sparsity": 0.1462500046938658
+          }
+        },
+        "layers": {
+          "distribution_similarity": 0.7858561081708728,
+          "mean_difference": 0.2234435386878128,
+          "model1_stats": {
+            "avg_norm": 0.9210711171229681,
+            "avg_sparsity": 0.8916015625
+          },
+          "model2_stats": {
+            "avg_norm": 1.7293452024459839,
+            "avg_sparsity": 0.8619791666666666
+          }
+        }
+      }
+    },
+    "gpt2_vs_EleutherAI/pythia-70m": {
+      "models": [
+        "gpt2",
+        "EleutherAI/pythia-70m"
+      ],
+      "component_similarity": {
+        "embeddings": {
+          "distribution_similarity": 0.4946390053588705,
+          "mean_difference": 0.907107644239404,
+          "model1_stats": {
+            "avg_norm": 4.027040295600891,
+            "avg_sparsity": 0.055963543206453324
+          },
+          "model2_stats": {
+            "avg_norm": 0.7084242820739746,
+            "avg_sparsity": 0.251328125
+          }
+        },
+        "layers": {
+          "distribution_similarity": 0.10542539949683777,
+          "mean_difference": 4.7887173633013544,
+          "model1_stats": {
+            "avg_norm": 0.9210711171229681,
+            "avg_sparsity": 0.8916015625
+          },
+          "model2_stats": {
+            "avg_norm": 18.831459681193035,
+            "avg_sparsity": 0.8834635416666666
+          }
+        }
+      }
+    },
+    "bert-base-uncased_vs_EleutherAI/pythia-70m": {
+      "models": [
+        "bert-base-uncased",
+        "EleutherAI/pythia-70m"
+      ],
+      "component_similarity": {
+        "embeddings": {
+          "distribution_similarity": 0.7994764607957413,
+          "mean_difference": 0.20507129746489228,
+          "model1_stats": {
+            "avg_norm": 1.3855448365211487,
+            "avg_sparsity": 0.1462500046938658
+          },
+          "model2_stats": {
+            "avg_norm": 0.7084242820739746,
+            "avg_sparsity": 0.251328125
+          }
+        },
+        "layers": {
+          "distribution_similarity": 0.10728181671794569,
+          "mean_difference": 4.576016012113542,
+          "model1_stats": {
+            "avg_norm": 1.7293452024459839,
+            "avg_sparsity": 0.8619791666666666
+          },
+          "model2_stats": {
+            "avg_norm": 18.831459681193035,
+            "avg_sparsity": 0.8834635416666666
+          }
+        }
+      }
+    }
+  }
+}

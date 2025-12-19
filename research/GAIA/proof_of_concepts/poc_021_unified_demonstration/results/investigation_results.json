@@ -1,0 +1,149 @@
+{
+  "timestamp": "2025-12-19T13:34:49.173309",
+  "prompt_analysis": {
+    "Love is": {
+      "prompt_length": 2,
+      "categories": "['emotion']",
+      "num_categories": 1,
+      "token_transition_conf": 1.0,
+      "category_transition_conf": 0,
+      "avg_hit_rate": 100.0,
+      "hit_rate_variance": 0.0
+    },
+    "Time is": {
+      "prompt_length": 2,
+      "categories": "[]",
+      "num_categories": 0,
+      "token_transition_conf": 1.0,
+      "category_transition_conf": 0,
+      "avg_hit_rate": 100.0,
+      "hit_rate_variance": 0.0
+    },
+    "Trees grow": {
+      "prompt_length": 3,
+      "categories": "[]",
+      "num_categories": 0,
+      "token_transition_conf": 1.0,
+      "category_transition_conf": 0,
+      "avg_hit_rate": 100.0,
+      "hit_rate_variance": 0.0
+    },
+    "Fire burns": {
+      "prompt_length": 2,
+      "categories": "['nature']",
+      "num_categories": 1,
+      "token_transition_conf": 1.0,
+      "category_transition_conf": 0,
+      "avg_hit_rate": 100.0,
+      "hit_rate_variance": 0.0
+    },
+    "A dog": {
+      "prompt_length": 2,
+      "categories": "['animal']",
+      "num_categories": 1,
+      "token_transition_conf": 1.0,
+      "category_transition_conf": 0,
+      "avg_hit_rate": 100.0,
+      "hit_rate_variance": 0.0
+    },
+    "Research shows": {
+      "prompt_length": 2,
+      "categories": "[]",
+      "num_categories": 0,
+      "token_transition_conf": 1.0,
+      "category_transition_conf": 0,
+      "avg_hit_rate": 100.0,
+      "hit_rate_variance": 0.0
+    },
+    "History shows": {
+      "prompt_length": 2,
+      "categories": "[]",
+      "num_categories": 0,
+      "token_transition_conf": 1.0,
+      "category_transition_conf": 0,
+      "avg_hit_rate": 100.0,
+      "hit_rate_variance": 0.0
+    },
+    "People often": {
+      "prompt_length": 2,
+      "categories": "[]",
+      "num_categories": 0,
+      "token_transition_conf": 1.0,
+      "category_transition_conf": 0,
+      "avg_hit_rate": 100.0,
+      "hit_rate_variance": 0.0
+    },
+    "The cat": {
+      "prompt_length": 2,
+      "categories": "['animal']",
+      "num_categories": 1,
+      "token_transition_conf": 1.0,
+      "category_transition_conf": 0,
+      "avg_hit_rate": 100.0,
+      "hit_rate_variance": 0.0
+    },
+    "The sun": {
+      "prompt_length": 2,
+      "categories": "['nature']",
+      "num_categories": 1,
+      "token_transition_conf": 1.0,
+      "category_transition_conf": 0,
+      "avg_hit_rate": 100.0,
+      "hit_rate_variance": 0.0
+    },
+    "Animals need": {
+      "prompt_length": 3,
+      "categories": "[]",
+      "num_categories": 0,
+      "token_transition_conf": 1.0,
+      "category_transition_conf": 0,
+      "avg_hit_rate": 100.0,
+      "hit_rate_variance": 0.0
+    },
+    "Music creates": {
+      "prompt_length": 2,
+      "categories": "[]",
+      "num_categories": 0,
+      "token_transition_conf": 1.0,
+      "category_transition_conf": 0,
+      "avg_hit_rate": 100.0,
+      "hit_rate_variance": 0.0
+    }
+  },
+  "decay_stats": {
+    "total": 1000,
+    "token_level": 990,
+    "category_level": 5,
+    "supercat_level": 5,
+    "crystallized": 2732
+  },
+  "category_results": {
+    "animal": {
+      "hits": 36,
+      "misses": 16,
+      "total": 3
+    },
+    "nature": {
+      "hits": 42,
+      "misses": 4,
+      "total": 3
+    },
+    "emotion": {
+      "hits": 7,
+      "misses": 0,
+      "total": 1
+    },
+    "action": {
+      "hits": 18,
+      "misses": 15,
+      "total": 2
+    }
+  },
+  "scale_stats": {
+    "total": 1021,
+    "token_level": 1016,
+    "category_level": 5,
+    "supercat_level": 0,
+    "crystallized": 2595
+  }
+}

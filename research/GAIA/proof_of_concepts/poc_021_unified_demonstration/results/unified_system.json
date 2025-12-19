@@ -1,0 +1,19 @@
+{
+  "timestamp": "2025-12-19T12:43:57.331335",
+  "metrics": {
+    "models_loaded": 2,
+    "instances_extracted": 10000,
+    "categories_created": 10,
+    "layers_materialized": 5,
+    "confluence_contexts": 3148,
+    "delta_updates": 0,
+    "generations": 8
+  },
+  "layers": 6,
+  "confluence_contexts": 3148,
+  "pac_tree": {
+    "instances": 7596,
+    "categories": 10,
+    "supercategories": 4
+  }
+}

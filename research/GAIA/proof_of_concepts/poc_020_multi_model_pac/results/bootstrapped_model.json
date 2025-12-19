@@ -1,0 +1,12 @@
+{
+  "num_layers": 13,
+  "embed_dim": 256,
+  "num_heads": 10,
+  "materialized_layers": 12,
+  "grammar_rules": 4,
+  "knowledge_sources": [
+    "gpt2",
+    "pythia",
+    "bert"
+  ]
+}

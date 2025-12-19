@@ -1,0 +1,4 @@
+schema_version: "2.0"
+description: "Daily research logs for POC-018"
+semantic_scope: "documentation"
+proficiency_level: "research"

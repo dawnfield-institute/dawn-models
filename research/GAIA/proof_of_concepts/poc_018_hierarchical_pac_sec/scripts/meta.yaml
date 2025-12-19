@@ -1,0 +1,4 @@
+schema_version: "2.0"
+description: "Experiment scripts for hierarchical PAC-SEC"
+semantic_scope: "implementation"
+proficiency_level: "research"
