@@ -1,0 +1,109 @@
+{
+  "experiment": "exp_02_hit_rate_curve",
+  "timestamp": "2026-01-01T21:18:58.133372",
+  "device": "cuda",
+  "vocab_size": 50257,
+  "seq_len": 64,
+  "test_seqs": 500,
+  "constants": {
+    "PHI": 1.6180339887,
+    "PHI_INV": 0.618033988768953,
+    "XI": 0.0618
+  },
+  "data_points": [
+    {
+      "train_sequences": 100,
+      "hit_rate": 0.23790477216243744,
+      "train_seqs": 100,
+      "test_seqs": 500,
+      "transitions": 4015,
+      "unique_tokens_seen": 1567,
+      "time_s": 0.22969317436218262
+    },
+    {
+      "train_sequences": 250,
+      "hit_rate": 0.26520636677742004,
+      "train_seqs": 250,
+      "test_seqs": 500,
+      "transitions": 9282,
+      "unique_tokens_seen": 3141,
+      "time_s": 0.33623480796813965
+    },
+    {
+      "train_sequences": 500,
+      "hit_rate": 0.2692698538303375,
+      "train_seqs": 500,
+      "test_seqs": 500,
+      "transitions": 17356,
+      "unique_tokens_seen": 4959,
+      "time_s": 0.6446528434753418
+    },
+    {
+      "train_sequences": 1000,
+      "hit_rate": 0.32041269540786743,
+      "train_seqs": 1000,
+      "test_seqs": 500,
+      "transitions": 32668,
+      "unique_tokens_seen": 7557,
+      "time_s": 1.1874983310699463
+    },
+    {
+      "train_sequences": 2000,
+      "hit_rate": 0.3607936501502991,
+      "train_seqs": 2000,
+      "test_seqs": 500,
+      "transitions": 59484,
+      "unique_tokens_seen": 11143,
+      "time_s": 2.1150481700897217
+    },
+    {
+      "train_sequences": 4000,
+      "hit_rate": 0.38511112332344055,
+      "train_seqs": 4000,
+      "test_seqs": 500,
+      "transitions": 105064,
+      "unique_tokens_seen": 15424,
+      "time_s": 2.982023000717163
+    },
+    {
+      "train_sequences": 8000,
+      "hit_rate": 0.3989523947238922,
+      "train_seqs": 8000,
+      "test_seqs": 500,
+      "transitions": 186059,
+      "unique_tokens_seen": 20399,
+      "time_s": 5.32354736328125
+    },
+    {
+      "train_sequences": 16000,
+      "hit_rate": 0.42688891291618347,
+      "train_seqs": 16000,
+      "test_seqs": 500,
+      "transitions": 315231,
+      "unique_tokens_seen": 24231,
+      "time_s": 8.990521907806396
+    }
+  ],
+  "curve_fit": {
+    "linear": {
+      "r2": 0.666174876096042,
+      "slope": 1.0352496400987827e-05,
+      "intercept": 0.291851594865052
+    },
+    "logarithmic": {
+      "r2": 0.9731883573309384,
+      "slope": 0.039704453241846925,
+      "intercept": 0.046145783858308795
+    },
+    "power_law": {
+      "r2": 0.9659636777406561,
+      "exponent": 0.12249075894623336,
+      "scale": 0.13468540322219905
+    },
+    "phi_analysis": {
+      "log_slope": 0.039704453241846925,
+      "slope_over_phi_inv": 0.06424315484805823
+    },
+    "best_fit": "logarithmic"
+  }
+}

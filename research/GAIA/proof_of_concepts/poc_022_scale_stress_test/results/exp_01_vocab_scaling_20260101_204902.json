@@ -1,0 +1,53 @@
+{
+  "experiment": "exp_01_vocab_scaling",
+  "timestamp": "2026-01-01T20:39:55.795403",
+  "config": {
+    "vocab_sizes": [
+      10000,
+      25000,
+      50000
+    ],
+    "sequences_per_size": 500,
+    "epochs": 3,
+    "gpu_cache_size": 2000
+  },
+  "metrics": {
+    "10000": {
+      "vocab_size": 10000,
+      "setup_time_s": 50.69828772544861,
+      "memory_mb": 31.25,
+      "final_hit_rate": 0.6038924731182795,
+      "transitions_learned": 12512,
+      "epochs": [
+        {
+          "epoch": 1,
+          "hit_rate": 0.5801290322580646,
+          "time_s": 2.6874654293060303
+        },
+        {
+          "epoch": 2,
+          "hit_rate": 0.6061290322580645,
+          "time_s": 5.252484560012817
+        },
+        {
+          "epoch": 3,
+          "hit_rate": 0.6254193548387097,
+          "time_s": 5.236315488815308
+        }
+      ],
+      "cache_stats": {
+        "total_patterns": 10000,
+        "gpu_cached": 2000,
+        "gpu_cache_size": 2000,
+        "cache_utilization": 1.0,
+        "hit_rate": 0.0,
+        "hits": 0,
+        "misses": 0,
+        "prefetch_hits": 0,
+        "evictions": 0,
+        "pac_tree_stats": {
+          "total_nodes": 10001,
+          "leaf_nodes": 6379,
+          "internal_nodes": 3622,
+          "patterns_stored": 10000,
+          "memory_bytes": 

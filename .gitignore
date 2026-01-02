@@ -311,3 +311,5 @@ conda-meta/
 *.dfi
 *.dawn
 .dawn/
+# Claude local settings
+.claude/

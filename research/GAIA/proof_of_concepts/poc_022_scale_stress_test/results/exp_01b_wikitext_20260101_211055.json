@@ -1,0 +1,94 @@
+{
+  "experiment": "exp_01b_wikitext_real",
+  "timestamp": "2026-01-01T21:09:18.513621",
+  "device": "cuda",
+  "metrics": {
+    "2000": {
+      "dataset": "wikitext-2",
+      "vocab_size": 50257,
+      "num_sequences": 2000,
+      "load_time_s": 19.714154481887817,
+      "memory_mb": 0.9765625,
+      "final_hit_rate": 0.651206374168396,
+      "transitions_learned": 61442,
+      "epochs": [
+        {
+          "epoch": 1,
+          "hit_rate": 0.651206374168396,
+          "time_s": 2.1033666133880615,
+          "tokens_per_sec": 59903.96500448473
+        },
+        {
+          "epoch": 2,
+          "hit_rate": 0.651206374168396,
+          "time_s": 1.627100944519043,
+          "tokens_per_sec": 77438.34236249216
+        },
+        {
+          "epoch": 3,
+          "hit_rate": 0.651206374168396,
+          "time_s": 1.722686767578125,
+          "tokens_per_sec": 73141.5614094138
+        }
+      ]
+    },
+    "5000": {
+      "dataset": "wikitext-2",
+      "vocab_size": 50257,
+      "num_sequences": 5000,
+      "load_time_s": 13.1852707862854,
+      "memory_mb": 2.44140625,
+      "final_hit_rate": 0.5977206230163574,
+      "transitions_learned": 130885,
+      "epochs": [
+        {
+          "epoch": 1,
+          "hit_rate": 0.5977206230163574,
+          "time_s": 4.562091827392578,
+          "tokens_per_sec": 69047.27303133557
+        },
+        {
+          "epoch": 2,
+          "hit_rate": 0.5977206230163574,
+          "time_s": 3.8220021724700928,
+          "tokens_per_sec": 82417.5355704785
+        },
+        {
+          "epoch": 3,
+          "hit_rate": 0.5977206230163574,
+          "time_s": 3.5313658714294434,
+          "tokens_per_sec": 89200.6128700827
+        }
+      ]
+    },
+    "10000": {
+      "dataset": "wikitext-2",
+      "vocab_size": 50257,
+      "num_sequences": 10000,
+      "load_time_s": 26.319811582565308,
+      "memory_mb": 4.8828125,
+      "final_hit_rate": 0.553509533405304,
+      "transitions_learned": 228619,
+      "epochs": [
+        {
+          "epoch": 1,
+          "hit_rate": 0.553509533405304,
+          "time_s": 7.220477342605591,
+          "tokens_per_sec": 87251.84916550924
+        },
+        {
+          "epoch": 2,
+          "hit_rate": 0.553509533405304,
+          "time_s": 6.129789113998413,
+          "tokens_per_sec": 102776.78208558401
+        },
+        {
+          "epoch": 3,
+          "hit_rate": 0.553509533405304,
+          "time_s": 6.3996758460998535,
+          "tokens_per_sec": 98442.48601809108
+        }
+      ]
+    }
+  }
+}

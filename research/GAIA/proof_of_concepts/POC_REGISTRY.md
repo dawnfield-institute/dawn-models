@@ -60,6 +60,15 @@
 | 013 | Kronos Persistence | ✅ Complete | Storage | FDO v2.0 format, episode save/restore |
 | 014 | Persistent Consciousness | ✅ Complete | Memory | 100% accuracy retention across restart |
 
+### Validation & Falsification (Priority: CRITICAL)
+
+| POC | Name | Status | Challenge | Key Question |
+|-----|------|--------|-----------|--------------|
+| 022 | Scale Stress Test | 📋 Planned | Scale | Does PAC learning hold at 100K+ vocabulary? |
+| 023 | Semantic Probe | 📋 Planned | Semantics | True semantic learning or pattern matching? |
+| 024 | φ-Weight Ablation | 📋 Planned | Falsification | Is golden ratio weighting actually better? |
+| 025 | Architecture Transfer | 📋 Planned | Universality | Can PAC graft between Transformer and SSM? |
+
 ---
 
 ## POC-007: PAC Tree Memory
@@ -507,6 +516,142 @@ This IS the model's **"personality"** - the structure of how potentials flow thr
 - Training-free capability transfer
 - Model composition via PAC grafting
 - Capability marketplace (buy/sell PAC trees)
+
+---
+
+### Validation & Falsification (Priority: CRITICAL)
+
+| POC | Name | Status | Challenge | Key Question |
+|-----|------|--------|-----------|--------------|
+| 022 | Scale Stress Test | 📋 Planned | Scale | Does PAC learning hold at 100K+ vocabulary? |
+| 023 | Semantic Probe | 📋 Planned | Semantics | True semantic learning or pattern matching? |
+| 024 | φ-Weight Ablation | 📋 Planned | Falsification | Is golden ratio weighting actually better? |
+| 025 | Architecture Transfer | 📋 Planned | Universality | Can PAC graft between Transformer and SSM? |
+
+---
+
+## POC-022: Scale Stress Test
+
+**Status:** 📋 Planned  
+**Date Created:** 2026-01-01  
+**Goal:** Validate PAC learning at WikiText-103 scale (100K+ vocabulary)
+
+**Motivation:** Current validation caps at ~25K patterns. MED claims bounded emergence regardless of substrate size. This needs direct falsification testing.
+
+**Experiments:**
+| Exp | Name | Goal |
+|-----|------|------|
+| 01 | Vocabulary Scaling | Test 50K → 100K → 200K vocab sizes |
+| 02 | Hit Rate Curve | Measure accuracy vs vocabulary size |
+| 03 | Memory Profile | GPU cache vs PAC cold storage efficiency |
+| 04 | Learning Convergence | Epochs to convergence vs scale |
+| 05 | Transition Density | Does transition matrix become sparse? |
+
+**Success Criteria:**
+- [ ] Hit rate ≥ 60% at 100K vocabulary
+- [ ] Memory ≤ 2GB for full vocabulary
+- [ ] Convergence within 10 epochs
+- [ ] No exponential blowup in transition matrix
+
+**Falsification Conditions:**
+- Hit rate drops below 50% at scale
+- Memory exceeds linear scaling
+- Learning fails to converge
+
+**Key Files:** `poc_022_scale_stress_test/`
+
+---
+
+## POC-023: Semantic Probe
+
+**Status:** 📋 Planned  
+**Date Created:** 2026-01-01  
+**Goal:** Distinguish true semantic learning from sophisticated pattern matching
+
+**Core Question:** Is PAC learning capturing **meaning** or just **very good co-occurrence patterns**?
+
+**Test Suite:**
+1. **Synonym vs Co-occurrence** - Does "happy" cluster with "joyful" (semantic) or "birthday" (distributional)?
+2. **Compositional Generalization** - Can unseen combinations be handled?
+3. **Analogy Arithmetic** - Does `king - man + woman = queen` work in PAC space?
+4. **Negation Sensitivity** - "good" vs "not good" should be distinct
+
+**Success Criteria:**
+- [ ] Synonym similarity > co-occurrence similarity (p < 0.05)
+- [ ] ≥ 70% accuracy on compositional holdout
+- [ ] ≥ 50% accuracy on analogy task
+- [ ] Negation detection ≥ 80% accuracy
+
+**Theoretical Stakes:** If PAC = distributional clustering, then SEC collapse "reveals" structure rather than "creates" ontological entities. This would contradict core infodynamics claims.
+
+**Key Files:** `poc_023_semantic_probe/`
+
+---
+
+## POC-024: φ-Weight Ablation Study
+
+**Status:** 📋 Planned  
+**Date Created:** 2026-01-01  
+**Goal:** Critical falsification test for golden ratio weighting
+
+**Hypothesis:** If PAC's Fibonacci recursion is fundamental, φ-weighting should outperform arbitrary schemes.
+
+**Weighting Schemes to Compare:**
+| Scheme | Level 0 | Level 1 | Level 2 |
+|--------|---------|---------|---------|
+| **φ-weighted** | 1.0 | 0.618 | 0.382 |
+| **Uniform** | 1.0 | 1.0 | 1.0 |
+| **Linear decay** | 1.0 | 0.75 | 0.5 |
+| **Exponential (0.5)** | 1.0 | 0.5 | 0.25 |
+| **Random** | 1.0 | rand | rand |
+
+**Success Criteria (for φ validation):**
+- [ ] φ-weighted hit rate > uniform by ≥ 5% (statistically significant)
+- [ ] φ-weighted converges faster than alternatives
+- [ ] Advantage holds across vocabulary scales
+
+**Falsification Conditions:**
+- Uniform or random matches φ performance
+- No significant difference between schemes
+
+**Theoretical Stakes:** If φ doesn't matter in ML, it raises questions about whether the PAC Confluence Xi particle physics results are coincidental.
+
+**Key Files:** `poc_024_phi_weight_ablation/`
+
+---
+
+## POC-025: Architecture-Agnostic Transfer
+
+**Status:** 📋 Planned  
+**Date Created:** 2026-01-01  
+**Goal:** Test PAC grafting between fundamentally different architectures
+
+**Core Question:** Can knowledge transfer between Transformers and State Space Models (SSM)?
+
+POC-020 succeeded with GPT-2 ↔ Pythia (both Transformers). The real test is cross-architecture:
+
+| From/To | Transformer | SSM | Hybrid |
+|---------|-------------|-----|--------|
+| Transformer | ✅ POC-020 | ? | ? |
+| SSM | ? | ? | ? |
+
+**Models to Test:**
+- **Transformers:** GPT-2, Pythia, LLaMA-2
+- **SSMs:** Mamba, RWKV
+- **Hybrids:** Jamba, StripedHyena
+
+**Success Criteria:**
+- [ ] ≥ 1 successful cross-architecture graft
+- [ ] Embedding deltas transfer with > 50% resonance
+- [ ] Functional improvement after graft
+
+**Falsification Conditions:**
+- All cross-architecture grafts fail
+- PAC is architecture-specific, not universal
+
+**Theoretical Stakes:** If PAC is truly architecture-agnostic, it validates that information patterns are more fundamental than implementation substrate.
+
+**Key Files:** `poc_025_architecture_transfer/`
 
 ---
 

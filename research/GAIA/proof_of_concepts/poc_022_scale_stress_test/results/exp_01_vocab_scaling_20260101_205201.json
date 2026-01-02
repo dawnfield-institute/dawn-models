@@ -1,0 +1,123 @@
+{
+  "experiment": "exp_01_vocab_scaling",
+  "timestamp": "2026-01-01T20:51:36.540102",
+  "device": "cuda",
+  "config": {
+    "vocab_sizes": [
+      10000,
+      25000,
+      50000,
+      100000
+    ]
+  },
+  "metrics": {
+    "10000": {
+      "vocab_size": 10000,
+      "setup_time_s": 0.2239525318145752,
+      "memory_mb": 30.1220703125,
+      "final_hit_rate": 0.6524515748023987,
+      "transitions_learned": 12561,
+      "epochs": [
+        {
+          "epoch": 1,
+          "hit_rate": 0.6524515748023987,
+          "time_s": 1.5510504245758057,
+          "tokens_per_sec": 9993.22765682429
+        },
+        {
+          "epoch": 2,
+          "hit_rate": 0.6524515748023987,
+          "time_s": 1.3260858058929443,
+          "tokens_per_sec": 11688.534732156935
+        },
+        {
+          "epoch": 3,
+          "hit_rate": 0.6524515748023987,
+          "time_s": 1.3298251628875732,
+          "tokens_per_sec": 11655.667551321863
+        }
+      ]
+    },
+    "25000": {
+      "vocab_size": 25000,
+      "setup_time_s": 0.002998828887939453,
+      "memory_mb": 74.1220703125,
+      "final_hit_rate": 0.6785160899162292,
+      "transitions_learned": 13146,
+      "epochs": [
+        {
+          "epoch": 1,
+          "hit_rate": 0.6785160899162292,
+          "time_s": 1.719541311264038,
+          "tokens_per_sec": 9014.031764439507
+        },
+        {
+          "epoch": 2,
+          "hit_rate": 0.6785160899162292,
+          "time_s": 1.5553092956542969,
+          "tokens_per_sec": 9965.863409489471
+        },
+        {
+          "epoch": 3,
+          "hit_rate": 0.6785160899162292,
+          "time_s": 1.6104352474212646,
+          "tokens_per_sec": 9624.727243656413
+        }
+      ]
+    },
+    "50000": {
+      "vocab_size": 50000,
+      "setup_time_s": 0.0029985904693603516,
+      "memory_mb": 146.6064453125,
+      "final_hit_rate": 0.6673548221588135,
+      "transitions_learned": 13533,
+      "epochs": [
+        {
+          "epoch": 1,
+          "hit_rate": 0.6673548221588135,
+          "time_s": 2.020932674407959,
+          "tokens_per_sec": 7669.726060785668
+        },
+        {
+          "epoch": 2,
+          "hit_rate": 0.6673548221588135,
+          "time_s": 1.6575207710266113,
+          "tokens_per_sec": 9351.315694463263
+        },
+        {
+          "epoch": 3,
+          "hit_rate": 0.6673548221588135,
+          "time_s": 1.570295810699463,
+          "tokens_per_sec": 9870.751672639168
+        }
+      ]
+    },
+    "100000": {
+      "vocab_size": 100000,
+      "setup_time_s": 0.0031938552856445312,
+      "memory_mb": 293.0908203125,
+      "final_hit_rate": 0.6454193592071533,
+      "transitions_learned": 13800,
+      "epochs": [
+        {
+          "epoch": 1,
+          "hit_rate": 0.6454193592071533,
+          "time_s": 3.808460235595703,
+          "tokens_per_sec": 4069.8862640417083
+        },
+        {
+          "epoch": 2,
+          "hit_rate": 0.6454193592071533,
+          "time_s": 3.0721402168273926,
+          "tokens_per_sec": 5045.342629577921
+        },
+        {
+          "epoch": 3,
+          "hit_rate": 0.6454193592071533,
+          "time_s": 3.074599027633667,
+          "tokens_per_sec": 5041.307780523633
+        }
+      ]
+    }
+  }
+}
