@@ -1,0 +1,52 @@
+{
+  "experiment": "exp_02_cross_scale_agreement",
+  "timestamp": "2026-01-02T09:38:37.837778",
+  "device": "cuda",
+  "vocab_size": 50257,
+  "train_tokens": 512000,
+  "test_tokens": 128000,
+  "max_depth": 5,
+  "constants": {
+    "PHI": 1.6180339887,
+    "PHI_INV": 0.618033988768953,
+    "XI": 0.0618
+  },
+  "agreement_stats": {
+    "1_2": {
+      "agree": 79928,
+      "disagree": 0,
+      "both_valid": 79928
+    },
+    "1_3": {
+      "agree": 58004,
+      "disagree": 0,
+      "both_valid": 58004
+    },
+    "1_5": {
+      "agree": 30944,
+      "disagree": 0,
+      "both_valid": 30944
+    },
+    "2_3": {
+      "agree": 58004,
+      "disagree": 0,
+      "both_valid": 58004
+    },
+    "2_5": {
+      "agree": 30944,
+      "disagree": 0,
+      "both_valid": 30944
+    },
+    "3_5": {
+      "agree": 30944,
+      "disagree": 0,
+      "both_valid": 30944
+    }
+  },
+  "agree_hits": 14226,
+  "agree_total": 30944,
+  "disagree_hits": 0,
+  "disagree_total": 0,
+  "unique_nodes": 106390,
+  "eval_time_s": 144.31853938102722
+}

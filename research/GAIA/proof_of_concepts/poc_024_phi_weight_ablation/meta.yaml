@@ -1,0 +1,36 @@
+schema_version: "2.0"
+description: "Ablation study comparing φ-weighted hierarchy to uniform and random weighting"
+semantic_scope: "implementation"
+proficiency_level: "research"
+status: "planned"
+date_created: "2026-01-01"
+
+files:
+  - "[README.md]": "Hypothesis, design, success criteria"
+
+child_directories:
+  - name: journals/
+    description: "Daily research logs"
+  - name: results/
+    description: "JSON outputs from experiments"
+  - name: scripts/
+    description: "Experiment scripts"
+
+dependencies:
+  - poc_021_unified_demonstration
+
+theoretical_foundation:
+  principle: "PAC (Potential-Actualization Conservation)"
+  claim: "Fibonacci recursion underlies optimal potential distribution"
+  implication: "φ-weighting should outperform arbitrary weighting schemes"
+
+key_questions:
+  - "Does φ-weighted hierarchy outperform uniform weighting?"
+  - "Is the improvement statistically significant?"
+  - "Is φ special or is any decay ratio sufficient?"
+  - "Does the gap widen or narrow at scale?"
+
+falsification_conditions:
+  - "Uniform weighting matches or exceeds φ-weighted performance"
+  - "Random decay ratios perform equally well"
+  - "No statistically significant difference across schemes"

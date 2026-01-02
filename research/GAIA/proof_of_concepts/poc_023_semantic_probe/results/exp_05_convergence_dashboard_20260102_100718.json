@@ -1,0 +1,36 @@
+{
+  "experiment": "exp_05_convergence_dashboard",
+  "timestamp": "2026-01-02T10:07:18.646799",
+  "device": "cuda",
+  "vocab_size": 50257,
+  "max_depth": 5,
+  "gen_length": 40,
+  "temperature": 0.8,
+  "constants": {
+    "PHI": 1.6180339887,
+    "XI": 1.0571428
+  },
+  "sequences": [
+    {
+      "seed": " . <unk> added",
+      "generated": " . The St. Joseph altar includes a bone relic of St. Leonard of Port Maurice .On the Gospel side of the chancel is a large hand @-@ carved white wood communion rail , decorated",
+      "collapse_count": 8,
+      "recovery_count": 8,
+      "mean_concentration": 0.7302631578947368
+    },
+    {
+      "seed": " forces to secure regions around",
+      "generated": " an SNL style series , and was accepted by NBC . She signed a contract with NBC in May 2003 , which allowed her to remain in her SNL head writer position at least through the 2004 \u2013",
+      "collapse_count": 4,
+      "recovery_count": 4,
+      "mean_concentration": 0.7543859649122807
+    },
+    {
+      "seed": "> and reduced the ship",
+      "generated": " at <unk> , carnivals and in vaudeville , sometimes advertised under the collective name , \" Hadji Ali & Co . \" Almina played the part of assistant in her father",
+      "collapse_count": 5,
+      "recovery_count": 5,
+      "mean_concentration": 0.7564102564102564
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-01-02T10:20:20.512684",
+  "n_tokens_analyzed": 150,
+  "n_layers": 12,
+  "layer_agreement_rates": [
+    0.13333333333333333,
+    0.16,
+    0.12666666666666668,
+    0.13333333333333333,
+    0.14666666666666667,
+    0.22666666666666666,
+    0.28,
+    0.38,
+    0.46,
+    0.5266666666666666,
+    0.6666666666666666,
+    1.0
+  ],
+  "mean_concentration": 0.3533,
+  "mean_xi_balance": 0.4094,
+  "concentration_bins": {
+    "high": 16,
+    "medium": 45,
+    "low": 89
+  },
+  "layer_progression": {
+    "early_mean": 0.1544,
+    "late_mean": 0.5522,
+    "late_early_ratio": 3.5755
+  },
+  "dawn_constants": {
+    "PHI": 1.6180339887,
+    "XI": 1.0571428
+  }
+}

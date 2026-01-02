@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-01-02T10:45:35.278815",
+  "n_prompts": 5,
+  "n_runs": 3,
+  "strategies": {
+    "baseline": {
+      "mean_concentration": 0.1723,
+      "mean_probability": 0.2397,
+      "mean_entropy": 2.31,
+      "mean_low_conc": 16.93,
+      "mean_resamples": 0.0
+    },
+    "layer_reject": {
+      "mean_concentration": 0.2649,
+      "mean_probability": 0.2482,
+      "mean_entropy": 2.43,
+      "mean_low_conc": 11.07,
+      "mean_resamples": 68.33
+    },
+    "temp_modulated": {
+      "mean_concentration": 0.2036,
+      "mean_probability": 0.3335,
+      "mean_entropy": 2.36,
+      "mean_low_conc": 16.4,
+      "mean_resamples": 0.0
+    }
+  },
+  "dawn_constants": {
+    "PHI": 1.6180339887,
+    "XI": 1.0571428
+  }
+}

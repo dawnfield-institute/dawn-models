@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-01-02T10:15:39.914356",
+  "n_runs": 30,
+  "seq_length": 50,
+  "strategies": {
+    "baseline": {
+      "mean_quality": 0.8079,
+      "mean_concentration": 0.6872,
+      "mean_collapse": 10.1,
+      "mean_rare": 23.73,
+      "mean_resample": 0.0
+    },
+    "reject_resample": {
+      "mean_quality": 0.8366,
+      "mean_concentration": 0.8121,
+      "mean_collapse": 5.23,
+      "mean_rare": 21.4,
+      "mean_resample": 22.77
+    },
+    "temp_modulation": {
+      "mean_quality": 0.7925,
+      "mean_concentration": 0.6632,
+      "mean_collapse": 10.87,
+      "mean_rare": 25.43,
+      "mean_resample": 0.0
+    },
+    "depth_weighted": {
+      "mean_quality": 0.8239,
+      "mean_concentration": 0.7447,
+      "mean_collapse": 7.67,
+      "mean_rare": 24.33,
+      "mean_resample": 0.0
+    }
+  },
+  "best_strategy": "reject_resample",
+  "dawn_constants": {
+    "PHI": 1.6180339887,
+    "XI": 1.0571428
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "experiment": "exp_02_cross_scale_agreement",
+  "timestamp": "2026-01-02T09:43:37.446694",
+  "device": "cuda",
+  "vocab_size": 50257,
+  "train_tokens": 512000,
+  "test_tokens": 128000,
+  "max_depth": 5,
+  "constants": {
+    "PHI": 1.6180339887,
+    "PHI_INV": 0.618033988768953,
+    "XI": 0.0618
+  },
+  "change_stats": {
+    "1_2": {
+      "same": 79928,
+      "changed": 0,
+      "both_valid": 79928,
+      "same_hits": 35041,
+      "changed_hits": 0
+    },
+    "1_3": {
+      "same": 58004,
+      "changed": 0,
+      "both_valid": 58004,
+      "same_hits": 26008,
+      "changed_hits": 0
+    },
+    "1_5": {
+      "same": 30944,
+      "changed": 0,
+      "both_valid": 30944,
+      "same_hits": 14226,
+      "changed_hits": 0
+    },
+    "2_5": {
+      "same": 30944,
+      "changed": 0,
+      "both_valid": 30944,
+      "same_hits": 14226,
+      "changed_hits": 0
+    }
+  },
+  "unique_nodes": 106390,
+  "eval_time_s": 68.19427561759949
+}

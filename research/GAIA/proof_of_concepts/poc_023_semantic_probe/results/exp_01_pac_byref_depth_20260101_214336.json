@@ -1,0 +1,57 @@
+{
+  "experiment": "exp_01_pac_byref_depth",
+  "timestamp": "2026-01-01T21:43:36.823008",
+  "device": "cuda",
+  "vocab_size": 50257,
+  "train_tokens": 512000,
+  "test_tokens": 128000,
+  "max_depth": 5,
+  "constants": {
+    "PHI": 1.6180339887,
+    "PHI_INV": 0.618033988768953,
+    "XI": 0.0618
+  },
+  "metrics": {
+    "total": 127999,
+    "hits": 50773,
+    "hit_rate": 0.39666716146219894,
+    "depth_stats": {
+      "0": {
+        "used": 3802,
+        "hits": 0,
+        "hit_rate": 0.0
+      },
+      "1": {
+        "used": 44266,
+        "hits": 15730,
+        "hit_rate": 0.3553517372249582
+      },
+      "2": {
+        "used": 21925,
+        "hits": 9034,
+        "hit_rate": 0.41204104903078675
+      },
+      "3": {
+        "used": 15934,
+        "hits": 6861,
+        "hit_rate": 0.43058867829797914
+      },
+      "4": {
+        "used": 11128,
+        "hits": 4922,
+        "hit_rate": 0.4423076923076923
+      },
+      "5": {
+        "used": 30944,
+        "hits": 14226,
+        "hit_rate": 0.45973371251292655
+      }
+    },
+    "unique_nodes": 106390,
+    "root_nodes": 21278
+  },
+  "unique_nodes": 106390,
+  "compression_ratio": 3.013634893576821e+18,
+  "train_time_s": 2.337171792984009,
+  "eval_time_s": 84.79009056091309
+}

@@ -1,0 +1,37 @@
+schema_version: "2.0"
+description: "Probe whether PAC learning captures true semantics or sophisticated pattern matching"
+semantic_scope: "implementation"
+proficiency_level: "research"
+status: "planned"
+date_created: "2026-01-01"
+
+files:
+  - "[README.md]": "Hypothesis, design, success criteria"
+
+child_directories:
+  - name: journals/
+    description: "Daily research logs"
+  - name: results/
+    description: "JSON outputs from experiments"
+  - name: scripts/
+    description: "Experiment scripts"
+
+dependencies:
+  - poc_002_resonance_training
+  - poc_021_unified_demonstration
+
+theoretical_foundation:
+  principle: "SEC (Symbolic Entropy Collapse)"
+  claim: "Collapse creates ontological entities, not just reveals patterns"
+  implication: "PAC learning should create semantic categories, not just cluster co-occurrences"
+
+key_questions:
+  - "Can PAC trees distinguish synonyms from co-occurring words?"
+  - "Do semantic categories emerge or just distributional clusters?"
+  - "Can the system reason about unseen compositions?"
+  - "Does analogy work (king - man + woman = queen)?"
+
+falsification_conditions:
+  - "PAC categories = distributional clusters with no semantic coherence"
+  - "No compositional generalization to unseen combinations"
+  - "Analogy tasks fail completely"

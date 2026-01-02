@@ -1,0 +1,91 @@
+{
+  "experiment": "exp_01_depth_scaling",
+  "timestamp": "2026-01-01T21:35:04.548641",
+  "device": "cuda",
+  "vocab_size": 50257,
+  "train_tokens": 1956996,
+  "test_tokens": 489250,
+  "constants": {
+    "PHI": 1.6180339887,
+    "PHI_INV": 0.618033988768953
+  },
+  "results": [
+    {
+      "depth": 1,
+      "ngram": 2,
+      "num_contexts": 26603,
+      "memory_mb": 48.903011322021484,
+      "train_time_s": 0.868006706237793,
+      "eval_time_s": 144.83488965034485,
+      "hits": 225342,
+      "total": 489249,
+      "context_coverage": 0.9918139842902081,
+      "hit_rate": 0.4605875535770129,
+      "hit_rate_given_context": 0.46438904963276206
+    },
+    {
+      "depth": 2,
+      "ngram": 3,
+      "num_contexts": 510656,
+      "memory_mb": 118.14574813842773,
+      "train_time_s": 1.9799621105194092,
+      "eval_time_s": 22.45987582206726,
+      "hits": 155933,
+      "total": 489248,
+      "context_coverage": 0.7439907776833017,
+      "hit_rate": 0.3187197494930996,
+      "hit_rate_given_context": 0.4283920702425301
+    },
+    {
+      "depth": 3,
+      "ngram": 4,
+      "num_contexts": 1157142,
+      "memory_mb": 171.36183547973633,
+      "train_time_s": 3.685945987701416,
+      "eval_time_s": 15.422399997711182,
+      "hits": 87597,
+      "total": 489247,
+      "context_coverage": 0.4015272449294528,
+      "hit_rate": 0.1790445316987125,
+      "hit_rate_given_context": 0.4459087993647109
+    },
+    {
+      "depth": 4,
+      "ngram": 5,
+      "num_contexts": 1519144,
+      "memory_mb": 208.7678985595703,
+      "train_time_s": 3.821922540664673,
+      "eval_time_s": 1.5410676002502441,
+      "hits": 50401,
+      "total": 489246,
+      "context_coverage": 0.20854130641844798,
+      "hit_rate": 0.10301770479472494,
+      "hit_rate_given_context": 0.49399184537577917
+    },
+    {
+      "depth": 5,
+      "ngram": 6,
+      "num_contexts": 1702963,
+      "memory_mb": 237.52386093139648,
+      "train_time_s": 3.1997134685516357,
+      "eval_time_s": 0.563190221786499,
+      "hits": 28657,
+      "total": 489245,
+      "context_coverage": 0.11642019846906969,
+      "hit_rate": 0.058573925129536325,
+      "hit_rate_given_context": 0.5031251097299765
+    }
+  ],
+  "analysis": {
+    "marginal_gains": [
+      -0.14186781644821167,
+      -0.13967521488666534,
+      -0.07602682709693909,
+      -0.044443778693675995
+    ],
+    "total_improvement": -0.4020136296749115,
+    "decay_rate": 3.051757857974735e-06,
+    "decay_over_phi_inv": 4.9378479394854286e-06,
+    "close_to_phi": false
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "timestamp": "2026-01-02T10:11:45.357771",
+  "n_samples": 1000,
+  "correlations": {
+    "concentration_quality": 0.3622,
+    "velocity_quality": 0.2731,
+    "xi_quality": -0.1673
+  },
+  "tier_summary": {
+    "high": {
+      "count": 513,
+      "mean_concentration": 0.8231,
+      "mean_xi": 72.9072
+    },
+    "medium": {
+      "count": 462,
+      "mean_concentration": 0.7065,
+      "mean_xi": 122.8488
+    },
+    "low": {
+      "count": 25,
+      "mean_concentration": 0.112,
+      "mean_xi": 171.38
+    }
+  },
+  "pattern_counts": {
+    "stable": 773,
+    "drifting": 224,
+    "overconfident": 3,
+    "fragile": 0
+  },
+  "pattern_quality": {
+    "stable": 0.8578,
+    "drifting": 0.7598,
+    "overconfident": 0.7,
+    "fragile": 0
+  },
+  "dawn_constants": {
+    "PHI": 1.6180339887,
+    "XI": 1.0571428,
+    "PHI_INV": 0.6180339887
+  }
+}
