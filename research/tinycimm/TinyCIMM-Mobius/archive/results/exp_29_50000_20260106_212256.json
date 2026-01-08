@@ -1,0 +1,22 @@
+{
+  "experiment": "exp_29_pac_dynamic_chords",
+  "timestamp": "20260106_212256",
+  "config": {
+    "n_primes": 50000,
+    "initial_strands": 16,
+    "max_strands": 16,
+    "n_epochs": 30
+  },
+  "final_mae": 7.43831729888916,
+  "baseline_mae": 9.820271492004395,
+  "improvement_pct": 24.25548209186077,
+  "chord_dynamics": {
+    "n_events": 29,
+    "n_splits": 14,
+    "n_merges": 15,
+    "mean_conservation_error": 0.003982331218390629,
+    "max_conservation_error": 0.012524783611297607
+  },
+  "final_strands": 15,
+  "elapsed_seconds": 56.43053197860718
+}

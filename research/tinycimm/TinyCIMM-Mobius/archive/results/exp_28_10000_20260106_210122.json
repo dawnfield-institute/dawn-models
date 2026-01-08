@@ -1,0 +1,20 @@
+{
+  "experiment": "exp_28_prime_gap_continuous",
+  "timestamp": "20260106_210122",
+  "config": {
+    "n_primes": 10000,
+    "window_size": 10,
+    "n_strands": 8,
+    "lr": 0.001
+  },
+  "final_mae": 6.5110065421491,
+  "baseline_mae": 8.069906951657355,
+  "improvement_pct": 19.31745209513347,
+  "early_freq": 0.4700805275164099,
+  "late_freq": 0.49508325206759873,
+  "freq_increased": true,
+  "early_dim": 0.2586347809353344,
+  "late_dim": 0.2845721775269393,
+  "dim_collapsed": false,
+  "elapsed_seconds": 155.67376565933228
+}

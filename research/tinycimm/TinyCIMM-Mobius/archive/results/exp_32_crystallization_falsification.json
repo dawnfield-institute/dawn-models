@@ -1,0 +1,23 @@
+{
+  "experiment": "exp_32_crystallization_falsification",
+  "timestamp": "2026-01-07T12:46:28.887771",
+  "hypothesis": "Phi is special for primes but not for random data",
+  "method": "Fixed ratio scan on prime gaps vs random data",
+  "findings": {
+    "prime_optimal_ratio": 0.7,
+    "prime_optimal_improvement": 0.4129822086090029,
+    "random_optimal_ratio": 0.5,
+    "random_optimal_improvement": -0.0011700889400767522,
+    "phi_reference": 0.618034,
+    "prime_at_phi": {
+      "mean": 0.38756176133557974,
+      "std": 0.1480422174976573
+    },
+    "random_at_phi": {
+      "mean": -0.008449853210654723,
+      "std": 0.022276107538722195
+    }
+  },
+  "conclusion": "Phi is NOT inherently special for prime gaps. The optimal ratio is architecture-dependent, not data-dependent.",
+  "implication": "Earlier improvements (25-26%) came from Mobius architecture, not phi specifically."
+}

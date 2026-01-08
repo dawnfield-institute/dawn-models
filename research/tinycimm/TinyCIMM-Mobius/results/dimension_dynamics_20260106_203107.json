@@ -1,0 +1,51 @@
+{
+  "timestamp": "2026-01-06T20:30:59.900542",
+  "hypothesis": "\u03c6-patterns collapse dimension, non-\u03c6 patterns grow dimension",
+  "experiments": {
+    "fibonacci": {
+      "description": "Strong \u03c6-structure",
+      "initial_dim": 0.6531559228897095,
+      "final_dim": 0.6202322244644165,
+      "dim_change": -0.03292369842529297,
+      "dim_ratio": 0.9495928961653887,
+      "coherence": 0.596213628442901,
+      "chord": "locked",
+      "collapsed": false,
+      "grew": false
+    },
+    "golden_spiral": {
+      "description": "Weak \u03c6-structure",
+      "initial_dim": 0.6073781251907349,
+      "final_dim": 0.6550796031951904,
+      "dim_change": 0.047701478004455566,
+      "dim_ratio": 1.0785367072439032,
+      "coherence": 0.439625498506152,
+      "chord": "locked",
+      "collapsed": false,
+      "grew": false
+    },
+    "polynomial": {
+      "description": "No \u03c6-structure",
+      "initial_dim": 0.2787332534790039,
+      "final_dim": 0.18404936790466309,
+      "dim_change": -0.09468388557434082,
+      "dim_ratio": 0.6603064600561803,
+      "coherence": 0.4491813663216035,
+      "chord": "polyphonic",
+      "collapsed": true,
+      "grew": false
+    },
+    "random": {
+      "description": "Maximum entropy",
+      "initial_dim": 0.3830528259277344,
+      "final_dim": 0.6706242561340332,
+      "dim_change": 0.28757143020629883,
+      "dim_ratio": 1.7507356968580392,
+      "coherence": 0.4598790881962561,
+      "chord": "locked",
+      "collapsed": false,
+      "grew": true
+    }
+  },
+  "prediction_validated": false
+}

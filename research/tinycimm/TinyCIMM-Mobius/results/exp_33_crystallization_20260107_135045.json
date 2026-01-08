@@ -1,0 +1,56 @@
+{
+  "limit": 100000,
+  "num_primes": 9592,
+  "num_gaps": 9589,
+  "lattice_constant": 8,
+  "gap_distribution": {
+    "2": 1223,
+    "4": 1215,
+    "6": 1940,
+    "8": 773,
+    "10": 916,
+    "12": 964,
+    "14": 484,
+    "16": 339,
+    "18": 514,
+    "20": 238
+  },
+  "facet_counts": {
+    "6k+1": 4784,
+    "6k-1": 4806
+  },
+  "facet_symmetry": 0.9954223886808157,
+  "facet_transitions": {
+    "5->1": 2869,
+    "1->5": 2868,
+    "5->5": 1937,
+    "1->1": 1915
+  },
+  "same_facet_ratio": 0.40171029304411304,
+  "alternation_preference": 1.489356178608515,
+  "walk_rms_actual": 24.815546860914765,
+  "walk_rms_expected": 97.92854537876073,
+  "balance_ratio": 0.25340463053887957,
+  "balance_factor": 3.946257800709649,
+  "restoring_force_k": 0.05433102353322336,
+  "restoring_correlation": -0.05433102353322336,
+  "defects": {
+    "twin_primes_gap2": 1223,
+    "cousin_primes_gap4": 1215,
+    "sexy_primes_gap6": 1940,
+    "total_defects": 2438,
+    "defect_density": 0.25424966106997604
+  },
+  "gap_mod6_distribution": {
+    "2": 2869,
+    "4": 2868,
+    "0": 3852
+  },
+  "pnt_expected": 8685.889638065037,
+  "pnt_ratio": 1.1043198105999443,
+  "seed_autocorrelation": {
+    "lag_1": -0.251,
+    "lag_2": -0.024,
+    "lag_3": -0.053
+  }
+}

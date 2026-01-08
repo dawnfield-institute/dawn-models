@@ -1,0 +1,29 @@
+schema_version: "2.0"
+description: "Legacy GAIA implementations - archived for reference"
+semantic_scope: "archive"
+proficiency_level: "historical"
+
+files:
+  - "[gaia.py]": "Original GAIA implementation"
+  - "[gaia_unified.py]": "Unified GAIA attempt"
+
+child_directories:
+  - name: "core"
+    description: "Legacy core modules"
+  - name: "GAIACore"
+    description: "Earlier GAIACore implementation"
+  - name: "v4"
+    description: "V4 architecture with cortex/organs/learning + gaia_1 trained model"
+
+notes: |
+  These implementations are preserved for historical reference.
+  The active implementation is now gaia_prime (formerly gaia_pac).
+  
+  Key learnings from legacy:
+  - v4/gaia_1: Trained model with checkpoints, but architecture didn't scale
+  - core/: Early experiments with mesh structures
+  - GAIACore/: Attempt at unified interface
+  
+  Do not use for new development - use gaia_prime instead.
+
+archived_date: "2025-01-02"

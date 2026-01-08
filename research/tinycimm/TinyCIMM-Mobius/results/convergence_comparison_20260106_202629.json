@@ -1,0 +1,96 @@
+{
+  "timestamp": "2026-01-06T20:26:22.603157",
+  "hypothesis": "PhiAnchorMemory prevents catastrophic forgetting in M\u00f6bius networks",
+  "experiments": {
+    "baseline": {
+      "phases": {
+        "phase1": {
+          "test_error": 0.0021258945295432154,
+          "phi_frequency": 0.6504821181297302,
+          "success": true
+        },
+        "phase2": {
+          "test_error": 0.5299045089896003,
+          "phi_frequency": 0.6753198802471161,
+          "success": false
+        },
+        "phase3": {
+          "test_error": 0.5020063166081894,
+          "original_error": 0.0021258945295432154,
+          "degradation_ratio": 236.1388627854713,
+          "phi_frequency": 0.6753198802471161,
+          "success": false
+        }
+      },
+      "success_criteria": {
+        "phase1_error": 0.01,
+        "phase2_error": 0.1,
+        "phase3_retention": 0.05
+      },
+      "overall_success": false,
+      "interpretation": "Catastrophic forgetting"
+    },
+    "anchored": {
+      "phases": {
+        "phase1": {
+          "test_error": 0.012510363684096755,
+          "phi_frequency": 0.8386468092600504,
+          "success": false
+        },
+        "phase2": {
+          "test_error": 0.5148386289940351,
+          "phi_frequency": 0.8354059457778931,
+          "success": false
+        },
+        "phase3": {
+          "test_error": 0.22338368934988856,
+          "original_error": 0.012510363684096755,
+          "degradation_ratio": 17.855890922967745,
+          "phi_frequency": 0.8354059457778931,
+          "success": false
+        }
+      },
+      "success_criteria": {
+        "phase1_error": 0.01,
+        "phase2_error": 0.1,
+        "phase3_retention": 0.05
+      },
+      "overall_success": false,
+      "interpretation": "Catastrophic forgetting"
+    },
+    "strong_anchor": {
+      "phases": {
+        "phase1": {
+          "test_error": 0.017470956271885656,
+          "phi_frequency": 0.9279781778653463,
+          "success": false
+        },
+        "phase2": {
+          "test_error": 0.3316726220354095,
+          "phi_frequency": 0.877053459485372,
+          "success": false
+        },
+        "phase3": {
+          "test_error": 0.18921542920072992,
+          "original_error": 0.017470956271885656,
+          "degradation_ratio": 10.830284631025966,
+          "phi_frequency": 0.877053459485372,
+          "success": false
+        }
+      },
+      "success_criteria": {
+        "phase1_error": 0.01,
+        "phase2_error": 0.1,
+        "phase3_retention": 0.05
+      },
+      "overall_success": false,
+      "interpretation": "Catastrophic forgetting"
+    }
+  },
+  "comparison": {
+    "baseline_degradation": 236.1388627854713,
+    "anchored_degradation": 17.855890922967745,
+    "improvement_factor": 13.224703477647799,
+    "anchor_memory_helps": true
+  }
+}

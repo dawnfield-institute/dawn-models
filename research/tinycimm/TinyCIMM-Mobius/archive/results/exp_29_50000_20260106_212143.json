@@ -1,0 +1,18 @@
+{
+  "experiment": "exp_29_pac_dynamic_chords",
+  "timestamp": "20260106_212143",
+  "config": {
+    "n_primes": 50000,
+    "initial_strands": 16,
+    "max_strands": 16,
+    "n_epochs": 30
+  },
+  "final_mae": 7.432925224304199,
+  "baseline_mae": 9.820271492004395,
+  "improvement_pct": 24.31038968366565,
+  "chord_dynamics": {
+    "n_events": 0
+  },
+  "final_strands": 16,
+  "elapsed_seconds": 33.17524266242981
+}

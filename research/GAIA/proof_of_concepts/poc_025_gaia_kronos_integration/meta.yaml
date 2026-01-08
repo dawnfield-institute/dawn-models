@@ -1,0 +1,36 @@
+schema_version: "2.0"
+description: "GAIA Prime + Kronos integration - complete cognitive architecture"
+semantic_scope: "implementation"
+proficiency_level: "research"
+
+hypothesis: "Combining GAIA Prime (active cognition) with Kronos (persistent memory) creates a complete cognitive system with continuous consciousness across restarts"
+
+key_questions:
+  - "Can high-confidence patterns crystallize to persistent storage?"
+  - "Can recalled patterns integrate seamlessly with active mesh?"
+  - "Does PAC conservation hold across the boundary?"
+  - "Can session state persist and restore correctly?"
+
+success_criteria:
+  crystallization: "100% high-importance patterns saved"
+  recall_accuracy: ">80% semantic match"
+  persistence: "100% state survival across restart"
+  conservation: "<1e-10 PAC residual"
+  latency: "<100ms crystallize/recall"
+
+dependencies:
+  - "fracton.storage.KronosMemory"
+  - "gaia_prime.GAIA_Prime"
+  - "gaia_prime.physics_mesh"
+  - "gaia_prime.validated_constants"
+
+prior_art:
+  - "poc_013_kronos_persistence"
+  - "poc_014_persistent_consciousness"
+  - "poc_011_pac_lazy_transformer"
+
+files:
+  - "[README.md]": "Experiment overview and architecture"
+  - "[exp_01_bridge.py]": "KronosGAIABridge implementation and tests"
+  - "[exp_02_crystallization.py]": "Automatic crystallization from physics mesh"
+  - "[exp_03_session.py]": "Session save/restore verification"

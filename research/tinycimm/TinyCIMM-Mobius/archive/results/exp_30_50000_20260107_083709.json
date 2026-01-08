@@ -1,0 +1,25 @@
+{
+  "experiment": "exp_30_pac_elastic",
+  "timestamp": "20260107_083709",
+  "config": {
+    "n_primes": 50000,
+    "n_strands": 8,
+    "elastic_strength": 1.0,
+    "n_epochs": 30
+  },
+  "final_mae": 7.336726188659668,
+  "baseline_mae": 9.820271492004395,
+  "improvement_pct": 25.289986181815994,
+  "phi_discovery": {
+    "target_ratio": 0.618033988749895,
+    "learned_ratio": 0.30006253719329834,
+    "difference": 0.3179714515565967,
+    "converged_to_phi": false
+  },
+  "pac_state": {
+    "anchor": 0.43751251697540283,
+    "final": 0.4379306733608246,
+    "deviation": 0.00041815638542175293
+  },
+  "elapsed_seconds": 48.66281270980835
+}

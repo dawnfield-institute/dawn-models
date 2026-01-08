@@ -1,0 +1,51 @@
+schema_version: "2.0"
+description: "TinyCIMM-Möbius: Continuous learning with Möbius frequency memory and emergent dimensionality"
+semantic_scope: "implementation"
+proficiency_level: "research"
+estimated_context_weight: 0.7
+validation_type: "automated"
+
+files:
+  - "[README.md]": "Overview, architecture, and key findings"
+  - "[tinycimm_mobius.py]": "Core TinyCIMM-Möbius with single Möbius stack"
+  - "[mobius_strand_field.py]": "Multi-strand field with emergent dimensions"
+  - "[exp_24_convergence_maintenance.py]": "Catastrophic forgetting tests with PhiAnchorMemory"
+  - "[exp_25_dimension_dynamics.py]": "Dimension collapse experiments across pattern types"
+  - "[exp_26_visualize_strands.py]": "Strand visualization utilities"
+  - "[exp_33_prime_crystallization.py]": "Prime gaps as crystallization events (tangent)"
+  - "[exp_34_multiscale_crystal.py]": "Primorial hierarchy analysis (tangent)"
+  - "[exp_35_mobius_vs_baseline.py]": "Initial Möbius vs MLP comparison (misleading)"
+  - "[exp_36_proper_composition.py]": "Composition structure analysis"
+  - "[exp_37_iterated_dynamics.py]": "KEY RESULT: Möbius excels at iterated dynamics (12000x advantage)"
+
+child_directories:
+  - name: "results"
+    description: "JSON outputs from experiments"
+  - name: "journals"
+    description: "Daily research logs following experiment schema"
+  - name: "archive"
+    description: "Exploratory experiments moved out of main workspace"
+
+key_concepts:
+  - "Möbius frequency as memory"
+  - "Strands as independent Möbius transformations"
+  - "Emergent dimensionality from phase coupling"
+  - "φ-pattern dimension collapse"
+  - "PhiAnchorMemory for catastrophic forgetting prevention"
+  - "Iterated dynamics advantage (12000x over MLP)"
+  - "Fixed point learning (converges to 1/φ exactly)"
+
+theoretical_connections:
+  - "Dawn Field Theory: 2D Möbius → 3D+1 spacetime"
+  - "TinyCIMM continuous learning patterns"
+  - "Fibonacci/φ-structure detection"
+  - "fracton/core/mobius_tensor.py: 4π periodicity implementation"
+
+key_findings:
+  - "Anchor memory reduces forgetting 13-22x"
+  - "Random patterns grow dimension (+0.288)"
+  - "8 strands show optimal collapse (0.70x)"
+  - "Chord detection: locked/polyphonic/pure_phi"
+  - "CRITICAL: Möbius wins by 12000x on iterated dynamics"
+  - "Möbius learns exact functional form, MLP learns point approximation"
+  - "Fixed point accuracy: 0.618032 vs true 0.618034"

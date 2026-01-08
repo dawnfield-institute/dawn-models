@@ -1,0 +1,27 @@
+{
+  "timestamp": "20260107_142259",
+  "device": "cuda",
+  "tasks": {
+    "continued_fraction": {
+      "mobius_loss": 0.004614038181443902,
+      "mlp_loss": 3.4463234442227986e-05,
+      "loss_ratio": 133.88291192396895,
+      "mobius_params": 42,
+      "mlp_params": 45
+    },
+    "mobius_inversion": {
+      "mobius_loss": 0.02887631105780315,
+      "mlp_loss": 9.810191768337973e-05,
+      "loss_ratio": 294.3501181189991,
+      "mobius_params": 42,
+      "mlp_params": 45
+    },
+    "golden_convergence": {
+      "mobius_loss": 0.0002960285812150687,
+      "mlp_loss": 0.00013782283785985784,
+      "loss_ratio": 2.1478920751586825,
+      "mobius_params": 42,
+      "mlp_params": 45
+    }
+  }
+}
