@@ -1,0 +1,23 @@
+schema_version: '2.0'
+directory_name: token_pac_tree
+description: >
+  Token-level PAC tree analysis: observing PAC conservation and SEC collapse
+  in LLM logit distributions during token prediction. Tests whether phi,
+  1/phi, and xi appear in the probability ratios of top candidate tokens,
+  and whether SEC phase classification can diagnose hallucinations.
+semantic_scope:
+  - experiment
+  - pac
+  - sec
+  - interpretability
+  - llm
+files:
+  - README.md
+child_directories:
+  - core
+  - scripts
+  - results
+  - journals
+proficiency_level: research
+estimated_context_weight: 0.8
+validation_type: automated

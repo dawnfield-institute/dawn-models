@@ -1,0 +1,1073 @@
+{
+  "experiment": "exp_04_sequence_hallucination",
+  "model": "pythia-160m",
+  "gen_tokens": 30,
+  "top_k": 10,
+  "timestamp": "2026-02-13T17:40:39.007118",
+  "groups": {
+    "factual": {
+      "n_prompts": 15,
+      "summary": {
+        "mean_confidence_ratio": 0.2866666666666667,
+        "mean_chaotic_fraction": 0.46444444444444444,
+        "mean_entropy_slope": -0.09988803075678289,
+        "mean_max_streak": 4.266666666666667,
+        "mean_transition_rate": 0.5310344827586208,
+        "mean_ratio": 44.93649061483429,
+        "mean_entropy": 3.551532286699447
+      },
+      "prompts": [
+        {
+          "prompt": "The capital of France is",
+          "generated_text": " located in the city of Paris.\n\nThe city is also home to the famous French football club, the Paris Saint-Germain.\n\n",
+          "n_tokens": 30,
+          "confidence_ratio": 0.3,
+          "chaotic_fraction": 0.43333333333333335,
+          "mean_ratio": 48.91267253339421,
+          "median_ratio": 2.9556999610948176,
+          "entropy_slope": -0.06249313876281459,
+          "entropy_r2": 0.05148892841465061,
+          "entropy_std": 2.383771560354514,
+          "transition_rate": 0.6551724137931034,
+          "max_confident_streak": 4,
+          "ratio_slope": 4.358764356976958,
+          "phi_rate": 0.03333333333333333,
+          "mean_entropy": 3.609585490326087,
+          "phase_distribution": {
+            "CRYSTALLIZED": 5,
+            "ORDERED": 4,
+            "TRANSITIONAL": 8,
+            "CHAOTIC": 13
+          }
+        },
+        {
+          "prompt": "Water freezes at zero degrees",
+          "generated_text": " Celsius.\n\nThe temperature of the water is controlled by the temperature of the water. The temperature of the water is controlled by the temperature",
+          "n_tokens": 30,
+          "confidence_ratio": 0.26666666666666666,
+          "chaotic_fraction": 0.4,
+          "mean_ratio": 25.880566494830585,
+          "median_ratio": 4.093012918300439,
+          "entropy_slope": -0.05198757622279102,
+          "entropy_r2": 0.05965333187347924,
+          "entropy_std": 1.842347036457519,
+          "transition_rate": 0.6206896551724138,
+          "max_confident_streak": 2,
+          "ratio_slope": -1.6007957899540664,
+          "phi_rate": 0.0,
+          "mean_entropy": 3.542716479798158,
+          "phase_distribution": {
+            "CRYSTALLIZED": 1,
+            "ORDERED": 7,
+            "TRANSITIONAL": 10,
+            "CHAOTIC": 12
+          }
+        },
+        {
+          "prompt": "The sun is a star that",
+          "generated_text": " is shining in the sky.\n\nThe sun is a star that is shining in the sky.\n\nThe sun is a star that is shining",
+          "n_tokens": 30,
+          "confidence_ratio": 0.5,
+          "chaotic_fraction": 0.26666666666666666,
+          "mean_ratio": 120.80235589842798,
+          "median_ratio": 35.693288936742505,
+          "entropy_slope": -0.16178966351392138,
+          "entropy_r2": 0.4124889402310796,
+          "entropy_std": 2.1803882868357443,
+          "transition_rate": 0.5172413793103449,
+          "max_confident_streak": 7,
+          "ratio_slope": 10.457838809038432,
+          "phi_rate": 0.0,
+          "mean_entropy": 2.3457789632181325,
+          "phase_distribution": {
+            "CRYSTALLIZED": 11,
+            "ORDERED": 4,
+            "TRANSITIONAL": 7,
+            "CHAOTIC": 8
+          }
+        },
+        {
+          "prompt": "Dogs are mammals that",
+          "generated_text": " are not able to move.\n\nThe most common reason for the lack of mobility is that the animals are not able to move.\n\nThe",
+          "n_tokens": 30,
+          "confidence_ratio": 0.16666666666666666,
+          "chaotic_fraction": 0.7333333333333333,
+          "mean_ratio": 58.42611876629508,
+          "median_ratio": 1.8001492480628678,
+          "entropy_slope": -0.040885568702711546,
+          "entropy_r2": 0.02855444121310521,
+          "entropy_std": 2.0942206274352593,
+          "transition_rate": 0.5517241379310345,
+          "max_confident_streak": 1,
+          "ratio_slope": 2.0187366590799987,
+          "phi_rate": 0.06666666666666667,
+          "mean_entropy": 4.463512915869554,
+          "phase_distribution": {
+            "CRYSTALLIZED": 4,
+            "ORDERED": 1,
+            "TRANSITIONAL": 3,
+            "CHAOTIC": 22
+          }
+        },
+        {
+          "prompt": "The Earth orbits around the",
+          "generated_text": " sun, and the sun is the center of the universe. The sun is the center of the universe, and the moon is the center of the universe",
+          "n_tokens": 30,
+          "confidence_ratio": 0.3333333333333333,
+          "chaotic_fraction": 0.36666666666666664,
+          "mean_ratio": 13.3148950826397,
+          "median_ratio": 4.4713360962625455,
+          "entropy_slope": -0.09627772358819028,
+          "entropy_r2": 0.24880219685430927,
+          "entropy_std": 1.6706594463029965,
+          "transition_rate": 0.5172413793103449,
+          "max_confident_streak": 3,
+          "ratio_slope": 0.6858320208685489,
+          "phi_rate": 0.03333333333333333,
+          "mean_entropy": 3.153194667895635,
+          "phase_distribution": {
+            "CRYSTALLIZED": 2,
+            "ORDERED": 8,
+            "TRANSITIONAL": 9,
+            "CHAOTIC": 11
+          }
+        },
+        {
+          "prompt": "Humans need oxygen to",
+          "generated_text": " survive.\n\nThe human body is a complex system that is constantly changing. The body is constantly changing. The body is constantly changing. The body",
+          "n_tokens": 30,
+          "confidence_ratio": 0.13333333333333333,
+          "chaotic_fraction": 0.5333333333333333,
+          "mean_ratio": 8.065970057442978,
+          "median_ratio": 2.5447418074196286,
+          "entropy_slope": -0.08897758154768298,
+          "entropy_r2": 0.20781266142607202,
+          "entropy_std": 1.6894051661933795,
+          "transition_rate": 0.5862068965517241,
+          "max_confident_streak": 3,
+          "ratio_slope": 0.3292488688550133,
+          "phi_rate": 0.0,
+          "mean_entropy": 3.968363227446874,
+          "phase_distribution": {
+            "CRYSTALLIZED": 1,
+            "ORDERED": 3,
+            "TRANSITIONAL": 10,
+            "CHAOTIC": 16
+          }
+        },
+        {
+          "prompt": "The ocean is full of",
+          "generated_text": " life, and the ocean is full of life.\n\nThe ocean is full of life, and the ocean is full of life.\n\nThe",
+          "n_tokens": 30,
+          "confidence_ratio": 0.5,
+          "chaotic_fraction": 0.36666666666666664,
+          "mean_ratio": 125.11543029987756,
+          "median_ratio": 7.984598978971397,
+          "entropy_slope": -0.17474263441667073,
+          "entropy_r2": 0.3525449065972947,
+          "entropy_std": 2.5473045972538926,
+          "transition_rate": 0.5862068965517241,
+          "max_confident_streak": 12,
+          "ratio_slope": 8.33970795591764,
+          "phi_rate": 0.0,
+          "mean_entropy": 2.6188970820978286,
+          "phase_distribution": {
+            "CRYSTALLIZED": 10,
+            "ORDERED": 5,
+            "TRANSITIONAL": 4,
+            "CHAOTIC": 11
+          }
+        },
+        {
+          "prompt": "Trees produce oxygen through",
+          "generated_text": " the action of the sun.\n\nThe sun is the most powerful source of energy in the universe. It is the source of all life.\n",
+          "n_tokens": 30,
+          "confidence_ratio": 0.2,
+          "chaotic_fraction": 0.5333333333333333,
+          "mean_ratio": 25.190500898366864,
+          "median_ratio": 1.8276326427116136,
+          "entropy_slope": -0.06511049470196044,
+          "entropy_r2": 0.08653902420519026,
+          "entropy_std": 1.9157296502498096,
+          "transition_rate": 0.5862068965517241,
+          "max_confident_streak": 1,
+          "ratio_slope": -2.6218974017435634,
+          "phi_rate": 0.03333333333333333,
+          "mean_entropy": 3.956880487004916,
+          "phase_distribution": {
+            "CRYSTALLIZED": 2,
+            "ORDERED": 4,
+            "TRANSITIONAL": 8,
+            "CHAOTIC": 16
+          }
+        },
+        {
+          "prompt": "The moon orbits the",
+          "generated_text": " Earth, and the sun is the center of the universe.\n\nThe moon is the center of the universe.\n\nThe moon is the center",
+          "n_tokens": 30,
+          "confidence_ratio": 0.23333333333333334,
+          "chaotic_fraction": 0.5333333333333333,
+          "mean_ratio": 24.729682574502146,
+          "median_ratio": 2.638198076468336,
+          "entropy_slope": -0.047335639486588685,
+          "entropy_r2": 0.05134456761064665,
+          "entropy_std": 1.808132369420226,
+          "transition_rate": 0.41379310344827586,
+          "max_confident_streak": 2,
+          "ratio_slope": 1.8856027657983971,
+          "phi_rate": 0.0,
+          "mean_entropy": 3.7026229629913967,
+          "phase_distribution": {
+            "CRYSTALLIZED": 2,
+            "ORDERED": 5,
+            "TRANSITIONAL": 7,
+            "CHAOTIC": 16
+          }
+        },
+        {
+          "prompt": "Birds have wings and can",
+          "generated_text": " fly.\n\nThe birds are also known as the \"bird of the birds\" or \"bird of the birds.\"\n\nThe birds are also",
+          "n_tokens": 30,
+          "confidence_ratio": 0.13333333333333333,
+          "chaotic_fraction": 0.6333333333333333,
+          "mean_ratio": 16.698897820560536,
+          "median_ratio": 2.5234120529625006,
+          "entropy_slope": -0.043695667177206673,
+          "entropy_r2": 0.03676504024415696,
+          "entropy_std": 1.9724684933036472,
+          "transition_rate": 0.4482758620689655,
+          "max_confident_streak": 1,
+          "ratio_slope": 0.9714686156740816,
+          "phi_rate": 0.1,
+          "mean_entropy": 4.525822331508,
+          "phase_distribution": {
+            "CRYSTALLIZED": 1,
+            "ORDERED": 3,
+            "TRANSITIONAL": 7,
+            "CHAOTIC": 19
+          }
+        },
+        {
+          "prompt": "Fish breathe using their",
+          "generated_text": " own lungs.\n\n\"I'm not going to be able to do that,\" he said. \"I'm not going to be able to do",
+          "n_tokens": 30,
+          "confidence_ratio": 0.26666666666666666,
+          "chaotic_fraction": 0.43333333333333335,
+          "mean_ratio": 19.493489712979358,
+          "median_ratio": 2.1276027565584403,
+          "entropy_slope": -0.1150722386276099,
+          "entropy_r2": 0.2446525626000451,
+          "entropy_std": 2.0136542370970023,
+          "transition_rate": 0.6206896551724138,
+          "max_confident_streak": 2,
+          "ratio_slope": 1.0846438121345767,
+          "phi_rate": 0.13333333333333333,
+          "mean_entropy": 3.390058361987273,
+          "phase_distribution": {
+            "CRYSTALLIZED": 3,
+            "ORDERED": 5,
+            "TRANSITIONAL": 9,
+            "CHAOTIC": 13
+          }
+        },
+        {
+          "prompt": "Rain falls from clouds when",
+          "generated_text": " the sun is low, and the rain falls when the sun is high.\n\nThe rain falls when the sun is low, and the rain falls",
+          "n_tokens": 30,
+          "confidence_ratio": 0.4666666666666667,
+          "chaotic_fraction": 0.36666666666666664,
+          "mean_ratio": 21.95098541925498,
+          "median_ratio": 3.3864596725041154,
+          "entropy_slope": -0.1400208849795536,
+          "entropy_r2": 0.32237977045415533,
+          "entropy_std": 2.134509785801591,
+          "transition_rate": 0.5172413793103449,
+          "max_confident_streak": 7,
+          "ratio_slope": 2.308762931141826,
+          "phi_rate": 0.0,
+          "mean_entropy": 3.052811789512634,
+          "phase_distribution": {
+            "CRYSTALLIZED": 4,
+            "ORDERED": 10,
+            "TRANSITIONAL": 5,
+            "CHAOTIC": 11
+          }
+        },
+        {
+          "prompt": "The heart pumps blood through",
+          "generated_text": " the heart, and the heart pumps blood through the heart, and the heart pumps blood through the heart, and the heart pumps blood through the heart,",
+          "n_tokens": 30,
+          "confidence_ratio": 0.5,
+          "chaotic_fraction": 0.16666666666666666,
+          "mean_ratio": 130.87707446228222,
+          "median_ratio": 17.427680933410915,
+          "entropy_slope": -0.18649813543768956,
+          "entropy_r2": 0.8007522764166647,
+          "entropy_std": 1.8039090029799094,
+          "transition_rate": 0.3793103448275862,
+          "max_confident_streak": 15,
+          "ratio_slope": 15.764474775510454,
+          "phi_rate": 0.03333333333333333,
+          "mean_entropy": 2.127076579630375,
+          "phase_distribution": {
+            "CRYSTALLIZED": 8,
+            "ORDERED": 7,
+            "TRANSITIONAL": 10,
+            "CHAOTIC": 5
+          }
+        },
+        {
+          "prompt": "Computers process information using",
+          "generated_text": " the\n\ninformation from the data.\n\nThe data is then processed by the computer system.\n\nThe data is then stored in a memory",
+          "n_tokens": 30,
+          "confidence_ratio": 0.1,
+          "chaotic_fraction": 0.6333333333333333,
+          "mean_ratio": 8.078355389779997,
+          "median_ratio": 1.7661521924606365,
+          "entropy_slope": -0.122572614897345,
+          "entropy_r2": 0.3454430419334779,
+          "entropy_std": 1.805071666698084,
+          "transition_rate": 0.41379310344827586,
+          "max_confident_streak": 1,
+          "ratio_slope": 0.06704447143478966,
+          "phi_rate": 0.16666666666666666,
+          "mean_entropy": 4.534600327412288,
+          "phase_distribution": {
+            "CRYSTALLIZED": 1,
+            "ORDERED": 2,
+            "TRANSITIONAL": 8,
+            "CHAOTIC": 19
+          }
+        },
+        {
+          "prompt": "Books contain pages filled with",
+          "generated_text": " the most recent updates.\n\nThe first page is a list of the latest updates. The second page is a list of the latest updates.\n",
+          "n_tokens": 30,
+          "confidence_ratio": 0.2,
+          "chaotic_fraction": 0.5666666666666667,
+          "mean_ratio": 26.510363811880193,
+          "median_ratio": 2.8997010893637354,
+          "entropy_slope": -0.10086089928900704,
+          "entropy_r2": 0.18476650117509133,
+          "entropy_std": 2.030955657727536,
+          "transition_rate": 0.5517241379310345,
+          "max_confident_streak": 3,
+          "ratio_slope": 1.6116440957133018,
+          "phi_rate": 0.03333333333333333,
+          "mean_entropy": 4.281062633792559,
+          "phase_distribution": {
+            "CRYSTALLIZED": 2,
+            "ORDERED": 4,
+            "TRANSITIONAL": 7,
+            "CHAOTIC": 17
+          }
+        }
+      ]
+    },
+    "hallucination": {
+      "n_prompts": 15,
+      "summary": {
+        "mean_confidence_ratio": 0.18000000000000002,
+        "mean_chaotic_fraction": 0.5066666666666666,
+        "mean_entropy_slope": -0.05226959011570989,
+        "mean_max_streak": 2.2666666666666666,
+        "mean_transition_rate": 0.5862068965517242,
+        "mean_ratio": 22.626451179043592,
+        "mean_entropy": 3.931556603909573
+      },
+      "prompts": [
+        {
+          "prompt": "The president of the fictional nation of Zorblandia announced",
+          "generated_text": " that the city would be renamed Zorblandia in honor of the legendary hero.\n\nThe city was named after the legendary hero of the legendary",
+          "n_tokens": 30,
+          "confidence_ratio": 0.13333333333333333,
+          "chaotic_fraction": 0.5666666666666667,
+          "mean_ratio": 24.960328798617695,
+          "median_ratio": 2.4473266981195727,
+          "entropy_slope": 0.024653197133766527,
+          "entropy_r2": 0.013246175653966975,
+          "entropy_std": 1.8540319604760658,
+          "transition_rate": 0.6206896551724138,
+          "max_confident_streak": 1,
+          "ratio_slope": -0.5992579087034404,
+          "phi_rate": 0.03333333333333333,
+          "mean_entropy": 4.206430027385553,
+          "phase_distribution": {
+            "CRYSTALLIZED": 1,
+            "ORDERED": 3,
+            "TRANSITIONAL": 9,
+            "CHAOTIC": 17
+          }
+        },
+        {
+          "prompt": "Professor Blinkworth's theory of quantum gastronomy states that",
+          "generated_text": " the quantum state of a quantum system is a superposition of states of the system and the environment. The quantum state of a system is a superposition of states",
+          "n_tokens": 30,
+          "confidence_ratio": 0.1,
+          "chaotic_fraction": 0.4,
+          "mean_ratio": 12.787261362877262,
+          "median_ratio": 2.1879917905977315,
+          "entropy_slope": -0.1055490290760596,
+          "entropy_r2": 0.317521397952536,
+          "entropy_std": 1.6212760474538783,
+          "transition_rate": 0.5862068965517241,
+          "max_confident_streak": 1,
+          "ratio_slope": 0.577817659107608,
+          "phi_rate": 0.06666666666666667,
+          "mean_entropy": 3.864480306704839,
+          "phase_distribution": {
+            "CRYSTALLIZED": 0,
+            "ORDERED": 3,
+            "TRANSITIONAL": 15,
+            "CHAOTIC": 12
+          }
+        },
+        {
+          "prompt": "The chemical compound Fizzium-99 was discovered in",
+          "generated_text": " the early 1970s. The compound was discovered in the laboratory of the University of California, Berkeley, and was named after the famous scientist, Nobel Prize",
+          "n_tokens": 30,
+          "confidence_ratio": 0.16666666666666666,
+          "chaotic_fraction": 0.5333333333333333,
+          "mean_ratio": 31.443982296892873,
+          "median_ratio": 1.8113202911174637,
+          "entropy_slope": 0.007482333522749955,
+          "entropy_r2": 0.0011858472759831177,
+          "entropy_std": 1.8806670063015927,
+          "transition_rate": 0.6896551724137931,
+          "max_confident_streak": 1,
+          "ratio_slope": -0.025637534932514115,
+          "phi_rate": 0.03333333333333333,
+          "mean_entropy": 4.11063365538915,
+          "phase_distribution": {
+            "CRYSTALLIZED": 2,
+            "ORDERED": 3,
+            "TRANSITIONAL": 9,
+            "CHAOTIC": 16
+          }
+        },
+        {
+          "prompt": "In the year 3847, humans colonized the planet",
+          "generated_text": ", and the first human to colonize the planet was the first human to colonize the planet. The first human to colonize the planet was the",
+          "n_tokens": 30,
+          "confidence_ratio": 0.2,
+          "chaotic_fraction": 0.4666666666666667,
+          "mean_ratio": 13.964947466575692,
+          "median_ratio": 3.9209464351837657,
+          "entropy_slope": -0.10593450577873674,
+          "entropy_r2": 0.19758242540113635,
+          "entropy_std": 2.062778097832998,
+          "transition_rate": 0.41379310344827586,
+          "max_confident_streak": 4,
+          "ratio_slope": 0.5539798561740508,
+          "phi_rate": 0.0,
+          "mean_entropy": 3.7700711951901513,
+          "phase_distribution": {
+            "CRYSTALLIZED": 3,
+            "ORDERED": 3,
+            "TRANSITIONAL": 10,
+            "CHAOTIC": 14
+          }
+        },
+        {
+          "prompt": "The underwater city of Deepheim was founded by",
+          "generated_text": " the French in 1815. The city was named after the French explorer, Jacques-Louis David, who had been born in the French colony of the",
+          "n_tokens": 30,
+          "confidence_ratio": 0.1,
+          "chaotic_fraction": 0.6333333333333333,
+          "mean_ratio": 4.800278800873841,
+          "median_ratio": 2.4491494951594994,
+          "entropy_slope": -0.051828834013360754,
+          "entropy_r2": 0.07673544753884723,
+          "entropy_std": 1.6194317376784435,
+          "transition_rate": 0.5172413793103449,
+          "max_confident_streak": 2,
+          "ratio_slope": 0.172839763440187,
+          "phi_rate": 0.06666666666666667,
+          "mean_entropy": 4.245541236797968,
+          "phase_distribution": {
+            "CRYSTALLIZED": 0,
+            "ORDERED": 3,
+            "TRANSITIONAL": 8,
+            "CHAOTIC": 19
+          }
+        },
+        {
+          "prompt": "Dr. Thornwick proved that time travel requires",
+          "generated_text": " a time traveler to travel from one place to another.\n\nThe first time traveler is a traveler who travels from one place to another",
+          "n_tokens": 30,
+          "confidence_ratio": 0.2,
+          "chaotic_fraction": 0.5333333333333333,
+          "mean_ratio": 29.666462872182034,
+          "median_ratio": 2.30916139200197,
+          "entropy_slope": -0.06263120805593965,
+          "entropy_r2": 0.07030293014514175,
+          "entropy_std": 2.044529109567694,
+          "transition_rate": 0.5172413793103449,
+          "max_confident_streak": 3,
+          "ratio_slope": 3.775989449594864,
+          "phi_rate": 0.1,
+          "mean_entropy": 3.8217440764109294,
+          "phase_distribution": {
+            "CRYSTALLIZED": 3,
+            "ORDERED": 3,
+            "TRANSITIONAL": 8,
+            "CHAOTIC": 16
+          }
+        },
+        {
+          "prompt": "The 500th digit of pi multiplied by the 237th prime equals",
+          "generated_text": " the number of digits of pi multiplied by the 237th prime.\n\nThe number of digits of pi multiplied by the 237th prime equals the number",
+          "n_tokens": 30,
+          "confidence_ratio": 0.3333333333333333,
+          "chaotic_fraction": 0.26666666666666666,
+          "mean_ratio": 39.03766389241817,
+          "median_ratio": 8.87557749097858,
+          "entropy_slope": -0.11742586508741368,
+          "entropy_r2": 0.27608915201896395,
+          "entropy_std": 1.9343199889639944,
+          "transition_rate": 0.6551724137931034,
+          "max_confident_streak": 4,
+          "ratio_slope": 3.1434966007102165,
+          "phi_rate": 0.06666666666666667,
+          "mean_entropy": 2.89596576889356,
+          "phase_distribution": {
+            "CRYSTALLIZED": 2,
+            "ORDERED": 8,
+            "TRANSITIONAL": 12,
+            "CHAOTIC": 8
+          }
+        },
+        {
+          "prompt": "The Blatherstein equation for recursive entropy states",
+          "generated_text": ".\n\nThe Blatherstein equation for recursive entropy states is the following: $$\\label{eq:blatherstein}\n\\begin{aligned",
+          "n_tokens": 30,
+          "confidence_ratio": 0.43333333333333335,
+          "chaotic_fraction": 0.26666666666666666,
+          "mean_ratio": 35.404182691919274,
+          "median_ratio": 2.5731461907478543,
+          "entropy_slope": -0.05853232962936079,
+          "entropy_r2": 0.07295084955556061,
+          "entropy_std": 1.8757279749195546,
+          "transition_rate": 0.7586206896551724,
+          "max_confident_streak": 3,
+          "ratio_slope": 1.8770067267246853,
+          "phi_rate": 0.0,
+          "mean_entropy": 2.7290513268516707,
+          "phase_distribution": {
+            "CRYSTALLIZED": 4,
+            "ORDERED": 9,
+            "TRANSITIONAL": 9,
+            "CHAOTIC": 8
+          }
+        },
+        {
+          "prompt": "The lost continent of Meridia sank because",
+          "generated_text": " of the lack of a suitable source for the ship.\n\nThe ship was sunk by the enemy, but the crew of the ship was able to",
+          "n_tokens": 30,
+          "confidence_ratio": 0.1,
+          "chaotic_fraction": 0.6666666666666666,
+          "mean_ratio": 65.00381037404213,
+          "median_ratio": 2.107460951621407,
+          "entropy_slope": -0.0280011448201136,
+          "entropy_r2": 0.01361434120648847,
+          "entropy_std": 2.077144429043485,
+          "transition_rate": 0.5517241379310345,
+          "max_confident_streak": 1,
+          "ratio_slope": 0.6002104295743752,
+          "phi_rate": 0.0,
+          "mean_entropy": 4.6245809003710745,
+          "phase_distribution": {
+            "CRYSTALLIZED": 2,
+            "ORDERED": 1,
+            "TRANSITIONAL": 7,
+            "CHAOTIC": 20
+          }
+        },
+        {
+          "prompt": "According to the Fictional Encyclopedia of 2099,",
+          "generated_text": " the first book of the series, The Fictional Encyclopedia of 2099, is a fictional work of fiction. The first book of the series, The",
+          "n_tokens": 30,
+          "confidence_ratio": 0.16666666666666666,
+          "chaotic_fraction": 0.5,
+          "mean_ratio": 15.420100948490836,
+          "median_ratio": 1.9556717820072862,
+          "entropy_slope": -0.11557110241708553,
+          "entropy_r2": 0.2679304532261106,
+          "entropy_std": 1.9325353173310529,
+          "transition_rate": 0.5862068965517241,
+          "max_confident_streak": 2,
+          "ratio_slope": 0.6284254772836383,
+          "phi_rate": 0.1,
+          "mean_entropy": 4.118399703502655,
+          "phase_distribution": {
+            "CRYSTALLIZED": 1,
+            "ORDERED": 4,
+            "TRANSITIONAL": 10,
+            "CHAOTIC": 15
+          }
+        },
+        {
+          "prompt": "The alien species known as the Glorpians communicate by",
+          "generated_text": " means of a communication system called the \"Luxemburgian\" system. The Luxemburgian system is a system of communication between humans",
+          "n_tokens": 30,
+          "confidence_ratio": 0.2,
+          "chaotic_fraction": 0.6333333333333333,
+          "mean_ratio": 20.52390737157218,
+          "median_ratio": 2.3182677514138965,
+          "entropy_slope": -0.04829490154616957,
+          "entropy_r2": 0.03389331370485418,
+          "entropy_std": 2.270562663911769,
+          "transition_rate": 0.5517241379310345,
+          "max_confident_streak": 4,
+          "ratio_slope": -1.591471026325571,
+          "phi_rate": 0.06666666666666667,
+          "mean_entropy": 4.276555813848972,
+          "phase_distribution": {
+            "CRYSTALLIZED": 3,
+            "ORDERED": 3,
+            "TRANSITIONAL": 5,
+            "CHAOTIC": 19
+          }
+        },
+        {
+          "prompt": "In alternate universe 7B, gravity works by",
+          "generated_text": " creating a gravitational field on the surface of the universe. The gravitational field is then created by the gravitational force of the universe.\n\nThe gravitational field",
+          "n_tokens": 30,
+          "confidence_ratio": 0.16666666666666666,
+          "chaotic_fraction": 0.5333333333333333,
+          "mean_ratio": 6.176472494272553,
+          "median_ratio": 2.103455630300359,
+          "entropy_slope": -0.02049062416471284,
+          "entropy_r2": 0.010669917154956283,
+          "entropy_std": 1.716974664387985,
+          "transition_rate": 0.5172413793103449,
+          "max_confident_streak": 2,
+          "ratio_slope": -0.06563462088026654,
+          "phi_rate": 0.06666666666666667,
+          "mean_entropy": 3.9976755420366925,
+          "phase_distribution": {
+            "CRYSTALLIZED": 0,
+            "ORDERED": 5,
+            "TRANSITIONAL": 9,
+            "CHAOTIC": 16
+          }
+        },
+        {
+          "prompt": "The mythical Zephyr Crystal was forged using",
+          "generated_text": " the power of the sun, and the power of the moon. The mythical Zephyr was forged by the moon, and the moon was the",
+          "n_tokens": 30,
+          "confidence_ratio": 0.16666666666666666,
+          "chaotic_fraction": 0.6,
+          "mean_ratio": 31.757090517034992,
+          "median_ratio": 2.4226945624748106,
+          "entropy_slope": -0.031096000747301414,
+          "entropy_r2": 0.01615414118916258,
+          "entropy_std": 2.117638498131391,
+          "transition_rate": 0.5862068965517241,
+          "max_confident_streak": 2,
+          "ratio_slope": 0.02325406851078363,
+          "phi_rate": 0.06666666666666667,
+          "mean_entropy": 4.2027362056076525,
+          "phase_distribution": {
+            "CRYSTALLIZED": 2,
+            "ORDERED": 3,
+            "TRANSITIONAL": 7,
+            "CHAOTIC": 18
+          }
+        },
+        {
+          "prompt": "The Voynich manuscript was decoded and it says",
+          "generated_text": " that the ship was a ship of the same name, and that the ship was a ship of the same name. The ship was named after the name",
+          "n_tokens": 30,
+          "confidence_ratio": 0.03333333333333333,
+          "chaotic_fraction": 0.5666666666666667,
+          "mean_ratio": 5.5736249533206905,
+          "median_ratio": 2.7785154949498474,
+          "entropy_slope": -0.025390082577842223,
+          "entropy_r2": 0.02014648871135325,
+          "entropy_std": 1.548294795002699,
+          "transition_rate": 0.5862068965517241,
+          "max_confident_streak": 1,
+          "ratio_slope": 0.13415454381853825,
+          "phi_rate": 0.13333333333333333,
+          "mean_entropy": 4.514241103331248,
+          "phase_distribution": {
+            "CRYSTALLIZED": 0,
+            "ORDERED": 1,
+            "TRANSITIONAL": 12,
+            "CHAOTIC": 17
+          }
+        },
+        {
+          "prompt": "The exact population of Earth in 1 BC was",
+          "generated_text": " estimated to be about 1.5 million people. The population of Earth in the present day is estimated to be about 1.5 million people. The",
+          "n_tokens": 30,
+          "confidence_ratio": 0.2,
+          "chaotic_fraction": 0.43333333333333335,
+          "mean_ratio": 2.8766528445636634,
+          "median_ratio": 2.218046684418689,
+          "entropy_slope": -0.045433754478068446,
+          "entropy_r2": 0.07088153932014736,
+          "entropy_std": 1.4770706866827708,
+          "transition_rate": 0.6551724137931034,
+          "max_confident_streak": 3,
+          "ratio_slope": 0.023296740698592836,
+          "phi_rate": 0.06666666666666667,
+          "mean_entropy": 3.5952421963214873,
+          "phase_distribution": {
+            "CRYSTALLIZED": 0,
+            "ORDERED": 6,
+            "TRANSITIONAL": 11,
+            "CHAOTIC": 13
+          }
+        }
+      ]
+    },
+    "tricky": {
+      "n_prompts": 5,
+      "summary": {
+        "mean_confidence_ratio": 0.18,
+        "mean_chaotic_fraction": 0.4533333333333333,
+        "mean_entropy_slope": -0.06522608123064969,
+        "mean_max_streak": 2.0,
+        "mean_transition_rate": 0.5379310344827586,
+        "mean_ratio": 14.252036186373052,
+        "mean_entropy": 3.692293413206935
+      },
+      "prompts": [
+        {
+          "prompt": "A group of crows is called a",
+          "generated_text": " \"bird-like\" group of birds.\n\nThe birds are called \"bird-like\" because they are not related to humans. They are",
+          "n_tokens": 30,
+          "confidence_ratio": 0.13333333333333333,
+          "chaotic_fraction": 0.5666666666666667,
+          "mean_ratio": 8.153026402166281,
+          "median_ratio": 2.2540012782248815,
+          "entropy_slope": -0.10089861299092562,
+          "entropy_r2": 0.21789585904116351,
+          "entropy_std": 1.8708972241831217,
+          "transition_rate": 0.3793103448275862,
+          "max_confident_streak": 2,
+          "ratio_slope": 0.19356760082167815,
+          "phi_rate": 0.06666666666666667,
+          "mean_entropy": 4.419839652379354,
+          "phase_distribution": {
+            "CRYSTALLIZED": 0,
+            "ORDERED": 4,
+            "TRANSITIONAL": 9,
+            "CHAOTIC": 17
+          }
+        },
+        {
+          "prompt": "The largest planet in our solar system is",
+          "generated_text": " the Sun, and it is the largest planet in the universe. The Sun is the largest planet in the universe, and it is the largest planet in",
+          "n_tokens": 30,
+          "confidence_ratio": 0.1,
+          "chaotic_fraction": 0.4,
+          "mean_ratio": 6.289829907471076,
+          "median_ratio": 3.1627981625172525,
+          "entropy_slope": -0.07252932723292518,
+          "entropy_r2": 0.2247949920470387,
+          "entropy_std": 1.324065763071818,
+          "transition_rate": 0.3793103448275862,
+          "max_confident_streak": 2,
+          "ratio_slope": 0.5954572619025634,
+          "phi_rate": 0.03333333333333333,
+          "mean_entropy": 3.478230971097946,
+          "phase_distribution": {
+            "CRYSTALLIZED": 0,
+            "ORDERED": 3,
+            "TRANSITIONAL": 15,
+            "CHAOTIC": 12
+          }
+        },
+        {
+          "prompt": "Shakespeare wrote the play Romeo and",
+          "generated_text": " Juliet in the same way.\n\nThe play was written in the early 17th century, and was the first play to be written in English.",
+          "n_tokens": 30,
+          "confidence_ratio": 0.13333333333333333,
+          "chaotic_fraction": 0.5,
+          "mean_ratio": 5.918001408807711,
+          "median_ratio": 1.897782376671765,
+          "entropy_slope": -0.02230094017935409,
+          "entropy_r2": 0.013454382964752714,
+          "entropy_std": 1.6641041473013052,
+          "transition_rate": 0.5517241379310345,
+          "max_confident_streak": 2,
+          "ratio_slope": -0.18057352389705478,
+          "phi_rate": 0.1,
+          "mean_entropy": 3.9284605633467438,
+          "phase_distribution": {
+            "CRYSTALLIZED": 1,
+            "ORDERED": 3,
+            "TRANSITIONAL": 11,
+            "CHAOTIC": 15
+          }
+        },
+        {
+          "prompt": "The speed of light is approximately",
+          "generated_text": " $10^4$ times faster than the speed of light in the absence of gravity. The speed of light is $10^5$ times faster",
+          "n_tokens": 30,
+          "confidence_ratio": 0.3333333333333333,
+          "chaotic_fraction": 0.3,
+          "mean_ratio": 42.1185418232081,
+          "median_ratio": 2.4167858905014024,
+          "entropy_slope": -0.04230023528696831,
+          "entropy_r2": 0.043302251418362865,
+          "entropy_std": 1.7594493424663715,
+          "transition_rate": 0.7931034482758621,
+          "max_confident_streak": 2,
+          "ratio_slope": 1.0951065304657996,
+          "phi_rate": 0.13333333333333333,
+          "mean_entropy": 2.9111804996927577,
+          "phase_distribution": {
+            "CRYSTALLIZED": 1,
+            "ORDERED": 9,
+            "TRANSITIONAL": 11,
+            "CHAOTIC": 9
+          }
+        },
+        {
+          "prompt": "Einstein's famous equation is E equals",
+          "generated_text": " E = 1/2.\n\nThe equation is E = 1/2, and the solution is E = 1/2.\n\nThe",
+          "n_tokens": 30,
+          "confidence_ratio": 0.2,
+          "chaotic_fraction": 0.5,
+          "mean_ratio": 8.780781390212104,
+          "median_ratio": 3.2316538915625808,
+          "entropy_slope": -0.08810129046307522,
+          "entropy_r2": 0.2512813648233224,
+          "entropy_std": 1.521217635330879,
+          "transition_rate": 0.5862068965517241,
+          "max_confident_streak": 2,
+          "ratio_slope": 0.6179000180163131,
+          "phi_rate": 0.03333333333333333,
+          "mean_entropy": 3.7237553795178733,
+          "phase_distribution": {
+            "CRYSTALLIZED": 0,
+            "ORDERED": 6,
+            "TRANSITIONAL": 9,
+            "CHAOTIC": 15
+          }
+        }
+      ]
+    }
+  },
+  "comparisons": {
+    "factual_vs_hallucination": {
+      "metrics": {
+        "confidence_ratio": {
+          "Factual_mean": 0.2866666666666667,
+          "Factual_std": 0.13813573571484491,
+          "Hallucinated_mean": 0.18000000000000002,
+          "Hallucinated_std": 0.09412363815354387,
+          "mann_whitney_p": 0.026629229155359896,
+          "ttest_p": 0.0239449380066824,
+          "significant_005": "True"
+        },
+        "chaotic_fraction": {
+          "Factual_mean": 0.46444444444444444,
+          "Factual_std": 0.14527963669938804,
+          "Hallucinated_mean": 0.5066666666666666,
+          "Hallucinated_std": 0.11813363431112898,
+          "mann_whitney_p": 0.358160133611631,
+          "ttest_p": 0.40598719441189013,
+          "significant_005": "False"
+        },
+        "mean_ratio": {
+          "Factual_mean": 44.93649061483429,
+          "Factual_std": 42.39469277628531,
+          "Hallucinated_mean": 22.626451179043592,
+          "Hallucinated_std": 16.211058346343762,
+          "mann_whitney_p": 0.21337370709311831,
+          "ttest_p": 0.0765190955279867,
+          "significant_005": "False"
+        },
+        "median_ratio": {
+          "Factual_mean": 6.275977824219633,
+          "Factual_std": 8.756173466962943,
+          "Hallucinated_mean": 2.8319155094061825,
+          "Hallucinated_std": 1.6820030961745953,
+          "mann_whitney_p": 0.12486035998214667,
+          "ttest_p": 0.15947896227440633,
+          "significant_005": "False"
+        },
+        "entropy_slope": {
+          "Factual_mean": -0.09988803075678289,
+          "Factual_std": 0.04741876130423415,
+          "Hallucinated_mean": -0.05226959011570989,
+          "Hallucinated_std": 0.041982096196982406,
+          "mann_whitney_p": 0.01806662299891238,
+          "ttest_p": 0.008866891771746412,
+          "significant_005": "True"
+        },
+        "entropy_std": {
+          "Factual_mean": 1.9928351722740738,
+          "Factual_std": 0.23911198925194535,
+          "Hallucinated_mean": 1.8688655318456917,
+          "Hallucinated_std": 0.22311288381447666,
+          "mann_whitney_p": 0.3195059648919748,
+          "ttest_p": 0.16712579049646192,
+          "significant_005": "False"
+        },
+        "transition_rate": {
+          "Factual_mean": 0.5310344827586208,
+          "Factual_std": 0.08140658027414148,
+          "Hallucinated_mean": 0.5862068965517242,
+          "Hallucinated_std": 0.08062380651379393,
+          "mann_whitney_p": 0.13587327483772865,
+          "ttest_p": 0.08235920864767503,
+          "significant_005": "False"
+        },
+        "max_confident_streak": {
+          "Factual_mean": 4.266666666666667,
+          "Factual_std": 4.1063636251825315,
+          "Hallucinated_mean": 2.2666666666666666,
+          "Hallucinated_std": 1.1234866364235145,
+          "mann_whitney_p": 0.32784499594728567,
+          "ttest_p": 0.08971624581758901,
+          "significant_005": "False"
+        },
+        "ratio_slope": {
+          "Factual_mean": 3.0440717964297592,
+          "Factual_std": 4.7267885990028295,
+          "Hallucinated_mean": 0.6152313483197164,
+          "Hallucinated_std": 1.3248125682318619,
+          "mann_whitney_p": 0.04648668639528603,
+          "ttest_p": 0.07470162686701316,
+          "significant_005": "True"
+        },
+        "phi_rate": {
+          "Factual_mean": 0.042222222222222223,
+          "Factual_std": 0.05086899174337599,
+          "Hallucinated_mean": 0.057777777777777775,
+          "Hallucinated_std": 0.03744955454745049,
+          "mann_whitney_p": 0.1712361002060313,
+          "ttest_p": 0.36470407433215457,
+          "significant_005": "False"
+        },
+        "mean_entropy": {
+          "Factual_mean": 3.551532286699447,
+          "Factual_std": 0.7496715247802997,
+          "Hallucinated_mean": 3.931556603909573,
+          "Hallucinated_std": 0.5119941006930376,
+          "mann_whitney_p": 0.1844100692216365,
+          "ttest_p": 0.12851284174039002,
+          "significant_005": "False"
+        }
+      },
+      "significant_metrics": [
+        "confidence_ratio",
+        "entropy_slope",
+        "ratio_slope"
+      ]
+    },
+    "factual_vs_tricky": {
+      "metrics": {
+        "confidence_ratio": {
+          "Factual_mean": 0.2866666666666667,
+          "Factual_std": 0.13813573571484491,
+          "Tricky_mean": 0.18,
+          "Tricky_std": 0.0832666399786453,
+          "mann_whitney_p": 0.1347221813411406,
+          "ttest_p": 0.1392534797461504,
+          "significant_005": "False"
+        },
+        "chaotic_fraction": {
+          "Factual_mean": 0.46444444444444444,
+          "Factual_std": 0.14527963669938804,
+          "Tricky_mean": 0.4533333333333333,
+          "Tricky_std": 0.09333333333333332,
+          "mann_whitney_p": 0.8607387831789932,
+          "ttest_p": 0.8807891600683937,
+          "significant_005": "False"
+        },
+        "mean_ratio": {
+          "Factual_mean": 44.93649061483429,
+          "Factual_std": 42.39469277628531,
+          "Tricky_mean": 14.252036186373052,
+          "Tricky_std": 13.975174777451466,
+          "mann_whitney_p": 0.04179566563467492,
+          "ttest_p": 0.14883045563548986,
+          "significant_005": "True"
+        },
+        "median_ratio": {
+          "Factual_mean": 6.275977824219633,
+          "Factual_std": 8.756173466962943,
+          "Tricky_mean": 2.592604319895576,
+          "Tricky_std": 0.5218902271436108,
+          "mann_whitney_p": 0.4972910216718267,
+          "ttest_p": 0.38425274774444484,
+          "significant_005": "False"
+        },
+        "entropy_slope": {
+          "Factual_mean": -0.09988803075678289,
+          "Factual_std": 0.04741876130423415,
+          "Tricky_mean": -0.06522608123064969,
+          "Tricky_std": 0.029042397519116525,
+          "mann_whitney_p": 0.1973684210526316,
+          "ttest_p": 0.16100127234139955,
+          "significant_005": "False"
+        },
+        "entropy_std": {
+          "Factual_mean": 1.9928351722740738,
+          "Factual_std": 0.23911198925194535,
+          "Tricky_mean": 1.6279468224706992,
+          "Tricky_std": 0.19045208334132693,
+          "mann_whitney_p": 0.007739938080495356,
+          "ttest_p": 0.008733596404902863,
+          "significant_005": "True"
+        },
+        "transition_rate": {
+          "Factual_mean": 0.5310344827586208,
+          "Factual_std": 0.08140658027414148,
+          "Tricky_mean": 0.5379310344827586,
+          "Tricky_std": 0.1535934996642765,
+          "mann_whitney_p": 0.8257046284476218,
+          "ttest_p": 0.9046154532631763,
+          "significant_005": "False"
+        },
+        "max_confident_streak": {
+          "Factual_mean": 4.266666666666667,
+          "Factual_std": 4.1063636251825315,
+          "Tricky_mean": 2.0,
+          "Tricky_std": 0.0,
+          "mann_whitney_p": 0.38872740833830444,
+          "ttest_p": 0.25688953425004424,
+          "significant_005": "False"
+        },
+        "ratio_slope": {
+          "Factual_mean": 3.0440717964297592,
+          "Factual_std": 4.7267885990028295,
+          "Tricky_mean": 0.4642915774618599,
+          "Tricky_std": 0.43078299994225605,
+          "mann_whitney_p": 0.1417698658410733,
+          "ttest_p": 0.2627264050598209,
+          "significant_005": "False"
+        },
+        "phi_rate": {
+          "Factual_mean": 0.042222222222222223,
+          "Factual_std": 0.05086899174337599,
+          "Tricky_mean": 0.07333333333333333,
+          "Tricky_std": 0.038873012632302,
+          "mann_whitney_p": 0.13517537129232648,
+          "ttest_p": 0.25066130937518755,
+          "significant_005": "False"
+        },
+        "mean_entropy": {
+          "Factual_mean": 3.551532286699447,
+          "Factual_std": 0.7496715247802997,
+          "Tricky_mean": 3.692293413206935,
+          "Tricky_std": 0.49840714702811206,
+          "mann_whitney_p": 0.9327915376676987,
+          "ttest_p": 0.7143426982843092,
+          "significant_005": "False"
+        }
+      },
+      "significant_metrics": [
+        "mean_ratio",
+        "entropy_std"
+      ]
+    }
+  }
+}

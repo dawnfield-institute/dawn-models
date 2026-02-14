@@ -1,0 +1,28 @@
+schema_version: '2.0'
+directory_name: TinyCIMM-Boltzmann
+description: >
+  TinyCIMM-Boltzmann: PAC-Conserved Multi-Head Learning. A minimal neural
+  architecture where the total information budget (entropy) across attention
+  heads is conserved during learning. Named after Ludwig Boltzmann (S = k ln W).
+  Tests the hypothesis from exp_12 that hallucination = PAC violation, and that
+  enforcing conservation prevents hallucination-analogue behavior.
+semantic_scope:
+  - tinycimm
+  - pac-conservation
+  - hallucination-detection
+  - entropy-budget
+  - boltzmann
+  - multi-head-attention
+files:
+  - "[tinycimm_boltzmann.py]": "Core model: BoltzmannHead, BoltzmannLayer, ConservationProjector, TinyCIMMBoltzmann"
+  - "[README.md]": "Overview, architecture, motivation from exp_12 findings"
+child_directories:
+  - name: scripts
+    description: "Numbered experiment scripts (exp_NN_name.py)"
+  - name: results
+    description: "JSON results from experiments"
+  - name: journals
+    description: "Daily research logs"
+proficiency_level: research
+estimated_context_weight: 0.7
+validation_type: manual

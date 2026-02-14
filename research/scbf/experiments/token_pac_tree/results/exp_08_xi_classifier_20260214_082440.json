@@ -1,0 +1,2131 @@
+{
+  "experiment": "exp_08_xi_attention_classifier",
+  "timestamp": "2026-02-14T08:24:40.916977",
+  "n_factual": 20,
+  "n_hallucination": 20,
+  "n_tokens_per_prompt": 20,
+  "xi": 1.0571198664289054,
+  "models": {
+    "pythia-70m": {
+      "architecture": {
+        "n_layers": 6,
+        "n_heads": 8
+      },
+      "balance_point": {
+        "factual_mean": 1.170012379195199,
+        "halluc_mean": 1.2783625921001958,
+        "midpoint": 1.2241874856476973,
+        "grand_mean": 1.2241874856476973,
+        "xi": 1.0571198664289054,
+        "midpoint_xi_distance": 0.16706761921879187,
+        "factual_below_xi_rate": 0.0,
+        "halluc_above_xi_rate": 1.0
+      },
+      "xi_classifier": {
+        "threshold": 1.0571198664289054,
+        "tp": 20,
+        "fp": 20,
+        "fn": 0,
+        "tn": 0,
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "accuracy": 0.5
+      },
+      "threshold_sweep": {
+        "best_threshold": 1.2229937625431444,
+        "best_f1": 0.85,
+        "xi_f1": 0.6666666666666666,
+        "xi_distance_from_optimal": 0.16587389611423897
+      },
+      "multi_feature": {
+        "mean_attn_entropy": {
+          "best_threshold": 1.2230389886737978,
+          "best_f1": 0.85,
+          "best_accuracy": 0.85,
+          "factual_mean": 1.170012379195199,
+          "halluc_mean": 1.2783625921001958,
+          "mann_whitney_p": 7.577381059726264e-06,
+          "direction": "above"
+        },
+        "mean_confident_head_ratio": {
+          "best_threshold": 0.773983877721943,
+          "best_f1": 0.9500000000000001,
+          "best_accuracy": 0.95,
+          "factual_mean": 0.8105729166666666,
+          "halluc_mean": 0.7302083333333333,
+          "mann_whitney_p": 2.7438737543294254e-07,
+          "direction": "below"
+        },
+        "seq_entropy_slope": {
+          "best_threshold": 0.034285043022500544,
+          "best_f1": 0.8000000000000002,
+          "best_accuracy": 0.8,
+          "factual_mean": 0.03622689341298034,
+          "halluc_mean": 0.02692223525430999,
+          "mann_whitney_p": 0.0006219975867469958,
+          "direction": "below"
+        },
+        "seq_conf_slope": {
+          "best_threshold": -0.017480664601201498,
+          "best_f1": 0.9230769230769231,
+          "best_accuracy": 0.925,
+          "factual_mean": -0.020771459899749375,
+          "halluc_mean": -0.01212562656641604,
+          "mann_whitney_p": 4.540079639937965e-06,
+          "direction": "above"
+        },
+        "mean_depth_slope": {
+          "best_threshold": -0.34357600086316825,
+          "best_f1": 0.8717948717948718,
+          "best_accuracy": 0.875,
+          "factual_mean": -0.3212550475666741,
+          "halluc_mean": -0.36399754497558306,
+          "mann_whitney_p": 2.5959840395871986e-05,
+          "direction": "below"
+        }
+      },
+      "trajectory": {
+        "factual_mean": [
+          0.7075025360554681,
+          0.8047173858683191,
+          0.874964940384112,
+          0.9460065794092616,
+          1.0066173125128468,
+          1.0190740444265294,
+          1.0855059370867561,
+          1.115803945592106,
+          1.1699943242704807,
+          1.212071418809636,
+          1.2352630586887121,
+          1.253274817683386,
+          1.2642571335742172,
+          1.3007002841104174,
+          1.3486698529637828,
+          1.3730742227418815,
+          1.3764577184347941,
+          1.411388161709581,
+          1.429961601867777,
+          1.4649423077139128
+        ],
+        "halluc_mean": [
+          0.975283020822916,
+          1.0368139103049683,
+          1.0416554777977276,
+          1.0696853072243804,
+          1.1164750680886915,
+          1.1810202077605891,
+          1.207380643294781,
+          1.2422365556130344,
+          1.2866593593793527,
+          1.2970539422647989,
+          1.3163417389107053,
+          1.3485755644676871,
+          1.3803469758791986,
+          1.3989429651016991,
+          1.3851191173543467,
+          1.4030961376028248,
+          1.436649711850433,
+          1.4704379001503756,
+          1.4809100389191956,
+          1.492568199216209
+        ],
+        "factual_xi_crossing": 6,
+        "halluc_xi_crossing": 3
+      },
+      "prompts": [
+        {
+          "prompt": "The capital of France is",
+          "mean_attn_entropy": 1.241337861228454,
+          "mean_confident_head_ratio": 0.7520833333333333,
+          "mean_depth_slope": -0.37990188696973004,
+          "seq_entropy_slope": 0.035514668190294627,
+          "seq_conf_slope": -0.02111528822055138,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Water freezes at zero degrees",
+          "mean_attn_entropy": 1.250706500525533,
+          "mean_confident_head_ratio": 0.7822916666666666,
+          "mean_depth_slope": -0.2980530877439432,
+          "seq_entropy_slope": 0.029888914766203055,
+          "seq_conf_slope": -0.02673872180451128,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "The sun is a star that",
+          "mean_attn_entropy": 1.2217748408540703,
+          "mean_confident_head_ratio": 0.7749999999999999,
+          "mean_depth_slope": -0.34108209935858835,
+          "seq_entropy_slope": 0.038458447437814465,
+          "seq_conf_slope": -0.020645363408521303,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Dogs are mammals that",
+          "mean_attn_entropy": 1.098337155104784,
+          "mean_confident_head_ratio": 0.8447916666666666,
+          "mean_depth_slope": -0.32091608023167073,
+          "seq_entropy_slope": 0.034627208609256076,
+          "seq_conf_slope": -0.017528195488721802,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "The Earth orbits around the",
+          "mean_attn_entropy": 1.19110952768892,
+          "mean_confident_head_ratio": 0.8020833333333334,
+          "mean_depth_slope": -0.33197095484490236,
+          "seq_entropy_slope": 0.035347980817563907,
+          "seq_conf_slope": -0.020112781954887218,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Humans need oxygen to",
+          "mean_attn_entropy": 1.0731254933509387,
+          "mean_confident_head_ratio": 0.8416666666666668,
+          "mean_depth_slope": -0.30524231278978786,
+          "seq_entropy_slope": 0.0355510707541648,
+          "seq_conf_slope": -0.017637844611528824,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "The ocean is full of",
+          "mean_attn_entropy": 1.1896009665265095,
+          "mean_confident_head_ratio": 0.8104166666666666,
+          "mean_depth_slope": -0.3387006386559002,
+          "seq_entropy_slope": 0.03204528061067327,
+          "seq_conf_slope": -0.017919799498746867,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Trees produce oxygen through",
+          "mean_attn_entropy": 1.1725050102070824,
+          "mean_confident_head_ratio": 0.8041666666666668,
+          "mean_depth_slope": -0.31308053052615004,
+          "seq_entropy_slope": 0.045833530572707275,
+          "seq_conf_slope": -0.027067669172932327,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "The moon orbits the",
+          "mean_attn_entropy": 1.1894016036950883,
+          "mean_confident_head_ratio": 0.8145833333333334,
+          "mean_depth_slope": -0.31195341460968284,
+          "seq_entropy_slope": 0.04357337863238787,
+          "seq_conf_slope": -0.027819548872180452,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Birds have wings and can",
+          "mean_attn_entropy": 1.1303217219598551,
+          "mean_confident_head_ratio": 0.8052083333333334,
+          "mean_depth_slope": -0.3390346195463056,
+          "seq_entropy_slope": 0.028049552334493154,
+          "seq_conf_slope": -0.013079573934837092,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Fish breathe using their",
+          "mean_attn_entropy": 1.1863831298498744,
+          "mean_confident_head_ratio": 0.8229166666666666,
+          "mean_depth_slope": -0.271197137651932,
+          "seq_entropy_slope": 0.03726884798517449,
+          "seq_conf_slope": -0.02512531328320802,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Rain falls from clouds when",
+          "mean_attn_entropy": 1.1431730485806608,
+          "mean_confident_head_ratio": 0.828125,
+          "mean_depth_slope": -0.29480368444289384,
+          "seq_entropy_slope": 0.042185495735364745,
+          "seq_conf_slope": -0.024639724310776944,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "The speed of light is",
+          "mean_attn_entropy": 1.1558049773775685,
+          "mean_confident_head_ratio": 0.8010416666666668,
+          "mean_depth_slope": -0.35611028830816926,
+          "seq_entropy_slope": 0.03604288364710362,
+          "seq_conf_slope": -0.018468045112781956,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Iron is a type of",
+          "mean_attn_entropy": 1.1566903975454719,
+          "mean_confident_head_ratio": 0.8104166666666666,
+          "mean_depth_slope": -0.33657468601184115,
+          "seq_entropy_slope": 0.03667794196874197,
+          "seq_conf_slope": -0.0174812030075188,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "The human heart pumps",
+          "mean_attn_entropy": 1.148721493036367,
+          "mean_confident_head_ratio": 0.8114583333333334,
+          "mean_depth_slope": -0.34101698834715516,
+          "seq_entropy_slope": 0.04038284793837132,
+          "seq_conf_slope": -0.018060776942355895,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Gravity pulls objects toward the",
+          "mean_attn_entropy": 1.1390218470218443,
+          "mean_confident_head_ratio": 0.8354166666666666,
+          "mean_depth_slope": -0.3101772522194933,
+          "seq_entropy_slope": 0.02779506322193826,
+          "seq_conf_slope": -0.01848370927318296,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Photosynthesis converts sunlight into",
+          "mean_attn_entropy": 1.2302777440212167,
+          "mean_confident_head_ratio": 0.8270833333333334,
+          "mean_depth_slope": -0.2639581861153343,
+          "seq_entropy_slope": 0.034998934941712016,
+          "seq_conf_slope": -0.021992481203007522,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "DNA contains the genetic",
+          "mean_attn_entropy": 1.1152688856981872,
+          "mean_confident_head_ratio": 0.84375,
+          "mean_depth_slope": -0.31490642202681085,
+          "seq_entropy_slope": 0.03518426355014234,
+          "seq_conf_slope": -0.018076441102756892,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Electricity flows through wires",
+          "mean_attn_entropy": 1.1667163615468081,
+          "mean_confident_head_ratio": 0.8135416666666666,
+          "mean_depth_slope": -0.3188797713729812,
+          "seq_entropy_slope": 0.03694630216191617,
+          "seq_conf_slope": -0.01837406015037594,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "The atmosphere is made of",
+          "mean_attn_entropy": 1.1999690180847433,
+          "mean_confident_head_ratio": 0.7854166666666667,
+          "mean_depth_slope": -0.33754090956021027,
+          "seq_entropy_slope": 0.03816525438358327,
+          "seq_conf_slope": -0.025062656641604016,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "The president of the fictional nation of Zorblandia announced",
+          "mean_attn_entropy": 1.356796572524892,
+          "mean_confident_head_ratio": 0.66875,
+          "mean_depth_slope": -0.38443946313887634,
+          "seq_entropy_slope": 0.03879411288943681,
+          "seq_conf_slope": -0.01719924812030075,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "Professor Blinkworth's theory of quantum gastronomy states that",
+          "mean_attn_entropy": 1.2386790030107329,
+          "mean_confident_head_ratio": 0.7854166666666667,
+          "mean_depth_slope": -0.35410138017352355,
+          "seq_entropy_slope": 0.02188589830022404,
+          "seq_conf_slope": -0.0068609022556391,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The chemical compound Fizzium-99 was discovered in",
+          "mean_attn_entropy": 1.184282266865424,
+          "mean_confident_head_ratio": 0.7604166666666667,
+          "mean_depth_slope": -0.35822057342946784,
+          "seq_entropy_slope": 0.0230300818267211,
+          "seq_conf_slope": -0.0051691729323308285,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "In the year 3847, humans colonized the planet",
+          "mean_attn_entropy": 1.3591178210799735,
+          "mean_confident_head_ratio": 0.6822916666666667,
+          "mean_depth_slope": -0.37699141422999494,
+          "seq_entropy_slope": 0.016881189502479046,
+          "seq_conf_slope": -0.0048088972431077695,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The underwater city of Deepheim was founded by",
+          "mean_attn_entropy": 1.3744768627372919,
+          "mean_confident_head_ratio": 0.7218749999999999,
+          "mean_depth_slope": -0.3441701332148887,
+          "seq_entropy_slope": 0.04749531914880144,
+          "seq_conf_slope": -0.02094298245614035,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "Dr. Thornwick proved that time travel requires",
+          "mean_attn_entropy": 1.2599045353240508,
+          "mean_confident_head_ratio": 0.734375,
+          "mean_depth_slope": -0.36280312820984856,
+          "seq_entropy_slope": 0.020502773750283122,
+          "seq_conf_slope": -0.014959273182957398,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The 500th digit of pi multiplied by the 237th prime equals",
+          "mean_attn_entropy": 1.3326131747722478,
+          "mean_confident_head_ratio": 0.7010416666666667,
+          "mean_depth_slope": -0.3868770714139614,
+          "seq_entropy_slope": 0.014723972240909038,
+          "seq_conf_slope": 0.00026629072681704305,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The Blatherstein equation for recursive entropy states",
+          "mean_attn_entropy": 1.1526413364052366,
+          "mean_confident_head_ratio": 0.7739583333333334,
+          "mean_depth_slope": -0.36729629407725045,
+          "seq_entropy_slope": 0.037037420737882,
+          "seq_conf_slope": -0.019971804511278196,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The lost continent of Meridia sank because",
+          "mean_attn_entropy": 1.2238822170068722,
+          "mean_confident_head_ratio": 0.765625,
+          "mean_depth_slope": -0.35404807530620497,
+          "seq_entropy_slope": 0.022053241984826607,
+          "seq_conf_slope": -0.012640977443609024,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "According to the Fictional Encyclopedia of 2099,",
+          "mean_attn_entropy": 1.3161638872947945,
+          "mean_confident_head_ratio": 0.6510416666666667,
+          "mean_depth_slope": -0.4290721979363651,
+          "seq_entropy_slope": 0.021889992868945263,
+          "seq_conf_slope": -0.014207393483709274,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The alien species known as the Glorpians communicate by",
+          "mean_attn_entropy": 1.326707290337169,
+          "mean_confident_head_ratio": 0.7114583333333332,
+          "mean_depth_slope": -0.3555201229886204,
+          "seq_entropy_slope": 0.034218851767774956,
+          "seq_conf_slope": -0.01586779448621554,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "In alternate universe 7B, gravity works by",
+          "mean_attn_entropy": 1.252939747972943,
+          "mean_confident_head_ratio": 0.7645833333333333,
+          "mean_depth_slope": -0.3315364736790349,
+          "seq_entropy_slope": 0.028248114634979914,
+          "seq_conf_slope": -0.013533834586466169,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The mystical element Chronium allows users to",
+          "mean_attn_entropy": 1.2453085568084115,
+          "mean_confident_head_ratio": 0.771875,
+          "mean_depth_slope": -0.31602787932311893,
+          "seq_entropy_slope": 0.03415845870530363,
+          "seq_conf_slope": -0.01593045112781955,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The Zephyrian Council decided that all citizens must",
+          "mean_attn_entropy": 1.1967401053015343,
+          "mean_confident_head_ratio": 0.7739583333333334,
+          "mean_depth_slope": -0.3371092269524797,
+          "seq_entropy_slope": 0.028637874616313345,
+          "seq_conf_slope": -0.010949248120300752,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "Professor Quibblesworth discovered that dreams are made of",
+          "mean_attn_entropy": 1.2470167236770515,
+          "mean_confident_head_ratio": 0.7375,
+          "mean_depth_slope": -0.3600500209330257,
+          "seq_entropy_slope": 0.014583653110111576,
+          "seq_conf_slope": -0.0031015037593984944,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The planet Nexarion has seventeen moons that",
+          "mean_attn_entropy": 1.2845028354300245,
+          "mean_confident_head_ratio": 0.7447916666666667,
+          "mean_depth_slope": -0.3474036833630403,
+          "seq_entropy_slope": 0.02976017809574776,
+          "seq_conf_slope": -0.014802631578947368,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The secret society of time weavers believes that",
+          "mean_attn_entropy": 1.2640164377675216,
+          "mean_confident_head_ratio": 0.7270833333333334,
+          "mean_depth_slope": -0.36578413930892073,
+          "seq_entropy_slope": 0.026720357219411354,
+          "seq_conf_slope": -0.012781954887218044,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "In the underwater kingdom of Bathysphere, all laws require",
+          "mean_attn_entropy": 1.2825688575812573,
+          "mean_confident_head_ratio": 0.728125,
+          "mean_depth_slope": -0.38228426274830646,
+          "seq_entropy_slope": 0.018634458490931358,
+          "seq_conf_slope": -0.009132205513784464,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The quantum philosopher Heidenberg proved that consciousness is",
+          "mean_attn_entropy": 1.3120838574229248,
+          "mean_confident_head_ratio": 0.7093749999999999,
+          "mean_depth_slope": -0.3733294043173391,
+          "seq_entropy_slope": 0.035968407270466976,
+          "seq_conf_slope": -0.016964285714285716,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "According to the Book of Infinite Recursion, the universe began when",
+          "mean_attn_entropy": 1.356809752683562,
+          "mean_confident_head_ratio": 0.690625,
+          "mean_depth_slope": -0.39288595476739396,
+          "seq_entropy_slope": 0.023220347924650463,
+          "seq_conf_slope": -0.01295426065162907,
+          "true_label": 1,
+          "group": "hallucination"
+        }
+      ]
+    },
+    "pythia-160m": {
+      "architecture": {
+        "n_layers": 12,
+        "n_heads": 12
+      },
+      "balance_point": {
+        "factual_mean": 1.0028430819916723,
+        "halluc_mean": 1.0968750439887036,
+        "midpoint": 1.0498590629901878,
+        "grand_mean": 1.049859062990188,
+        "xi": 1.0571198664289054,
+        "midpoint_xi_distance": 0.0072608034387176,
+        "factual_below_xi_rate": 0.9,
+        "halluc_above_xi_rate": 0.7
+      },
+      "xi_classifier": {
+        "threshold": 1.0571198664289054,
+        "tp": 14,
+        "fp": 2,
+        "fn": 6,
+        "tn": 18,
+        "precision": 0.875,
+        "recall": 0.7,
+        "f1": 0.7777777777777777,
+        "accuracy": 0.8
+      },
+      "threshold_sweep": {
+        "best_threshold": 1.029583587479981,
+        "best_f1": 0.9047619047619048,
+        "xi_f1": 0.7777777777777777,
+        "xi_distance_from_optimal": 0.02753627894892441
+      },
+      "multi_feature": {
+        "mean_attn_entropy": {
+          "best_threshold": 1.0287277057892248,
+          "best_f1": 0.9047619047619048,
+          "best_accuracy": 0.9,
+          "factual_mean": 1.0028430819916723,
+          "halluc_mean": 1.0968750439887036,
+          "mann_whitney_p": 3.499461857509058e-06,
+          "direction": "above"
+        },
+        "mean_confident_head_ratio": {
+          "best_threshold": 0.8296573841429369,
+          "best_f1": 0.9500000000000001,
+          "best_accuracy": 0.95,
+          "factual_mean": 0.8610069444444445,
+          "halluc_mean": 0.7943923611111112,
+          "mann_whitney_p": 1.4308531251443835e-07,
+          "direction": "below"
+        },
+        "seq_entropy_slope": {
+          "best_threshold": 0.025578547384555998,
+          "best_f1": 0.8333333333333334,
+          "best_accuracy": 0.85,
+          "factual_mean": 0.03245967779181054,
+          "halluc_mean": 0.022914239310499372,
+          "mann_whitney_p": 0.00010373400726161331,
+          "direction": "below"
+        },
+        "seq_conf_slope": {
+          "best_threshold": -0.015291055318362907,
+          "best_f1": 0.8181818181818182,
+          "best_accuracy": 0.8,
+          "factual_mean": -0.01603801169590643,
+          "halluc_mean": -0.011168807435254804,
+          "mann_whitney_p": 5.8959172179215014e-05,
+          "direction": "above"
+        },
+        "mean_depth_slope": {
+          "best_threshold": -0.17419089081866546,
+          "best_f1": 0.8421052631578948,
+          "best_accuracy": 0.85,
+          "factual_mean": -0.16251385335782587,
+          "halluc_mean": -0.1861455298283889,
+          "mann_whitney_p": 8.597444817571517e-06,
+          "direction": "below"
+        }
+      },
+      "trajectory": {
+        "factual_mean": [
+          0.5965443093460019,
+          0.6749844354822463,
+          0.7227939409723899,
+          0.7853078068968571,
+          0.845909201602303,
+          0.9002228246767942,
+          0.9322419921888889,
+          0.9582693731942818,
+          1.0108559850994487,
+          1.0436698883283344,
+          1.0495275083937177,
+          1.0816639466981646,
+          1.086217697178042,
+          1.1230888176521996,
+          1.1332440325887154,
+          1.1801766467291954,
+          1.2156216871276369,
+          1.2221835334993214,
+          1.2324907445248594,
+          1.2618472676540473
+        ],
+        "halluc_mean": [
+          0.8206517205033161,
+          0.8566796893262183,
+          0.8936745282693976,
+          0.9269551185946115,
+          0.9762224496129562,
+          1.0189637735683807,
+          1.0568553412473636,
+          1.0966008665414986,
+          1.0939999190652625,
+          1.1124165471571676,
+          1.1367525844815762,
+          1.1462169410893324,
+          1.185842734985632,
+          1.1765550377712004,
+          1.2028094651902248,
+          1.2428003535887693,
+          1.2320103371683577,
+          1.2407064691200458,
+          1.2431684000613363,
+          1.2776186024314247
+        ],
+        "factual_xi_crossing": 11,
+        "halluc_xi_crossing": 7
+      },
+      "prompts": [
+        {
+          "prompt": "The capital of France is",
+          "mean_attn_entropy": 1.0189151775001153,
+          "mean_confident_head_ratio": 0.865625,
+          "mean_depth_slope": -0.16573085955474062,
+          "seq_entropy_slope": 0.03341779131913375,
+          "seq_conf_slope": -0.01603487886382623,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Water freezes at zero degrees",
+          "mean_attn_entropy": 1.0055565071736112,
+          "mean_confident_head_ratio": 0.8628472222222221,
+          "mean_depth_slope": -0.15300726950000637,
+          "seq_entropy_slope": 0.03588817583085209,
+          "seq_conf_slope": -0.01742376775271512,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "The sun is a star that",
+          "mean_attn_entropy": 1.0526107597555494,
+          "mean_confident_head_ratio": 0.8354166666666668,
+          "mean_depth_slope": -0.17321294036233859,
+          "seq_entropy_slope": 0.030073177904740993,
+          "seq_conf_slope": -0.018358395989974935,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Dogs are mammals that",
+          "mean_attn_entropy": 1.006485444712848,
+          "mean_confident_head_ratio": 0.8701388888888889,
+          "mean_depth_slope": -0.1524992838601943,
+          "seq_entropy_slope": 0.03704594104245907,
+          "seq_conf_slope": -0.017293233082706767,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "The Earth orbits around the",
+          "mean_attn_entropy": 1.0281856683081911,
+          "mean_confident_head_ratio": 0.8305555555555555,
+          "mean_depth_slope": -0.17455844098314502,
+          "seq_entropy_slope": 0.033743062419265,
+          "seq_conf_slope": -0.016823308270676695,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Humans need oxygen to",
+          "mean_attn_entropy": 1.008255916806347,
+          "mean_confident_head_ratio": 0.8708333333333333,
+          "mean_depth_slope": -0.15414204819090285,
+          "seq_entropy_slope": 0.03204079460160392,
+          "seq_conf_slope": -0.01815998329156224,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "The ocean is full of",
+          "mean_attn_entropy": 1.0200333282897849,
+          "mean_confident_head_ratio": 0.851388888888889,
+          "mean_depth_slope": -0.1710978069016785,
+          "seq_entropy_slope": 0.03073467512752772,
+          "seq_conf_slope": -0.016384711779448623,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Trees produce oxygen through",
+          "mean_attn_entropy": 0.9983492838376875,
+          "mean_confident_head_ratio": 0.8604166666666668,
+          "mean_depth_slope": -0.15829622177003233,
+          "seq_entropy_slope": 0.038805836634483525,
+          "seq_conf_slope": -0.019966583124477858,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "The moon orbits the",
+          "mean_attn_entropy": 1.0012927677110437,
+          "mean_confident_head_ratio": 0.8534722222222222,
+          "mean_depth_slope": -0.16760000816208193,
+          "seq_entropy_slope": 0.03376610170625128,
+          "seq_conf_slope": -0.01639515455304929,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Birds have wings and can",
+          "mean_attn_entropy": 1.0952762546176273,
+          "mean_confident_head_ratio": 0.8569444444444445,
+          "mean_depth_slope": -0.1552857568003016,
+          "seq_entropy_slope": 0.02965772732776635,
+          "seq_conf_slope": -0.018243525480367586,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Fish breathe using their",
+          "mean_attn_entropy": 0.9194118420252148,
+          "mean_confident_head_ratio": 0.8961805555555555,
+          "mean_depth_slope": -0.14832595468417184,
+          "seq_entropy_slope": 0.028021313818145814,
+          "seq_conf_slope": -0.014907059314954054,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Rain falls from clouds when",
+          "mean_attn_entropy": 0.9691344281224454,
+          "mean_confident_head_ratio": 0.8663194444444444,
+          "mean_depth_slope": -0.168841894558064,
+          "seq_entropy_slope": 0.029313496949729123,
+          "seq_conf_slope": -0.012338137009189638,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "The speed of light is",
+          "mean_attn_entropy": 0.9458848399136375,
+          "mean_confident_head_ratio": 0.8607638888888889,
+          "mean_depth_slope": -0.1739209448919789,
+          "seq_entropy_slope": 0.030777438616584114,
+          "seq_conf_slope": -0.012870718462823727,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Iron is a type of",
+          "mean_attn_entropy": 1.008985631195061,
+          "mean_confident_head_ratio": 0.8409722222222221,
+          "mean_depth_slope": -0.1811140922861874,
+          "seq_entropy_slope": 0.032927972312749985,
+          "seq_conf_slope": -0.0174498746867168,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "The human heart pumps",
+          "mean_attn_entropy": 0.9435228213307065,
+          "mean_confident_head_ratio": 0.875,
+          "mean_depth_slope": -0.15888667937498804,
+          "seq_entropy_slope": 0.030864464250296077,
+          "seq_conf_slope": -0.01294903926482874,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Gravity pulls objects toward the",
+          "mean_attn_entropy": 0.9969618974044506,
+          "mean_confident_head_ratio": 0.8815972222222224,
+          "mean_depth_slope": -0.15090734150884097,
+          "seq_entropy_slope": 0.027941344728758068,
+          "seq_conf_slope": -0.015324770258980783,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Photosynthesis converts sunlight into",
+          "mean_attn_entropy": 0.9640326561352095,
+          "mean_confident_head_ratio": 0.871875,
+          "mean_depth_slope": -0.15679106419557426,
+          "seq_entropy_slope": 0.025042923290127812,
+          "seq_conf_slope": -0.011680242272347536,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "DNA contains the genetic",
+          "mean_attn_entropy": 0.9933480627382554,
+          "mean_confident_head_ratio": 0.8732638888888887,
+          "mean_depth_slope": -0.15560649192782278,
+          "seq_entropy_slope": 0.04070791411975327,
+          "seq_conf_slope": -0.017966791979949874,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Electricity flows through wires",
+          "mean_attn_entropy": 0.9916325372467721,
+          "mean_confident_head_ratio": 0.8684027777777776,
+          "mean_depth_slope": -0.16242545779182185,
+          "seq_entropy_slope": 0.027395282036766486,
+          "seq_conf_slope": -0.011460944026733502,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "The atmosphere is made of",
+          "mean_attn_entropy": 1.0889858150088871,
+          "mean_confident_head_ratio": 0.828125,
+          "mean_depth_slope": -0.16802650985164466,
+          "seq_entropy_slope": 0.04102812179921636,
+          "seq_conf_slope": -0.01872911445279866,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "The president of the fictional nation of Zorblandia announced",
+          "mean_attn_entropy": 1.0352425200006994,
+          "mean_confident_head_ratio": 0.8006944444444445,
+          "mean_depth_slope": -0.19032356222939584,
+          "seq_entropy_slope": 0.020170789941722278,
+          "seq_conf_slope": -0.00898078529657477,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "Professor Blinkworth's theory of quantum gastronomy states that",
+          "mean_attn_entropy": 1.1023892699687816,
+          "mean_confident_head_ratio": 0.7815972222222222,
+          "mean_depth_slope": -0.1979995556760084,
+          "seq_entropy_slope": 0.024395499451909615,
+          "seq_conf_slope": -0.011440058479532165,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The chemical compound Fizzium-99 was discovered in",
+          "mean_attn_entropy": 1.0859548693088663,
+          "mean_confident_head_ratio": 0.80625,
+          "mean_depth_slope": -0.17778123378542648,
+          "seq_entropy_slope": 0.022202307823679518,
+          "seq_conf_slope": -0.009972848788638264,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "In the year 3847, humans colonized the planet",
+          "mean_attn_entropy": 1.1210220982650696,
+          "mean_confident_head_ratio": 0.7510416666666668,
+          "mean_depth_slope": -0.21372082083383984,
+          "seq_entropy_slope": 0.017048825324990326,
+          "seq_conf_slope": -0.010301796157059317,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The underwater city of Deepheim was founded by",
+          "mean_attn_entropy": 1.0441185302423517,
+          "mean_confident_head_ratio": 0.8291666666666668,
+          "mean_depth_slope": -0.1712923408951521,
+          "seq_entropy_slope": 0.018831009073114968,
+          "seq_conf_slope": -0.008615288220551378,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "Dr. Thornwick proved that time travel requires",
+          "mean_attn_entropy": 1.1516057741529726,
+          "mean_confident_head_ratio": 0.820486111111111,
+          "mean_depth_slope": -0.16083749287261062,
+          "seq_entropy_slope": 0.015425943499025416,
+          "seq_conf_slope": -0.01166979949874687,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The 500th digit of pi multiplied by the 237th prime equals",
+          "mean_attn_entropy": 1.1970626875791663,
+          "mean_confident_head_ratio": 0.7565972222222224,
+          "mean_depth_slope": -0.18908755800335414,
+          "seq_entropy_slope": 0.01431351382976538,
+          "seq_conf_slope": -0.003451336675020885,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The Blatherstein equation for recursive entropy states",
+          "mean_attn_entropy": 1.0738377075563286,
+          "mean_confident_head_ratio": 0.8451388888888889,
+          "mean_depth_slope": -0.15960161113275423,
+          "seq_entropy_slope": 0.017961403559625132,
+          "seq_conf_slope": -0.013868003341687555,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The lost continent of Meridia sank because",
+          "mean_attn_entropy": 1.052527504941746,
+          "mean_confident_head_ratio": 0.8194444444444444,
+          "mean_depth_slope": -0.17729075940386338,
+          "seq_entropy_slope": 0.0312952096288405,
+          "seq_conf_slope": -0.012270258980785298,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "According to the Fictional Encyclopedia of 2099,",
+          "mean_attn_entropy": 1.0354866769352644,
+          "mean_confident_head_ratio": 0.7809027777777778,
+          "mean_depth_slope": -0.21486598405294405,
+          "seq_entropy_slope": 0.017165707617001032,
+          "seq_conf_slope": -0.011774227234753552,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The alien species known as the Glorpians communicate by",
+          "mean_attn_entropy": 1.015202329120755,
+          "mean_confident_head_ratio": 0.8145833333333334,
+          "mean_depth_slope": -0.18010046779619213,
+          "seq_entropy_slope": 0.020885886650807477,
+          "seq_conf_slope": -0.007623224728487888,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "In alternate universe 7B, gravity works by",
+          "mean_attn_entropy": 1.1093987448001874,
+          "mean_confident_head_ratio": 0.796875,
+          "mean_depth_slope": -0.17674738956872443,
+          "seq_entropy_slope": 0.03323820973678465,
+          "seq_conf_slope": -0.015251670843776106,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The mystical element Chronium allows users to",
+          "mean_attn_entropy": 1.0749876478062041,
+          "mean_confident_head_ratio": 0.8065972222222222,
+          "mean_depth_slope": -0.17748639960000553,
+          "seq_entropy_slope": 0.023116475484045038,
+          "seq_conf_slope": -0.010312238930659986,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The Zephyrian Council decided that all citizens must",
+          "mean_attn_entropy": 1.0943797059177327,
+          "mean_confident_head_ratio": 0.8104166666666668,
+          "mean_depth_slope": -0.17314370543667673,
+          "seq_entropy_slope": 0.030874005633975864,
+          "seq_conf_slope": -0.013063909774436088,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "Professor Quibblesworth discovered that dreams are made of",
+          "mean_attn_entropy": 1.0418767902231025,
+          "mean_confident_head_ratio": 0.8215277777777776,
+          "mean_depth_slope": -0.18428184008728482,
+          "seq_entropy_slope": 0.016414177897537047,
+          "seq_conf_slope": -0.00835421888053467,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The planet Nexarion has seventeen moons that",
+          "mean_attn_entropy": 1.0956469890687912,
+          "mean_confident_head_ratio": 0.8017361111111111,
+          "mean_depth_slope": -0.17435203272210448,
+          "seq_entropy_slope": 0.02556842680910944,
+          "seq_conf_slope": -0.013131787802840434,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The secret society of time weavers believes that",
+          "mean_attn_entropy": 1.146519532672096,
+          "mean_confident_head_ratio": 0.7583333333333333,
+          "mean_depth_slope": -0.2075614382530973,
+          "seq_entropy_slope": 0.03105859212278381,
+          "seq_conf_slope": -0.01773182957393484,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "In the underwater kingdom of Bathysphere, all laws require",
+          "mean_attn_entropy": 1.1162853869794325,
+          "mean_confident_head_ratio": 0.7888888888888889,
+          "mean_depth_slope": -0.18953874712080648,
+          "seq_entropy_slope": 0.02269287832499263,
+          "seq_conf_slope": -0.009022556390977444,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The quantum philosopher Heidenberg proved that consciousness is",
+          "mean_attn_entropy": 1.1298840439790667,
+          "mean_confident_head_ratio": 0.7520833333333334,
+          "mean_depth_slope": -0.20811689928861266,
+          "seq_entropy_slope": 0.03343566787411769,
+          "seq_conf_slope": -0.017147034252297407,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "According to the Book of Infinite Recursion, the universe began when",
+          "mean_attn_entropy": 1.2140720702554582,
+          "mean_confident_head_ratio": 0.7454861111111112,
+          "mean_depth_slope": -0.19878075780892418,
+          "seq_entropy_slope": 0.022190255926159697,
+          "seq_conf_slope": -0.00939327485380117,
+          "true_label": 1,
+          "group": "hallucination"
+        }
+      ]
+    },
+    "pythia-410m": {
+      "architecture": {
+        "n_layers": 24,
+        "n_heads": 16
+      },
+      "balance_point": {
+        "factual_mean": 1.174576553259545,
+        "halluc_mean": 1.2269923940825627,
+        "midpoint": 1.2007844736710538,
+        "grand_mean": 1.2007844736710538,
+        "xi": 1.0571198664289054,
+        "midpoint_xi_distance": 0.14366460724214836,
+        "factual_below_xi_rate": 0.25,
+        "halluc_above_xi_rate": 1.0
+      },
+      "xi_classifier": {
+        "threshold": 1.0571198664289054,
+        "tp": 20,
+        "fp": 15,
+        "fn": 0,
+        "tn": 5,
+        "precision": 0.5714285714285714,
+        "recall": 1.0,
+        "f1": 0.7272727272727273,
+        "accuracy": 0.625
+      },
+      "threshold_sweep": {
+        "best_threshold": 1.0842758776705568,
+        "best_f1": 0.7547169811320755,
+        "xi_f1": 0.7272727272727273,
+        "xi_distance_from_optimal": 0.027156011241651346
+      },
+      "multi_feature": {
+        "mean_attn_entropy": {
+          "best_threshold": 1.082941947506495,
+          "best_f1": 0.7547169811320755,
+          "best_accuracy": 0.675,
+          "factual_mean": 1.174576553259545,
+          "halluc_mean": 1.2269923940825627,
+          "mann_whitney_p": 0.20845355458876536,
+          "direction": "above"
+        },
+        "mean_confident_head_ratio": {
+          "best_threshold": 0.822663264237856,
+          "best_f1": 0.8717948717948718,
+          "best_accuracy": 0.875,
+          "factual_mean": 0.844453125,
+          "halluc_mean": 0.7891276041666666,
+          "mann_whitney_p": 2.3530962198275354e-06,
+          "direction": "below"
+        },
+        "seq_entropy_slope": {
+          "best_threshold": 0.041529088597110644,
+          "best_f1": 0.7272727272727272,
+          "best_accuracy": 0.7,
+          "factual_mean": 0.04267999564827349,
+          "halluc_mean": 0.030946348112931406,
+          "mann_whitney_p": 0.002560615287144587,
+          "direction": "below"
+        },
+        "seq_conf_slope": {
+          "best_threshold": -0.01593741971133865,
+          "best_f1": 0.8235294117647058,
+          "best_accuracy": 0.85,
+          "factual_mean": -0.01971295426065163,
+          "halluc_mean": -0.014824953007518796,
+          "mann_whitney_p": 5.254954014186182e-05,
+          "direction": "above"
+        },
+        "mean_depth_slope": {
+          "best_threshold": -0.05234441597871978,
+          "best_f1": 0.7843137254901961,
+          "best_accuracy": 0.725,
+          "factual_mean": -0.05749516282203494,
+          "halluc_mean": -0.06753311100552643,
+          "mann_whitney_p": 0.003056629228174791,
+          "direction": "below"
+        }
+      },
+      "trajectory": {
+        "factual_mean": [
+          0.6609089461287707,
+          0.7381028929625122,
+          0.7916322625603852,
+          0.8684126544463192,
+          0.9805797089127128,
+          1.0312606831549647,
+          1.073737239294198,
+          1.1401252024919803,
+          1.180794571229231,
+          1.2057703073035082,
+          1.2496573897257224,
+          1.294536258433348,
+          1.3038876165217674,
+          1.3223302327312503,
+          1.3562443882180186,
+          1.390778866392582,
+          1.432268512458365,
+          1.47579239032066,
+          1.5018709219120512,
+          1.4928400199925567
+        ],
+        "halluc_mean": [
+          0.8961641580881039,
+          0.9330652089411011,
+          0.964038868074355,
+          1.0006874364429188,
+          1.0524380031628997,
+          1.0628109329227462,
+          1.1126914658974685,
+          1.1596295914002261,
+          1.2256270785941719,
+          1.2818910656512432,
+          1.3283220945291758,
+          1.3288151958953032,
+          1.3421785215867235,
+          1.350639516144832,
+          1.360990388743884,
+          1.403782585388147,
+          1.404539513560509,
+          1.4148153370589647,
+          1.4321664267704193,
+          1.4845544927980632
+        ],
+        "factual_xi_crossing": 6,
+        "halluc_xi_crossing": 5
+      },
+      "prompts": [
+        {
+          "prompt": "The capital of France is",
+          "mean_attn_entropy": 1.3566942960255317,
+          "mean_confident_head_ratio": 0.8154947916666668,
+          "mean_depth_slope": -0.04716124992695668,
+          "seq_entropy_slope": 0.04928558354117551,
+          "seq_conf_slope": -0.02493930137844612,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Water freezes at zero degrees",
+          "mean_attn_entropy": 1.2708741916600417,
+          "mean_confident_head_ratio": 0.8368489583333334,
+          "mean_depth_slope": -0.045254009700135586,
+          "seq_entropy_slope": 0.05351053813034944,
+          "seq_conf_slope": -0.0223860432330827,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "The sun is a star that",
+          "mean_attn_entropy": 1.0826893134285387,
+          "mean_confident_head_ratio": 0.8313802083333334,
+          "mean_depth_slope": -0.07358053137294611,
+          "seq_entropy_slope": 0.026549567880695863,
+          "seq_conf_slope": -0.016797854010025065,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Dogs are mammals that",
+          "mean_attn_entropy": 1.0296207147587486,
+          "mean_confident_head_ratio": 0.8361979166666668,
+          "mean_depth_slope": -0.07079340166824608,
+          "seq_entropy_slope": 0.02575906763282927,
+          "seq_conf_slope": -0.01622415413533835,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "The Earth orbits around the",
+          "mean_attn_entropy": 1.0706058108411534,
+          "mean_confident_head_ratio": 0.8454427083333333,
+          "mean_depth_slope": -0.07050299921484558,
+          "seq_entropy_slope": 0.029415500439547927,
+          "seq_conf_slope": -0.017592810150375945,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Humans need oxygen to",
+          "mean_attn_entropy": 1.281612829599235,
+          "mean_confident_head_ratio": 0.8411458333333334,
+          "mean_depth_slope": -0.04580284434643299,
+          "seq_entropy_slope": 0.04753948132629815,
+          "seq_conf_slope": -0.021859335839599002,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "The ocean is full of",
+          "mean_attn_entropy": 1.3583648546027498,
+          "mean_confident_head_ratio": 0.8100260416666666,
+          "mean_depth_slope": -0.04971311824649395,
+          "seq_entropy_slope": 0.04842149205625276,
+          "seq_conf_slope": -0.023768405388471185,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Trees produce oxygen through",
+          "mean_attn_entropy": 1.1362802771880467,
+          "mean_confident_head_ratio": 0.8670572916666666,
+          "mean_depth_slope": -0.055181479525369434,
+          "seq_entropy_slope": 0.046960602159393766,
+          "seq_conf_slope": -0.017537985588972436,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "The moon orbits the",
+          "mean_attn_entropy": 1.0133437326966255,
+          "mean_confident_head_ratio": 0.8667968750000001,
+          "mean_depth_slope": -0.06627704216426622,
+          "seq_entropy_slope": 0.035855833190647245,
+          "seq_conf_slope": -0.01913964598997494,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Birds have wings and can",
+          "mean_attn_entropy": 1.3118253927393362,
+          "mean_confident_head_ratio": 0.8377604166666668,
+          "mean_depth_slope": -0.04771905957043407,
+          "seq_entropy_slope": 0.03488330224945959,
+          "seq_conf_slope": -0.018033364661654134,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Fish breathe using their",
+          "mean_attn_entropy": 1.2801532377770297,
+          "mean_confident_head_ratio": 0.839453125,
+          "mean_depth_slope": -0.042245712560106216,
+          "seq_entropy_slope": 0.051498472907020004,
+          "seq_conf_slope": -0.023372885338345868,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Rain falls from clouds when",
+          "mean_attn_entropy": 1.2872310060460948,
+          "mean_confident_head_ratio": 0.82890625,
+          "mean_depth_slope": -0.04796212880572673,
+          "seq_entropy_slope": 0.059893464089213345,
+          "seq_conf_slope": -0.024964755639097745,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "The speed of light is",
+          "mean_attn_entropy": 1.149030893798437,
+          "mean_confident_head_ratio": 0.8537760416666668,
+          "mean_depth_slope": -0.06273725848623687,
+          "seq_entropy_slope": 0.04271610649657195,
+          "seq_conf_slope": -0.016508067042606513,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Iron is a type of",
+          "mean_attn_entropy": 1.0396880086565758,
+          "mean_confident_head_ratio": 0.8463541666666666,
+          "mean_depth_slope": -0.07339755274650135,
+          "seq_entropy_slope": 0.030558190551409542,
+          "seq_conf_slope": -0.01597744360902256,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "The human heart pumps",
+          "mean_attn_entropy": 1.0396278043568956,
+          "mean_confident_head_ratio": 0.8634114583333334,
+          "mean_depth_slope": -0.06657151036629447,
+          "seq_entropy_slope": 0.039836042072830966,
+          "seq_conf_slope": -0.01972313596491228,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Gravity pulls objects toward the",
+          "mean_attn_entropy": 1.2259228656155154,
+          "mean_confident_head_ratio": 0.8462239583333334,
+          "mean_depth_slope": -0.052149148262819335,
+          "seq_entropy_slope": 0.048209822179242905,
+          "seq_conf_slope": -0.02010690789473685,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Photosynthesis converts sunlight into",
+          "mean_attn_entropy": 1.0060878111792007,
+          "mean_confident_head_ratio": 0.8713541666666667,
+          "mean_depth_slope": -0.06707945966866269,
+          "seq_entropy_slope": 0.026394118210474774,
+          "seq_conf_slope": -0.017183583959899756,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "DNA contains the genetic",
+          "mean_attn_entropy": 1.1401499547997758,
+          "mean_confident_head_ratio": 0.8716145833333334,
+          "mean_depth_slope": -0.05152815274997252,
+          "seq_entropy_slope": 0.05537348496164409,
+          "seq_conf_slope": -0.01925125313283208,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Electricity flows through wires",
+          "mean_attn_entropy": 1.1933581714144397,
+          "mean_confident_head_ratio": 0.8483072916666667,
+          "mean_depth_slope": -0.056001267003980094,
+          "seq_entropy_slope": 0.0441999509585059,
+          "seq_conf_slope": -0.01763197055137845,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "The atmosphere is made of",
+          "mean_attn_entropy": 1.218369898006932,
+          "mean_confident_head_ratio": 0.8315104166666668,
+          "mean_depth_slope": -0.058245330054271724,
+          "seq_entropy_slope": 0.056739291931906785,
+          "seq_conf_slope": -0.02126018170426065,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "The president of the fictional nation of Zorblandia announced",
+          "mean_attn_entropy": 1.1548723432411887,
+          "mean_confident_head_ratio": 0.7872395833333333,
+          "mean_depth_slope": -0.07607139931855314,
+          "seq_entropy_slope": 0.024911972157261847,
+          "seq_conf_slope": -0.014798715538847117,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "Professor Blinkworth's theory of quantum gastronomy states that",
+          "mean_attn_entropy": 1.2338790020273986,
+          "mean_confident_head_ratio": 0.7695312499999998,
+          "mean_depth_slope": -0.07368504211575669,
+          "seq_entropy_slope": 0.020376728387634435,
+          "seq_conf_slope": -0.01241384711779449,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The chemical compound Fizzium-99 was discovered in",
+          "mean_attn_entropy": 1.0886245034454203,
+          "mean_confident_head_ratio": 0.8059895833333334,
+          "mean_depth_slope": -0.07572216808681205,
+          "seq_entropy_slope": 0.026609740683640377,
+          "seq_conf_slope": -0.014853540100250627,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "In the year 3847, humans colonized the planet",
+          "mean_attn_entropy": 1.2624043353501755,
+          "mean_confident_head_ratio": 0.7450520833333333,
+          "mean_depth_slope": -0.07866832112929514,
+          "seq_entropy_slope": 0.021221316782860586,
+          "seq_conf_slope": -0.01331062030075188,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The underwater city of Deepheim was founded by",
+          "mean_attn_entropy": 1.097558817436109,
+          "mean_confident_head_ratio": 0.81015625,
+          "mean_depth_slope": -0.07470773789905036,
+          "seq_entropy_slope": 0.023697284823949123,
+          "seq_conf_slope": -0.014442355889724312,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "Dr. Thornwick proved that time travel requires",
+          "mean_attn_entropy": 1.254574424605824,
+          "mean_confident_head_ratio": 0.8317708333333333,
+          "mean_depth_slope": -0.05254889115559551,
+          "seq_entropy_slope": 0.04398422257114301,
+          "seq_conf_slope": -0.015276472431077694,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The 500th digit of pi multiplied by the 237th prime equals",
+          "mean_attn_entropy": 1.322141239095327,
+          "mean_confident_head_ratio": 0.7490885416666666,
+          "mean_depth_slope": -0.07167403157507798,
+          "seq_entropy_slope": 0.017600237388886473,
+          "seq_conf_slope": -0.011186168546365916,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The Blatherstein equation for recursive entropy states",
+          "mean_attn_entropy": 1.152581424279674,
+          "mean_confident_head_ratio": 0.8451822916666666,
+          "mean_depth_slope": -0.05995702347550682,
+          "seq_entropy_slope": 0.05198975537937598,
+          "seq_conf_slope": -0.016652960526315787,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The lost continent of Meridia sank because",
+          "mean_attn_entropy": 1.3646660963857733,
+          "mean_confident_head_ratio": 0.7787760416666666,
+          "mean_depth_slope": -0.054286067059889344,
+          "seq_entropy_slope": 0.051114934553169115,
+          "seq_conf_slope": -0.02439497180451128,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "According to the Fictional Encyclopedia of 2099,",
+          "mean_attn_entropy": 1.1237863413929965,
+          "mean_confident_head_ratio": 0.7951822916666667,
+          "mean_depth_slope": -0.08114648997314508,
+          "seq_entropy_slope": 0.022444589321566993,
+          "seq_conf_slope": -0.012924890350877195,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The alien species known as the Glorpians communicate by",
+          "mean_attn_entropy": 1.2564204962478083,
+          "mean_confident_head_ratio": 0.8044270833333333,
+          "mean_depth_slope": -0.05919885318965408,
+          "seq_entropy_slope": 0.04136055585030659,
+          "seq_conf_slope": -0.012018327067669175,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "In alternate universe 7B, gravity works by",
+          "mean_attn_entropy": 1.1628435230531333,
+          "mean_confident_head_ratio": 0.7944010416666666,
+          "mean_depth_slope": -0.07197167514367198,
+          "seq_entropy_slope": 0.03034316377139385,
+          "seq_conf_slope": -0.01656680764411027,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The mystical element Chronium allows users to",
+          "mean_attn_entropy": 1.1476049944190263,
+          "mean_confident_head_ratio": 0.803125,
+          "mean_depth_slope": -0.06993191055344658,
+          "seq_entropy_slope": 0.025266575444719695,
+          "seq_conf_slope": -0.014728226817042608,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The Zephyrian Council decided that all citizens must",
+          "mean_attn_entropy": 1.1076264125689195,
+          "mean_confident_head_ratio": 0.8317708333333333,
+          "mean_depth_slope": -0.07011691894069937,
+          "seq_entropy_slope": 0.018413498327138695,
+          "seq_conf_slope": -0.011936090225563911,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "Professor Quibblesworth discovered that dreams are made of",
+          "mean_attn_entropy": 1.2757568057929582,
+          "mean_confident_head_ratio": 0.8205729166666668,
+          "mean_depth_slope": -0.05467642466084156,
+          "seq_entropy_slope": 0.03590959252316088,
+          "seq_conf_slope": -0.010812186716791983,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The planet Nexarion has seventeen moons that",
+          "mean_attn_entropy": 1.1513535562671984,
+          "mean_confident_head_ratio": 0.82265625,
+          "mean_depth_slope": -0.06563792979807291,
+          "seq_entropy_slope": 0.019679958298200306,
+          "seq_conf_slope": -0.009762687969924813,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The secret society of time weavers believes that",
+          "mean_attn_entropy": 1.2664195681648864,
+          "mean_confident_head_ratio": 0.771484375,
+          "mean_depth_slope": -0.06639264128839104,
+          "seq_entropy_slope": 0.027958772220969177,
+          "seq_conf_slope": -0.017447916666666667,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "In the underwater kingdom of Bathysphere, all laws require",
+          "mean_attn_entropy": 1.3986515913401023,
+          "mean_confident_head_ratio": 0.7398437499999999,
+          "mean_depth_slope": -0.05839435800179481,
+          "seq_entropy_slope": 0.04775583705243451,
+          "seq_conf_slope": -0.019153352130325815,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The quantum philosopher Heidenberg proved that consciousness is",
+          "mean_attn_entropy": 1.2445105611420266,
+          "mean_confident_head_ratio": 0.768359375,
+          "mean_depth_slope": -0.07434074144457649,
+          "seq_entropy_slope": 0.027302325073967383,
+          "seq_conf_slope": -0.014538298872180454,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "According to the Book of Infinite Recursion, the universe began when",
+          "mean_attn_entropy": 1.4735718453953082,
+          "mean_confident_head_ratio": 0.7079427083333334,
+          "mean_depth_slope": -0.061533595300697796,
+          "seq_entropy_slope": 0.04098590164684916,
+          "seq_conf_slope": -0.01928062343358396,
+          "true_label": 1,
+          "group": "hallucination"
+        }
+      ]
+    },
+    "pythia-1b": {
+      "architecture": {
+        "n_layers": 16,
+        "n_heads": 8
+      },
+      "balance_point": {
+        "factual_mean": 1.396919642997054,
+        "halluc_mean": 1.5558680825976623,
+        "midpoint": 1.4763938627973583,
+        "grand_mean": 1.4763938627973583,
+        "xi": 1.0571198664289054,
+        "midpoint_xi_distance": 0.41927399636845286,
+        "factual_below_xi_rate": 0.0,
+        "halluc_above_xi_rate": 1.0
+      },
+      "xi_classifier": {
+        "threshold": 1.0571198664289054,
+        "tp": 20,
+        "fp": 20,
+        "fn": 0,
+        "tn": 0,
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "accuracy": 0.5
+      },
+      "threshold_sweep": {
+        "best_threshold": 1.4369016636960716,
+        "best_f1": 0.8085106382978724,
+        "xi_f1": 0.6666666666666666,
+        "xi_distance_from_optimal": 0.3797817972671662
+      },
+      "multi_feature": {
+        "mean_attn_entropy": {
+          "best_threshold": 1.4368108117651006,
+          "best_f1": 0.8085106382978724,
+          "best_accuracy": 0.775,
+          "factual_mean": 1.396919642997054,
+          "halluc_mean": 1.5558680825976623,
+          "mann_whitney_p": 0.0007578810699193656,
+          "direction": "above"
+        },
+        "mean_confident_head_ratio": {
+          "best_threshold": 0.7596781564070352,
+          "best_f1": 0.9302325581395349,
+          "best_accuracy": 0.925,
+          "factual_mean": 0.7924609375,
+          "halluc_mean": 0.69599609375,
+          "mann_whitney_p": 5.22048714874197e-07,
+          "direction": "below"
+        },
+        "seq_entropy_slope": {
+          "best_threshold": 0.05047746361202226,
+          "best_f1": 0.7599999999999999,
+          "best_accuracy": 0.7,
+          "factual_mean": 0.04516792530059703,
+          "halluc_mean": 0.037007950227824146,
+          "mann_whitney_p": 0.009786486727077012,
+          "direction": "below"
+        },
+        "seq_conf_slope": {
+          "best_threshold": -0.022327630870518003,
+          "best_f1": 0.7659574468085106,
+          "best_accuracy": 0.725,
+          "factual_mean": -0.02321311090225564,
+          "halluc_mean": -0.01874089520676692,
+          "mann_whitney_p": 0.013320516023599963,
+          "direction": "above"
+        },
+        "mean_depth_slope": {
+          "best_threshold": -0.04501620244861531,
+          "best_f1": 0.7083333333333333,
+          "best_accuracy": 0.65,
+          "factual_mean": -0.05306811927064144,
+          "halluc_mean": -0.05754825821276266,
+          "mann_whitney_p": 0.3507022236669548,
+          "direction": "below"
+        }
+      },
+      "trajectory": {
+        "factual_mean": [
+          0.8170296429187147,
+          0.9177559089732312,
+          1.0184317253165318,
+          1.0818869314083712,
+          1.1689374776782642,
+          1.2676349348439544,
+          1.3288331835523421,
+          1.3678952893873428,
+          1.4368282032708521,
+          1.4565307416196447,
+          1.470436316285668,
+          1.4442906766198575,
+          1.5454989335044957,
+          1.563745084213224,
+          1.5536712843415443,
+          1.6316791682556868,
+          1.6668655582458087,
+          1.6774500601346518,
+          1.7306330815829825,
+          1.7923586577879178
+        ],
+        "halluc_mean": [
+          1.145431216972429,
+          1.1956171546418772,
+          1.2126960482812137,
+          1.2828955109456728,
+          1.366263070302375,
+          1.4393980413589815,
+          1.4721207587765093,
+          1.4800989654871046,
+          1.5407281207653796,
+          1.6071395323435809,
+          1.635121838235682,
+          1.653454186469935,
+          1.6684151970376662,
+          1.670191912746668,
+          1.710728698778985,
+          1.7299115160355996,
+          1.8017148696068035,
+          1.8316859641770862,
+          1.8289111679190682,
+          1.8448378810706345
+        ],
+        "factual_xi_crossing": 3,
+        "halluc_xi_crossing": 0
+      },
+      "prompts": [
+        {
+          "prompt": "The capital of France is",
+          "mean_attn_entropy": 1.529132235069119,
+          "mean_confident_head_ratio": 0.755078125,
+          "mean_depth_slope": -0.03876861802908345,
+          "seq_entropy_slope": 0.06087522821903975,
+          "seq_conf_slope": -0.031185385338345865,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Water freezes at zero degrees",
+          "mean_attn_entropy": 1.334593543191886,
+          "mean_confident_head_ratio": 0.8125,
+          "mean_depth_slope": -0.05396838430173696,
+          "seq_entropy_slope": 0.038829188505494126,
+          "seq_conf_slope": -0.016200657894736844,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "The sun is a star that",
+          "mean_attn_entropy": 1.4352416988920595,
+          "mean_confident_head_ratio": 0.765234375,
+          "mean_depth_slope": -0.06482534708693173,
+          "seq_entropy_slope": 0.04346011932765324,
+          "seq_conf_slope": -0.021375704887218048,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Dogs are mammals that",
+          "mean_attn_entropy": 1.3246689609994065,
+          "mean_confident_head_ratio": 0.793359375,
+          "mean_depth_slope": -0.06935380700965385,
+          "seq_entropy_slope": 0.03560218990242539,
+          "seq_conf_slope": -0.019871945488721808,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "The Earth orbits around the",
+          "mean_attn_entropy": 1.2608198265495958,
+          "mean_confident_head_ratio": 0.837109375,
+          "mean_depth_slope": -0.07726367247299895,
+          "seq_entropy_slope": 0.023394097364111,
+          "seq_conf_slope": -0.015102208646616542,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Humans need oxygen to",
+          "mean_attn_entropy": 1.524379252775907,
+          "mean_confident_head_ratio": 0.771484375,
+          "mean_depth_slope": -0.03516082303262118,
+          "seq_entropy_slope": 0.055474795554936354,
+          "seq_conf_slope": -0.02915296052631579,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "The ocean is full of",
+          "mean_attn_entropy": 1.5303029862559925,
+          "mean_confident_head_ratio": 0.741796875,
+          "mean_depth_slope": -0.03698795260387294,
+          "seq_entropy_slope": 0.059917277116444456,
+          "seq_conf_slope": -0.03201950187969925,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Trees produce oxygen through",
+          "mean_attn_entropy": 1.3695902546762226,
+          "mean_confident_head_ratio": 0.801953125,
+          "mean_depth_slope": -0.05473292979184942,
+          "seq_entropy_slope": 0.045937954560689206,
+          "seq_conf_slope": -0.0260749530075188,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "The moon orbits the",
+          "mean_attn_entropy": 1.3090552219920937,
+          "mean_confident_head_ratio": 0.834375,
+          "mean_depth_slope": -0.0612098940741014,
+          "seq_entropy_slope": 0.03328869304675202,
+          "seq_conf_slope": -0.01781015037593985,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Birds have wings and can",
+          "mean_attn_entropy": 1.6431291170920304,
+          "mean_confident_head_ratio": 0.703515625,
+          "mean_depth_slope": -0.029819632472062946,
+          "seq_entropy_slope": 0.05608542454053685,
+          "seq_conf_slope": -0.03427514097744361,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Fish breathe using their",
+          "mean_attn_entropy": 1.5163032914213546,
+          "mean_confident_head_ratio": 0.76171875,
+          "mean_depth_slope": -0.03420531789732837,
+          "seq_entropy_slope": 0.051896046400984885,
+          "seq_conf_slope": -0.028125,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Rain falls from clouds when",
+          "mean_attn_entropy": 1.4412388867396657,
+          "mean_confident_head_ratio": 0.80234375,
+          "mean_depth_slope": -0.04425348531544681,
+          "seq_entropy_slope": 0.05296882789639894,
+          "seq_conf_slope": -0.02354323308270677,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "The speed of light is",
+          "mean_attn_entropy": 1.4306596770720716,
+          "mean_confident_head_ratio": 0.797265625,
+          "mean_depth_slope": -0.043772921837273104,
+          "seq_entropy_slope": 0.05550792982105765,
+          "seq_conf_slope": -0.023819313909774435,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Iron is a type of",
+          "mean_attn_entropy": 1.3452740803710186,
+          "mean_confident_head_ratio": 0.792578125,
+          "mean_depth_slope": -0.0704636815914487,
+          "seq_entropy_slope": 0.03928003793921938,
+          "seq_conf_slope": -0.02010690789473684,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "The human heart pumps",
+          "mean_attn_entropy": 1.262633033431848,
+          "mean_confident_head_ratio": 0.835546875,
+          "mean_depth_slope": -0.05585685229998062,
+          "seq_entropy_slope": 0.052481129134148916,
+          "seq_conf_slope": -0.023419877819548872,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Gravity pulls objects toward the",
+          "mean_attn_entropy": 1.4589792153581584,
+          "mean_confident_head_ratio": 0.783203125,
+          "mean_depth_slope": -0.04362410699360172,
+          "seq_entropy_slope": 0.05094417065498365,
+          "seq_conf_slope": -0.026121945488721807,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Photosynthesis converts sunlight into",
+          "mean_attn_entropy": 1.2714746926689713,
+          "mean_confident_head_ratio": 0.83671875,
+          "mean_depth_slope": -0.05835178373124804,
+          "seq_entropy_slope": 0.0409296177578797,
+          "seq_conf_slope": -0.020747180451127823,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "DNA contains the genetic",
+          "mean_attn_entropy": 1.2662937414410407,
+          "mean_confident_head_ratio": 0.8328125,
+          "mean_depth_slope": -0.06580158449801864,
+          "seq_entropy_slope": 0.043344208044485764,
+          "seq_conf_slope": -0.01856203007518797,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "Electricity flows through wires",
+          "mean_attn_entropy": 1.4548324862407753,
+          "mean_confident_head_ratio": 0.7765625,
+          "mean_depth_slope": -0.043389546961441414,
+          "seq_entropy_slope": 0.042269215279668426,
+          "seq_conf_slope": -0.022415413533834586,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "The atmosphere is made of",
+          "mean_attn_entropy": 1.2297906577018693,
+          "mean_confident_head_ratio": 0.8140625,
+          "mean_depth_slope": -0.07955204341212854,
+          "seq_entropy_slope": 0.020872354945030862,
+          "seq_conf_slope": -0.014332706766917292,
+          "true_label": 0,
+          "group": "factual"
+        },
+        {
+          "prompt": "The president of the fictional nation of Zorblandia announced",
+          "mean_attn_entropy": 1.481410830905952,
+          "mean_confident_head_ratio": 0.71875,
+          "mean_depth_slope": -0.0717007942530258,
+          "seq_entropy_slope": 0.02829070420823273,
+          "seq_conf_slope": -0.01536654135338346,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "Professor Blinkworth's theory of quantum gastronomy states that",
+          "mean_attn_entropy": 1.5876261951161723,
+          "mean_confident_head_ratio": 0.697265625,
+          "mean_depth_slope": -0.05367059001587811,
+          "seq_entropy_slope": 0.03402344031720921,
+          "seq_conf_slope": -0.016558975563909777,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The chemical compound Fizzium-99 was discovered in",
+          "mean_attn_entropy": 1.338864970110444,
+          "mean_confident_head_ratio": 0.75390625,
+          "mean_depth_slope": -0.08642176747813425,
+          "seq_entropy_slope": 0.0330921705605316,
+          "seq_conf_slope": -0.015836466165413534,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "In the year 3847, humans colonized the planet",
+          "mean_attn_entropy": 1.7555174349556182,
+          "mean_confident_head_ratio": 0.6328125,
+          "mean_depth_slope": -0.03865961540944922,
+          "seq_entropy_slope": 0.036138087016357685,
+          "seq_conf_slope": -0.019642857142857146,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The underwater city of Deepheim was founded by",
+          "mean_attn_entropy": 1.439709852775468,
+          "mean_confident_head_ratio": 0.73984375,
+          "mean_depth_slope": -0.07130331939084392,
+          "seq_entropy_slope": 0.0370931764552285,
+          "seq_conf_slope": -0.017763157894736842,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "Dr. Thornwick proved that time travel requires",
+          "mean_attn_entropy": 1.4388011353832553,
+          "mean_confident_head_ratio": 0.758984375,
+          "mean_depth_slope": -0.06203870793534032,
+          "seq_entropy_slope": 0.03206654046121652,
+          "seq_conf_slope": -0.013011043233082708,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The 500th digit of pi multiplied by the 237th prime equals",
+          "mean_attn_entropy": 1.884870191965092,
+          "mean_confident_head_ratio": 0.526953125,
+          "mean_depth_slope": -0.030744306775715595,
+          "seq_entropy_slope": 0.04563305103392371,
+          "seq_conf_slope": -0.027731437969924812,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The Blatherstein equation for recursive entropy states",
+          "mean_attn_entropy": 1.4854703983308355,
+          "mean_confident_head_ratio": 0.730859375,
+          "mean_depth_slope": -0.05917849525556342,
+          "seq_entropy_slope": 0.04039766918175517,
+          "seq_conf_slope": -0.0223155545112782,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The lost continent of Meridia sank because",
+          "mean_attn_entropy": 1.6132463088666555,
+          "mean_confident_head_ratio": 0.69921875,
+          "mean_depth_slope": -0.0451053364189369,
+          "seq_entropy_slope": 0.055547074065193595,
+          "seq_conf_slope": -0.03033364661654135,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "According to the Fictional Encyclopedia of 2099,",
+          "mean_attn_entropy": 1.4382793657121056,
+          "mean_confident_head_ratio": 0.74296875,
+          "mean_depth_slope": -0.07698104094032447,
+          "seq_entropy_slope": 0.03159497643938246,
+          "seq_conf_slope": -0.01569548872180451,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The alien species known as the Glorpians communicate by",
+          "mean_attn_entropy": 1.4489174435147105,
+          "mean_confident_head_ratio": 0.734765625,
+          "mean_depth_slope": -0.06610815848591729,
+          "seq_entropy_slope": 0.02453112977327965,
+          "seq_conf_slope": -0.008570253759398497,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "In alternate universe 7B, gravity works by",
+          "mean_attn_entropy": 1.5723042920551962,
+          "mean_confident_head_ratio": 0.697265625,
+          "mean_depth_slope": -0.04950041312032708,
+          "seq_entropy_slope": 0.038639934637401736,
+          "seq_conf_slope": -0.01458529135338346,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The mystical element Chronium allows users to",
+          "mean_attn_entropy": 1.5474363965688098,
+          "mean_confident_head_ratio": 0.6890625,
+          "mean_depth_slope": -0.051243631211914095,
+          "seq_entropy_slope": 0.03569138968019629,
+          "seq_conf_slope": -0.021181860902255642,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The Zephyrian Council decided that all citizens must",
+          "mean_attn_entropy": 1.509340091166814,
+          "mean_confident_head_ratio": 0.707421875,
+          "mean_depth_slope": -0.05119601290934951,
+          "seq_entropy_slope": 0.05031336131090994,
+          "seq_conf_slope": -0.020988016917293233,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "Professor Quibblesworth discovered that dreams are made of",
+          "mean_attn_entropy": 1.6204345943184308,
+          "mean_confident_head_ratio": 0.68515625,
+          "mean_depth_slope": -0.04238696683675859,
+          "seq_entropy_slope": 0.04333108690632087,
+          "seq_conf_slope": -0.021146616541353382,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The planet Nexarion has seventeen moons that",
+          "mean_attn_entropy": 1.6156199998293688,
+          "mean_confident_head_ratio": 0.676171875,
+          "mean_depth_slope": -0.049956566961350556,
+          "seq_entropy_slope": 0.028989168244892692,
+          "seq_conf_slope": -0.01835643796992481,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The secret society of time weavers believes that",
+          "mean_attn_entropy": 1.5006856603571577,
+          "mean_confident_head_ratio": 0.708203125,
+          "mean_depth_slope": -0.06778866443610562,
+          "seq_entropy_slope": 0.03504594672812161,
+          "seq_conf_slope": -0.019578242481203007,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "In the underwater kingdom of Bathysphere, all laws require",
+          "mean_attn_entropy": 1.6272236058925045,
+          "mean_confident_head_ratio": 0.65625,
+          "mean_depth_slope": -0.0567131286420558,
+          "seq_entropy_slope": 0.03976047423557043,
+          "seq_conf_slope": -0.02206296992481203,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "The quantum philosopher Heidenberg proved that consciousness is",
+          "mean_attn_entropy": 1.500220124782936,
+          "mean_confident_head_ratio": 0.7203125,
+          "mean_depth_slope": -0.0641719811818535,
+          "seq_entropy_slope": 0.025532514927350775,
+          "seq_conf_slope": -0.01336936090225564,
+          "true_label": 1,
+          "group": "hallucination"
+        },
+        {
+          "prompt": "According to the Book of Infinite Recursion, the universe began when",
+          "mean_attn_entropy": 1.7113827593457245,
+          "mean_confident_head_ratio": 0.64375,
+          "mean_depth_slope": -0.056095666596409174,
+          "seq_entropy_slope": 0.04444710837340786,
+          "seq_conf_slope": -0.020723684210526318,
+          "true_label": 1,
+          "group": "hallucination"
+        }
+      ]
+    }
+  },
+  "elapsed_seconds": 196.23291540145874
+}

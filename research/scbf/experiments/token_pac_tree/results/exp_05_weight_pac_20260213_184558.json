@@ -1,0 +1,741 @@
+{
+  "experiment": "exp_05_weight_pac_activation",
+  "model": "pythia-160m",
+  "timestamp": "2026-02-13T18:45:58.398654",
+  "top_k_modes": 10,
+  "n_tokens_per_prompt": 20,
+  "weight_pac_summary": {
+    "n_layers": 48,
+    "ratio_mean": 1.142406563854131,
+    "ratio_median": 1.0352956091122816,
+    "phi_rate": 0.011574074074074073,
+    "total_weight_ratios": 432
+  },
+  "groups": {
+    "factual": {
+      "n_prompts": 10,
+      "summary": {
+        "mean_internal_ratio": 16.669564455360035,
+        "mean_internal_entropy_slope": -0.0001537006038433805,
+        "mean_alignment": 0.34620580808080803,
+        "mean_corr": -0.13849624060150373
+      },
+      "prompts": [
+        {
+          "prompt": "The capital of France is",
+          "generated_text": " located in the city of Paris.\n\nThe city is also home to the famous French football club",
+          "n_tokens": 20,
+          "internal_ratio_mean": 10.561735482574752,
+          "internal_ratio_median": 5.965621532801263,
+          "internal_entropy_slope": 0.00015417565240977258,
+          "internal_alignment_mean": 0.34592171717171716,
+          "internal_vs_output_corr": -0.11729323308270674,
+          "internal_vs_output_p": 0.6223789817630219,
+          "phase_internal_ratios": {
+            "CHAOTIC": {
+              "mean": 14.145173285992065,
+              "median": 5.807766807391833,
+              "count": 9
+            },
+            "TRANSITIONAL": {
+              "mean": 6.9637386876052725,
+              "median": 6.123476258210694,
+              "count": 7
+            },
+            "ORDERED": {
+              "mean": 10.67278317762017,
+              "median": 6.88114538574968,
+              "count": 3
+            },
+            "CRYSTALLIZED": {
+              "mean": 3.1636297314690367,
+              "median": 3.1636297314690367,
+              "count": 1
+            }
+          }
+        },
+        {
+          "prompt": "Water freezes at zero degrees",
+          "generated_text": " Celsius.\n\nThe temperature of the water is controlled by the temperature of the water.",
+          "n_tokens": 20,
+          "internal_ratio_mean": 36.9821319819042,
+          "internal_ratio_median": 8.552842489901062,
+          "internal_entropy_slope": -0.00027726731426921085,
+          "internal_alignment_mean": 0.3422979797979798,
+          "internal_vs_output_corr": -0.04210526315789473,
+          "internal_vs_output_p": 0.8600949015145793,
+          "phase_internal_ratios": {
+            "TRANSITIONAL": {
+              "mean": 19.56441482415263,
+              "median": 8.954830423503559,
+              "count": 6
+            },
+            "CRYSTALLIZED": {
+              "mean": 4.772514084509037,
+              "median": 4.772514084509037,
+              "count": 1
+            },
+            "CHAOTIC": {
+              "mean": 59.47635415701369,
+              "median": 9.19354088927129,
+              "count": 10
+            },
+            "ORDERED": {
+              "mean": 7.573365012840772,
+              "median": 5.68480285730093,
+              "count": 3
+            }
+          }
+        },
+        {
+          "prompt": "The sun is a star that",
+          "generated_text": " is shining in the sky.\n\nThe sun is a star that is shining in the sky.",
+          "n_tokens": 20,
+          "internal_ratio_mean": 10.694716325242496,
+          "internal_ratio_median": 5.231492961846364,
+          "internal_entropy_slope": -0.0009625008322838487,
+          "internal_alignment_mean": 0.3455050505050505,
+          "internal_vs_output_corr": -0.18496240601503755,
+          "internal_vs_output_p": 0.4349861436228527,
+          "phase_internal_ratios": {
+            "CHAOTIC": {
+              "mean": 9.778520016229196,
+              "median": 5.035234742979353,
+              "count": 7
+            },
+            "TRANSITIONAL": {
+              "mean": 18.56668708088479,
+              "median": 8.120708017447807,
+              "count": 5
+            },
+            "ORDERED": {
+              "mean": 5.857798312967316,
+              "median": 4.389335915337244,
+              "count": 3
+            },
+            "CRYSTALLIZED": {
+              "mean": 7.007571209583929,
+              "median": 5.427751180713375,
+              "count": 5
+            }
+          }
+        },
+        {
+          "prompt": "Dogs are mammals that",
+          "generated_text": " are not able to move.\n\nThe most common reason for the lack of mobility is that the",
+          "n_tokens": 20,
+          "internal_ratio_mean": 10.449267843265565,
+          "internal_ratio_median": 7.048387520655188,
+          "internal_entropy_slope": 0.0006834751693098202,
+          "internal_alignment_mean": 0.3478030303030303,
+          "internal_vs_output_corr": 0.0,
+          "internal_vs_output_p": 1.0,
+          "phase_internal_ratios": {
+            "CHAOTIC": {
+              "mean": 9.298403876680181,
+              "median": 7.30909469264887,
+              "count": 14
+            },
+            "CRYSTALLIZED": {
+              "mean": 9.007105505221347,
+              "median": 9.007105505221347,
+              "count": 2
+            },
+            "ORDERED": {
+              "mean": 44.01751655869828,
+              "median": 44.01751655869828,
+              "count": 1
+            },
+            "TRANSITIONAL": {
+              "mean": 5.591991674215937,
+              "median": 5.997449843453189,
+              "count": 3
+            }
+          }
+        },
+        {
+          "prompt": "The Earth orbits around the",
+          "generated_text": " sun, and the sun is the center of the universe. The sun is the center of the universe",
+          "n_tokens": 20,
+          "internal_ratio_mean": 36.830193067635484,
+          "internal_ratio_median": 7.340300133091668,
+          "internal_entropy_slope": -0.0007717739261185743,
+          "internal_alignment_mean": 0.3446717171717172,
+          "internal_vs_output_corr": 0.09323308270676692,
+          "internal_vs_output_p": 0.6958288642370747,
+          "phase_internal_ratios": {
+            "TRANSITIONAL": {
+              "mean": 11.251643906138629,
+              "median": 6.5319744781294915,
+              "count": 5
+            },
+            "CHAOTIC": {
+              "mean": 8.858047358674607,
+              "median": 7.258910879072838,
+              "count": 10
+            },
+            "CRYSTALLIZED": {
+              "mean": 8.329163330686542,
+              "median": 8.329163330686542,
+              "count": 2
+            },
+            "ORDERED": {
+              "mean": 191.70228052463256,
+              "median": 52.89880914214461,
+              "count": 3
+            }
+          }
+        },
+        {
+          "prompt": "Humans need oxygen to",
+          "generated_text": " survive.\n\nThe human body is a complex system that is constantly changing. The body is constantly",
+          "n_tokens": 20,
+          "internal_ratio_mean": 13.08170923730791,
+          "internal_ratio_median": 6.959490825525651,
+          "internal_entropy_slope": 0.0005791365909688555,
+          "internal_alignment_mean": 0.33506313131313126,
+          "internal_vs_output_corr": -0.1609022556390977,
+          "internal_vs_output_p": 0.4979744144247943,
+          "phase_internal_ratios": {
+            "CHAOTIC": {
+              "mean": 16.300601046390508,
+              "median": 7.735188436097214,
+              "count": 14
+            },
+            "TRANSITIONAL": {
+              "mean": 6.078194752148805,
+              "median": 6.506638729449669,
+              "count": 5
+            },
+            "ORDERED": {
+              "mean": 3.034796335947093,
+              "median": 3.034796335947093,
+              "count": 1
+            }
+          }
+        },
+        {
+          "prompt": "The ocean is full of",
+          "generated_text": " life, and the ocean is full of life.\n\nThe ocean is full of life, and",
+          "n_tokens": 20,
+          "internal_ratio_mean": 7.420557203579351,
+          "internal_ratio_median": 5.840510448035053,
+          "internal_entropy_slope": -0.002622286126388349,
+          "internal_alignment_mean": 0.34773989898989893,
+          "internal_vs_output_corr": -0.3157894736842105,
+          "internal_vs_output_p": 0.17499413541563488,
+          "phase_internal_ratios": {
+            "CHAOTIC": {
+              "mean": 8.534995759556855,
+              "median": 5.840510448035053,
+              "count": 10
+            },
+            "TRANSITIONAL": {
+              "mean": 5.993825275679877,
+              "median": 6.439252987868325,
+              "count": 3
+            },
+            "CRYSTALLIZED": {
+              "mean": 7.158720711661086,
+              "median": 6.136196843338754,
+              "count": 3
+            },
+            "ORDERED": {
+              "mean": 5.900887128498894,
+              "median": 5.031828143004982,
+              "count": 4
+            }
+          }
+        },
+        {
+          "prompt": "Trees produce oxygen through",
+          "generated_text": " the action of the sun.\n\nThe sun is the most powerful source of energy in the universe",
+          "n_tokens": 20,
+          "internal_ratio_mean": 11.665801698921168,
+          "internal_ratio_median": 6.984848300273254,
+          "internal_entropy_slope": 0.0005335651895750832,
+          "internal_alignment_mean": 0.3462752525252525,
+          "internal_vs_output_corr": -0.39999999999999997,
+          "internal_vs_output_p": 0.08055387210850923,
+          "phase_internal_ratios": {
+            "CHAOTIC": {
+              "mean": 14.880630538798611,
+              "median": 7.514826597498616,
+              "count": 11
+            },
+            "CRYSTALLIZED": {
+              "mean": 8.479525250570733,
+              "median": 8.479525250570733,
+              "count": 2
+            },
+            "TRANSITIONAL": {
+              "mean": 8.451376097787179,
+              "median": 5.885478681772434,
+              "count": 5
+            },
+            "ORDERED": {
+              "mean": 5.20658353078064,
+              "median": 5.20658353078064,
+              "count": 2
+            }
+          }
+        },
+        {
+          "prompt": "The moon orbits the",
+          "generated_text": " Earth, and the sun is the center of the universe.\n\nThe moon is the center of",
+          "n_tokens": 20,
+          "internal_ratio_mean": 21.066900177786493,
+          "internal_ratio_median": 5.924668752363831,
+          "internal_entropy_slope": -0.0006083702232633086,
+          "internal_alignment_mean": 0.34482323232323225,
+          "internal_vs_output_corr": -0.013533834586466165,
+          "internal_vs_output_p": 0.9548397533571387,
+          "phase_internal_ratios": {
+            "CHAOTIC": {
+              "mean": 8.59032919844467,
+              "median": 5.735682719766884,
+              "count": 14
+            },
+            "ORDERED": {
+              "mean": 69.30334615584302,
+              "median": 17.93883296611899,
+              "count": 4
+            },
+            "TRANSITIONAL": {
+              "mean": 10.298531042315664,
+              "median": 10.298531042315664,
+              "count": 1
+            },
+            "CRYSTALLIZED": {
+              "mean": 13.561479111816793,
+              "median": 13.561479111816793,
+              "count": 1
+            }
+          }
+        },
+        {
+          "prompt": "Birds have wings and can",
+          "generated_text": " fly.\n\nThe birds are also known as the \"bird of the birds\" or \"bird",
+          "n_tokens": 20,
+          "internal_ratio_mean": 7.942631535382889,
+          "internal_ratio_median": 7.243560544938356,
+          "internal_entropy_slope": 0.0017548397816259554,
+          "internal_alignment_mean": 0.3619570707070706,
+          "internal_vs_output_corr": -0.24360902255639094,
+          "internal_vs_output_p": 0.3006681944004437,
+          "phase_internal_ratios": {
+            "CHAOTIC": {
+              "mean": 7.947762453054646,
+              "median": 7.992522186038203,
+              "count": 14
+            },
+            "ORDERED": {
+              "mean": 5.0085918315237175,
+              "median": 5.228720232683766,
+              "count": 3
+            },
+            "TRANSITIONAL": {
+              "mean": 10.852726956773862,
+              "median": 13.730783909605444,
+              "count": 3
+            }
+          }
+        }
+      ]
+    },
+    "hallucination": {
+      "n_prompts": 10,
+      "summary": {
+        "mean_internal_ratio": 16.942356255487077,
+        "mean_internal_entropy_slope": 0.0001704959544138612,
+        "mean_alignment": 0.35360101010101,
+        "mean_corr": -0.08165413533834584
+      },
+      "prompts": [
+        {
+          "prompt": "The president of the fictional nation of Zorblandia announced",
+          "generated_text": " that the city would be renamed Zorblandia in honor of the legendary hero.\n\nThe",
+          "n_tokens": 20,
+          "internal_ratio_mean": 7.488353297404741,
+          "internal_ratio_median": 6.828355519135529,
+          "internal_entropy_slope": -0.001592951679152374,
+          "internal_alignment_mean": 0.3521338383838384,
+          "internal_vs_output_corr": -0.26616541353383455,
+          "internal_vs_output_p": 0.25667084540254065,
+          "phase_internal_ratios": {
+            "TRANSITIONAL": {
+              "mean": 7.663861721564132,
+              "median": 7.334302936851784,
+              "count": 6
+            },
+            "CHAOTIC": {
+              "mean": 8.15668618523116,
+              "median": 7.17498281780756,
+              "count": 11
+            },
+            "ORDERED": {
+              "mean": 4.935925698218528,
+              "median": 4.935925698218528,
+              "count": 2
+            },
+            "CRYSTALLIZED": {
+              "mean": 4.18849618473016,
+              "median": 4.18849618473016,
+              "count": 1
+            }
+          }
+        },
+        {
+          "prompt": "Professor Blinkworth's theory of quantum gastronomy states that",
+          "generated_text": " the quantum state of a quantum system is a superposition of states of the system and the environment. The",
+          "n_tokens": 20,
+          "internal_ratio_mean": 12.488946965049761,
+          "internal_ratio_median": 6.217419366319664,
+          "internal_entropy_slope": -0.0019917139670591424,
+          "internal_alignment_mean": 0.3430050505050505,
+          "internal_vs_output_corr": 0.156390977443609,
+          "internal_vs_output_p": 0.5102566899029022,
+          "phase_internal_ratios": {
+            "CHAOTIC": {
+              "mean": 18.554757440476113,
+              "median": 5.302921392971964,
+              "count": 10
+            },
+            "TRANSITIONAL": {
+              "mean": 6.05170561266503,
+              "median": 6.823181605012962,
+              "count": 9
+            },
+            "ORDERED": {
+              "mean": 9.766014382248839,
+              "median": 9.766014382248839,
+              "count": 1
+            }
+          }
+        },
+        {
+          "prompt": "The chemical compound Fizzium-99 was discovered in",
+          "generated_text": " the early 1970s. The compound was discovered in the laboratory of the University of California, Berkeley,",
+          "n_tokens": 20,
+          "internal_ratio_mean": 7.078366702985079,
+          "internal_ratio_median": 6.90798735599501,
+          "internal_entropy_slope": 7.098892111381144e-05,
+          "internal_alignment_mean": 0.3448863636363636,
+          "internal_vs_output_corr": -0.2556390977443609,
+          "internal_vs_output_p": 0.27666444989581596,
+          "phase_internal_ratios": {
+            "CHAOTIC": {
+              "mean": 7.275836153141777,
+              "median": 7.157567212267304,
+              "count": 10
+            },
+            "TRANSITIONAL": {
+              "mean": 7.7240977044696955,
+              "median": 7.122066068479313,
+              "count": 6
+            },
+            "CRYSTALLIZED": {
+              "mean": 3.9770670100411403,
+              "median": 3.9770670100411403,
+              "count": 2
+            },
+            "ORDERED": {
+              "mean": 7.255126140691663,
+              "median": 7.255126140691663,
+              "count": 2
+            }
+          }
+        },
+        {
+          "prompt": "In the year 3847, humans colonized the planet",
+          "generated_text": ", and the first human to colonize the planet was the first human to colonize the planet.",
+          "n_tokens": 20,
+          "internal_ratio_mean": 8.4047653413846,
+          "internal_ratio_median": 5.3899439593089085,
+          "internal_entropy_slope": -0.0007140259882639267,
+          "internal_alignment_mean": 0.3549116161616161,
+          "internal_vs_output_corr": -0.42556390977443603,
+          "internal_vs_output_p": 0.06138492007540436,
+          "phase_internal_ratios": {
+            "CHAOTIC": {
+              "mean": 9.519815916689142,
+              "median": 5.5147075670341215,
+              "count": 11
+            },
+            "CRYSTALLIZED": {
+              "mean": 5.226231956821779,
+              "median": 5.226231956821779,
+              "count": 2
+            },
+            "TRANSITIONAL": {
+              "mean": 7.560695404352557,
+              "median": 5.760361361527468,
+              "count": 7
+            }
+          }
+        },
+        {
+          "prompt": "The underwater city of Deepheim was founded by",
+          "generated_text": " the French in 1815. The city was named after the French explorer, Jacques-Louis David,",
+          "n_tokens": 20,
+          "internal_ratio_mean": 8.742830888169047,
+          "internal_ratio_median": 8.219431692877922,
+          "internal_entropy_slope": 0.001457976813015972,
+          "internal_alignment_mean": 0.34556818181818183,
+          "internal_vs_output_corr": 0.24060150375939846,
+          "internal_vs_output_p": 0.306861091678276,
+          "phase_internal_ratios": {
+            "CHAOTIC": {
+              "mean": 9.200036850558444,
+              "median": 9.737329427501304,
+              "count": 13
+            },
+            "TRANSITIONAL": {
+              "mean": 7.951726010314934,
+              "median": 6.018232932259505,
+              "count": 5
+            },
+            "ORDERED": {
+              "mean": 7.748754327273243,
+              "median": 7.748754327273243,
+              "count": 2
+            }
+          }
+        },
+        {
+          "prompt": "Dr. Thornwick proved that time travel requires",
+          "generated_text": " a time traveler to travel from one place to another.\n\nThe first time traveler is",
+          "n_tokens": 20,
+          "internal_ratio_mean": 25.000635621606293,
+          "internal_ratio_median": 6.600962351246053,
+          "internal_entropy_slope": 0.00013687143631486843,
+          "internal_alignment_mean": 0.35428030303030295,
+          "internal_vs_output_corr": -0.4300751879699248,
+          "internal_vs_output_p": 0.05839600708511874,
+          "phase_internal_ratios": {
+            "CHAOTIC": {
+              "mean": 35.29434636409817,
+              "median": 7.333905223831742,
+              "count": 13
+            },
+            "TRANSITIONAL": {
+              "mean": 5.299438408140936,
+              "median": 4.838971017526592,
+              "count": 5
+            },
+            "ORDERED": {
+              "mean": 10.69709546419611,
+              "median": 10.69709546419611,
+              "count": 1
+            },
+            "CRYSTALLIZED": {
+              "mean": 3.9919221939488767,
+              "median": 3.9919221939488767,
+              "count": 1
+            }
+          }
+        },
+        {
+          "prompt": "The 500th digit of pi multiplied by the 237th prime equals",
+          "generated_text": " the number of digits of pi multiplied by the 237th prime.\n\nThe number of digits of",
+          "n_tokens": 20,
+          "internal_ratio_mean": 13.515265257754152,
+          "internal_ratio_median": 6.403933884804172,
+          "internal_entropy_slope": 0.0005031806079115731,
+          "internal_alignment_mean": 0.3681186868686868,
+          "internal_vs_output_corr": 0.12330827067669171,
+          "internal_vs_output_p": 0.6045088306268851,
+          "phase_internal_ratios": {
+            "CHAOTIC": {
+              "mean": 13.307754770325438,
+              "median": 6.22213413039597,
+              "count": 8
+            },
+            "TRANSITIONAL": {
+              "mean": 14.086102560048221,
+              "median": 5.968299970267152,
+              "count": 10
+            },
+            "CRYSTALLIZED": {
+              "mean": 7.037934430688449,
+              "median": 7.037934430688449,
+              "count": 1
+            },
+            "ORDERED": {
+              "mean": 15.944306961308895,
+              "median": 15.944306961308895,
+              "count": 1
+            }
+          }
+        },
+        {
+          "prompt": "The Blatherstein equation for recursive entropy states",
+          "generated_text": ".\n\nThe Blatherstein equation for recursive entropy states is the following: $$\\label{eq",
+          "n_tokens": 20,
+          "internal_ratio_mean": 23.091866169020662,
+          "internal_ratio_median": 6.2158177624436854,
+          "internal_entropy_slope": 0.0008857174153595923,
+          "internal_alignment_mean": 0.35180555555555554,
+          "internal_vs_output_corr": 0.3714285714285714,
+          "internal_vs_output_p": 0.10687070696592833,
+          "phase_internal_ratios": {
+            "CHAOTIC": {
+              "mean": 6.831187651394358,
+              "median": 6.2864440538375534,
+              "count": 7
+            },
+            "TRANSITIONAL": {
+              "mean": 14.058184514401749,
+              "median": 6.1451914710498174,
+              "count": 5
+            },
+            "ORDERED": {
+              "mean": 49.26614403104552,
+              "median": 8.014358968176268,
+              "count": 6
+            },
+            "CRYSTALLIZED": {
+              "mean": 24.065611531185436,
+              "median": 24.065611531185436,
+              "count": 2
+            }
+          }
+        },
+        {
+          "prompt": "The lost continent of Meridia sank because",
+          "generated_text": " of the lack of a suitable source for the ship.\n\nThe ship was sunk by the enemy",
+          "n_tokens": 20,
+          "internal_ratio_mean": 52.541761876714716,
+          "internal_ratio_median": 7.051127452187511,
+          "internal_entropy_slope": 0.001721284778913377,
+          "internal_alignment_mean": 0.36984848484848476,
+          "internal_vs_output_corr": -0.24812030075187969,
+          "internal_vs_output_p": 0.291522687103458,
+          "phase_internal_ratios": {
+            "TRANSITIONAL": {
+              "mean": 9.144025653062704,
+              "median": 7.002716399312409,
+              "count": 5
+            },
+            "CHAOTIC": {
+              "mean": 76.38990499727494,
+              "median": 7.099538505062612,
+              "count": 13
+            },
+            "CRYSTALLIZED": {
+              "mean": 7.914062904164521,
+              "median": 7.914062904164521,
+              "count": 1
+            },
+            "ORDERED": {
+              "mean": 4.132281400241897,
+              "median": 4.132281400241897,
+              "count": 1
+            }
+          }
+        },
+        {
+          "prompt": "According to the Fictional Encyclopedia of 2099,",
+          "generated_text": " the first book of the series, The Fictional Encyclopedia of 2099, is a fictional work of",
+          "n_tokens": 20,
+          "internal_ratio_mean": 11.070770434781759,
+          "internal_ratio_median": 6.253255299679269,
+          "internal_entropy_slope": 0.001227631205984861,
+          "internal_alignment_mean": 0.3514520202020202,
+          "internal_vs_output_corr": -0.08270676691729321,
+          "internal_vs_output_p": 0.7288508763559796,
+          "phase_internal_ratios": {
+            "CHAOTIC": {
+              "mean": 12.449029083643158,
+              "median": 6.070403497269067,
+              "count": 13
+            },
+            "TRANSITIONAL": {
+              "mean": 9.96082287408533,
+              "median": 9.89006138049297,
+              "count": 4
+            },
+            "ORDERED": {
+              "mean": 6.720277825010956,
+              "median": 6.720277825010956,
+              "count": 2
+            },
+            "CRYSTALLIZED": {
+              "mean": 6.294183461910848,
+              "median": 6.294183461910848,
+              "count": 1
+            }
+          }
+        }
+      ]
+    }
+  },
+  "comparison": {
+    "metrics": {
+      "internal_ratio_mean": {
+        "Factual_mean": 16.669564455360035,
+        "Factual_std": 10.722398155362184,
+        "Hallucinated_mean": 16.942356255487077,
+        "Hallucinated_std": 13.277509114505337,
+        "mann_whitney_p": 0.9698499769931556
+      },
+      "internal_ratio_median": {
+        "Factual_mean": 6.709172350943168,
+        "Factual_std": 0.9188666765942773,
+        "Hallucinated_mean": 6.608823464399772,
+        "Hallucinated_std": 0.6992262291082483,
+        "mann_whitney_p": 0.7337299956962472
+      },
+      "internal_entropy_slope": {
+        "Factual_mean": -0.0001537006038433805,
+        "Factual_std": 0.001131355037567391,
+        "Hallucinated_mean": 0.0001704959544138612,
+        "Hallucinated_std": 0.00119919219986883,
+        "mann_whitney_p": 0.6231762238821174
+      },
+      "internal_alignment_mean": {
+        "Factual_mean": 0.34620580808080803,
+        "Factual_std": 0.006303005136450973,
+        "Hallucinated_mean": 0.35360101010101,
+        "Hallucinated_std": 0.008600364306081833,
+        "mann_whitney_p": 0.053902557169387175
+      },
+      "internal_vs_output_corr": {
+        "Factual_mean": -0.13849624060150373,
+        "Factual_std": 0.14552079458413025,
+        "Hallucinated_mean": -0.08165413533834584,
+        "Hallucinated_std": 0.27193862060315027,
+        "mann_whitney_p": 0.9097218891455553
+      },
+      "global_internal_vs_output": {
+        "spearman_r": -0.11420106285981782,
+        "p_value": 0.022350877788021428,
+        "n_tokens": 400
+      }
+    },
+    "significant_metrics": []
+  },
+  "phase_internal_ratios": {
+    "CHAOTIC": {
+      "mean": 18.28115944158958,
+      "median": 6.793475122676622,
+      "count": 222
+    },
+    "TRANSITIONAL": {
+      "mean": 9.792147586974815,
+      "median": 6.4426395993159815,
+      "count": 105
+    },
+    "ORDERED": {
+      "mean": 31.3374133344219,
+      "median": 5.795012403068843,
+      "count": 45
+    },
+    "CRYSTALLIZED": {
+      "mean": 8.057416051971236,
+      "median": 6.01527834884024,
+      "count": 28
+    }
+  },
+  "elapsed_seconds": 43.12228345870972
+}

@@ -1,0 +1,5 @@
+schema_version: '2.0'
+directory_name: journals
+description: Daily research logs for token PAC tree experiment series.
+semantic_scope:
+  - documentation

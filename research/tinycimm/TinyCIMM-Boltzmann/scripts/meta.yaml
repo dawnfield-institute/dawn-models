@@ -1,0 +1,6 @@
+schema_version: '2.0'
+description: "Experiment scripts for TinyCIMM-Boltzmann"
+semantic_scope: implementation
+files:
+  - "[exp_01_conservation_vs_free.py]": "2x2 matrix test: conservation on/off × factual/noise"
+proficiency_level: research

@@ -1,0 +1,12 @@
+schema_version: '2.0'
+directory_name: core
+description: >
+  Core data structures and metrics for token-level PAC tree analysis.
+  PACNode, TokenPACTree, PACForest for tree construction;
+  CollapseSignature, SECPhase for diagnostic classification.
+semantic_scope:
+  - implementation
+files:
+  - __init__.py
+  - pac_tree.py
+  - collapse_metrics.py
