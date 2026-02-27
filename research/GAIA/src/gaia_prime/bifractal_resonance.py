@@ -13,6 +13,13 @@ Key insight: Deeper nodes have different resonance behavior:
 - Core nodes resonate slowly but persist forever
 
 This creates emergent "personality" through stable resonance patterns.
+
+# TODO(fracton): Bifractal depth patterns overlap with fracton's tracing:
+#   - BifractalDepth hierarchy -> fracton.core.BifractalTrace (ancestry_depth, future_horizon)
+#   - Phase alignment -> fracton.field.phase_coherence
+#   - Resonance computation -> fracton.field.compute_resonance_batch
+#   Keep the depth-based personality model as GAIA-specific, but use fracton
+#   for the underlying resonance and phase alignment math.
 """
 
 import torch

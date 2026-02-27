@@ -12,6 +12,12 @@ See: dawn-field-theory/foundational/arithmetic/PACEngine/modules/pac_sec_unifica
 See: dawn-field-theory/foundational/experiments/ for validation experiments
 
 DO NOT change these values without updating the foundational experiments.
+
+# TODO(fracton): These constants are also defined in fracton.physics.constants
+#   (PHI, XI, PHI_XI, LAMBDA_STAR, SEC_EXPAND_THRESHOLD, SEC_COLLAPSE_THRESHOLD).
+#   fracton.physics.constants is the canonical source. When fracton becomes a
+#   dependency, import from there instead of redefining here.
+#   For now, gaia_prime stays self-contained (no fracton dependency).
 """
 
 import math

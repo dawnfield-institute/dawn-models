@@ -16,6 +16,14 @@ Collapse strategies:
 3. PRUNING: Remove weak connections
 4. COMPRESSION: Merge redundant paths
 5. HIERARCHICAL: Create new summary nodes
+
+# TODO(fracton): Collapse strategies overlap with fracton's field primitives:
+#   - Entropy tracking -> fracton.core.EntropyDispatcher
+#   - Phase transitions -> fracton.physics.phase_transitions (detect_phase, should_collapse)
+#   - Collapse dynamics -> fracton.field (evolve, dissipate, amplify)
+#   - EntropyBalancer -> fracton.core.DispatchConditions
+#   Keep the 5 strategies as GAIA-specific policy, but use fracton for the
+#   underlying entropy/field computations.
 """
 
 import torch

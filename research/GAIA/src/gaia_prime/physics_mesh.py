@@ -26,6 +26,14 @@ Based on legacy systems:
 - ConservationEngine: Xi operator, potential/actualization
 - CollapseCore: entropy_tension, curvature
 - ResonanceMesh: BifractalMemoryPattern, phase alignment
+
+# TODO(fracton): This entire module reimplements physics that fracton provides:
+#   - EntropyMonitor -> fracton.core.EntropyDispatcher + fracton.field.compute_field_energy
+#   - ConservationEnforcer (Xi operator) -> fracton.core.validate_pac_conservation
+#   - CollapseEngine (phase transitions) -> fracton.physics.phase_transitions
+#   - ResonanceField -> fracton.field.compute_resonance / fracton.field.ResonanceMesh
+#   Migration: keep PhysicsMesh as the GAIA integration layer, but delegate
+#   physics computation to fracton SDK instead of manual torch operations.
 """
 
 import torch

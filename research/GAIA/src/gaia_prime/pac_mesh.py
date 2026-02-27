@@ -20,6 +20,14 @@ Dimensions:
 2. Context depth (sequence position)
 3. Convergence topology (shared nodes)
 4. Confidence (model agreement)
+
+# TODO(fracton): PACMeshSpace and MeshNode overlap with fracton's PAC substrate:
+#   - MeshNode -> fracton.core.PACNode (delta-only, conservation)
+#   - PACMeshSpace -> fracton.core.PACSystem (tiered cache, injection, retrieval)
+#   - Convergence tracking -> fracton.core.PACSystem.find_resonant
+#   GAIA's mesh adds embedding-space semantics and multi-model convergence on top,
+#   which fracton doesn't have. Consider extending fracton.core.PACSystem rather
+#   than reimplementing the base PAC operations.
 """
 
 import torch

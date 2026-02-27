@@ -12,21 +12,24 @@ description: >
 semantic_scope:
 - models
 - post-symbolic-ai
+- gaia
 - cimm
 - tinycimm
 - scbf
-- symbolic-collapse
-- field-theory
+- pac-conservation
 - entropy-dynamics
+- field-theory
 files:
+- CLAUDE.md
 - CONTRIBUTING.md
 - LICENSE
 - LICENSING.md
 - README.md
+- meta.yaml
 child_directories:
-- .cip
 - research
 - stable
+- roadmaps
 title: dawn-models
 repository_role: models
 generation_context:
