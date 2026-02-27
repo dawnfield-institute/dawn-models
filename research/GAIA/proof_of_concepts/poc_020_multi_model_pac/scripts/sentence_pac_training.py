@@ -18,7 +18,7 @@ from collections import defaultdict
 # Add paths to use our EXISTING work
 sys.path.insert(0, str(Path(__file__).parent))
 sys.path.insert(0, str(Path(__file__).parent.parent.parent / "poc_019_true_no_backprop"))
-sys.path.insert(0, r"c:\Users\peter\repos\Dawn Field Institute\fracton")
+sys.path.insert(0, r"c:\Users\peter\repos\core_workspace\fracton")
 
 # Constants
 PHI = (1 + np.sqrt(5)) / 2

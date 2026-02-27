@@ -33,7 +33,7 @@ from collections import defaultdict
 import hashlib
 
 # Add fracton path
-sys.path.insert(0, r"c:\Users\peter\repos\Dawn Field Institute\fracton")
+sys.path.insert(0, r"c:\Users\peter\repos\core_workspace\fracton")
 
 # Constants
 PHI = (1 + np.sqrt(5)) / 2

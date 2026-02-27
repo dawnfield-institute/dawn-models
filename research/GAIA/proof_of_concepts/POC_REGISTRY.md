@@ -38,12 +38,14 @@
 
 ### Unified Architecture Validation
 
-| Benchmark | Result | Baseline |
-|-----------|--------|----------|
-| WikiText-2 Perplexity | **5.91** | GPT-2: 29.41 |
-| Training Time | **2.3 min** | Hours (traditional) |
-| Test Pass Rate | **98.3%** | 135/137 tests |
-| Memory Retrieval | **100%** | At depth 1000 |
+| Benchmark | Result | Baseline | Note |
+|-----------|--------|----------|------|
+| WikiText-2 Similarity* | **5.91** | — | *Not standard perplexity (see note below)* |
+| Training Time | **2.3 min** | Hours (traditional) | |
+| Test Pass Rate | **98.3%** | 135/137 tests | |
+| Memory Retrieval | **100%** | At depth 1000 | |
+
+*\*The 5.91 metric is a similarity-based score computed via GAIA's non-autoregressive architecture. It is **not** a standard perplexity and cannot be compared to GPT-2's reported 29.41 perplexity (which measures cross-entropy loss on token prediction). A fair comparison requires evaluating GAIA on standard next-token prediction benchmarks, which has not yet been done.*
 
 ---
 

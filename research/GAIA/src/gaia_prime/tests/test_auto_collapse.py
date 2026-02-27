@@ -17,7 +17,7 @@ Tests:
 import torch
 import pytest
 import sys
-sys.path.insert(0, 'c:/Users/peter/repos/Dawn Field Institute/dawn-models/research/GAIA/src')
+sys.path.insert(0, 'c:/Users/peter/repos/core_workspace/dawn-models/research/GAIA/src')
 
 from gaia_prime.pac_mesh import PACMeshSpace, MeshNode
 from gaia_prime.physics_mesh import PhysicsMesh, CollapseType

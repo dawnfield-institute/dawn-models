@@ -9,7 +9,7 @@
 
 ```bash
 # Navigate to GAIA
-cd "c:\Users\peter\repos\Dawn Field Institute\dawn-models\research\GAIA"
+cd "c:\Users\peter\repos\core_workspace\dawn-models\research\GAIA"
 
 # Run resonance demo
 python usecases/demo_resonance.py
@@ -144,7 +144,7 @@ cooling_factor = (1 + i) ** -0.5  # Power-law instead of exponential
 # Make sure you're in the right directory
 import os
 print(os.getcwd())
-# Should be: .../Dawn Field Institute/dawn-models/research/GAIA
+# Should be: .../core_workspace/dawn-models/research/GAIA
 
 # Add to path if needed
 import sys

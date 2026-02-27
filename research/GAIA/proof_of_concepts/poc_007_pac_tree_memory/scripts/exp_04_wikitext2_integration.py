@@ -22,7 +22,7 @@ from dataclasses import dataclass
 
 import sys
 sys.path.insert(0, str(Path(__file__).parent))
-sys.path.insert(0, r'c:\Users\peter\repos\Dawn Field Institute\dawn-models\research\GAIA\src')
+sys.path.insert(0, r'c:\Users\peter\repos\core_workspace\dawn-models\research\GAIA\src')
 
 from tiered_memory_cache import TieredMemoryCache
 

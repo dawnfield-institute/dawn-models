@@ -10,7 +10,7 @@ We'll test:
 """
 
 import sys
-sys.path.insert(0, r"c:\Users\peter\repos\Dawn Field Institute\fracton")
+sys.path.insert(0, r"c:\Users\peter\repos\core_workspace\fracton")
 
 import torch
 import numpy as np

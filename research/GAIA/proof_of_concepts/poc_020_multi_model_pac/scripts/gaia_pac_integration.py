@@ -18,7 +18,7 @@ from pathlib import Path
 # Add paths
 gaia_path = Path(__file__).parent.parent.parent.parent / "src" / "v4" / "gaia_1"
 sys.path.insert(0, str(gaia_path))
-sys.path.insert(0, r"c:\Users\peter\repos\Dawn Field Institute\fracton")
+sys.path.insert(0, r"c:\Users\peter\repos\core_workspace\fracton")
 
 import torch
 import torch.nn.functional as F

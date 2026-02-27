@@ -19,8 +19,8 @@ This POC:
 """
 
 import sys
-sys.path.insert(0, r"c:\Users\peter\repos\Dawn Field Institute\fracton")
-sys.path.insert(0, r"c:\Users\peter\repos\Dawn Field Institute\dawn-models\research\GAIA\src")
+sys.path.insert(0, r"c:\Users\peter\repos\core_workspace\fracton")
+sys.path.insert(0, r"c:\Users\peter\repos\core_workspace\dawn-models\research\GAIA\src")
 
 import torch
 import time
