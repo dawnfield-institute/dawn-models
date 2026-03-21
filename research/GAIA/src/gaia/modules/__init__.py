@@ -6,10 +6,30 @@ Each module implements the GAIAModule protocol:
   - phase() -> SECPhase                  (current entropy phase)
   - health() -> RBFBalance               (energy-information balance)
 
-Planned modules:
+Available:
+  - safety: Boltzmann conservation layer, hallucination detection
+
+Planned:
   - language: Token prediction, embedding grafting, generation
   - reasoning: Mobius neurons for recursive dynamics
-  - safety: Boltzmann conservation layer, hallucination detection
   - observability: SCBF metrics, QBE equilibrium monitoring
   - memory: Bifractal hierarchy, PACTree, continuous learning
 """
+
+from .safety import (
+    BoltzmannHead,
+    BoltzmannLayer,
+    BoltzmannMonitor,
+    ConservationProjector,
+    SafetyMetrics,
+    SafetyModule,
+)
+
+__all__ = [
+    "BoltzmannHead",
+    "BoltzmannLayer",
+    "BoltzmannMonitor",
+    "ConservationProjector",
+    "SafetyMetrics",
+    "SafetyModule",
+]
