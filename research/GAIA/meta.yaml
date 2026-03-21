@@ -1,26 +1,28 @@
 schema_version: "2.0"
 directory_name: GAIA
 description: >
-  GAIA (Generalized Architectures for Intelligent Actualization) - 
-  Physics-native cognitive architecture implementing Dawn Field Theory 
-  through conservation laws, field dynamics, and emergent intelligence.
-  v3.0 PAC-Native with Fracton SDK foundation.
+  GAIA v2 (Generative AI via Information Architecture) — Modular intelligence
+  architecture where specialized modules compose via a PAC conservation bus.
+  Each module implements a three-method protocol (process/phase/health) with
+  PAC conservation enforced at every boundary. Built on Fracton SDK 2.1.
+  v1 code archived in spikes/v1/ (25 validated POCs, 8.4K lines gaia_prime).
 semantic_scope:
   - GAIA
-  - model
-  - protocol
-  - cognition
-  - physics-native
+  - gaia-v2
+  - modular-intelligence
+  - conservation-bus
+  - module-protocol
+  - pac-conservation
+  - fracton-native
+  - continuous-learning
+  - hallucination-detection
 files:
-  - "[README.md]": "Main GAIA documentation and overview"
-  - "[test_bifractal_memory.py]": "Bifractal memory validation tests"
+  - "[README.md]": "GAIA v2 overview and architecture"
 child_directories:
   - .spec
-  - docs
-  - results
   - src
   - tests
-  - usecases
+  - spikes
 proficiency_level: research
 estimated_context_weight: high
 validation_type: tests

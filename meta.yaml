@@ -1,24 +1,27 @@
 schema_version: '2.0'
 directory_name: dawn-models
 description: >
-  Dawn Models is the official model repository for the Dawn Field Institute, 
-  implementing cutting-edge post-symbolic AI architectures including CIMM 
-  (Cosmic Information Mining Model), TinyCIMM variants for symbolic cognition, 
-  and SCBF (Symbolic Collapse Bifractal Framework) for interpretability analysis.
-  Features dual-licensing strategy with experimental research models (AGPL-3.0) 
-  and stable production models (Apache-2.0). Demonstrates entropy-informed 
-  architectures achieving adaptive learning, symbolic memory, and field-based 
-  intelligence using Dawn Field Theory principles.
+  Dawn Models is the model repository for the Dawn Field Institute,
+  implementing post-symbolic AI architectures using Dawn Field Theory principles.
+  Primary model: GAIA v2 — a modular intelligence architecture where specialized
+  modules (language, reasoning, safety, memory) compose via a PAC conservation bus
+  built on Fracton SDK 2.1. Also includes TinyCIMM domain-specialized variants
+  (ancestors of GAIA v2 modules), SCBF interpretability framework, and CIMM Legacy
+  (Apache-2.0 production engine). Dual-licensing: research (AGPL-3.0), stable (Apache-2.0).
 semantic_scope:
 - models
 - post-symbolic-ai
 - gaia
+- gaia-v2
+- modular-intelligence
+- conservation-bus
 - cimm
 - tinycimm
 - scbf
 - pac-conservation
 - entropy-dynamics
 - field-theory
+- fracton
 files:
 - CLAUDE.md
 - CONTRIBUTING.md
@@ -32,10 +35,3 @@ child_directories:
 - roadmaps
 title: dawn-models
 repository_role: models
-generation_context:
-  generator: ai_enhanced
-  file_count: 5
-  directory_count: 3
-  primary_file_types:
-    .md: 3
-    .yaml: 1

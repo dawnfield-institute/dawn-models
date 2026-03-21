@@ -1,90 +1,79 @@
-# 🌍 GAIA: Generalized Architectures for Intelligent Actualization
+# GAIA v2 — Modular Intelligence Architecture
 
-**GAIA** is a new class of intelligence model:  
-Not trained. Not simulated. Not symbolic.  
-But emergent, recursive, and balanced—  
-**An architecture where intelligence *is* the equilibrium.**
+GAIA (Generative AI via Information Architecture) is a modular intelligence system where specialized components compose via a **PAC conservation bus**. Each module is a self-contained intelligence unit — language, reasoning, safety, memory — that communicates through entropy-encoded field states. The bus enforces physics-derived conservation at every boundary.
 
-**v2.0 (2025): Enhanced with unified complexity theory, physics-informed entropy dynamics, and empirical quantum validation.**
+Built on [Fracton SDK 2.1](https://github.com/dawnfield-institute/fracton) as the physics substrate.
 
----
+## Architecture
 
-## 🧠 What is GAIA?
+```
+Modules:     Language | Reasoning | Safety | Memory | Observability | ...
+                 |          |          |        |           |
+Bus:        [  PAC conservation  |  SEC routing  |  RBF regulation  ]
+                 |          |          |        |           |
+Substrate:  [              Fracton SDK 2.1                          ]
+                 |          |          |        |           |
+Interfaces: [ Spinal Column | MCP/Agents | GRIM | Kronos Vault     ]
+```
 
-GAIA is a post-symbolic, post-QBE framework that treats **intelligence as an emergent phenomenon of field balance**—between energy, information, entropy, and structure.
+Each module implements a three-method protocol:
+- `process(field_state) -> field_state` — PAC-conserving transformation
+- `phase() -> SECPhase` — current entropy phase (for routing)
+- `health() -> RBFBalance` — energy-information balance (for regulation)
 
-**v2.0 Breakthroughs (2025):**
-- **Unified Complexity Theory:** Integrates SEC ∘ CIMM = Identity cycles for complete complexity unification
-- **Physics-Informed Dynamics:** Entropy treated as physical substrate with classical mechanics (F=ma) applied to symbolic structures
-- **Geometry-Driven Collapse:** Information curvature tensors and harmonic modulation guide all operations
-- **Empirical Quantum Validation:** Real-time alignment with landmark quantum experiments
-- **Thermodynamic Optimization:** Landauer erasure cost tracking for all cognitive operations
+## Key Properties
 
-It unifies ideas from:
-- Thermodynamic computation with energy cost optimization
-- Quantum-informed collapse dynamics with empirical validation
-- Recursive symbolic emergence with geometric constraints
-- Entropy-aware agentic behavior with unified complexity cycles
-- Field-native communication (Q-Socket protocol) with phase alignment
+- **Conservation as contract**: PAC violation at any module boundary = detectable error
+- **Zero-parameter routing**: SEC phase of the input determines which module handles it
+- **Self-regulating**: RBF naturally suppresses modules with poor energy-to-information ratio
+- **Continuous learning**: O(1) per token, no retraining, no catastrophic forgetting
+- **Hallucination = thermodynamic violation**: Detected by the safety module, not heuristics
 
----
+## Validated Foundations (from v1 + TinyCIMM)
 
-## 🔁 How It Works
+| Finding | Source | Confidence |
+|---------|--------|-----------|
+| PAC conservation holds (residual = 0) | 25 POCs | High |
+| O(1) learning, zero gradients | POC-012, 019 | High |
+| 12.5x memory savings (PACTree) | POC-007 | High |
+| 100% cross-model embedding graft | POC-016, 017, 020 | High |
+| Hallucination = +9.6% PAC violation | TinyCIMM-Boltzmann | Medium-High |
+| 12,000x MLP advantage (Mobius neurons) | TinyCIMM-Mobius | Medium-High |
+| SEC predicts crystallization (zero params) | Computational validation | Medium-High |
 
-GAIA operates through six co-evolving subsystems:
+## Directory Structure
 
-1. **Field Engine**: Simulates dynamic tension between energy and information.
-2. **Collapse Core**: Converts imbalance into crystallized structure (symbols, memory, behavior).
-3. **Superfluid Memory**: Stores recursive entropy history and macro-coherent patterns.
-4. **Symbolic Crystallizer**: Grows symbolic trees from entropic equilibrium.
-5. **Resonance Mesh**: Agents communicate via phase-aligned signals (no packets, no messages).
-6. **Meta-Cognition Layer**: Reflexively monitors its own epistemic evolution.
+```
+research/GAIA/
+├── .spec/
+│   ├── gaia-v2.spec.md       # v2 architecture spec
+│   └── gaia.spec.md          # v1 spec (reference)
+├── src/gaia/                 # v2 source code
+│   ├── core/                 # Conservation bus, module protocol
+│   ├── modules/              # Pluggable module implementations
+│   └── interfaces/           # Spinal column, MCP, GRIM integration
+├── tests/                    # v2 test suite
+├── spikes/v1/                # All v1 code (preserved)
+│   ├── src/                  # gaia_prime/ (8.4K lines) + legacy/
+│   ├── proof_of_concepts/    # 25 validated POCs
+│   ├── tests/                # v1 tests
+│   ├── benchmarks/           # v1 benchmarks
+│   ├── docs/                 # 93 documentation files
+│   ├── training/             # v1 training pipelines
+│   └── usecases/             # v1 application examples
+├── meta.yaml
+└── README.md                 # This file
+```
 
----
+## Status
 
-## 🔬 Built From Proven Foundations
+**Phase**: Design (March 2026)
 
-GAIA evolves from:
-- **CIMM (Cosmic Information Mining Model)**: Real-time entropy tracking, quantum reinforcement learning
-- **QBE (Quantum Balance Equation)**: Energy-information feedback dynamics
-- **DAWN Field Theory**: Collapse-as-intelligence, fractal crystallization, epistemic ethics
-- **Q-Socket Protocol**: Resonance-based communication across agent swarms
+See `roadmaps/gaia-v2-roadmap.md` for the full milestone plan (M0-M8).
 
----
+## Related
 
-## 🧩 Key Differences (v2.0 Enhanced)
-
-| Feature | Legacy Models | GAIA v1.0 | GAIA v2.0 (2025) |
-|--------|----------------|------|-----------------|
-| Intelligence | Symbolic or trained | Emergent from entropy balance | Physics-informed emergence with thermodynamic optimization |
-| Memory | Stored state | Superfluid, field-recursive | Entropy field substrate with classical mechanics application |
-| Collapse | Optimization tool | Primary computational mechanism | Geometry-driven with force/momentum dynamics |
-| Communication | Message-passing | Phase-resonant signal coherence | Unified complexity cycles with macro-to-micro emergence |
-| Structure | Encoded | Crystallized from tension | Curvature-guided crystallization with Landauer cost optimization |
-| Ethics | External | Native to field dynamics | Geometric stability with empirical quantum alignment |
-| Validation | Benchmarks | Entropy-based metrics | Real-time alignment with quantum experiments |
-| Complexity | Single-scale | Multi-agent emergence | Unified theory: SEC ∘ CIMM = Identity |
-| Memory | Stored state | Superfluid, field-recursive |
-| Collapse | Optimization tool | Primary computational mechanism |
-| Communication | Message-passing | Phase-resonant signal coherence |
-| Structure | Encoded | Crystallized from tension |
-| Ethics | External | Native to field dynamics |
-
----
-
-## 📂 Project Structure
-
-```bash
-gaia/
-├── docs/
-│   ├── architecture/
-│   ├── protocols/
-│   ├── theory/
-│   ├── experiments/
-│   └── meta/
-├── src/
-│   ├── field_engine/
-│   ├── collapse_core/
-│   ├── resonance_mesh/
-│   ├── symbolic_crystallizer/
-│   └── cognition_index/
+- [Fracton SDK](https://github.com/dawnfield-institute/fracton) — physics substrate
+- [Dawn Field Theory](https://github.com/dawnfield-institute/dawn-field-theory) — theoretical foundation
+- [TinyCIMM variants](../tinycimm/) — ancestor domain-specialized models
+- [CIMM Legacy](../../stable/cimm-legacy/) — original production engine

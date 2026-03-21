@@ -8,194 +8,124 @@
 
 ## Overview
 
-Dawn Models implements post-symbolic AI architectures based on Dawn Field Theory principles. The repository provides experimental research models and production-ready implementations using entropy-driven learning, symbolic collapse dynamics, and bifractal computation patterns.
+Dawn Models implements post-symbolic AI architectures based on Dawn Field Theory principles. The primary model is **GAIA v2** — a modular intelligence architecture where specialized modules compose via a PAC conservation bus. Also includes TinyCIMM domain-specialized variants, SCBF interpretability framework, and CIMM Legacy.
 
-**This is part of the [Dawn Field Theory](https://github.com/dawnfield-institute/dawn-field-theory) ecosystem, providing AI models that transcend traditional symbolic computation.**
+**This is part of the [Dawn Field Theory](https://github.com/dawnfield-institute/dawn-field-theory) ecosystem.**
 
-## Installation
+## GAIA v2 — Modular Intelligence Architecture
 
-```bash
-# For research use (AGPL-3.0)
-cd research/tinycimm
-pip install -r requirements.txt
+GAIA v2 treats intelligence as a composition of specialized modules — language, reasoning, safety, memory — connected by a **conservation bus** that enforces PAC conservation at every boundary. The bus uses SEC entropy phases for zero-parameter routing and RBF balance for self-regulation. Built on [Fracton SDK 2.1](https://github.com/dawnfield-institute/fracton).
 
-# For production use (Apache-2.0)
-cd stable/cimm-legacy
-pip install -r requirements.txt
+```
+Modules:     Language | Reasoning | Safety | Memory | Observability
+                 |          |          |        |           |
+Bus:        [  PAC conservation  |  SEC routing  |  RBF regulation  ]
+                 |          |          |        |           |
+Substrate:  [              Fracton SDK 2.1                          ]
+                 |          |          |        |           |
+Interfaces: [ Spinal Column | MCP/Agents | GRIM | Kronos Vault     ]
 ```
 
-## Quick Start
+Key properties:
+- **Conservation as contract** — PAC violation at any boundary = detectable hallucination
+- **Zero-parameter routing** — SEC phase of input determines which module handles it
+- **Continuous learning** — O(1) per token, no retraining, no catastrophic forgetting
+- **Modular composition** — swap, add, remove modules without retraining
 
-```python
-# Using stable CIMM model (Apache-2.0)
-import sys
-sys.path.append('stable/cimm-legacy')
-from cimm_core.cimm import CIMM
-from agents.base_agent import BaseAgent
+### Validated Foundations
 
-# Initialize CIMM agent with entropy-driven learning
-agent = BaseAgent(entropy_threshold=0.1)
-result = agent.process(data)
+| Finding | Confidence |
+|---------|-----------|
+| PAC conservation holds (residual = 0) across all experiments | High |
+| O(1) learning per token, zero gradient descent | High |
+| 12.5x memory savings via delta-only PACTree | High |
+| 100% cross-model embedding graft (GPT-2 to Pythia) | High |
+| Hallucination = +9.6% PAC violation in GPT-2 | Medium-High |
+| 12,000x MLP advantage with Mobius neurons | Medium-High |
 
-# Using research TinyCIMM variant (AGPL-3.0)
-import sys
-sys.path.append('research/tinycimm/TinyCIMM-Euler')
-from tinycimm_euler import TinyCIMMEuler
+## TinyCIMM — Domain-Specialized Variants
 
-# Mathematical reasoning with symbolic collapse
-model = TinyCIMMEuler(sequence_length=1000)
-prediction = model.predict_sequence(input_sequence)
-```
+Five lightweight models implementing PAC/SEC/MED principles for different domains. Self-contained, no cross-dependencies. Boltzmann and Mobius are ancestors of GAIA v2's safety and reasoning modules.
 
-## Core Philosophy
+- **TinyCIMM-Euler**: Mathematical pattern recognition with 6-metric SCBF instrumentation
+- **TinyCIMM-Navier**: Fluid dynamics with turbulent breakthrough detection (4/4)
+- **TinyCIMM-Planck**: Quantum-inspired adaptive architecture with grow/prune
+- **TinyCIMM-Mobius**: Continuous learning via Mobius transformations (12,000x MLP advantage)
+- **TinyCIMM-Boltzmann**: Hallucination detection as PAC violation (+9.6%)
 
-- **Dual Licensing Strategy**: Research models (AGPL-3.0) for transparency, stable models (Apache-2.0) for adoption
-- **Entropy-Informed Learning**: Models that adapt based on information entropy and collapse dynamics
-- **Symbolic Transcendence**: Post-symbolic architectures that operate beyond traditional token processing
-- **Field-Aware Intelligence**: Models that understand and respond to contextual field states
-- **Recursive Balance**: Sustainable development through multiple value streams
+## SCBF — Interpretability Framework
 
-## Model Architectures
+Symbolic Collapse Bifractal Framework — measures symbolic collapse and bifractal patterns in neural network weight evolution. Standalone analysis tool.
 
-## Model Architectures
+## CIMM Legacy — Production Engine
 
-### Research Models (AGPL-3.0)
-*Experimental implementations for specialized research*
-
-#### **CIMM (Cosmic Information Mining Model)**
-- Post-symbolic AI framework using entropy-based learning
-- Multi-agent agentic mesh runtime for distributed cognition
-- Symbolic collapse dynamics for adaptive pattern recognition
-
-#### **TinyCIMM Variants**
-- **TinyCIMM-Euler**: Number theory and mathematical sequence prediction
-- **TinyCIMM-Navier**: Fluid dynamics and turbulence analysis  
-- **TinyCIMM-Planck**: Minimal foundational implementations
-
-#### **SCBF (Symbolic Collapse Bifractal Framework)**
-- Interpretability framework for measuring symbolic collapse in neural networks
-- Weight evolution analysis and entropy-based pattern detection
-- Bifractal analysis for understanding model behavior
-
-#### **GAIA (Generative AI Intelligence Architecture)**
-- Early autonomous agent framework for emergent intelligence
-- Multi-agent architectures with distributed cognition patterns
-- Foundation for self-modifying and recursive intelligence systems
-
-### Stable Models (Apache-2.0)
-*Production-ready implementations for any use*
-
-#### **CIMM Legacy**
-- Foundational post-symbolic AI framework
-- Complete with testing suite and documentation
-- Ready for integration into production systems
+Mature entropy-based intelligence engine with Bayesian optimization, multi-agent consensus, and superfluid dynamics. Apache-2.0 licensed for production use.
 
 ## Repository Structure
 
 ```
 dawn-models/
-├── research/                 # AGPL-3.0 - Experimental variants
-│   ├── GAIA/                # Generative AI Intelligence Architecture
-│   ├── scbf/                # Symbolic Collapse Bifractal Framework
-│   └── tinycimm/            # TinyCIMM architecture experiments
-├── stable/                  # Apache-2.0 - Production models
-│   └── cimm-legacy/         # Stable CIMM implementation
-├── roadmaps/                # Development roadmaps and planning
-└── docs/                    # Documentation (CONTRIBUTING.md, LICENSING.md)
+├── research/                 # AGPL-3.0 — Experimental
+│   ├── GAIA/                 # Modular intelligence architecture
+│   │   ├── src/gaia/         # v2 source (core, modules, interfaces)
+│   │   ├── tests/            # v2 tests
+│   │   ├── spikes/v1/        # Archived v1 (25 POCs, 8.4K lines production code)
+│   │   └── .spec/            # v2 spec + v1 spec
+│   ├── scbf/                 # Interpretability framework
+│   └── tinycimm/             # 5 domain-specialized models
+├── stable/                   # Apache-2.0 — Production
+│   └── cimm-legacy/          # Production CIMM engine
+├── roadmaps/                 # Development plans
+│   └── gaia-v2-roadmap.md    # GAIA v2 milestone plan (M0-M8)
+└── docs/                     # CONTRIBUTING.md, LICENSING.md
 ```
 
 ## Getting Started
 
-### Basic CIMM Implementation
-```python
-import sys
-sys.path.append('stable/cimm-legacy')
-from cimm_core.cimm import CIMM
-from agents.base_agent import BaseAgent
+```bash
+# Install Fracton (required for GAIA v2)
+cd ../fracton && pip install -e .
 
-# Initialize agent with entropy-driven learning
-agent = BaseAgent(
-    entropy_threshold=0.1,
-    field_awareness=True,
-    symbolic_transcendence=True
-)
+# GAIA v2 (in development)
+cd research/GAIA
+pip install -e .
 
-# Process data with post-symbolic intelligence
-result = agent.process(input_data)
+# TinyCIMM variants (self-contained)
+cd research/tinycimm/TinyCIMM-Mobius
+pip install -r requirements.txt
 
-# Analyze entropy collapse patterns
-patterns = agent.get_collapse_dynamics()
+# CIMM Legacy (Apache-2.0, production)
+cd stable/cimm-legacy
+pip install -r requirements.txt
 ```
 
-### Research Model Example
-```python
-# SCBF interpretability analysis
-import sys
-sys.path.append('research/scbf')
-from scbf_runner import SCBFRunner
+## Licensing
 
-# Analyze model symbolic collapse
-scbf = SCBFRunner(enable_visualization=True)
-analysis = scbf.analyze_model(model, input_data)
-bifractal_trace = analysis.get_bifractal_patterns()
-```
+| Use Case | Location | License |
+|----------|----------|---------|
+| Academic Research | `/research` | AGPL-3.0 |
+| Open Source Project | Either | Respective |
+| Commercial Product | `/stable` | Apache-2.0 |
+| Specialized Commercial | `/research` | Contact us |
 
-## Licensing Quick Reference
-
-| Use Case | Location | License | Notes |
-|----------|----------|---------|-------|
-| Academic Research | `/research` | AGPL-3.0 | Open research, copyleft |
-| Open Source Project | Either | Respective | Follow license terms |
-| Commercial Product | `/stable` | Apache-2.0 | Free commercial use |
-| Specialized Commercial | `/research` | Contact us | Commercial licensing available |
-
-*See [LICENSING.md](./LICENSING.md) for complete licensing strategy.*
-
-## Contributing
-
-We welcome contributions to both research and stable models! See [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed guidelines on:
-- Research model contributions (AGPL-3.0)
-- Stable model improvements (Apache-2.0)  
-- Documentation and infrastructure
+See [LICENSING.md](./LICENSING.md) for complete licensing strategy.
 
 ## Dawn Field Theory Ecosystem
 
-Dawn Models is part of the larger Dawn Field Theory ecosystem:
+- **[dawn-field-theory](https://github.com/dawnfield-institute/dawn-field-theory)** — Core theoretical foundation
+- **[fracton](https://github.com/dawnfield-institute/fracton)** — Computing SDK (GAIA's physics substrate)
+- **[reality-engine](https://github.com/dawnfield-institute/reality-engine)** — Physics simulation and validation
+- **[dawn-models](https://github.com/dawnfield-institute/dawn-models)** — AI architectures and implementations
+- **[dawn-infrastructure](https://github.com/dawnfield-institute/dawn-infrastructure)** — Deployment and ops
 
-- **[dawn-field-theory](https://github.com/dawnfield-institute/dawn-field-theory)** - Core theoretical foundation
-- **[dawn-models](https://github.com/dawnfield-institute/dawn-models)** - AI architectures and implementations ⭐
-- **[cip-core](https://github.com/dawnfield-institute/cip-core)** - Cognition Index Protocol
-- **[fracton](https://github.com/dawnfield-institute/fracton)** - Computational modeling language
-- **[dawn-devkit](https://github.com/dawnfield-institute/dawn-devkit)** - Development tools and templates
+## Contributing
 
-## Documentation
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
 
-- **Licensing Strategy**: [LICENSING.md](./LICENSING.md)
-- **Contributing Guide**: [CONTRIBUTING.md](./CONTRIBUTING.md)
-- **Development Roadmaps**: [roadmaps/](./roadmaps/)
-- **Research Models**: [research/](./research/)
-- **Stable Models**: [stable/](./stable/)
-
-## Development
-
-- **Model Roadmaps**: [roadmaps/](./roadmaps/) - GAIA, SCBF, and symbolic entropy development plans
-- **Research Status**: See individual model directories for current development status
-- **Contributing**: [CONTRIBUTING.md](./CONTRIBUTING.md) - Contribution guidelines and processes
-- **Issues**: [GitHub Issues](https://github.com/dawnfield-institute/dawn-models/issues)
-
-## Contact & Support
+## Contact
 
 - **General Inquiries**: info@dawnfield.ca
-- **Research Collaboration**: info@dawnfield.ca  
+- **Research Collaboration**: info@dawnfield.ca
 - **Commercial Licensing**: info@dawnfield.ca
-- **Enterprise Support**: info@dawnfield.ca
-
-*For detailed support tiers and commercial licensing options, see [LICENSING.md](./LICENSING.md).*
-
-## License
-
-Dual License:
-- Research models: AGPL-3.0 (see [research/LICENSE](./research/LICENSE))
-- Stable models: Apache-2.0 (see [stable/LICENSE](./stable/LICENSE))
 
 See [LICENSING.md](./LICENSING.md) for complete licensing strategy.
