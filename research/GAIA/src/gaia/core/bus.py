@@ -128,7 +128,9 @@ class ConservationBus:
         adjusted_residual = abs(input_energy - output_energy) - abs(budget_delta)
         residual = max(0.0, adjusted_residual)
 
-        conserved = residual < self._tolerance
+        # Relative tolerance: compare residual against energy magnitude
+        energy_scale = max(abs(input_energy), abs(output_energy), 1e-10)
+        conserved = (residual / energy_scale) < self._tolerance
 
         result = ConservationResult(
             conserved=conserved,

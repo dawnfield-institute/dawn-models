@@ -126,6 +126,7 @@ class PACTree:
         self._next_id = 0
         self._capacity = capacity
         self._root_ids: list[int] = []
+        self._value_cache: dict[int, torch.Tensor] = {}  # Cached reconstructions
 
     def store(
         self,
@@ -141,16 +142,8 @@ class PACTree:
         Returns:
             Node ID of the stored pattern.
         """
-        # Find best parent via resonance
-        best_parent_id = -1
-        best_score = 0.0
-
-        if self._nodes:
-            for node_id, node in self._nodes.items():
-                score = self._resonance(pattern, self.reconstruct(node_id))
-                if score > best_score:
-                    best_score = score
-                    best_parent_id = node_id
+        # Find best parent via tree-guided search (O(branching * depth) not O(n))
+        best_parent_id, best_score = self._find_best_match(pattern)
 
         # Determine depth from importance
         if importance > 0.8:
@@ -191,6 +184,8 @@ class PACTree:
             self._root_ids.append(node_id)
 
         self._nodes[node_id] = node
+        # Cache the full value for this node (pattern is the full value)
+        self._value_cache[node_id] = pattern.clone().detach()
 
         # Garbage collect if over capacity
         if len(self._nodes) > self._capacity:
@@ -219,19 +214,53 @@ class PACTree:
         top_k: int = 5,
         threshold: float = 0.3,
     ) -> list[tuple[int, float]]:
-        """Find most resonant patterns for a query.
+        """Find most resonant patterns via beam search down the tree.
+
+        Starts at roots, expands the best candidates' children.
+        O(beam_width * tree_depth) instead of O(n).
 
         Returns:
             List of (node_id, resonance_score) sorted by score descending.
         """
-        results = []
-        for node_id in self._nodes:
-            node = self._nodes[node_id]
-            node.access_count += 1  # Track access for promotion
-            value = self.reconstruct(node_id)
-            score = self._resonance(query, value)
-            if score >= threshold:
-                results.append((node_id, score))
+        if not self._root_ids:
+            return []
+
+        beam_width = max(top_k * 2, 8)  # Explore wider than we return
+        results: list[tuple[int, float]] = []
+
+        # Start with roots
+        frontier = list(self._root_ids)
+        visited: set[int] = set()
+
+        while frontier:
+            # Score all candidates in this frontier
+            scored: list[tuple[int, float]] = []
+            for nid in frontier:
+                if nid in visited or nid not in self._nodes:
+                    continue
+                visited.add(nid)
+                self._nodes[nid].access_count += 1
+                val = self._cached_reconstruct(nid)
+                score = self._resonance(query, val)
+                scored.append((nid, score))
+                if score >= threshold:
+                    results.append((nid, score))
+
+            # Pick top candidates to expand
+            scored.sort(key=lambda x: x[1], reverse=True)
+            best = scored[:beam_width]
+
+            # Expand children of best candidates
+            next_frontier: list[int] = []
+            for nid, score in best:
+                if score < threshold * 0.5:
+                    continue  # Don't explore unpromising subtrees
+                children = self._nodes[nid].children_ids
+                for cid in children:
+                    if cid not in visited:
+                        next_frontier.append(cid)
+
+            frontier = next_frontier
 
         results.sort(key=lambda x: x[1], reverse=True)
         return results[:top_k]
@@ -241,6 +270,67 @@ class PACTree:
         for node in self._nodes.values():
             rate = _DEPTH_DECAY[node.depth]
             node.strength *= rate
+
+    def _find_best_match(self, pattern: torch.Tensor) -> tuple[int, float]:
+        """Tree-guided search for the most resonant node.
+
+        Drills down from roots: score all roots, take the best, score its
+        children, take the best child, repeat until no improvement.
+        O(branching_factor * depth) instead of O(n).
+
+        Returns:
+            (best_node_id, best_score) or (-1, 0.0) if tree is empty.
+        """
+        if not self._root_ids:
+            return -1, 0.0
+
+        # Score all roots
+        best_id = -1
+        best_score = 0.0
+        for rid in self._root_ids:
+            if rid not in self._nodes:
+                continue
+            val = self._cached_reconstruct(rid)
+            score = self._resonance(pattern, val)
+            if score > best_score:
+                best_score = score
+                best_id = rid
+
+        if best_id < 0:
+            return -1, 0.0
+
+        # Drill down: check children of current best, keep going if we improve
+        current_id = best_id
+        while True:
+            children = self._nodes[current_id].children_ids
+            if not children:
+                break
+
+            improved = False
+            for cid in children:
+                if cid not in self._nodes:
+                    continue
+                val = self._cached_reconstruct(cid)
+                score = self._resonance(pattern, val)
+                if score > best_score:
+                    best_score = score
+                    best_id = cid
+                    improved = True
+
+            if improved:
+                current_id = best_id
+            else:
+                break
+
+        return best_id, best_score
+
+    def _cached_reconstruct(self, node_id: int) -> torch.Tensor:
+        """Reconstruct with caching — O(1) for repeated access."""
+        if node_id in self._value_cache:
+            return self._value_cache[node_id]
+        value = self.reconstruct(node_id)
+        self._value_cache[node_id] = value.clone().detach()
+        return value
 
     def _resonance(self, a: torch.Tensor, b: torch.Tensor) -> float:
         """Compute resonance (cosine similarity) between two patterns."""
@@ -286,6 +376,7 @@ class PACTree:
             self._root_ids.remove(node_id)
 
         del self._nodes[node_id]
+        self._value_cache.pop(node_id, None)
 
     @property
     def size(self) -> int:
