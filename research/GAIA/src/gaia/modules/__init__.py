@@ -10,10 +10,10 @@ Available:
   - safety: Boltzmann conservation layer, hallucination detection
   - reasoning: Mobius neurons for recursive dynamics
   - memory: Bifractal hierarchy, PACTree, continuous learning
+  - observability: SCBF metrics, QBE equilibrium monitoring
 
 Planned:
   - language: Token prediction, embedding grafting, generation
-  - observability: SCBF metrics, QBE equilibrium monitoring
 """
 
 from .memory import (
@@ -24,6 +24,14 @@ from .memory import (
     MemoryNode,
     PACTree,
     TransitionTracker,
+)
+from .observability import (
+    CollapseEvent,
+    ObservabilityMetrics,
+    ObservabilityModule,
+    QBEController,
+    SCBFMetrics,
+    SCBFTracker,
 )
 from .reasoning import (
     MobiusHarmonicAnalyzer,
@@ -52,13 +60,19 @@ __all__ = [
     "MemoryMetrics",
     "MemoryModule",
     "MemoryNode",
+    "CollapseEvent",
+    "ObservabilityMetrics",
+    "ObservabilityModule",
     "MobiusHarmonicAnalyzer",
     "MobiusLayer",
     "MobiusNeuron",
     "PACTree",
+    "QBEController",
     "PhiAnchorMemory",
     "ReasoningMetrics",
     "ReasoningModule",
+    "SCBFMetrics",
+    "SCBFTracker",
     "SafetyMetrics",
     "SafetyModule",
     "TransitionTracker",
