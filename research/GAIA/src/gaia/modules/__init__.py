@@ -8,14 +8,22 @@ Each module implements the GAIAModule protocol:
 
 Available:
   - safety: Boltzmann conservation layer, hallucination detection
+  - reasoning: Mobius neurons for recursive dynamics
 
 Planned:
   - language: Token prediction, embedding grafting, generation
-  - reasoning: Mobius neurons for recursive dynamics
   - observability: SCBF metrics, QBE equilibrium monitoring
   - memory: Bifractal hierarchy, PACTree, continuous learning
 """
 
+from .reasoning import (
+    MobiusHarmonicAnalyzer,
+    MobiusLayer,
+    MobiusNeuron,
+    PhiAnchorMemory,
+    ReasoningMetrics,
+    ReasoningModule,
+)
 from .safety import (
     BoltzmannHead,
     BoltzmannLayer,
@@ -30,6 +38,12 @@ __all__ = [
     "BoltzmannLayer",
     "BoltzmannMonitor",
     "ConservationProjector",
+    "MobiusHarmonicAnalyzer",
+    "MobiusLayer",
+    "MobiusNeuron",
+    "PhiAnchorMemory",
+    "ReasoningMetrics",
+    "ReasoningModule",
     "SafetyMetrics",
     "SafetyModule",
 ]
