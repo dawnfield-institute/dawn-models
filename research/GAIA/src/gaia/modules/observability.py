@@ -596,14 +596,20 @@ class ObservabilityModule:
     def health(self) -> RBFBalance:
         """RBF balance from SCBF metrics.
 
-        Energy = pattern consistency (how stable are the patterns).
-        Information = attractor density (how structured is the space).
+        Observability is a pure observer — it never transforms the tensor,
+        so it should never be suppressed by RBF regulation. Energy is always
+        >= information to ensure a non-negative balance.
+
+        Energy = max(pattern_consistency, attractor_density) (stability).
+        Information = min(pattern_consistency, attractor_density) (structure).
         Memory = mathematical memory utilization.
         """
         if self._last_metrics:
             scbf = self._last_metrics.scbf
-            energy = scbf.pattern_consistency
-            information = scbf.attractor_density
+            # Ensure energy >= information so balance stays non-negative.
+            # An observer should never be RBF-suppressed.
+            energy = max(scbf.pattern_consistency, scbf.attractor_density)
+            information = min(scbf.pattern_consistency, scbf.attractor_density)
             memory = min(scbf.mathematical_memory_size, 30) / 30.0
         else:
             energy = 1.0

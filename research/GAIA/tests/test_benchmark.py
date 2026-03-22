@@ -16,6 +16,7 @@ from gaia.core.bus import ConservationBus
 from gaia.core.exceptions import ConservationViolation
 from gaia.core.types import FieldState, SECPhase
 from gaia.modules.memory import MemoryModule, PACTree, BifractalDepth
+from gaia.modules.observability import ObservabilityModule, SCBFMetrics
 from gaia.modules.reasoning import ReasoningModule
 from gaia.modules.safety import SafetyModule
 
@@ -94,12 +95,29 @@ class TestConservationDrift:
         assert mean_drift < 1e-3, f"Mean drift {mean_drift:.6e} exceeds threshold"
         assert max_drift < 1e-2, f"Max drift {max_drift:.6e} exceeds threshold"
 
+    def test_single_module_drift_observability(self):
+        """Observability is pass-through — should have zero drift."""
+        bus = ConservationBus(enforcement="hard", tolerance=1e-10)
+        bus.register_module(ObservabilityModule())
+
+        drifts = []
+        for _ in range(100):
+            state = make_state(dim=16, entropy=1.0)
+            input_e = state.total_energy()
+            result = bus.process(state)
+            output_e = result.total_energy()
+            drifts.append(abs(input_e - output_e))
+
+        max_drift = max(drifts)
+        assert max_drift == 0.0, f"Observability drift {max_drift:.6e} — should be exactly 0"
+
     def test_full_stack_drift_100_iterations(self):
-        """All 3 modules in sequence, 100 iterations. The real test."""
+        """All 4 modules in sequence, 100 iterations. The real test."""
         bus = ConservationBus(enforcement="hard", tolerance=1e-3)
         bus.register_module(SafetyModule(input_dim=16))
         bus.register_module(ReasoningModule(input_dim=16))
         bus.register_module(MemoryModule())
+        bus.register_module(ObservabilityModule())
 
         drifts = []
         for _ in range(100):
@@ -121,6 +139,7 @@ class TestConservationDrift:
         bus.register_module(SafetyModule(input_dim=16))
         bus.register_module(ReasoningModule(input_dim=16))
         bus.register_module(MemoryModule())
+        bus.register_module(ObservabilityModule())
 
         state = make_state(dim=16, entropy=1.0, positive=True)
         initial_energy = state.total_energy()
@@ -169,11 +188,12 @@ class TestEdgeCases:
         bus.register_module(SafetyModule(input_dim=1))
         bus.register_module(ReasoningModule(input_dim=1))
         bus.register_module(MemoryModule())
+        bus.register_module(ObservabilityModule())
 
         state = FieldState(tensor=torch.tensor([1.0]), entropy=1.0)
         result = bus.process(state)
         assert torch.isfinite(result.tensor).all()
-        assert len(result.provenance) == 3
+        assert len(result.provenance) == 4
 
     def test_high_dim_tensor(self):
         """dim=1024 — still works?"""
@@ -181,11 +201,12 @@ class TestEdgeCases:
         bus.register_module(SafetyModule(input_dim=1024))
         bus.register_module(ReasoningModule(input_dim=1024))
         bus.register_module(MemoryModule())
+        bus.register_module(ObservabilityModule())
 
         state = make_state(dim=1024, entropy=1.0)
         result = bus.process(state)
         assert torch.isfinite(result.tensor).all()
-        assert len(result.provenance) == 3
+        assert len(result.provenance) == 4
 
     def test_zero_entropy(self):
         """Entropy = 0 → CRYSTALLIZED phase. All modules still run?"""
@@ -213,6 +234,7 @@ class TestEdgeCases:
         bus.register_module(SafetyModule(input_dim=8))
         bus.register_module(ReasoningModule(input_dim=8))
         bus.register_module(MemoryModule())
+        bus.register_module(ObservabilityModule())
 
         # Create tensor that sums to ~0
         tensor = torch.tensor([1.0, -1.0, 2.0, -2.0, 0.5, -0.5, 0.3, -0.3])
@@ -337,15 +359,17 @@ class TestCompositionStress:
         state = make_state(dim=dim, entropy=1.0)
         input_e = state.total_energy()
 
-        # Order 1: safety → reasoning → memory
+        # Order 1: safety → reasoning → memory → observability
         bus1 = ConservationBus(enforcement="hard", tolerance=1e-3)
         bus1.register_module(SafetyModule(input_dim=dim))
         bus1.register_module(ReasoningModule(input_dim=dim))
         bus1.register_module(MemoryModule())
+        bus1.register_module(ObservabilityModule())
         r1 = bus1.process(state)
 
-        # Order 2: memory → safety → reasoning
+        # Order 2: observability → memory → safety → reasoning
         bus2 = ConservationBus(enforcement="hard", tolerance=1e-3)
+        bus2.register_module(ObservabilityModule())
         bus2.register_module(MemoryModule())
         bus2.register_module(SafetyModule(input_dim=dim))
         bus2.register_module(ReasoningModule(input_dim=dim))
@@ -364,6 +388,7 @@ class TestCompositionStress:
         bus.register_module(SafetyModule(input_dim=dim))
         bus.register_module(ReasoningModule(input_dim=dim))
         bus.register_module(MemoryModule())
+        bus.register_module(ObservabilityModule())
 
         for entropy in [0.0, 0.25, 0.5, 1.0, 2.0, 3.0, 4.0, 8.0]:
             state = make_state(dim=dim, entropy=entropy)
@@ -378,6 +403,7 @@ class TestCompositionStress:
         bus.register_module(SafetyModule(input_dim=dim))
         bus.register_module(ReasoningModule(input_dim=dim))
         bus.register_module(MemoryModule())
+        bus.register_module(ObservabilityModule())
 
         for _ in range(50):
             state = make_state(dim=dim, entropy=1.0)
@@ -387,7 +413,7 @@ class TestCompositionStress:
         # The question is: at 1e-6 tolerance, how many violations?
         n_violations = len(bus.violation_log)
         # With the blunt energy-scaling approach, we expect some at tight tolerance
-        print(f"\n  Soft enforcement at 1e-6: {n_violations}/150 module-passes had violations")
+        print(f"\n  Soft enforcement at 1e-6: {n_violations}/200 module-passes had violations")
 
 
 # ─── Performance ─────────────────────────────────────────────────
@@ -406,6 +432,7 @@ class TestPerformance:
             ("safety", SafetyModule(input_dim=dim)),
             ("reasoning", ReasoningModule(input_dim=dim)),
             ("memory", MemoryModule()),
+            ("observability", ObservabilityModule()),
         ]:
             bus = ConservationBus(enforcement="hard", tolerance=1e-3)
             bus.register_module(module)
@@ -422,7 +449,7 @@ class TestPerformance:
             print(f"    {name}: {rate:.0f}")
 
     def test_throughput_full_stack(self):
-        """Full 3-module stack throughput."""
+        """Full 4-module stack throughput."""
         dim = 32
         n = 100
 
@@ -430,6 +457,7 @@ class TestPerformance:
         bus.register_module(SafetyModule(input_dim=dim))
         bus.register_module(ReasoningModule(input_dim=dim))
         bus.register_module(MemoryModule())
+        bus.register_module(ObservabilityModule())
 
         t0 = time.perf_counter()
         for _ in range(n):
@@ -529,3 +557,166 @@ class TestModuleHealth:
         # Initial was empty → ORDERED
         # Phase should have changed (or at least not crashed)
         assert isinstance(later_phase, SECPhase)
+
+    def test_observability_phase_reflects_qbe(self):
+        """Observability phase should track QBE equilibrium status."""
+        obs = ObservabilityModule()
+        bus = ConservationBus(enforcement="hard", tolerance=1e-3)
+        bus.register_module(obs)
+
+        phases = []
+        for _ in range(30):
+            state = make_state(dim=16, entropy=1.0)
+            bus.process(state)
+            phases.append(obs.phase())
+
+        assert all(isinstance(p, SECPhase) for p in phases)
+
+    def test_observability_health_under_load(self):
+        """Observability health() should return valid RBFBalance after many steps."""
+        obs = ObservabilityModule()
+        bus = ConservationBus(enforcement="hard", tolerance=1e-3)
+        bus.register_module(obs)
+
+        for _ in range(50):
+            state = make_state(dim=16, entropy=1.0)
+            bus.process(state)
+
+        h = obs.health()
+        assert h.energy >= 0, f"Negative energy: {h.energy}"
+        assert h.information >= 0, f"Negative information: {h.information}"
+
+
+# ─── Observability-Specific Stress ──────────────────────────────
+
+
+class TestObservabilityStress:
+    """SCBF metrics and QBE under load."""
+
+    def test_scbf_metrics_under_varied_inputs(self):
+        """SCBF metrics should stay finite across diverse input distributions."""
+        obs = ObservabilityModule()
+        bus = ConservationBus(enforcement="hard", tolerance=1e-3)
+        bus.register_module(obs)
+
+        distributions = [
+            ("uniform", lambda: torch.rand(16)),
+            ("normal", lambda: torch.randn(16).abs() + 0.01),
+            ("sparse", lambda: torch.zeros(16).scatter_(0, torch.randint(0, 16, (4,)), 1.0)),
+            ("constant", lambda: torch.ones(16) * 3.0),
+            ("large", lambda: torch.randn(16).abs() * 1000),
+            ("tiny", lambda: torch.randn(16).abs() * 1e-6 + 1e-8),
+        ]
+
+        for name, gen_fn in distributions:
+            obs_fresh = ObservabilityModule()
+            for _ in range(10):
+                state = FieldState(tensor=gen_fn(), entropy=1.0)
+                result = obs_fresh.process(state)
+                assert torch.isfinite(result.tensor).all(), f"Non-finite at dist={name}"
+
+            m = obs_fresh.metrics
+            assert m is not None, f"No metrics after dist={name}"
+            assert m.scbf.entropy_collapse >= 0, f"Negative entropy collapse at dist={name}"
+            assert 0 <= m.scbf.ancestry_stability <= 1.0, f"Bad ancestry at dist={name}"
+
+    def test_scbf_collapse_detection(self):
+        """Feed stable pattern then sudden shift — tracker should detect collapse."""
+        obs = ObservabilityModule()
+
+        # Warm up with stable pattern
+        stable = torch.ones(16) * 2.0
+        for _ in range(20):
+            obs.process(FieldState(tensor=stable.clone(), entropy=1.0))
+
+        # Sudden shift
+        shock = torch.randn(16) * 100
+        obs.process(FieldState(tensor=shock, entropy=1.0))
+
+        # Check tracker recorded the shift
+        assert obs.tracker.step == 21
+        # Entropy momentum should be non-zero after the shift
+        assert obs.metrics.scbf.entropy_momentum != 0.0
+
+    def test_qbe_convergence_pattern(self):
+        """Feeding identical inputs should drive QBE toward convergence."""
+        obs = ObservabilityModule()
+        pattern = torch.ones(16) * 2.0
+
+        for _ in range(30):
+            obs.process(FieldState(tensor=pattern.clone(), entropy=1.0))
+
+        # After 30 identical inputs, QBE should be near equilibrium
+        status = obs.metrics.qbe_status
+        assert status == "Near Equilibrium", f"Expected near equilibrium, got {status}"
+
+    def test_scbf_metrics_scale_with_dimension(self):
+        """SCBF should work at different tensor dimensions."""
+        for dim in [1, 4, 16, 64, 256]:
+            obs = ObservabilityModule()
+            for _ in range(10):
+                state = FieldState(tensor=torch.randn(dim).abs() + 0.01, entropy=1.0)
+                obs.process(state)
+
+            m = obs.metrics
+            assert m is not None, f"No metrics at dim={dim}"
+            assert isinstance(m.scbf, SCBFMetrics), f"Bad SCBF type at dim={dim}"
+
+    def test_observability_throughput_overhead(self):
+        """Measure overhead of adding observability to the stack."""
+        dim = 32
+        n = 200
+
+        # Without observability
+        bus_no_obs = ConservationBus(enforcement="hard", tolerance=1e-3)
+        bus_no_obs.register_module(SafetyModule(input_dim=dim))
+        bus_no_obs.register_module(ReasoningModule(input_dim=dim))
+        bus_no_obs.register_module(MemoryModule())
+
+        t0 = time.perf_counter()
+        for _ in range(n):
+            bus_no_obs.process(make_state(dim=dim, entropy=1.0))
+        time_without = time.perf_counter() - t0
+
+        # With observability
+        bus_obs = ConservationBus(enforcement="hard", tolerance=1e-3)
+        bus_obs.register_module(SafetyModule(input_dim=dim))
+        bus_obs.register_module(ReasoningModule(input_dim=dim))
+        bus_obs.register_module(MemoryModule())
+        bus_obs.register_module(ObservabilityModule())
+
+        t0 = time.perf_counter()
+        for _ in range(n):
+            bus_obs.process(make_state(dim=dim, entropy=1.0))
+        time_with = time.perf_counter() - t0
+
+        overhead_pct = ((time_with - time_without) / time_without) * 100
+        rate_without = n / time_without
+        rate_with = n / time_with
+        print(f"\n  Observability overhead:")
+        print(f"    Without: {rate_without:.0f} iter/s")
+        print(f"    With:    {rate_with:.0f} iter/s")
+        print(f"    Overhead: {overhead_pct:.1f}%")
+
+        # Observability should add < 100% overhead (it's pass-through + metrics)
+        assert overhead_pct < 100, f"Observability overhead {overhead_pct:.1f}% is too high"
+
+    def test_long_running_scbf_stability(self):
+        """500 iterations — metrics should stay bounded and finite."""
+        obs = ObservabilityModule()
+        bus = ConservationBus(enforcement="hard", tolerance=1e-3)
+        bus.register_module(obs)
+
+        for i in range(500):
+            state = make_state(dim=16, entropy=1.0)
+            result = bus.process(state)
+            assert torch.isfinite(result.tensor).all(), f"Non-finite at step {i}"
+
+        m = obs.metrics
+        assert m.step_count == 500
+        assert m.scbf.entropy_collapse >= 0
+        assert 0 <= m.scbf.ancestry_stability <= 1.0
+        assert 0 <= m.scbf.phase_alignment <= 1.0
+        assert 0 <= m.scbf.attractor_density <= 1.0
+        assert m.scbf.bifractal_strength >= 0
+        assert len(bus.violation_log) == 0
