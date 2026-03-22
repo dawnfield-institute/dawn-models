@@ -383,17 +383,25 @@ class PACTree:
         return len(self._nodes)
 
     def storage_ratio(self) -> float:
-        """Ratio of delta storage vs flat storage (lower = more efficient)."""
+        """Ratio of delta storage vs flat storage (lower = more efficient).
+
+        Compares L1 norm of stored deltas vs reconstructed full values.
+        When children store small deltas (similar to parent), ratio is low.
+        When everything is a root (no compression), ratio ≈ 1.0.
+        """
         if not self._nodes:
             return 1.0
-        total_delta = sum(n.delta.numel() for n in self._nodes.values())
-        # Flat storage would be numel * n_nodes (each storing full pattern)
-        if self._root_ids:
-            root = self._nodes[self._root_ids[0]]
-            flat = root.delta.numel() * len(self._nodes)
-        else:
-            flat = total_delta
-        return total_delta / max(flat, 1)
+
+        total_delta_norm = 0.0
+        total_full_norm = 0.0
+        for nid, node in self._nodes.items():
+            total_delta_norm += float(node.delta.abs().sum().item())
+            full_val = self._cached_reconstruct(nid)
+            total_full_norm += float(full_val.abs().sum().item())
+
+        if total_full_norm < 1e-10:
+            return 1.0
+        return total_delta_norm / total_full_norm
 
     def depth_distribution(self) -> dict[str, int]:
         """Count nodes at each bifractal depth."""

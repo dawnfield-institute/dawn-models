@@ -154,16 +154,19 @@ class TestContinuousLearning:
         bus = ConservationBus(enforcement="hard", tolerance=1e-3)
         bus.register_module(mem)
 
-        # Domain A: high-value tensors
+        # Domain A: random positive tensors
+        gen = torch.Generator().manual_seed(42)
         for _ in range(20):
-            state = FieldState(tensor=torch.ones(16) * 5.0, entropy=1.0)
+            t = torch.randn(16, generator=gen).abs() + 1.0
+            state = FieldState(tensor=t, entropy=1.0)
             bus.process(state)
 
         stored_after_a = mem.metrics.n_nodes
 
-        # Domain B: low-value tensors (different distribution)
+        # Domain B: random negative tensors (orthogonal distribution)
         for _ in range(20):
-            state = FieldState(tensor=torch.ones(16) * 0.1, entropy=1.0)
+            t = -(torch.randn(16, generator=gen).abs() + 1.0)
+            state = FieldState(tensor=t, entropy=1.0)
             bus.process(state)
 
         stored_after_b = mem.metrics.n_nodes

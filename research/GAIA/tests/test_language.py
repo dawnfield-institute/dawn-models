@@ -210,11 +210,28 @@ class TestConcentrationGate:
         assert gate.should_reject(result) is True
 
     def test_stats_accumulate(self):
-        gate = ConcentrationGate()
+        gate = ConcentrationGate(min_depths=1)
         preds = {1: (torch.tensor([5]), torch.tensor([1.0]))}
         gate.evaluate(preds)
         gate.evaluate(preds)
         assert gate.stats["total_analyzed"] == 2
+
+    def test_single_depth_capped(self):
+        """Single depth vote should NOT pass threshold (POC-023)."""
+        gate = ConcentrationGate()  # default min_depths=2
+        preds = {1: (torch.tensor([5]), torch.tensor([1.0]))}
+        result = gate.evaluate(preds)
+        # 1 vote → capped below threshold
+        assert result.concentration < gate.threshold
+        assert result.is_high_quality is False
+
+    def test_min_depths_backward_compat(self):
+        """min_depths=1 restores old behavior (single depth = 1.0)."""
+        gate = ConcentrationGate(min_depths=1)
+        preds = {1: (torch.tensor([5]), torch.tensor([1.0]))}
+        result = gate.evaluate(preds)
+        assert result.concentration == 1.0
+        assert result.is_high_quality is True
 
 
 # ─── LanguageModule Protocol ─────────────────────────────────────
@@ -328,6 +345,37 @@ class TestLanguageModuleFunctional:
         assert m is not None
         assert isinstance(m, LanguageMetrics)
         assert m.step_count == 1
+
+    def test_discretize_preserves_integers(self):
+        """Integer tensor values pass through as-is (no bucketize)."""
+        module = LanguageModule(n_bins=256)
+        flat = torch.tensor([0.0, 3.0, 10.0, 7.0, 15.0])
+        tokens = module._discretize(flat)
+        assert tokens == [0, 3, 10, 7, 15]
+        assert module._integer_mode is True
+
+    def test_integer_mode_round_trip(self):
+        """process() with integer FieldState learns correct transitions."""
+        module = LanguageModule(max_context_len=2, n_bins=21)
+        # Feed same bigram pattern: 3 → 10 repeatedly
+        for _ in range(5):
+            tensor = torch.tensor([3.0, 10.0, 3.0, 10.0, 3.0, 10.0])
+            state = FieldState(tensor=tensor, entropy=1.0)
+            module.process(state)
+
+        # Counter should have learned (3,) → 10
+        pred_ids, probs = module.counter.predict((3,), top_k=1)
+        assert len(pred_ids) > 0
+        assert int(pred_ids[0].item()) == 10
+
+    def test_token_to_value_integer_mode(self):
+        """In integer mode, _token_to_value returns the token ID as float."""
+        module = LanguageModule(n_bins=256)
+        # Trigger integer mode by discretizing an integer tensor
+        module._discretize(torch.tensor([0.0, 5.0, 10.0]))
+        assert module._integer_mode is True
+        assert module._token_to_value(7) == 7.0
+        assert module._token_to_value(0) == 0.0
 
     def test_phase_reflects_concentration(self):
         module = LanguageModule()

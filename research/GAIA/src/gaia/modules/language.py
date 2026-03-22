@@ -260,10 +260,11 @@ class ConcentrationGate:
     """
 
     def __init__(
-        self, threshold: float = PHI_INV, max_depth: int = 5
+        self, threshold: float = PHI_INV, max_depth: int = 5, min_depths: int = 2
     ) -> None:
         self.threshold = threshold
         self.max_depth = max_depth
+        self.min_depths = min_depths
         self._total_analyzed = 0
         self._high_quality_count = 0
         self._concentration_sum = 0.0
@@ -321,6 +322,10 @@ class ConcentrationGate:
         sorted_counts = sorted(vote_counts.values(), reverse=True)
         second_count = sorted_counts[1] if len(sorted_counts) > 1 else 0
         confidence = (majority_count - second_count) / total_votes
+
+        # POC-023: concentration only meaningful with multiple depths
+        if total_votes < self.min_depths:
+            concentration = min(concentration, self.threshold * 0.5)
 
         is_high_quality = concentration >= self.threshold
 
@@ -391,6 +396,7 @@ class LanguageModule:
 
         # Adaptive bin boundaries (computed from first tensor seen)
         self._bin_boundaries: torch.Tensor | None = None
+        self._integer_mode: bool = False
 
     @property
     def name(self) -> str:
@@ -410,11 +416,25 @@ class LanguageModule:
 
     # ── Discretization ───────────────────────────────────────────
 
+    @staticmethod
+    def _is_integer_tensor(flat: torch.Tensor) -> bool:
+        """Check if tensor values are already integer token IDs."""
+        if flat.numel() == 0:
+            return False
+        rounded = flat.round()
+        if not torch.allclose(flat, rounded, atol=1e-6):
+            return False
+        if float(flat.min()) < -0.5:
+            return False
+        return True
+
     def _discretize(self, tensor: torch.Tensor) -> list[int]:
         """Convert continuous tensor to discrete token sequence.
 
         With EmbeddingStore: each element mapped to nearest vocabulary token.
-        Without: adaptive binning via torch.bucketize.
+        Without embeddings, two paths:
+        - Integer passthrough: values already in [0, n_bins) pass through as-is.
+        - Quantization fallback: adaptive binning via torch.bucketize.
         """
         flat = tensor.flatten()
 
@@ -427,7 +447,13 @@ class LanguageModule:
                 token_ids.append(int(ids[0].item()))
             return token_ids
 
+        # Integer passthrough: values are already token IDs
+        if self._is_integer_tensor(flat) and float(flat.max()) < self._n_bins:
+            self._integer_mode = True
+            return flat.round().long().tolist()
+
         # Quantization fallback: adaptive bins
+        self._integer_mode = False
         if self._bin_boundaries is None or len(self._bin_boundaries) == 0:
             # Initialize bin boundaries from this tensor's value range
             vmin, vmax = float(flat.min()), float(flat.max())
@@ -443,6 +469,10 @@ class LanguageModule:
         if self._embeddings is not None:
             # Use mean of embedding vector as scalar value
             return float(self._embeddings.get_embedding(token_id).mean().item())
+
+        # Integer mode: token ID is the value
+        if self._integer_mode:
+            return float(token_id)
 
         # Bin center from boundaries
         if self._bin_boundaries is not None and len(self._bin_boundaries) > 0:
