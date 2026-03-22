@@ -1,0 +1,62 @@
+{
+  "experiment": "exp_19_sample_efficiency",
+  "passed": true,
+  "criterion": "Noether matches MLP final MSE with <= 50% data",
+  "fib_index": 11,
+  "mlp_final_mse": 0.12069054509205887,
+  "noether_match_n": 100,
+  "efficiency_ratio": 0.01,
+  "max_samples": 10000,
+  "sweep": [
+    {
+      "n_samples": 100,
+      "noether_mse": 0.09301427852076478,
+      "noether_r2": 0.9079711244364015,
+      "noether_time_s": 0.3820309638977051,
+      "mlp_mse": 0.13129211787350628,
+      "mlp_r2": 0.8700988045016675,
+      "mlp_time_s": 0.20221400260925293,
+      "mse_ratio": 0.7084528761306115
+    },
+    {
+      "n_samples": 500,
+      "noether_mse": 0.08290587570979434,
+      "noether_r2": 0.9179724377748677,
+      "noether_time_s": 1.076298713684082,
+      "mlp_mse": 0.12519400954786067,
+      "mlp_r2": 0.8761323088323913,
+      "mlp_time_s": 0.8714179992675781,
+      "mse_ratio": 0.662219190911847
+    },
+    {
+      "n_samples": 1000,
+      "noether_mse": 0.08267113046958706,
+      "noether_r2": 0.9182046960995437,
+      "noether_time_s": 1.9491355419158936,
+      "mlp_mse": 0.12292365414679086,
+      "mlp_r2": 0.8783786118518095,
+      "mlp_time_s": 2.032972812652588,
+      "mse_ratio": 0.6725404564597817
+    },
+    {
+      "n_samples": 5000,
+      "noether_mse": 0.08480746376930076,
+      "noether_r2": 0.916090995337377,
+      "noether_time_s": 28.612592220306396,
+      "mlp_mse": 0.12134785667596208,
+      "mlp_r2": 0.8799377151600609,
+      "mlp_time_s": 23.03981876373291,
+      "mse_ratio": 0.6988789591542934
+    },
+    {
+      "n_samples": 10000,
+      "noether_mse": 0.0837006313065836,
+      "noether_r2": 0.9171861019016709,
+      "noether_time_s": 45.656004905700684,
+      "mlp_mse": 0.12069054509205887,
+      "mlp_r2": 0.8805880631165635,
+      "mlp_time_s": 49.08328104019165,
+      "mse_ratio": 0.6935144028286512
+    }
+  ]
+}

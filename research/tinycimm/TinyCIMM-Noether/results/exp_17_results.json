@@ -1,0 +1,128 @@
+{
+  "experiment": "exp_17_scale_sweep_riemann",
+  "passed": true,
+  "criterion": "Noether MSE < MLP MSE at n >= 11",
+  "crossover_tier": "S",
+  "tiers": [
+    {
+      "tier": "XS",
+      "fib_index": 6,
+      "noether_params": 52,
+      "mlp_params": 49,
+      "noether_mse": 0.06851701737042548,
+      "noether_r2": -0.6201565409798826,
+      "mlp_mse": 0.04424697178878936,
+      "mlp_r2": -0.9367213054264294,
+      "mse_ratio": 1.5485131433962969,
+      "noether_wins": false,
+      "noether_skipped": false,
+      "mlp_skipped": false,
+      "per_seed_noether": [
+        0.1054333654270269,
+        0.050168671746514536,
+        0.049949014937735015
+      ],
+      "per_seed_mlp": [
+        0.038463115534444536,
+        0.03456917355531269,
+        0.05970862627661085
+      ]
+    },
+    {
+      "tier": "S",
+      "fib_index": 9,
+      "noether_params": 426,
+      "mlp_params": 426,
+      "noether_mse": 0.03919855413229428,
+      "noether_r2": -0.16357156987761545,
+      "mlp_mse": 0.04461063155131067,
+      "mlp_r2": -0.49403817076902157,
+      "mse_ratio": 0.8786818919433707,
+      "noether_wins": true,
+      "noether_skipped": false,
+      "mlp_skipped": false,
+      "per_seed_noether": [
+        0.04667108972991301,
+        0.035051956500022276,
+        0.03587261616694757
+      ],
+      "per_seed_mlp": [
+        0.04311949911812433,
+        0.04465157794088937,
+        0.0460608175949183
+      ]
+    },
+    {
+      "tier": "M",
+      "fib_index": 11,
+      "noether_params": 2269,
+      "mlp_params": 2289,
+      "noether_mse": 0.038481593357338605,
+      "noether_r2": -0.09789567852298897,
+      "mlp_mse": 0.041221103783900766,
+      "mlp_r2": -0.2670499223008329,
+      "mse_ratio": 0.933541070590349,
+      "noether_wins": true,
+      "noether_skipped": false,
+      "mlp_skipped": false,
+      "per_seed_noether": [
+        0.044975851934356166,
+        0.03662108303162279,
+        0.03384784510603684
+      ],
+      "per_seed_mlp": [
+        0.03960056493723727,
+        0.044999918906708715,
+        0.03906282750775632
+      ]
+    },
+    {
+      "tier": "L",
+      "fib_index": 13,
+      "noether_params": 13859,
+      "mlp_params": 13909,
+      "noether_mse": 0.03726651796026447,
+      "noether_r2": -0.10771717929740965,
+      "mlp_mse": 0.038530519172140544,
+      "mlp_r2": -0.24657903907373768,
+      "mse_ratio": 0.9671948045592387,
+      "noether_wins": true,
+      "noether_skipped": false,
+      "mlp_skipped": false,
+      "per_seed_noether": [
+        0.04016963471470686,
+        0.03747927968402243,
+        0.034150639482064114
+      ],
+      "per_seed_mlp": [
+        0.03828044617805854,
+        0.038879395964672776,
+        0.03843171537369032
+      ]
+    },
+    {
+      "tier": "XL",
+      "fib_index": 15,
+      "noether_params": 90570,
+      "mlp_params": 90586,
+      "noether_mse": 0.04218086340829038,
+      "noether_r2": -0.39802882685008223,
+      "mlp_mse": 0.037905444610749434,
+      "mlp_r2": -0.23011718866872322,
+      "mse_ratio": 1.1127916804945879,
+      "noether_wins": false,
+      "noether_skipped": false,
+      "mlp_skipped": false,
+      "per_seed_noether": [
+        0.04227678935060893,
+        0.04116492698371509,
+        0.04310087389054709
+      ],
+      "per_seed_mlp": [
+        0.03742313508113971,
+        0.03836899804713379,
+        0.03792420070397481
+      ]
+    }
+  ]
+}

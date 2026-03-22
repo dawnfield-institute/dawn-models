@@ -1,0 +1,18 @@
+{
+  "experiment": "exp_07_energy_cascade_conservation",
+  "passed": true,
+  "criterion": "Pearson r > 0.6",
+  "best_correlation": 0.9381021408344814,
+  "layer_correlations": [
+    0.23571717076822699,
+    0.4712619003905126,
+    0.7792052331034933,
+    0.9381021408344814
+  ],
+  "violation_correlation": 0.045778487945532624,
+  "level_violations": {
+    "0": 0.5127903617789488,
+    "1": 0.671433593051312,
+    "2": 0.7266825467370412
+  }
+}
