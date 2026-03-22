@@ -11,11 +11,18 @@ Available:
   - reasoning: Mobius neurons for recursive dynamics
   - memory: Bifractal hierarchy, PACTree, continuous learning
   - observability: SCBF metrics, QBE equilibrium monitoring
-
-Planned:
-  - language: Token prediction, embedding grafting, generation
+  - language: N-gram transitions, embedding grafting, concentration gating
 """
 
+from .language import (
+    ConcentrationGate,
+    ConcentrationResult,
+    EmbeddingStore,
+    LanguageMetrics,
+    LanguageModule,
+    TransitionCounter,
+    TransitionStats,
+)
 from .memory import (
     BifractalDepth,
     BifractalManager,
@@ -56,7 +63,12 @@ __all__ = [
     "BoltzmannHead",
     "BoltzmannLayer",
     "BoltzmannMonitor",
+    "ConcentrationGate",
+    "ConcentrationResult",
     "ConservationProjector",
+    "EmbeddingStore",
+    "LanguageMetrics",
+    "LanguageModule",
     "MemoryMetrics",
     "MemoryModule",
     "MemoryNode",
@@ -75,5 +87,7 @@ __all__ = [
     "SCBFTracker",
     "SafetyMetrics",
     "SafetyModule",
+    "TransitionCounter",
+    "TransitionStats",
     "TransitionTracker",
 ]
