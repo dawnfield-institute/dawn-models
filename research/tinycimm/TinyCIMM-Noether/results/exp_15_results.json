@@ -1,0 +1,30 @@
+{
+  "experiment": "exp_15_falsification_boundary",
+  "avg_violation_real": 0.16157931405767387,
+  "avg_violation_random": 0.18445274862639519,
+  "violation_ratio": 1.1415616516391258,
+  "avg_phi_deviation_real": 0.023659165975253364,
+  "avg_phi_deviation_random": 0.02386030491243941,
+  "deviation_ratio": 1.0085015227246992,
+  "per_seed_violations_real": [
+    0.2037007781189362,
+    0.04799678169007678,
+    0.23304038236400865
+  ],
+  "per_seed_violations_random": [
+    0.24463934701063866,
+    0.04954310715284587,
+    0.25917579171570104
+  ],
+  "per_seed_deviations_real": [
+    0.02170095815826348,
+    0.02720812426049708,
+    0.022068415506999537
+  ],
+  "per_seed_deviations_random": [
+    0.021519472251436775,
+    0.02831993207926341,
+    0.02174151040661804
+  ],
+  "passed": true
+}

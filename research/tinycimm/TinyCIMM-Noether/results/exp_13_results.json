@@ -1,0 +1,9 @@
+{
+  "experiment": "exp_13_pac_bounds_zero_prediction",
+  "n_samples": 199,
+  "pearson_r": 0.19618592913354158,
+  "pearson_p": 0.005483808712306334,
+  "mean_violation": 0.2266686449287734,
+  "mean_density_error": 0.9915710899579346,
+  "passed": true
+}

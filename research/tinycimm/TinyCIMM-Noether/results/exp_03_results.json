@@ -1,0 +1,20 @@
+{
+  "convergence": {
+    "pass": true,
+    "initial_mse": 1.3292958267035455,
+    "final_mse": 0.7594466656047814,
+    "reduction": 0.42868498471783834
+  },
+  "competitive": {
+    "pass": true,
+    "noether_mse": 0.7594466656047814,
+    "sgd_mse": 0.848277147711964,
+    "ratio": 0.8952812975849803
+  },
+  "conservation_advantage": {
+    "pass": true,
+    "noether_violation": 0.1528511984357962,
+    "sgd_violation": 0.22349190389496654
+  },
+  "overall": "PASS"
+}

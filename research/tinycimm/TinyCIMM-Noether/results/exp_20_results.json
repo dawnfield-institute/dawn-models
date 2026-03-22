@@ -1,0 +1,83 @@
+{
+  "experiment": "exp_20_generalisation_scaling",
+  "passed": false,
+  "criterion": "monotonic gap ratio decrease AND < 0.20 at L",
+  "monotonic": false,
+  "below_threshold_at_l": true,
+  "gap_ratios": [
+    0.5708121595222431,
+    0.7293915067608067,
+    0.5066848919588852,
+    0.050864080469734535,
+    0.03383652627292351
+  ],
+  "Re_train": 10000.0,
+  "Re_test": 1000000.0,
+  "tiers": [
+    {
+      "tier": "XS",
+      "fib_index": 6,
+      "n_params": 47,
+      "noether_mse_train": 0.13456489609601513,
+      "noether_mse_test": 0.2568901695607495,
+      "noether_gap": 0.9090429742281984,
+      "mlp_mse_train": 0.06355887414586267,
+      "mlp_mse_test": 0.16477912167490216,
+      "mlp_gap": 1.592543114239132,
+      "gap_ratio": 0.5708121595222431,
+      "skipped": false
+    },
+    {
+      "tier": "S",
+      "fib_index": 9,
+      "n_params": 405,
+      "noether_mse_train": 0.047015942446491155,
+      "noether_mse_test": 0.09046761812874521,
+      "noether_gap": 0.9241902497070517,
+      "mlp_mse_train": 0.01475829331523147,
+      "mlp_mse_test": 0.03345808725191782,
+      "mlp_gap": 1.267070209986949,
+      "gap_ratio": 0.7293915067608067,
+      "skipped": false
+    },
+    {
+      "tier": "M",
+      "fib_index": 11,
+      "n_params": 2214,
+      "noether_mse_train": 0.02769914944675712,
+      "noether_mse_test": 0.09430012903478671,
+      "noether_gap": 2.404441315990761,
+      "mlp_mse_train": 0.007861147321479231,
+      "mlp_mse_test": 0.04516572843465431,
+      "mlp_gap": 4.7454371624232285,
+      "gap_ratio": 0.5066848919588852,
+      "skipped": false
+    },
+    {
+      "tier": "L",
+      "fib_index": 13,
+      "n_params": 13715,
+      "noether_mse_train": 0.017846898017269183,
+      "noether_mse_test": 0.035832198501138744,
+      "noether_gap": 1.0077549816047,
+      "mlp_mse_train": 0.003619565693108108,
+      "mlp_mse_test": 0.0753329521447258,
+      "mlp_gap": 19.81270421666729,
+      "gap_ratio": 0.050864080469734535,
+      "skipped": false
+    },
+    {
+      "tier": "XL",
+      "fib_index": 15,
+      "n_params": 90193,
+      "noether_mse_train": 0.013770669262465713,
+      "noether_mse_test": 0.03030737881482705,
+      "noether_gap": 1.2008646142819268,
+      "mlp_mse_train": 0.0022962884209251034,
+      "mlp_mse_test": 0.08379199535936425,
+      "mlp_gap": 35.49018609630424,
+      "gap_ratio": 0.03383652627292351,
+      "skipped": false
+    }
+  ]
+}

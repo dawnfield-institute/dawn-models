@@ -1,0 +1,1 @@
+# Block D: Scale sweep experiments — PAC crossover point vs backprop (Exp 16-20)
