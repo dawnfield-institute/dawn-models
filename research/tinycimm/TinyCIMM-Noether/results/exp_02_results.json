@@ -1,0 +1,59 @@
+{
+  "D2": {
+    "depth": 2,
+    "mse": 0.396461877549657,
+    "total_violation": 0.3457280368111556,
+    "max_violation": 0.3457280368111556,
+    "param_count": 51,
+    "widths": [
+      8,
+      5,
+      1
+    ]
+  },
+  "D3": {
+    "depth": 3,
+    "mse": 0.4612528213783409,
+    "total_violation": 0.40365644364002884,
+    "max_violation": 0.36427287503536365,
+    "param_count": 67,
+    "widths": [
+      8,
+      5,
+      3,
+      1
+    ]
+  },
+  "D4": {
+    "depth": 4,
+    "mse": 0.935290338562017,
+    "total_violation": 0.024638447692745938,
+    "max_violation": 0.012397088524935124,
+    "param_count": 74,
+    "widths": [
+      8,
+      5,
+      3,
+      2,
+      1
+    ]
+  },
+  "criteria": {
+    "crit1_d3_beats_d4_mse": {
+      "pass": true,
+      "d3": 0.4612528213783409,
+      "d4": 0.935290338562017
+    },
+    "crit2_nontrivial_conservation": {
+      "pass": true,
+      "num_pairs": 2
+    },
+    "crit3_competitive_with_d2": {
+      "pass": true,
+      "d2": 0.396461877549657,
+      "d3": 0.4612528213783409,
+      "ratio": 1.1634228847242103
+    }
+  },
+  "overall": "PASS"
+}

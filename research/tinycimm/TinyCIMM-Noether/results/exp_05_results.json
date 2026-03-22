@@ -1,0 +1,14 @@
+{
+  "no_backward_flow": {
+    "pass": true,
+    "relative_diff": 0.09060841925962206
+  },
+  "local_dependency": {
+    "pass": true
+  },
+  "frozen_convergence": {
+    "pass": true,
+    "frozen_mse": 0.8895069470788387
+  },
+  "overall": "PASS"
+}

@@ -1,0 +1,18 @@
+{
+  "violations_decrease": {
+    "pass": true,
+    "early": 0.4045550530280936,
+    "late": 0.008775436265354078
+  },
+  "final_violation_bounded": {
+    "pass": true,
+    "max_violation": 0.02807650341902923,
+    "threshold": 0.1
+  },
+  "enforcement_works": {
+    "pass": true,
+    "enforced_violation": 0.0011788145374421188,
+    "satisfied": true
+  },
+  "overall": "PASS"
+}

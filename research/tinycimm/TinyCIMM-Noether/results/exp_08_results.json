@@ -1,0 +1,9 @@
+{
+  "experiment": "exp_08_intermittency_detection",
+  "passed": true,
+  "criterion": "Pearson r > 0.5",
+  "best_correlation": 0.9667022347725297,
+  "violation_mu_correlation": 0.19132123740054124,
+  "best_layer_correlation": 0.22639464640511764,
+  "prediction_correlation": 0.9667022347725297
+}

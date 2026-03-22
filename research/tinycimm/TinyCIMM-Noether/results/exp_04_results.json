@@ -1,0 +1,28 @@
+{
+  "power_law": {
+    "noether_mse": 0.5461752247503039,
+    "sgd_mse": 0.45680210469604626,
+    "noether_violation": 0.25258774162586295,
+    "noether_wins": false
+  },
+  "fibonacci_cascade": {
+    "noether_mse": 0.5973024898583694,
+    "sgd_mse": 0.1034921037387706,
+    "noether_violation": 0.15591521249609258,
+    "noether_wins": false
+  },
+  "criteria": {
+    "crit1_power_law_wins": {
+      "pass": false
+    },
+    "crit2_fibonacci_wins": {
+      "pass": false
+    },
+    "crit3_violations_bounded": {
+      "pass": true,
+      "power_law_viol": 0.25258774162586295,
+      "fib_viol": 0.15591521249609258
+    }
+  },
+  "overall": "FAIL"
+}

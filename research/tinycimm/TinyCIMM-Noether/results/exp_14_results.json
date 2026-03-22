@@ -1,0 +1,19 @@
+{
+  "experiment": "exp_14_convergence_arithmetic_vs_random",
+  "final_mse": {
+    "noether_real": 0.20732857746419597,
+    "noether_random": 0.22516195332582484,
+    "mlp_real": 0.02786411958948628,
+    "mlp_random": 0.018632434907662393
+  },
+  "advantage_pct": {
+    "noether_final": 7.920243894767933,
+    "mlp_final": -49.54631387456211,
+    "noether_auc": 7.96137184000274,
+    "mlp_auc": 5.812684656518578
+  },
+  "differential_pp": 57.466557769330045,
+  "noether_prefers_real": true,
+  "mlp_prefers_random": true,
+  "passed": true
+}

@@ -235,6 +235,13 @@ research/scbf/experiments/**/__pycache__/
 !research/tinycimm/TinyCIMM-Boltzmann/scripts/**
 !research/tinycimm/TinyCIMM-Boltzmann/results/
 !research/tinycimm/TinyCIMM-Boltzmann/results/**
+!research/tinycimm/TinyCIMM-Noether/
+!research/tinycimm/TinyCIMM-Noether/experiments/
+!research/tinycimm/TinyCIMM-Noether/experiments/**
+!research/tinycimm/TinyCIMM-Noether/scripts/
+!research/tinycimm/TinyCIMM-Noether/scripts/**
+!research/tinycimm/TinyCIMM-Noether/results/
+!research/tinycimm/TinyCIMM-Noether/results/**
 
 # GAIA-specific ignores
 research/GAIA/src/__pycache__/

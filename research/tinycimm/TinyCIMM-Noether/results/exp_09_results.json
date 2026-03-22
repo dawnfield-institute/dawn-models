@@ -1,0 +1,14 @@
+{
+  "experiment": "exp_09_multiscale_generalisation",
+  "passed": true,
+  "criterion": "gap_ratio < 0.5",
+  "noether_mse_train": 0.04771762004039277,
+  "noether_mse_test": 0.20348258892240498,
+  "noether_gap": 3.264307155799621,
+  "mlp_mse_train": 0.01080370818339461,
+  "mlp_mse_test": 0.09512970064706387,
+  "mlp_gap": 7.805282246770677,
+  "gap_ratio": 0.41821769572885836,
+  "Re_train": 10000.0,
+  "Re_test": 1000000.0
+}

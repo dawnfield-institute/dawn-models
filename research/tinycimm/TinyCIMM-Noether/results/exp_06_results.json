@@ -1,0 +1,11 @@
+{
+  "experiment": "exp_06_sle_power_law_fit",
+  "passed": true,
+  "criterion": "R^2 > 0.85",
+  "noether_r2": 0.8677826010424491,
+  "noether_mse": 0.13318551599289233,
+  "mlp_r2": 0.9551790275750311,
+  "mlp_mse": 0.04514915878536696,
+  "n_train": 560,
+  "n_test": 240
+}

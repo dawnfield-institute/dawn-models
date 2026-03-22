@@ -1,0 +1,9 @@
+{
+  "experiment": "exp_12_gue_statistics_conservation",
+  "n_spacings": 202,
+  "ks_statistic": 0.1541343592398974,
+  "p_value": 0.00011751640152059399,
+  "mean_spacing": 1.0000000000000002,
+  "std_spacing": 0.3258984525080971,
+  "passed": true
+}
