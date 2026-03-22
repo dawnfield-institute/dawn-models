@@ -342,4 +342,8 @@ class TestMemoryModule:
         for _ in range(10):
             state = make_field_state(tensor=torch.randn(10), entropy=1.0)
             result = module.process(state)
-            assert result.total_energy() == pytest.approx(state.total_energy(), rel=1e-4)
+            # Use both relative and absolute tolerance — near-zero sums make
+            # pure relative tolerance unreliable (denominator ≈ 0).
+            assert result.total_energy() == pytest.approx(
+                state.total_energy(), rel=1e-4, abs=1e-6
+            )
