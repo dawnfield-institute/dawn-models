@@ -32,9 +32,12 @@ import torch
 
 from gaia.core.types import FieldState, RBFBalance, SECPhase
 
-# DFT constants
-PHI = (1 + math.sqrt(5)) / 2
-PHI_INV = 1.0 / PHI  # 0.618... — critical threshold from POC-024
+# DFT constants — canonical source: fracton.constants
+try:
+    from fracton.constants import PHI, PHI_INV
+except ImportError:
+    PHI = (1 + math.sqrt(5)) / 2
+    PHI_INV = 1.0 / PHI  # 0.618... — critical threshold from POC-024
 N_BINS_DEFAULT = 256  # Quantization bins for embedding-free mode
 
 

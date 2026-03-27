@@ -24,9 +24,12 @@ import torch.nn as nn
 
 from gaia.core.types import FieldState, RBFBalance, SECPhase
 
-# Golden ratio constants
-PHI = (1 + math.sqrt(5)) / 2
-PHI_INV = PHI - 1  # = 1/phi
+# Golden ratio constants — canonical source: fracton.constants
+try:
+    from fracton.constants import PHI, PHI_INV
+except ImportError:
+    PHI = (1 + math.sqrt(5)) / 2
+    PHI_INV = PHI - 1  # = 1/phi
 
 
 # ─── Data Structures ────────────────────────────────────────────────

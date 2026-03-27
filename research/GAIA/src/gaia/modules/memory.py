@@ -27,9 +27,14 @@ import torch
 
 from gaia.core.types import FieldState, RBFBalance, SECPhase
 
-# DFT constants
-PHI = (1 + math.sqrt(5)) / 2
-LAMBDA_STAR = 0.9816  # Exponential decay rate
+# DFT constants — canonical source: fracton.constants
+# NOTE: LAMBDA_STAR value (0.9816) differs from fracton (0.9938) and docs (0.97).
+# Kept as-is pending first-principles derivation — see proj-homework Phase 3.
+try:
+    from fracton.constants import PHI
+except ImportError:
+    PHI = (1 + math.sqrt(5)) / 2
+LAMBDA_STAR = 0.9816  # Exponential decay rate (investigation pending)
 
 
 # ─── Bifractal Depth ───────────────────────────────────────────────

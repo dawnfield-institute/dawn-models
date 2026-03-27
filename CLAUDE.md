@@ -17,12 +17,13 @@ dawn-models/
 │   │   ├── tests/                 # v2 test suite
 │   │   └── spikes/v1/             # Archived v1 code (8.4K lines + 25 POCs + docs)
 │   ├── scbf/                      # Symbolic Collapse Bifractal Framework
-│   └── tinycimm/                  # 5 domain-specific variants (GAIA v2 ancestors)
+│   └── tinycimm/                  # 6 domain-specific variants (GAIA v2 ancestors)
 │       ├── TinyCIMM-Euler/        # Number theory (SCBF reference → observability module)
 │       ├── TinyCIMM-Navier/       # Fluid dynamics
 │       ├── TinyCIMM-Planck/       # Foundational minimal
 │       ├── TinyCIMM-Boltzmann/    # Hallucination detection (→ safety module)
-│       └── TinyCIMM-Mobius/       # Continuous learning (→ reasoning module)
+│       ├── TinyCIMM-Mobius/       # Continuous learning (→ reasoning module)
+│       └── TinyCIMM-Noether/      # PAC conservation as learning rule (20 experiments, 4 blocks)
 ├── stable/                        # Apache-2.0 — production
 │   └── cimm-legacy/               # Mature CIMM with agents/mesh runtime
 └── roadmaps/                      # Development plans
@@ -79,7 +80,7 @@ GAIA v2 depends on `fracton >= 2.1` for all physics. No reimplemented constants,
 ## Secondary Models
 
 - **SCBF**: Interpretability framework — measures symbolic collapse and bifractal patterns in neural network weight evolution. Standalone analysis tool, not a model.
-- **TinyCIMM**: 5 domain-specific lightweight models. Self-contained, no cross-variant dependencies. Boltzmann and Mobius are ancestors of GAIA v2's safety and reasoning modules respectively.
+- **TinyCIMM**: 6 domain-specific lightweight models. Self-contained, no cross-variant dependencies. Boltzmann and Mobius are ancestors of GAIA v2's safety and reasoning modules respectively. Noether replaces gradient descent with PAC conservation descent (20 experiments complete across 4 blocks).
 - **CIMM Legacy** (stable/): Mature production implementation with agent mesh runtime. Apache-2.0 licensed.
 
 ## Conventions
