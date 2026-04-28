@@ -1,0 +1,20 @@
+name: TinyCIMM-Ghost
+type: experiment-variant
+status: block_a_partial
+description: >
+  Constrained learner with M10 spectral confinement. Encoder-core-decoder
+  where core is a frozen symmetric recurrent system (sr=gamma/ln(phi),
+  eigenvectors fixed). Tests whether M10 constraints help a learning system.
+parent: dawn-models/research/tinycimm
+dependencies:
+  - numpy
+related_fdos:
+  - milestone10-symmetry-self-application
+  - tinycimm-overview
+  - tinycimm-noether
+block_a_score: 6/8
+headline_results:
+  - "Spectral confinement is EXACT during learning (drift < 1e-16)"
+  - "Ghost beats Noether on power-law data (MSE 0.268 vs 0.273)"
+  - "PAC violations 18x lower than SGD"
+  - "Fibonacci cascade bottleneck: core tanh at sr=1.2 loses information"

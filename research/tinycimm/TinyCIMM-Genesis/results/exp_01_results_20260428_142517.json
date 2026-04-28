@@ -1,0 +1,117 @@
+{
+  "experiment": "exp_01_modulation_rate_convergence",
+  "variant": "TinyCIMM-Genesis",
+  "score": "1/4",
+  "n_passed": 1,
+  "n_tests": 4,
+  "tests": [
+    {
+      "test": "convergence",
+      "passed": true,
+      "converged_N": 5
+    },
+    {
+      "test": "phi_prediction",
+      "passed": false,
+      "n_within_5pct": 0,
+      "results": {
+        "8": {
+          "mean_weak": 0.8944356000000002,
+          "std_weak": 0.0028596453486403025,
+          "predicted": 0.9416218876556355,
+          "error_pct": 5.011171498266187
+        },
+        "12": {
+          "mean_weak": 0.89602888,
+          "std_weak": 0.0019288123666132521,
+          "predicted": 0.9606924183246364,
+          "error_pct": 6.730930430095816
+        },
+        "16": {
+          "mean_weak": 0.8966872400000001,
+          "std_weak": 0.0016012544027730966,
+          "predicted": 0.9703720356933394,
+          "error_pct": 7.59345828022454
+        },
+        "24": {
+          "mean_weak": 0.8976243600000001,
+          "std_weak": 0.0014517171454523268,
+          "predicted": 0.9801491816680951,
+          "error_pct": 8.419618483754453
+        },
+        "32": {
+          "mean_weak": 0.89830292,
+          "std_weak": 0.0012020038742035224,
+          "predicted": 0.9850746345802126,
+          "error_pct": 8.808643683855506
+        }
+      }
+    },
+    {
+      "test": "n_dependence",
+      "passed": false,
+      "mean_weaks": [
+        0.8950875999999999,
+        0.8962085000000002,
+        0.8966079,
+        0.8973547,
+        0.8983528
+      ],
+      "monotone": true,
+      "spread": 0.003265200000000079,
+      "predicted_spread": 0.043452746924577124
+    },
+    {
+      "test": "per_traversal",
+      "passed": false,
+      "traversals": [
+        {
+          "N": 8,
+          "weak": 0.8950875999999999,
+          "traversal": 0.4120257188384828,
+          "error_pct": 33.33283826802269
+        },
+        {
+          "N": 12,
+          "weak": 0.8962085000000002,
+          "traversal": 0.26847799969271885,
+          "error_pct": 56.5593471265597
+        },
+        {
+          "N": 16,
+          "weak": 0.8966079,
+          "traversal": 0.1744379514301933,
+          "error_pct": 71.77534656580438
+        },
+        {
+          "N": 24,
+          "weak": 0.8973547,
+          "traversal": 0.07432576771168611,
+          "error_pct": 87.97383816025625
+        },
+        {
+          "N": 32,
+          "weak": 0.8983528,
+          "traversal": 0.03238184758015176,
+          "error_pct": 94.76050699967959
+        }
+      ],
+      "mean_error_pct": 68.88037542406452,
+      "target": 0.6180339887498948
+    }
+  ],
+  "config": {
+    "N_values": [
+      8,
+      12,
+      16,
+      24,
+      32
+    ],
+    "n_seeds": 50,
+    "n_steps": 5000,
+    "initial_weak": 0.9,
+    "meta_rate": 0.001
+  },
+  "timestamp": "2026-04-28T14:25:17.234630"
+}

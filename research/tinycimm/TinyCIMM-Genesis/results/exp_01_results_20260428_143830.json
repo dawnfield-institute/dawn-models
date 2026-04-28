@@ -1,0 +1,115 @@
+{
+  "experiment": "exp_01_viability_boundary",
+  "variant": "TinyCIMM-Genesis",
+  "description": "Viability boundary scan \u2014 does alive/dead transition occur at phi^(-1/N) without phi being inserted?",
+  "score": "3/4",
+  "n_passed": 3,
+  "n_tests": 4,
+  "tests": [
+    {
+      "test": "boundary_exists",
+      "passed": true,
+      "transition_width": 0.00513793103448279,
+      "min_alive": 0.0,
+      "max_alive": 1.0,
+      "N": 16
+    },
+    {
+      "test": "phi_prediction",
+      "passed": true,
+      "n_within_5pct": 5,
+      "mean_error_pct": 1.274158484660152,
+      "results": {
+        "8": {
+          "boundary": 0.971935546875,
+          "predicted": 0.9416218876556355,
+          "error_pct": 3.219302738898376
+        },
+        "12": {
+          "boundary": 0.977755859375,
+          "predicted": 0.9606924183246364,
+          "error_pct": 1.7761606862809185
+        },
+        "16": {
+          "boundary": 0.980083984375,
+          "predicted": 0.9703720356933394,
+          "error_pct": 1.0008479556731367
+        },
+        "24": {
+          "boundary": 0.982994140625,
+          "predicted": 0.9801491816680951,
+          "error_pct": 0.29025774954616373
+        },
+        "32": {
+          "boundary": 0.985904296875,
+          "predicted": 0.9850746345802126,
+          "error_pct": 0.08422329290216515
+        }
+      }
+    },
+    {
+      "test": "per_traversal",
+      "passed": false,
+      "traversals": [
+        {
+          "N": 8,
+          "boundary": 0.971935546875,
+          "traversal": 0.7963421951130063,
+          "error_pct": 28.850873836854475
+        },
+        {
+          "N": 12,
+          "boundary": 0.977755859375,
+          "traversal": 0.7634228006950816,
+          "error_pct": 23.524403931127903
+        },
+        {
+          "N": 16,
+          "boundary": 0.980083984375,
+          "traversal": 0.7247908109656832,
+          "error_pct": 17.273616687607554
+        },
+        {
+          "N": 24,
+          "boundary": 0.982994140625,
+          "traversal": 0.6625555540721817,
+          "error_pct": 7.203740592380889
+        },
+        {
+          "N": 32,
+          "boundary": 0.985904296875,
+          "traversal": 0.6349101953966088,
+          "error_pct": 2.7306275955550086
+        }
+      ],
+      "mean_error_pct": 15.916652528705168,
+      "target": 0.6180339887498948
+    },
+    {
+      "test": "n_dependence",
+      "passed": true,
+      "boundaries": [
+        0.971935546875,
+        0.977755859375,
+        0.980083984375,
+        0.982994140625,
+        0.985904296875
+      ],
+      "monotone": true,
+      "spread": 0.013968750000000085,
+      "predicted_spread": 0.043452746924577124
+    }
+  ],
+  "config": {
+    "N_values": [
+      8,
+      12,
+      16,
+      24,
+      32
+    ],
+    "n_seeds": 50,
+    "n_steps": 500
+  },
+  "timestamp": "2026-04-28T14:38:30.090211"
+}

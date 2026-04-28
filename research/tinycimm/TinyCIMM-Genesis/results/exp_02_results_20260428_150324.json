@@ -1,0 +1,168 @@
+{
+  "experiment": "exp_02_spectral_radius_emergence",
+  "variant": "TinyCIMM-Genesis",
+  "description": "Does sr = gamma/ln(phi) = 1.1995 emerge as special?",
+  "score": "1/4",
+  "n_passed": 1,
+  "n_tests": 4,
+  "tests": [
+    {
+      "test": "complexity_peak",
+      "passed": false,
+      "peak_sr": 0.8,
+      "is_peaked": false,
+      "scan": {
+        "0.8": {
+          "mean_depth": 15.933333333333334,
+          "mean_entropy": 2.63063728502786,
+          "mean_complexity": 0.815153194229774,
+          "mean_phi_enrichment": 0.09333333333333335,
+          "alive_frac": 0.0
+        },
+        "0.9": {
+          "mean_depth": 15.966666666666667,
+          "mean_entropy": 2.643600090597747,
+          "mean_complexity": 0.7429017242950814,
+          "mean_phi_enrichment": 0.08444444444444446,
+          "alive_frac": 0.0
+        },
+        "1.0": {
+          "mean_depth": 15.966666666666667,
+          "mean_entropy": 2.6603970047328156,
+          "mean_complexity": 0.6462309489837511,
+          "mean_phi_enrichment": 0.07555555555555557,
+          "alive_frac": 0.0
+        },
+        "1.05": {
+          "mean_depth": 15.966666666666667,
+          "mean_entropy": 2.680843508370299,
+          "mean_complexity": 0.5283649540182276,
+          "mean_phi_enrichment": 0.07333333333333333,
+          "alive_frac": 0.0
+        },
+        "1.1": {
+          "mean_depth": 16.0,
+          "mean_entropy": 2.7039927347690793,
+          "mean_complexity": 0.39585236379545186,
+          "mean_phi_enrichment": 0.060000000000000005,
+          "alive_frac": 0.0
+        },
+        "1.15": {
+          "mean_depth": 16.0,
+          "mean_entropy": 2.7253751219827675,
+          "mean_complexity": 0.2724593078132286,
+          "mean_phi_enrichment": 0.024444444444444446,
+          "alive_frac": 0.0
+        },
+        "1.2": {
+          "mean_depth": 16.0,
+          "mean_entropy": 2.7472895903945855,
+          "mean_complexity": 0.14599572820744253,
+          "mean_phi_enrichment": 0.01111111111111111,
+          "alive_frac": 0.0
+        },
+        "1.25": {
+          "mean_depth": 16.0,
+          "mean_entropy": 2.7663986000069345,
+          "mean_complexity": 0.03572183459129903,
+          "mean_phi_enrichment": 0.0,
+          "alive_frac": 0.9333333333333333
+        },
+        "1.3": {
+          "mean_depth": 16.0,
+          "mean_entropy": 2.7675854102841253,
+          "mean_complexity": 0.028873013385780234,
+          "mean_phi_enrichment": 0.0,
+          "alive_frac": 1.0
+        },
+        "1.4": {
+          "mean_depth": 16.0,
+          "mean_entropy": 2.766897001196735,
+          "mean_complexity": 0.032845670891704516,
+          "mean_phi_enrichment": 0.0,
+          "alive_frac": 1.0
+        },
+        "1.5": {
+          "mean_depth": 16.0,
+          "mean_entropy": 2.7667820591049175,
+          "mean_complexity": 0.03350897643512549,
+          "mean_phi_enrichment": 0.0,
+          "alive_frac": 1.0
+        },
+        "1.7": {
+          "mean_depth": 16.0,
+          "mean_entropy": 2.7645569788419815,
+          "mean_complexity": 0.046349425478793546,
+          "mean_phi_enrichment": 0.0,
+          "alive_frac": 1.0
+        },
+        "2.0": {
+          "mean_depth": 16.0,
+          "mean_entropy": 2.7627885321467716,
+          "mean_complexity": 0.05655474258781865,
+          "mean_phi_enrichment": 0.0,
+          "alive_frac": 1.0
+        }
+      }
+    },
+    {
+      "test": "scope_ratio",
+      "passed": false,
+      "n_match": 0,
+      "mean_peak_sr": 0.8,
+      "mean_error_pct": 33.30578439631317,
+      "peak_srs": [
+        0.8,
+        0.8,
+        0.8,
+        0.8
+      ]
+    },
+    {
+      "test": "phi_enrichment_peak",
+      "passed": false,
+      "peak_sr": 0.8,
+      "peak_enrichment": 0.09333333333333335,
+      "error_pct": 33.30578439631317
+    },
+    {
+      "test": "n_independence",
+      "passed": true,
+      "peak_srs": [
+        0.8,
+        0.8,
+        0.8,
+        0.8
+      ],
+      "mean_peak": 0.8,
+      "std_peak": 0.0,
+      "cv": 0.0
+    }
+  ],
+  "config": {
+    "N_values": [
+      12,
+      16,
+      24,
+      32
+    ],
+    "sr_scan": [
+      0.8,
+      0.9,
+      1.0,
+      1.05,
+      1.1,
+      1.15,
+      1.2,
+      1.25,
+      1.3,
+      1.4,
+      1.5,
+      1.7,
+      2.0
+    ],
+    "n_seeds": 30,
+    "n_steps": 500
+  },
+  "timestamp": "2026-04-28T15:03:24.365251"
+}

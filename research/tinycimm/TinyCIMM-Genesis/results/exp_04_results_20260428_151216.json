@@ -1,0 +1,89 @@
+{
+  "experiment": "exp_04_cascade_depth_floor",
+  "variant": "TinyCIMM-Genesis",
+  "description": "Cascade depth transition and eigenvalue spacing floor",
+  "score": "2/4",
+  "n_passed": 2,
+  "n_tests": 4,
+  "tests": [
+    {
+      "test": "first_order_transition",
+      "passed": false,
+      "max_jump": 0.0,
+      "transition_weak": 0.8,
+      "N": 16
+    },
+    {
+      "test": "entropy_gap",
+      "passed": false,
+      "max_entropy_gap": 0.011179668916089458,
+      "transition_weak": 0.993897435897436
+    },
+    {
+      "test": "floor_exists",
+      "passed": true,
+      "floor_depths": {
+        "8": {
+          "min_depth_aggressive": 8,
+          "mean_depth_boundary": 8.0
+        },
+        "12": {
+          "min_depth_aggressive": 11,
+          "mean_depth_boundary": 11.966666666666667
+        },
+        "16": {
+          "min_depth_aggressive": 16,
+          "mean_depth_boundary": 16.0
+        },
+        "24": {
+          "min_depth_aggressive": 24,
+          "mean_depth_boundary": 24.0
+        },
+        "32": {
+          "min_depth_aggressive": 31,
+          "mean_depth_boundary": 31.9
+        }
+      }
+    },
+    {
+      "test": "spacing_floor",
+      "passed": true,
+      "spacing_data": {
+        "8": {
+          "mean_min_spacing": 0.008659563636251777,
+          "spacing_per_sr": 0.007216303030209815
+        },
+        "12": {
+          "mean_min_spacing": 0.003123960510130941,
+          "spacing_per_sr": 0.0026033004251091174
+        },
+        "16": {
+          "mean_min_spacing": 0.001603322156056804,
+          "spacing_per_sr": 0.0013361017967140035
+        },
+        "24": {
+          "mean_min_spacing": 0.0007661753645196094,
+          "spacing_per_sr": 0.0006384794704330078
+        },
+        "32": {
+          "mean_min_spacing": 0.00043120287836825313,
+          "spacing_per_sr": 0.0003593357319735443
+        }
+      },
+      "decreasing": true,
+      "scaling_match": false
+    }
+  ],
+  "config": {
+    "N_values": [
+      8,
+      12,
+      16,
+      24,
+      32
+    ],
+    "n_seeds": 30,
+    "n_steps": 500
+  },
+  "timestamp": "2026-04-28T15:12:16.569542"
+}

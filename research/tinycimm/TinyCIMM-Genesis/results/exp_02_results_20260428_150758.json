@@ -1,0 +1,94 @@
+{
+  "experiment": "exp_02_spectral_radius_viability",
+  "variant": "TinyCIMM-Genesis",
+  "description": "Does the critical sr match gamma/ln(phi) = 1.1995?",
+  "score": "4/4",
+  "n_passed": 4,
+  "n_tests": 4,
+  "tests": [
+    {
+      "test": "sr_transition",
+      "passed": true,
+      "transition_width": 0.024137931034482696,
+      "min_alive": 0.0,
+      "max_alive": 1.0,
+      "N": 16,
+      "weak_factor": 0.9703720356933394
+    },
+    {
+      "test": "scope_ratio",
+      "passed": true,
+      "n_within": 4,
+      "mean_error_pct": 2.60398441236697,
+      "results": {
+        "8": {
+          "critical_sr": 1.2640625,
+          "predicted": 1.1995043239638556,
+          "error_pct": 5.382071139419232,
+          "weak_factor": 0.9416218876556355
+        },
+        "12": {
+          "critical_sr": 1.2453125,
+          "predicted": 1.1995043239638556,
+          "error_pct": 3.8189254612078187,
+          "weak_factor": 0.9606924183246364
+        },
+        "16": {
+          "critical_sr": 1.2265625,
+          "predicted": 1.1995043239638556,
+          "error_pct": 2.2557797829964046,
+          "weak_factor": 0.9703720356933394
+        },
+        "24": {
+          "critical_sr": 1.2171874999999999,
+          "predicted": 1.1995043239638556,
+          "error_pct": 1.4742069438906886,
+          "weak_factor": 0.9801491816680951
+        },
+        "32": {
+          "critical_sr": 1.1984375,
+          "predicted": 1.1995043239638556,
+          "error_pct": 0.08893873432070656,
+          "weak_factor": 0.9850746345802126
+        }
+      }
+    },
+    {
+      "test": "n_independence",
+      "passed": true,
+      "critical_srs": [
+        1.2640625,
+        1.2453125,
+        1.2265625,
+        1.2171874999999999,
+        1.1984375
+      ],
+      "mean_sr": 1.2303125,
+      "std_sr": 0.022655711200489856,
+      "cv": 0.018414598892955943
+    },
+    {
+      "test": "two_parameter_consistency",
+      "passed": true,
+      "weak_crit_at_sr12": 0.9800507812500001,
+      "weak_predicted": 0.9703720356933394,
+      "weak_error_pct": 0.9974262654575733,
+      "sr_crit_at_phi_weak": 1.2265625,
+      "sr_predicted": 1.1995043239638556,
+      "sr_error_pct": 2.2557797829964046,
+      "N": 16
+    }
+  ],
+  "config": {
+    "N_values": [
+      8,
+      12,
+      16,
+      24,
+      32
+    ],
+    "n_seeds": 50,
+    "n_steps": 500
+  },
+  "timestamp": "2026-04-28T15:07:58.321069"
+}

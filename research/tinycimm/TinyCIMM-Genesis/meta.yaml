@@ -1,0 +1,22 @@
+name: TinyCIMM-Genesis
+type: experiment-variant
+status: block_a_complete
+description: >
+  Self-organizing dynamical system. NOT a neural network. Tests whether M10's
+  structural predictions generalize beyond the SelfApplicator. Also investigates
+  failure modes: phi metastability, RMT comparison, attractor dynamics.
+parent: dawn-models/research/tinycimm
+dependencies:
+  - numpy
+  - scipy
+related_fdos:
+  - milestone10-symmetry-self-application
+  - tinycimm-overview
+block_a_score: 20/36
+headline_results:
+  - "phi^(-1/N) viability boundary confirmed with random W (mean error 1.05%)"
+  - "gamma/ln(phi) critical sr confirmed (mean error 2.60%)"
+  - "Anti-Hebbian creates new universality class: spacing N^(-2.45) vs GOE N^(-1.51)"
+  - "Phi is truly metastable (tau~1300, no plateau), not an attractor"
+  - "PR(phi) = sqrt(5) exact algebraic identity"
+  - "Three-level classification: topological / metastable / construction-specific"

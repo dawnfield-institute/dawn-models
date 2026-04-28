@@ -1,0 +1,11 @@
+{
+  "experiment": "exp_07_rmt_spacing_comparison",
+  "variant": "TinyCIMM-Genesis",
+  "description": "Compare eigenvalue spacing to GOE predictions",
+  "score": "3/4",
+  "n_passed": 3,
+  "n_tests": 4,
+  "tests": [
+    {
+      "test": "goe_scaling",
+      "passed": 

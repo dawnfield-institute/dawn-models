@@ -1,0 +1,66 @@
+{
+  "experiment": "exp_01_modulation_rate_convergence",
+  "variant": "TinyCIMM-Genesis",
+  "score": "1/4",
+  "n_passed": 1,
+  "n_tests": 4,
+  "tests": [
+    {
+      "test": "convergence",
+      "passed": false,
+      "converged_N": 3
+    },
+    {
+      "test": "phi_prediction",
+      "passed": false,
+      "n_within_5pct": 0,
+      "results": {
+        "8": {
+          "mean_weak": 0.8256344800000001,
+          "std_weak": 0.0038120194660573154,
+          "predicted": 0.9416218876556355,
+          "error_pct": 12.317832579742843
+        },
+        "12": {
+          "mean_weak": 0.8458956,
+          "std_weak": 0.011484942601510876,
+          "predicted": 0.9606924183246364,
+          "error_pct": 11.949383188100102
+        },
+        "16": {
+          "mean_weak": 0.8869062,
+          "std_weak": 0.007673719132207035,
+          "predicted": 0.9703720356933394,
+          "error_pct": 8.60142632136986
+        },
+        "24": {
+          "mean_weak": 0.8965166000000001,
+          "std_weak": 0.00205046891222476,
+          "predicted": 0.9801491816680951,
+          "error_pct": 8.53263801391564
+        },
+        "32": {
+          "mean_weak": 0.89800888,
+          "std_weak": 0.0013598688266153712,
+          "predicted": 0.9850746345802126,
+          "error_pct": 8.838493198773257
+        }
+      }
+    },
+    {
+      "test": "n_dependence",
+      "passed": true,
+      "mean_weaks": [
+        0.8262680999999998,
+        0.8468847,
+        0.8881178999999999,
+        0.8966082,
+        0.8979584
+      ],
+      "monotone": true,
+      "spread": 0.0716903000000002,
+      "predicted_spread": 0.043452746924577124
+    },
+    {
+      "test": "per_traversal",
+      "passed": 

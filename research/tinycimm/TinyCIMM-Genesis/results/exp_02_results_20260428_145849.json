@@ -1,0 +1,111 @@
+{
+  "experiment": "exp_02_spectral_radius_emergence",
+  "variant": "TinyCIMM-Genesis",
+  "description": "Does sr stabilize at gamma/ln(phi) = 1.1995?",
+  "score": "2/4",
+  "n_passed": 2,
+  "n_tests": 4,
+  "tests": [
+    {
+      "test": "sr_stabilizes",
+      "passed": true,
+      "stable_frac": 1.0,
+      "mean_sr": 0.5,
+      "std_sr": 0.0,
+      "N": 16
+    },
+    {
+      "test": "scope_ratio",
+      "passed": false,
+      "n_match": 0,
+      "mean_error_pct": 58.316115247695734,
+      "results": {
+        "12": {
+          "mean_sr": 0.5,
+          "predicted": 1.1995043239638556,
+          "error_pct": 58.316115247695734
+        },
+        "16": {
+          "mean_sr": 0.5,
+          "predicted": 1.1995043239638556,
+          "error_pct": 58.316115247695734
+        },
+        "24": {
+          "mean_sr": 0.5,
+          "predicted": 1.1995043239638556,
+          "error_pct": 58.316115247695734
+        },
+        "32": {
+          "mean_sr": 0.5,
+          "predicted": 1.1995043239638556,
+          "error_pct": 58.316115247695734
+        }
+      }
+    },
+    {
+      "test": "complexity_valley",
+      "passed": false,
+      "is_valley": false,
+      "min_sr": 0.8,
+      "sr_entropies": {
+        "0.8": 2.6659910726509697,
+        "1.0": 2.6839500622955836,
+        "1.1": 2.7202861061893637,
+        "1.2": 2.7425344874334,
+        "1.3": 2.7516180207883534,
+        "1.5": 2.761878156363224,
+        "2.0": 2.75515828129845
+      }
+    },
+    {
+      "test": "seed_independence",
+      "passed": true,
+      "mean_sr": 0.5,
+      "std_sr": 0.0,
+      "cv": 0.0,
+      "final_srs": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "config": {
+    "N_values": [
+      12,
+      16,
+      24,
+      32
+    ],
+    "n_seeds": 30,
+    "n_steps": 2000
+  },
+  "timestamp": "2026-04-28T14:58:49.962609"
+}

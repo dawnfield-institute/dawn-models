@@ -1,0 +1,77 @@
+{
+  "experiment": "exp_06_self_consistency_attractor",
+  "variant": "TinyCIMM-Genesis",
+  "description": "Does Frobenius normalization allow phi ratio emergence?",
+  "score": "1/4",
+  "n_passed": 1,
+  "n_tests": 4,
+  "tests": [
+    {
+      "test": "stability",
+      "passed": true
+    },
+    {
+      "test": "frobenius_vs_sr",
+      "passed": false,
+      "results": {
+        "8": {
+          "frob_enrichment": 0.06190476190476189,
+          "sr_enrichment": 0.0009523809523809524,
+          "advantage": 0.06095238095238094
+        },
+        "16": {
+          "frob_enrichment": 0.07777777777777779,
+          "sr_enrichment": 0.0,
+          "advantage": 0.07777777777777779
+        },
+        "32": {
+          "frob_enrichment": 0.04516129032258063,
+          "sr_enrichment": 0.0003225806451612903,
+          "advantage": 0.04483870967741934
+        }
+      }
+    },
+    {
+      "test": "above_baseline",
+      "passed": false,
+      "results": {
+        "8": {
+          "frob_enrichment": 0.06190476190476189,
+          "baseline_mean": 0.24642857142857139,
+          "baseline_std": 0.13772013917613457,
+          "excess": -0.18452380952380948
+        },
+        "16": {
+          "frob_enrichment": 0.07777777777777779,
+          "baseline_mean": 0.11,
+          "baseline_std": 0.07535103036971544,
+          "excess": -0.03222222222222221
+        },
+        "32": {
+          "frob_enrichment": 0.04516129032258063,
+          "baseline_mean": 0.04677419354838709,
+          "baseline_std": 0.036173647567751294,
+          "excess": -0.0016129032258064627
+        }
+      }
+    },
+    {
+      "test": "convergence",
+      "passed": false,
+      "frac_converging": 0.0,
+      "converging_count": 0,
+      "total_count": 90
+    }
+  ],
+  "config": {
+    "N_values": [
+      8,
+      16,
+      32
+    ],
+    "n_seeds": 30,
+    "n_steps": 5000,
+    "record_every": 100
+  },
+  "timestamp": "2026-04-28T16:05:23.923226"
+}

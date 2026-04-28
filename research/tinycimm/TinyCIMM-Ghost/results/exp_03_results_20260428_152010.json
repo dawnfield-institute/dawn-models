@@ -1,0 +1,72 @@
+{
+  "experiment": "exp_03_ghost_vs_noether_vs_sgd",
+  "variant": "TinyCIMM-Ghost",
+  "description": "Ghost vs Noether vs SGD on physics-structured data",
+  "score": "1/4",
+  "n_passed": 1,
+  "n_tests": 4,
+  "tests": [
+    {
+      "dataset": "power_law",
+      "ghost_mse": 0.2939880359469479,
+      "ghost_std": 0.05667121539479321,
+      "noether_mse": 0.27329176160822594,
+      "noether_std": 0.040852200458708646,
+      "sgd_mse": 0.3523943890441231,
+      "sgd_std": 0.07825316740828521,
+      "test": "power_law",
+      "passed": false
+    },
+    {
+      "dataset": "fibonacci_cascade",
+      "ghost_mse": 11.191024964605356,
+      "ghost_std": 3.263397837915946,
+      "noether_mse": 0.5284710844915578,
+      "noether_std": 0.16638335052398098,
+      "sgd_mse": 0.5173877517458905,
+      "sgd_std": 0.16611716240524754,
+      "test": "fibonacci_cascade",
+      "passed": false
+    },
+    {
+      "test": "within_sgd",
+      "passed": false,
+      "detail": [
+        {
+          "dataset": "power_law",
+          "ghost_mse": 0.2939880359469479,
+          "sgd_mse": 0.3523943890441231,
+          "ratio": 0.8342585611093195,
+          "within_2x": true
+        },
+        {
+          "dataset": "fibonacci_cascade",
+          "ghost_mse": 11.191024964605356,
+          "sgd_mse": 0.5173877517458905,
+          "ratio": 21.62986063516577,
+          "within_2x": false
+        },
+        {
+          "dataset": "generic",
+          "ghost_mse": 4.874568224111988,
+          "sgd_mse": 2.9580343770399886,
+          "ratio": 1.6479079019324359,
+          "within_2x": true
+        }
+      ]
+    },
+    {
+      "test": "pac_violations",
+      "passed": true,
+      "ghost_mean": 0.16561882570768915,
+      "sgd_mean": 3.1065055120009433
+    }
+  ],
+  "config": {
+    "n_seeds": 10,
+    "n_epochs": 300,
+    "n_train": 200,
+    "n_test": 50
+  },
+  "timestamp": "2026-04-28T15:20:10.948548"
+}

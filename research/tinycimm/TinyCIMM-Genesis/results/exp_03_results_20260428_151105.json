@@ -1,0 +1,72 @@
+{
+  "experiment": "exp_03_phi_in_eigenvalue_ratios",
+  "variant": "TinyCIMM-Genesis",
+  "description": "Do consecutive eigenvalue ratios cluster near phi after anti-Hebbian modulation?",
+  "score": "0/4",
+  "n_passed": 0,
+  "n_tests": 4,
+  "tests": [
+    {
+      "test": "enrichment_exists",
+      "passed": false,
+      "mean_enrichment": 0.006666666666666667,
+      "std_enrichment": 0.02,
+      "baseline": 0.09777777777777781,
+      "frac_above_15": 0.0,
+      "N": 16
+    },
+    {
+      "test": "enrichment_grows",
+      "passed": false,
+      "early_mean": 0.023703703703703703,
+      "late_mean": 0.003703703703703704,
+      "timeline": {
+        "100": 0.048888888888888885,
+        "200": 0.015555555555555555,
+        "300": 0.006666666666666667,
+        "400": 0.008888888888888889,
+        "500": 0.01111111111111111,
+        "600": 0.013333333333333334,
+        "700": 0.006666666666666667,
+        "800": 0.008888888888888889,
+        "900": 0.0044444444444444444,
+        "1000": 0.008888888888888889,
+        "1100": 0.008888888888888889,
+        "1200": 0.006666666666666667,
+        "1300": 0.0022222222222222222,
+        "1400": 0.0022222222222222222,
+        "1500": 0.006666666666666667
+      }
+    },
+    {
+      "test": "negative_control",
+      "passed": false,
+      "anti_hebbian_enrichment": 0.006666666666666667,
+      "hebbian_enrichment": 0.0,
+      "ratio": Infinity
+    },
+    {
+      "test": "n_dependence",
+      "passed": false,
+      "n_above_10": 0,
+      "enrichments": {
+        "8": 0.0,
+        "12": 0.006060606060606061,
+        "16": 0.006666666666666667,
+        "24": 0.008695652173913044,
+        "32": 0.002150537634408602
+      }
+    }
+  ],
+  "config": {
+    "N_values": [
+      8,
+      12,
+      16,
+      24,
+      32
+    ],
+    "n_seeds": 30
+  },
+  "timestamp": "2026-04-28T15:11:05.508854"
+}

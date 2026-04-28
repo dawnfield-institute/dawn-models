@@ -1,0 +1,76 @@
+{
+  "experiment": "exp_05_xi_from_dynamics",
+  "variant": "TinyCIMM-Genesis",
+  "description": "Does Xi = gamma + ln(phi) = 1.0584 emerge as the info cost per mode transition?",
+  "score": "1/4",
+  "n_passed": 1,
+  "n_tests": 4,
+  "tests": [
+    {
+      "test": "transitions_occur",
+      "passed": true,
+      "mean_count": 470.7,
+      "frac_with_transitions": 1.0,
+      "N": 16
+    },
+    {
+      "test": "consistent_cost",
+      "passed": false,
+      "n_events": 14121,
+      "n_significant": 0,
+      "mean_cost": 0.00024520930245543367,
+      "mean_significant": 0,
+      "cv_all": 1.6550222725595554,
+      "cv_significant": Infinity
+    },
+    {
+      "test": "xi_match",
+      "passed": false,
+      "reason": "insufficient_data"
+    },
+    {
+      "test": "n_independence",
+      "passed": false,
+      "costs_by_N": {
+        "8": {
+          "mean": 0.01205524506872622,
+          "median": 0.011878219163243386,
+          "n_events": 12
+        },
+        "12": {
+          "mean": 0.0,
+          "median": 0.0,
+          "n_events": 0
+        },
+        "16": {
+          "mean": 0.0,
+          "median": 0.0,
+          "n_events": 0
+        },
+        "24": {
+          "mean": 0.0,
+          "median": 0.0,
+          "n_events": 0
+        },
+        "32": {
+          "mean": 0.0,
+          "median": 0.0,
+          "n_events": 0
+        }
+      },
+      "cv": Infinity
+    }
+  ],
+  "config": {
+    "N_values": [
+      8,
+      12,
+      16,
+      24,
+      32
+    ],
+    "n_seeds": 30,
+    "n_steps": 2000
+  },
+  "timestamp": "2026-04-28T15:13:49.665703"
+}
