@@ -1,37 +1,38 @@
 schema_version: '2.0'
 directory_name: dawn-models
 description: >
-  Dawn Models is the model repository for the Dawn Field Institute,
-  implementing post-symbolic AI architectures using Dawn Field Theory principles.
-  Primary model: GAIA v2 — a modular intelligence architecture where specialized
-  modules (language, reasoning, safety, memory) compose via a PAC conservation bus
-  built on Fracton SDK 2.1. Also includes TinyCIMM domain-specialized variants
-  (ancestors of GAIA v2 modules), SCBF interpretability framework, and CIMM Legacy
-  (Apache-2.0 production engine). Dual-licensing: research (AGPL-3.0), stable (Apache-2.0).
+  Dawn Models — model repository for the Dawn Field Institute implementing
+  post-symbolic AI architectures using Dawn Field Theory principles.
+  Primary model: GAIA v2 — modular intelligence architecture where specialized
+  modules (language, reasoning, safety, memory, observability) compose via a PAC
+  conservation bus built on Fracton SDK 2.1. Also includes TinyCIMM domain-specialized
+  variants (6 models, ancestors of GAIA v2 modules), SCBF interpretability framework,
+  and CIMM Legacy (Apache-2.0 production engine). GAIA v2 in design phase.
+  Dual-licensing: research (AGPL-3.0), stable (Apache-2.0).
 semantic_scope:
-- models
-- post-symbolic-ai
-- gaia
-- gaia-v2
-- modular-intelligence
-- conservation-bus
-- cimm
-- tinycimm
-- scbf
-- pac-conservation
-- entropy-dynamics
-- field-theory
-- fracton
+  - models
+  - post-symbolic-ai
+  - gaia
+  - gaia-v2
+  - modular-intelligence
+  - conservation-bus
+  - cimm
+  - tinycimm
+  - scbf
+  - pac-conservation
+  - entropy-dynamics
+  - field-theory
+  - fracton
 files:
-- CLAUDE.md
-- CONTRIBUTING.md
-- LICENSE
-- LICENSING.md
-- README.md
-- meta.yaml
+  - CLAUDE.md
+  - CONTRIBUTING.md
+  - LICENSE
+  - LICENSING.md
+  - README.md
+  - meta.yaml
 child_directories:
-- research
-- stable
-- roadmaps
-title: dawn-models
+  - research
+  - stable
+  - roadmaps
+title: Dawn Models
 repository_role: models
