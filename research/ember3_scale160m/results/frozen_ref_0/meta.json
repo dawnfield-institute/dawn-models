@@ -1,0 +1,12 @@
+{
+  "arm": "frozen_ref",
+  "seed": 0,
+  "rep": 0,
+  "chunks": 10000,
+  "lr": 1e-05,
+  "seq": 512,
+  "updates": 0,
+  "duration_s": 282.5,
+  "final_heldout_loss": 3.5928731858730316,
+  "vram_peak_gb": 6.83
+}

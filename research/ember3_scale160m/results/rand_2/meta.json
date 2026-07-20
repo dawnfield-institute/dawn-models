@@ -1,0 +1,12 @@
+{
+  "arm": "rand",
+  "seed": 2,
+  "rep": 0,
+  "chunks": 10000,
+  "lr": 1e-05,
+  "seq": 512,
+  "updates": 4969,
+  "duration_s": 493.9,
+  "final_heldout_loss": 3.2677485644817352,
+  "vram_peak_gb": 8.34
+}

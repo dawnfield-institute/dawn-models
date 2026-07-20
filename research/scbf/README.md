@@ -1,30 +1,66 @@
-# � SCBF: Symbol## 🎯 Purpose
-SCBF provides:
-- Interpretability framework that measures symbolic collapse and bifractal patterns
+# SCBF: Symbolic Collapse Bifractal Framework
+
+Dawn Field Theory's interpretability framework for measuring symbolic collapse and
+bifractal patterns in neural network learning dynamics.
+
+## Purpose
+
+- Interpretability framework measuring symbolic collapse and bifractal patterns
 - Deep mathematical structure analysis during neural network learning
 - Entropy-based insights into emergent symbolic representations
-- Integration with Dawn Field Theory's core models (TinyCIMM, CIMM)
-- Visual and quantitative analysis tools for symbolic pattern formationlapse Bifractal Framework
+- Integration with Dawn Field Theory's core models (TinyCIMM, GAIA, CIMM)
+- Visual and quantitative analysis tools; protocol-driven, reproducible experiments
 
-This directory contains the code, experiments, and metrics for the Symbolic Collapse Bifractal Framework (SCBF), Dawn Field Theory's interpretability framework for measuring symbolic collapse and bifractal patterns in neural network weight evolution.🧩 SCBF: Symbolic Collapse Benchmark Framework
+## Contents
 
-This directory contains the code, experiments, and metrics for the Symbolic Collapse Benchmark Framework (SCBF), Dawn Field Theory’s suite for explainable AI and symbolic benchmarking.
+### v1 (snapshot-scale instrumentation — stable)
+- `metrics/` – symbolic collapse, entropy, ancestry, lineage, attractor metrics
+- `loggers/` – experiment tracking (collapse events, lineage, entropy)
+- `visualization/` – collapse heatmaps, PCA/t-SNE overlays, dashboards
+- `scbf_runner.py` – experiment registration and runner
+- `scbf_experiments/`, `experiments/` – protocols and concrete experiments
+- `tinycimm_scbf_experiment.py` – TinyCIMM integration
+- `test_scbf.py`, `utils/`, `vcpu/`, `docs/`
 
-## 📚 Contents
-- `scbf_experiments/` – Benchmarking experiments and protocols
-- `metrics/` – Symbolic collapse, entropy, and interpretability metrics
-- `loggers/` – Tools for tracking collapse events, lineage, and entropy
-- `visualization/` – Collapse heatmaps, PCA/t-SNE overlays, and narrative dashboards
-- `tinycimm_scbf_experiment.py` – Integration with TinyCIMM for agentic benchmarking
-- `scbf_runner.py` – Main benchmarking suite runner
-- `test_scbf.py` – Test scripts for framework validation
-- `utils/` – Utility functions and modules
+### v2 (continuous interpretability — 2026-07, `v2/`)
 
-## 🎯 Purpose
-SCBF provides:
-- Modular benchmarking for symbolic collapse and agentic models
-- Visual and quantitative interpretability tools
-- Protocol-driven, reproducible experiments for XAI research
-- Integration with Dawn Field Theory’s core models (TinyCIMM, GAIA, CIMM)
+Interpretability for models that never stop changing, built from the validated
+instrument set of the Ember III program (10 pre-registered rounds, 2026-07-18/20;
+record in `../ember3_scale160m/` and
+`../tinycimm/TinyCIMM-Euler/experiments/ember3_drift/`). Spec:
+`.spec/scbf-v2.spec.md`. v1 is untouched; import `scbf.v2` explicitly.
 
-Start here to run, extend, or analyze symbolic collapse benchmarks and interpretability experiments.
+- `v2/hookspine.py` – **HookSpine**: gradient-hook instrumentation core. Fused
+  per-parameter updates inside the backward pass (7B MoE continuous learning in
+  15.3GB VRAM), placement masks (= lesion configurations), per-group and
+  stacked-tensor per-slice update-mass telemetry. Bounded memory; loud NaN failure.
+- `v2/probes.py` – CKA drift (fixed probes, dimension-agnostic), held-out CE
+  splits, **ClozeKnowledgeProbe** (generation-free fact scoring), plasticity probe.
+- `v2/battery.py` – lm-eval parsing + the locked 2×SE reading rule.
+- `v2/lesion.py` – **gradient-pressure lesioning**: constrain where update pressure
+  lands, measure what dies → causal capability localization. First results: MoE
+  factual knowledge localized to expert FFNs (−10.4 EM under expert-confined
+  pressure, invisible to CE); refined by its own control to the **compensation
+  law** — uncompensated updates damage, compensated updates don't (identical
+  update mass, opposite outcomes; the protection is co-adaptation freedom).
+- `v2/gates.py` – update-admission policies (err / excess / band / rand) with
+  measured standings from the Ember III gate rounds.
+- `v2/telemetry.py` – RunLog CSV/JSON schemas.
+- `v2/tests/` – CPU-only unit tests (11).
+
+Quick start (v2):
+
+```python
+from scbf.v2 import HookSpine, olmoe_experts_only, olmoe_expert_stacked_fn
+
+spine = HookSpine(model,
+                  trainable=olmoe_experts_only(),     # placement mask / lesion
+                  lr=5e-4, fused=True,                # update during backprop
+                  stacked_fn=olmoe_expert_stacked_fn) # per-expert mass telemetry
+out = model(x, labels=x)
+out.loss.backward()   # updates applied + telemetry accumulated + grads freed
+print(spine.telemetry()["stacked_mass"])
+```
+
+Start here to run, extend, or analyze symbolic collapse and continuous-learning
+interpretability experiments.

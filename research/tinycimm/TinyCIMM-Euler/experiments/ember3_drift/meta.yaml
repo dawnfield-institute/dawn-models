@@ -1,0 +1,25 @@
+schema_version: '2.0'
+directory_name: ember3_drift
+description: Ember III shakedown experiment — endogenous vs exogenous structural
+  adaptation signals under continuous online learning on the prime-gap stream.
+  Tests whether signal exogeneity bounds representational drift (Arm A entropy
+  control vs Arm B residual-error treatment vs Arm C decoupled surrogate), with
+  a dimension-agnostic CKA drift metric, competence tracking, and plasticity
+  probes. Drift definition locked pre-run; see README.md.
+semantic_scope:
+- ember-iii
+- continuous-learning
+- representational-drift
+- structural-adaptation
+- exogenous-signal
+- prime-gaps
+files:
+- README.md
+child_directories:
+- scripts
+- results
+- journals
+generation_context:
+  generator: claude_code
+  date: '2026-07-18'
+  program: ember-iii

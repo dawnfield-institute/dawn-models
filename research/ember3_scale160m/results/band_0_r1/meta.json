@@ -1,0 +1,12 @@
+{
+  "arm": "band",
+  "seed": 0,
+  "rep": 1,
+  "chunks": 10000,
+  "lr": 1e-05,
+  "seq": 512,
+  "updates": 4965,
+  "duration_s": 495.6,
+  "final_heldout_loss": 3.2699160277843475,
+  "vram_peak_gb": 8.35
+}

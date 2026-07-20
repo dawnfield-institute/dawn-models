@@ -1,0 +1,12 @@
+{
+  "model": "vanilla",
+  "arm": "frozen_ref",
+  "seed": 0,
+  "chunks": 10000,
+  "lr": 1e-05,
+  "seq": 256,
+  "updates": 0,
+  "duration_s": 199.9,
+  "final_heldout_ce": 4.117187350988388,
+  "vram_peak_gb": 4.01
+}

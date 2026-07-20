@@ -1,0 +1,9 @@
+{
+  "config": "abl_0000",
+  "stab": {
+    "gravity": false,
+    "vlr": false,
+    "qclip": false,
+    "gate": false
+  }
+}
