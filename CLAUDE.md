@@ -55,7 +55,7 @@ Every module implements three methods:
 - **Spinal Column**: Hardware control (GPIO, CAN bus, robotics)
 - **MCP Server**: Agent orchestration tools
 - **GRIM Integration**: Intelligence substrate for the AI companion
-- **Kronos**: Knowledge persistence via vault FDOs
+- **Knowledge persistence**: via the Lore graph (kronos retired 2026-08-10)
 
 ### v1 Archive
 
@@ -98,8 +98,8 @@ GAIA v2 depends on `fracton >= 2.1` for all physics. No reimplemented constants,
 - `fracton` — Infodynamics SDK (GAIA's physics substrate, hard dependency)
 - `dawn-field-theory` — core theoretical foundation (experiments validate the math)
 - `reality-engine` — physics simulation (validates DFT before it reaches GAIA)
-- `kronos-vault` — knowledge graph (FDOs track GAIA architecture and progress)
-- `GRIM` — AI companion (future GAIA integration target)
+- Lore graph (`proj-loom` era) — knowledge of record; GAIA nodes live there (kronos-vault retired)
+- `bert` — the platform (GAIA integration target; GRIM retired and archived)
 
 ## Guardrails
 
