@@ -1,0 +1,13 @@
+{
+  "arm": "experts",
+  "seed": 0,
+  "chunks": 5000,
+  "lr": 0.0005,
+  "seq": 512,
+  "model": "allenai/OLMoE-1B-7B-0924",
+  "duration_s": 1682.0,
+  "hook_updates": 160000,
+  "final_heldout_dom": 2.2131608054041862,
+  "final_heldout_off": 1.3676763251423836,
+  "vram_peak_gb": 15.25
+}

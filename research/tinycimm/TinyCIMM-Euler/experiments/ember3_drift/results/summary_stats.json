@@ -1,0 +1,83 @@
+{
+  "tokens": 50000,
+  "arms": {
+    "A": {
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "final_drift_mean": 0.6419438344396037,
+      "final_drift_range": [
+        0.0637044976868282,
+        0.9978346441421564
+      ],
+      "late_drift_slope_per_1k": -0.02750287794605577,
+      "held_ahead_mae_final": 7.919375101725261,
+      "held_ahead_mae_best": 7.905711015065511,
+      "plasticity_first_mean": -0.023606953168175463,
+      "plasticity_last_mean": -0.18858000696997723,
+      "grow_events_mean": 28.666666666666668,
+      "prune_events_mean": 18.0,
+      "final_neurons": [
+        133,
+        138,
+        138
+      ],
+      "stream_edge_vs_rolling_median_first10pct": -0.024024635958922458,
+      "stream_edge_vs_rolling_median_last10pct": -0.03491357812086848
+    },
+    "B": {
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "final_drift_mean": 0.7885047926924118,
+      "final_drift_range": [
+        0.3827604969153251,
+        0.9935021990036366
+      ],
+      "late_drift_slope_per_1k": -0.015908158558932614,
+      "held_ahead_mae_final": 7.9183939297993975,
+      "held_ahead_mae_best": 7.904855728149414,
+      "plasticity_first_mean": 0.058192287737228836,
+      "plasticity_last_mean": -0.22035187896365238,
+      "grow_events_mean": 25.666666666666668,
+      "prune_events_mean": 2.0,
+      "final_neurons": [
+        138,
+        128,
+        139
+      ],
+      "stream_edge_vs_rolling_median_first10pct": -0.021618693929689403,
+      "stream_edge_vs_rolling_median_last10pct": -0.03635345298079932
+    },
+    "C": {
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "final_drift_mean": 0.8717452884336917,
+      "final_drift_range": [
+        0.8300633152360964,
+        0.9351738464354772
+      ],
+      "late_drift_slope_per_1k": -0.003013678451515243,
+      "held_ahead_mae_final": 8.907225131988525,
+      "held_ahead_mae_best": 7.895233631134033,
+      "plasticity_first_mean": -0.029864319422790008,
+      "plasticity_last_mean": -0.07584566805765137,
+      "grow_events_mean": 27.333333333333332,
+      "prune_events_mean": 4.0,
+      "final_neurons": [
+        130,
+        139,
+        130
+      ],
+      "stream_edge_vs_rolling_median_first10pct": -0.01871794264050264,
+      "stream_edge_vs_rolling_median_last10pct": -0.03412656497464613
+    }
+  }
+}

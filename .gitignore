@@ -331,3 +331,13 @@ conda-meta/
 
 *poc_025_gaia_kronos_integration
 
+
+# Track Ember III continuous-learning program (2026-07; raw run dirs stay local)
+!research/tinycimm/TinyCIMM-Euler/experiments/
+research/tinycimm/TinyCIMM-Euler/experiments/*
+!research/tinycimm/TinyCIMM-Euler/experiments/ember3_drift/
+!research/tinycimm/TinyCIMM-Euler/experiments/ember3_drift/**
+research/tinycimm/TinyCIMM-Euler/experiments/ember3_drift/results/*
+!research/tinycimm/TinyCIMM-Euler/experiments/ember3_drift/results/summary*.png
+!research/tinycimm/TinyCIMM-Euler/experiments/ember3_drift/results/*.csv
+!research/tinycimm/TinyCIMM-Euler/experiments/ember3_drift/results/*.json

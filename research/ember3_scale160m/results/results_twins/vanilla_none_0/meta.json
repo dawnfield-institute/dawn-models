@@ -1,0 +1,12 @@
+{
+  "model": "vanilla",
+  "arm": "none",
+  "seed": 0,
+  "chunks": 10000,
+  "lr": 1e-05,
+  "seq": 256,
+  "updates": 10000,
+  "duration_s": 525.7,
+  "final_heldout_ce": 3.7394740283489227,
+  "vram_peak_gb": 5.42
+}

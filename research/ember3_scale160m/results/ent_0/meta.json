@@ -1,0 +1,12 @@
+{
+  "arm": "ent",
+  "seed": 0,
+  "rep": 0,
+  "chunks": 10000,
+  "lr": 1e-05,
+  "seq": 512,
+  "updates": 4981,
+  "duration_s": 494.4,
+  "final_heldout_loss": 3.304999679327011,
+  "vram_peak_gb": 8.35
+}

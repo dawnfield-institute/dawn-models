@@ -1,0 +1,26 @@
+schema_version: '2.0'
+directory_name: ember3_scale160m
+description: Ember III rung 1 — gate-origin arms at 160M (Pythia-160m) under
+  continuous next-token learning on WikiText-103, run on node1's RTX 3090 (CT103).
+  Tests whether the gate-signal origin ordering (exogenous > random > endogenous)
+  established at TinyCIMM scale in ember3_drift rounds 1-4 survives a real
+  transformer substrate four orders of magnitude larger. Pre-registered design in
+  README.md and the runner docstring.
+semantic_scope:
+- ember-iii
+- continuous-learning
+- update-gating
+- pythia-160m
+- representational-drift
+- scaling-ladder
+files:
+- README.md
+child_directories:
+- scripts
+- results
+- journals
+generation_context:
+  generator: claude_code
+  date: '2026-07-19'
+  program: ember-iii
+  sibling: research/tinycimm/TinyCIMM-Euler/experiments/ember3_drift
